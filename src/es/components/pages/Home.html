@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,91 +12,33 @@
   <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
   <title>M4Music</title>
 </head>
+
 <body>
   <p-general>
-    <o-header mobile-breakpoint="100vw" no-scroll="nav-open" menu-icon="true" namespace="header-">
-      <m-navigation hover="false" namespace="navigation-" mobile-breakpoint="0vw" no-scroll="nav-open">
-        <ul>
-          <li>
-            <a href="/about/" target="">About</a>
-          </li>
-          <li>
-            <a href="/forderung/" target="">Förderung</a>
-          </li>
-          <li>
-            <a href="/kosmos/" target="">Kosmos</a>
-          </li>
-          <li>
-            <a href="/studios/" target="">Studios</a>
-          </li>
-          <li>
-            <a href="/news/" target="">News</a>
-            <ul>
-              <li>
-                <a href="/news/neue-m4music-home-page/" target="">Neue M4Music Home Page</a>
-              </li>
-              <li>
-                <a href="/news/noch-eine-neue-news/" target="">Noch eine neue News</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/netzwerk/" target="">Netzwerk</a>
-          </li>
-        </ul>
-      </m-navigation>
+    <o-header namespace="header-" namespace-fallback>
+      <a-logo namespace="header-logo-" src="../../../img/m4m_logo.png" href="/"></a-logo>
     </o-header>
-    <o-body>
+    <m4music-o-body namespace="body-" namespace-fallback>
       <div>
-        <a-picture namespace="picture-" defaultsource="../../../img/sparx-test.png" alt="M4Music Test">
-          <style>:host{--picture-width:min(,var(--content-width,100%));--picture-width-mobile:min(,var(--content-width-mobile,100%))}</style>
-        </a-picture>
+        <p>21.September 2022</p>
+        <h1>DEMOTAPE CLINIC 2022 - JETZT ANMELDEN!</h1>
+        <p>Gewinne 1'000'000$ und bringe</p>
       </div>
-      <m4music-a-marquee>
-        <div>
-          <span>
-            <a href="/news/noch-eine-neue-news/">   Natürlich können auch mehrere solche PUSH-News erfasst werden!</a>
-          </span> 
-          <span>
-            <a href="/news/neue-m4music-home-page/">Neue M4Music Home Page (soll der Page Title auch in die News-Leiste??)   Endlich ist die neue m4music-Seite Online - Juhui!!</a>
-          </span>
-        </div>
-      </m4music-a-marquee>
-    </o-body>
-    <o-footer namespace="footer-">
       <div>
-        <a-logo class="hide-mobile" namespace="footer-engagement-logo-" src="../../../img/logo_fge_mk_rgb_neg_300dpi_de.png" href="https://www.migros-engagement.ch/engagement" target="_blank" lang="de">
-          <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der Migros-Gruppe:  <br> <strong> <a style="color:#f60;font-size:var(--footer-engagement-logo-text-color)" href="https://www.migros-engagement.ch" target="_blank">https://www.migros-engagement.ch</a> </strong>
-          </p>
-        </a-logo>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
       </div>
-      <div class="footer-ul-wrapper">
-        <ul>
-          <li>
-            <p>© 2021</p>
-          </li>
-          <li>
-            <p class="language-switcher">
-              <a href="http://testadmin.m4music-space.ch/"> EN </a> <a href="http://testadmin.m4music-space.ch/"> FR </a>
-            </p>
-          </li>
-          <br>
-          <li>
-            <p></p>
-          </li>
-        </ul>
-      </div>
-      <div class="logo-container">
-        <a-logo class="hide-desktop" namespace="footer-engagement-logo-" src="../../../img/logo_fge_mk_rgb_neg_300dpi_de.png" href="https://www.migros-engagement.ch/engagement" target="_blank" lang="de">
-          <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der Migros-Gruppe:  <br> <strong> <a class="test" href="https://www.migros-engagement.ch" target="_blank">https://www.migros-engagement.ch</a> </strong> SO EIN ARSCH SO EIN ARSCH</p>
-        </a-logo>
-      </div>
-    </o-footer>
+    </m4music-o-body>
+    <m4music-o-footer namespace="footer-" namespace-fallback>
+      <div>Footer Navigation</div>
+      <div>Copyright</div>
+    </m4music-o-footer>
   </p-general>
   <script rel=preload type=module>
     self.Environment = {
-      mobileBreakpoint: '600px'
+        mobileBreakpoint: '600px'
     }
-  </script>
-  </body>
+</script>
+</body>
+
 </html>

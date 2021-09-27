@@ -1,4 +1,9 @@
 /**
  * NOTE: consider the following <link rel="preload" href="[url_to_font]"> to prefetch initially displayed fonts
  */
-@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+@font-face {
+  font-family: "Gill Sans MT";
+  src: url("../fonts/Gill Sans MT.woff2") format("woff2"),
+    url("../fonts/Gill Sans MT.woff") format("woff"),
+    url("../fonts/Gill Sans MT.ttf") format("truetype");
+}

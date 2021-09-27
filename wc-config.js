@@ -170,6 +170,10 @@
     {
       selector: 'm4music-a-',
       url: 'atoms/'
+    },
+    {
+      selector: 'm4music-o-',
+      url: 'organisms/'
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑
