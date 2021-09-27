@@ -50,8 +50,6 @@ export default class Footer extends BaseFooter {
     this.renderHTML()
   }
 
-  disconnectedCallback() { }
-
   /**
    * renders the o-footer css
    *

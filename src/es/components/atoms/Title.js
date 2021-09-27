@@ -1,0 +1,68 @@
+// @ts-check
+import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
+
+/* global self */
+
+/**
+ * Wrapper for title element
+ * Example at: /src/es/components/pages/Home.html
+ * As an atom, this component can not hold further children (those would be quantum)
+ *
+ * @export
+ * @class Title
+ * @type {CustomElementConstructor}
+ * @attribute {}
+ * @css {}
+ */
+export default class Title extends Shadow() {
+
+  connectedCallback() {
+    if (this.shouldComponentRenderCSS()) this.renderCSS()
+    if (this.shouldComponentRenderHTML()) this.renderHTML()
+  }
+
+  /**
+   * evaluates if a render is necessary
+   *
+   * @return {boolean}
+   */
+  shouldComponentRenderCSS() {
+    return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
+  }
+
+  /**
+   * evaluates if a render is necessary
+   *
+   * @return {boolean}
+   */
+  shouldComponentRenderHTML() {
+    return !this.root.querySelector('h1')
+  }
+
+  /**
+   * renders the css
+   *
+   * @return {void}
+   */
+  renderCSS() {
+    this.css = /* css */ `
+    :host :is(h1, h2, h3, h4, h5, h6) {
+      font-weight: var(--font-weight, normal);
+    }
+  
+    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host { }
+    }
+  `
+  }
+
+  /**
+   * renders the html
+   *
+   * @return {void}
+   */
+  renderHTML() {
+    this.html = `<h1>${this.getAttribute('title') || 'No title attribute set!'}</h1>`
+  }
+
+}
