@@ -44,4 +44,12 @@ html {
   --footer-content-width: var(--content-width);
   --footer-padding: 2rem 0;
   --footer-flex-direction: column;
+
+  /* --- BUTTON --- */
+  --button-width: auto;
+  --button-font-family: var(--font-family, var(--font-family-bold));
+  --button-font-weight: var(--font-weight, var(--font-weight, normal));
+  --button-background-color: #fb5f3f;
+  --button-padding: 0.8rem 1.2rem;
+  --background-color-hover: red;
 }
