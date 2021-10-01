@@ -62,5 +62,5 @@ html {
   --button-font-size: var(--font-size);
 
   /* --- TITLE --- */
-  --title-margin: 0;
+  --title-margin: 1rem 0;
 }
