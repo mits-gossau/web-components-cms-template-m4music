@@ -52,4 +52,5 @@ html {
   --button-background-color: #fb5f3f;
   --button-padding: 0.8rem 1.2rem;
   --background-color-hover: red;
+  --button-font-size: var(--font-size);
 }
