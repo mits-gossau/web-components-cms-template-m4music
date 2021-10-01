@@ -33,7 +33,7 @@ html {
   --body-h1-color: var(--color);
   --body-h1-font-family: var(--font-family);
   --body-margin-bottom: 4.85rem;
-  --body-p-margin: 1rem 0;
+  --body-p-margin: 0;
 
   /* --- FOOTER --- */
   --footer-background-color: var(--background-color);
