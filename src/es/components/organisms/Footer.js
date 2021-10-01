@@ -57,6 +57,7 @@ export default class Footer extends BaseFooter {
    */
   renderCSS () {
     this.css = /* css */`
+    
       :host {
         background-color: var(--background-color, black);
         grid-area: footer;
