@@ -16,7 +16,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class Button extends Shadow() {
-  constructor(...args) {
+  constructor (...args) {
     super(...args)
 
     if (this.hasShadowRoot) {
@@ -48,13 +48,13 @@ export default class Button extends Shadow() {
     }
   }
 
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('click', this.clickListener)
   }
 
-  disconnectedCallback() {
+  disconnectedCallback () {
     this.removeEventListener('click', this.clickListener)
   }
 
@@ -63,7 +63,7 @@ export default class Button extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -72,7 +72,7 @@ export default class Button extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('button')
   }
 
@@ -81,7 +81,7 @@ export default class Button extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */ `
     
     :host button {
@@ -115,19 +115,17 @@ export default class Button extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     // @ts-ignore
     this.html = this.button
   }
-
 
   /**
    * Get button element. If not set, create element and return it
    *
    * @return {HTMLButtonElement}
    */
-  get button() {
+  get button () {
     return this._button || (this._button = document.createElement('button'))
   }
-
 }

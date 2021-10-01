@@ -51,6 +51,7 @@ html {
   --footer-engagement-logo-text-padding: 1rem 0 0 4rem;
   --footer-engagement-logo-text-width: auto;
   --footer-engagement-logo-align-items: flex-start;
+  --footer-font-size: 1rem;
 
   /* --- BUTTON --- */
   --button-width: auto;

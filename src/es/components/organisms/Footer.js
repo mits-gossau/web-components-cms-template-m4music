@@ -62,10 +62,12 @@ export default class Footer extends BaseFooter {
         grid-area: footer;
         z-index: var(--z-index, 100);
       }
+
       :host > * {
         margin: var(--content-spacing, 0) auto;
         width: var(--content-width, 80%);
       }
+      
       :host > footer {
         border-top: var(--border-top, 0);
         align-content: var(--align-content, normal);
@@ -123,6 +125,14 @@ export default class Footer extends BaseFooter {
         }
         :host > footer ul {
           margin: var(--ul-margin-mobile, 0.5em 0);
+        }
+
+        :host .footer__main, .footer__meta {
+          flex-direction: column;
+        }
+
+        :host .footer__nav {
+          flex-direction: column;
         }
         
       }
