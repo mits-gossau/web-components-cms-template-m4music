@@ -16,7 +16,6 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  */
 export default class Title extends Shadow() {
   connectedCallback () {
-    console.log(this.type)
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
