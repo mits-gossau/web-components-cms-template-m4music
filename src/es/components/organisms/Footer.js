@@ -82,33 +82,30 @@ export default class Footer extends BaseFooter {
         margin: var(--ul-margin, 1em 0);
       }
       :host > footer li {
-        line-height:var(--li-line-height, 1.5em);
+        padding:0 1em 0 0;
+        float: left;
       }
-      :host .wrapper-language {
-        align-items: var(--wrapper-language-align-items, flex-start);
-        display:var(--wrapper-language-display, flex);
-        flex-direction: var(--wrapper-language-flex-direction, column);
-        justify-content: var(--wrapper-language-justify-content, space-between);
+
+      :host .footer__main, .footer__meta {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
-      :host .language-switcher li {
-        float:var(--language-switcher-li-float, left);
-        padding:var(--language-switcher-li-padding, 0 1.4em 0 0);
+
+      :host .footer__cp {}
+      :host .footer__nav {
+        display:flex;
+        flex-direction: row;
       }
-      :host .language-block-links li {
-        padding:var(--language-switcher-li-padding, 0 1.4em 0 0);
+
+      :host .footer__nav ul > li {
+        float: initial;
       }
-      :host .wrapper-logo {
-        display: var(--wrapper-logo-display, flex);
-        flex-direction:var(--wrapper-logo-flex-direction, column);
-        justify-content: var(--wrapper-logo-justify-content, start);
-        align-items: var(--wrapper-logo-align-items, normal);
-        width: var(--wrapper-logo-width, 30vw);
+
+      :host .footer__nav > div {
+        padding: 0 0 0 1rem;
       }
-      :host .wrapper-info-links {
-        display:var(--wrapper-info-links-display, flex);
-        flex-direction: var(--wrapper-logo-flex-direction, column);
-        justify-content: var(--wrapper-logo-justify-content, flex-end); 
-      }
+
       :host a-link {
         --padding: var(--a-link-content-spacing, 0);
         --display: var(--a-link-display);
@@ -116,10 +113,7 @@ export default class Footer extends BaseFooter {
       }
 
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        :host {
-          --wrapper-language-align-items: var(--wrapper-language-align-items-mobile);
-          --engagement-logo-text-margin: var(--engagement-logo-text-margin-mobile);
-        }
+      
         :host > * {
           width: var(--content-width-mobile, 80%);
           margin: var(--content-spacing-mobile, 0) auto; 
@@ -130,12 +124,7 @@ export default class Footer extends BaseFooter {
         :host > footer ul {
           margin: var(--ul-margin-mobile, 0.5em 0);
         }
-        :host .language-block-links li {
-          float: var(--language-switcher-li-float-mobile, left);
-        }
-        :host .wrapper-logo {
-          width: var(--wrapper-logo-width-mobile, max(60%, 2vw));
-        }
+        
       }
     `
   }
