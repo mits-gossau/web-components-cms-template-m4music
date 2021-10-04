@@ -7,10 +7,10 @@
 html {
   /* --- GLOBAL --- */
   --background-color: #434343;
-  --color: #ffffff;
   --border-color: #919191;
-  --content-spacing: 0;
+  --color: #ffffff;
   --content-spacing-mobile: var(--content-spacing);
+  --content-spacing: 0;
   --content-width-not-web-component: 85%;
   --content-width: 85%;
   --font-family: "GillSansMTMedium", sans-serif;
@@ -37,51 +37,51 @@ html {
   --body-p-margin: 0;
 
   /* --- FOOTER --- */
+  --footer-a-color-hover:#FB5F3F;
+  --footer-a-font-size: 0.65rem;
   --footer-background-color: var(--background-color);
   --footer-border-top: 1px solid var(--border-color);
   --footer-content-width-mobile: var(--content-width-mobile);
   --footer-content-width: var(--content-width);
-  --footer-padding: 2rem 0 0;
+  --footer-div-padding:0 0 0 1rem;
   --footer-flex-direction: column;
-  --footer-ul-padding: 0;
-  --footer-ul-margin: 0;
-  --footer-title-margin: 0;
-  --footer-a-font-size: 0.65rem;
   --footer-font-size: 0.65rem;
-  --footer-title-h6-font-size:0.75rem;
   --footer-li-padding:0 1em 0 0;
   --footer-meta-font-size: 0.65em;
   --footer-meta-padding:0 0 1.5rem;
+  --footer-padding: 2rem 0 0;
+  --footer-title-h6-font-size:0.75rem;
+  --footer-title-margin: 0;
   --footer-ul-li-padding:0 0 0.22em 0;
-  --footer-div-padding:0 0 0 1rem;
-  --footer-a-color-hover:#FB5F3F;
+  --footer-ul-margin: 0;
+  --footer-ul-padding: 0;
   /* --- FOOTER - ENGAGEMENT --- */
-  --footer-engagement-logo-flex-flow: column-reverse;
-  --footer-engagement-logo-text-font-family: "HelveticaNowTextRegular",Helvetica, sans-serif;
   --footer-engagement-logo-align-items: flex-start;
+  --footer-engagement-logo-flex-flow: column-reverse;
   --footer-engagement-logo-height: 1.9rem;
   --footer-engagement-logo-justify-content: flex-start;
   --footer-engagement-logo-text-a-color-hover: var(--footer-engagement-logo-text-a-color);
   --footer-engagement-logo-text-a-color: #f60;
   --footer-engagement-logo-text-a-text-decoration-hover: none;
   --footer-engagement-logo-text-color: var(--footer-color);
-  --footer-engagement-logo-text-font-size: 0.5rem;
+  --footer-engagement-logo-text-font-family: "HelveticaNowTextRegular",Helvetica, sans-serif;
   --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 3vw);
+  --footer-engagement-logo-text-font-size: 0.5rem;
   --footer-engagement-logo-text-line-height: 1.4em;
   --footer-engagement-logo-text-padding-mobile: 0 0 0 5rem;
   --footer-engagement-logo-text-padding: 1em 0 0 5em;
-  --footer-engagement-logo-text-width: auto;
   --footer-engagement-logo-text-width-mobile: auto;
+  --footer-engagement-logo-text-width: auto;
   --footer-engagement-text-max-width:30%;
 
   /* --- BUTTON --- */
-  --button-width: auto;
-  --button-font-family: var(--font-family, var(--font-family-bold));
-  --button-font-weight: var(--font-weight, var(--font-weight, normal));
-  --button-background-color: #fb5f3f;
-  --button-padding: 0.8rem 1.2rem;
   --background-color-hover: red;
+  --button-background-color: #fb5f3f;
+  --button-font-family: var(--font-family, var(--font-family-bold));
   --button-font-size: var(--font-size);
+  --button-font-weight: var(--font-weight, var(--font-weight, normal));
+  --button-padding: 0.8rem 1.2rem;
+  --button-width: auto;
 
   /* --- TITLE --- */
   --title-margin: 1rem 0;
