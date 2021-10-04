@@ -10,15 +10,15 @@ Using web-components-cms-template Repository
 
 ## Components - TODO:
 
-[] Title
-[] Footer
-[] Header
-[] Logo
-[] Content-Text
-[] Button
-[] Video
-[] Text-Container
-[] Link
-[] Card-Container
-[] Highlight-Box
-[] Form
+- [ ] Title
+- [ ] Footer
+- [ ] Header
+- [ ] Logo
+- [ ] Content-Text
+- [ ] Button
+- [ ] Video
+- [ ] Text-Container
+- [ ] Link
+- [ ] Card-Container
+- [ ] Highlight-Box
+- [ ] Formular
