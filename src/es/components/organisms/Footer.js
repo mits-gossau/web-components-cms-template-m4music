@@ -15,33 +15,6 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * @css {
  *  NOTE: grid-area: footer;
  *  var(--background-color, black)
- *  var(--z-index, 100)
- *  var(--content-spacing, 0)
- *  var(--content-width, 80%)
- *  var(--align-content, normal)
- *  var(--box-sizing, content-box)
- *  var(--color, white)
- *  var(--display, flex)
- *  var(--flex-direction, row)
- *  var(--justify-content, normal)
- *  var(--padding, 0)
- *  var(--ul-list-style-type, none)
- *  var(--ul-padding, 0)
- *  var(--li-line-height, 1.5em)
- *  var(--wrapper-language-align-items, flex-start)
- *  var(--wrapper-language-display, flex)
- *  var(--wrapper-language-flex-direction, column)
- *  var(--wrapper-language-justify-content, space-between)
- *  var(--language-switcher-li-float, left)
- *  var(--language-switcher-li-padding, 0 1.4em 0 0)
- *  var(--wrapper-logo-display, flex)
- *  var(--wrapper-logo-flex-direction, column)
- *  var(--wrapper-logo-justify-content, start)
- *  var(--wrapper-info-links-display, flex)
- *  var(--wrapper-logo-flex-direction, column)
- *  var(--wrapper-logo-justify-content, flex-end)
- *  var(--wrapper-logo-width, 30vw)
- *  var(--wrapper-logo-width-mobile, 30vw)
  * }
  */
 export default class Footer extends BaseFooter {
