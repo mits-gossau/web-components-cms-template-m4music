@@ -2,8 +2,30 @@
  * NOTE: consider the following <link rel="preload" href="[url_to_font]"> to prefetch initially displayed fonts
  */
 @font-face {
-  font-family: "Gill Sans MT";
-  src: url("../fonts/Gill Sans MT.woff2") format("woff2"),
-    url("../fonts/Gill Sans MT.woff") format("woff"),
-    url("../fonts/Gill Sans MT.ttf") format("truetype");
+  font-family: "GillSansMTMedium";
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/GillSansMTMedium/normal_normal.woff") format("woff"),
+    url("../fonts/GillSansMTMedium/normal_normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GillSansMTMediumItalic";
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/GillSansMTMediumItalic/italic_normal.woff") format("woff"),
+    url("../fonts/GillSansMTMediumItalic/italic_normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GillSansMTBoldItalic";
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/GillSansMTBoldItalic/italic_normal.woff") format("woff"),
+    url("../fonts/GillSansMTBoldItalic/italic_normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GillSansMTBold";
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/GillSansMTBold/normal_normal.woff") format("woff"),
+    url("../fonts/GillSansMTBold/normal_normal.woff2") format("woff2");
 }
