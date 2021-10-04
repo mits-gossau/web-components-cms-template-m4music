@@ -18,7 +18,7 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -28,7 +28,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
     
       :host {
@@ -55,10 +55,10 @@ export default class Footer extends BaseFooter {
       :host > footer ul {
         list-style-type: var(--ul-list-style-type, none);
         padding: var(--ul-padding, 0);
-        margin: var(--ul-margin, 1em 0);
+        margin: var(--ul-margin, 0);
       }
       :host > footer li {
-        padding:0 1em 0 0;
+        padding:var(--li-padding, 0);
         float: left;
       }
 
@@ -68,7 +68,15 @@ export default class Footer extends BaseFooter {
         justify-content: space-between;
       }
 
-      :host .footer__cp {}
+      :host .footer__meta{
+        font-size:var(--meta-font-size, 1em);
+        line-height:normal;
+        padding:var(--meta-padding, 0);
+      }
+
+      :host .footer__cp {
+        max-width:var(--engagement-text-max-width, auto);
+      }
       :host .footer__nav {
         display:flex;
         flex-direction: row;
@@ -76,16 +84,20 @@ export default class Footer extends BaseFooter {
 
       :host .footer__nav ul > li {
         float: initial;
+        padding: var(--ul-li-padding, 0);
+    
       }
 
       :host .footer__nav > div {
-        padding: 0 0 0 1rem;
+        padding: var(--div-padding, 0);
       }
 
       :host a-link {
         --padding: var(--a-link-content-spacing, 0);
         --display: var(--a-link-display);
         --display-mobile: var(--a-link-display-mobile);
+        --font-size:var(--a-font-size, 1em);
+        --color-hover: var(--a-color-hover, #FFFFFF);
       }
 
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
