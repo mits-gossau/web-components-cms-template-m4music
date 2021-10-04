@@ -8,6 +8,17 @@ Using web-components-cms-template Repository
 
 - pending.
 
-## Tide up - TODO:
+## Components - TODO:
 
-1. Setup
+[] Title
+[] Footer
+[] Header
+[] Logo
+[] Content-Text
+[] Button
+[] Video
+[] Text-Container
+[] Link
+[] Card-Container
+[] Highlight-Box
+[] Form
