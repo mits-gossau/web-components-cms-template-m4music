@@ -50,7 +50,7 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -60,7 +60,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
     
       :host {
@@ -131,7 +131,7 @@ export default class Footer extends BaseFooter {
         --display-mobile: var(--a-link-display-mobile);
         --display: var(--a-link-display);
         --font-size:var(--a-font-size, 1em);
-        --font-size-mobile: var(--a-font-size-mobile, 1em);
+        /*--font-size-mobile: var(--a-font-size-mobile, 1em);*/
         --padding: var(--a-link-content-spacing, 0);
       }
 

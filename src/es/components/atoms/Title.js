@@ -46,11 +46,11 @@ export default class Title extends Shadow() {
   renderCSS() {
     this.css = /* css */ `
     :host :is(h1, h2, h3, h4, h5, h6) {
-      --margin: var(--h-margin, 0);
-      --padding: var(--h-padding, 0);
       --font-family: var(--h-font-family, var(--font-family, inherit));
       --font-weight: var(--h-font-weight, var(--font-weight, normal));
       --line-height: var(--h-line-height, var(--line-height, normal));
+      --margin: var(--h-margin, 0);
+      --padding: var(--h-padding, 0);
       --text-transform: var(--h-text-transform, none);
     }
 
@@ -61,7 +61,6 @@ export default class Title extends Shadow() {
       font-weight: var(--h1-font-weight, var(--font-weight, normal));
       margin: var(--h1-margin, var(--margin, 0));
       padding:var(--h1-padding, var(--padding, 0));
-      
     }
     :host h2 {
       color:var(--h2-color, var(--h-color, white));
@@ -102,7 +101,7 @@ export default class Title extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
 
       :host h1 {
-        font-size:var(--h1-font-size-mobile, 3em);
+       /* font-size:var(--h1-font-size-mobile, 3em);*/
       }
   
       :host h6 {
