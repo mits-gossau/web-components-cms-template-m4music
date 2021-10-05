@@ -65,7 +65,6 @@ html {
   --footer-text-decoration-hover: none;
   --footer-a-text-underline-offset:5px;
   
-
   /* --- FOOTER - ENGAGEMENT --- */
   --footer-engagement-logo-align-items: flex-start;
   --footer-engagement-logo-flex-flow: column-reverse;
@@ -87,7 +86,7 @@ html {
   --engagement-padding-mobile: 0 0 1rem 0;
 
   /* --- BUTTON --- */
-  --background-color-hover: red;
+  --button-background-color-hover: yellow;
   --button-background-color: #fb5f3f;
   --button-font-family: var(--font-family, var(--font-family-bold));
   --button-font-size: var(--font-size);
