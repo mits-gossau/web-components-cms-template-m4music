@@ -75,7 +75,7 @@ export default class Footer extends BaseFooter {
         padding:var(--meta-padding, 0);
       }
 
-      :host .footer__cp {
+      :host .footer__engagement {
         max-width:var(--engagement-text-max-width, auto);
       }
 
@@ -119,6 +119,10 @@ export default class Footer extends BaseFooter {
           flex-direction: column;
         }
 
+        :host .footer__engagement {
+          padding: var(--engagement-padding-mobile, 0);
+        }
+
         :host .footer__nav {
           flex-direction: column;
         }
@@ -129,6 +133,10 @@ export default class Footer extends BaseFooter {
 
         :host a-link {
           --font-size: var(--a-font-size-mobile, 1em);
+        }
+
+        :host .footer__nav > div {
+          padding: var(--div-padding-mobile, 0);
         }
         
       }

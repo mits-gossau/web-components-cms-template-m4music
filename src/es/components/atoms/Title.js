@@ -47,8 +47,7 @@ export default class Title extends Shadow() {
     this.css = /* css */ `
     :host :is(h1, h2, h3, h4, h5, h6) {
       font-weight: var(--font-weight, normal);
-      margin: var(--margin, 0);
-      
+      margin: var(--margin, 0); 
     }
 
     :host h1 {
@@ -57,6 +56,8 @@ export default class Title extends Shadow() {
 
     :host h6 {
       font-size:var(--h6-font-size, 1em);
+      margin: var(--margin, 0);
+      padding:var(--padding, 0);
     }
   
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -67,6 +68,8 @@ export default class Title extends Shadow() {
   
       :host h6 {
         font-size:var(--h6-font-size-mobile, 1em);
+        margin: var(--margin-mobile, 0);
+        padding:var(--padding-mobile, 0);
       }
     }
   `
