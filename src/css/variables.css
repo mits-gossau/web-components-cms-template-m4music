@@ -82,16 +82,18 @@ html {
   --footer-engagement-logo-text-a-text-decoration-hover: none;
   --footer-engagement-logo-text-color: var(--footer-color);
   --footer-engagement-logo-text-font-family: "HelveticaNowTextRegular",Helvetica, sans-serif;
-  --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 3vw); 
+  --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 2vw); 
   --footer-engagement-logo-text-font-size: 0.5rem;
   --footer-engagement-logo-text-line-height: 1.4em;
-  --footer-engagement-logo-text-padding-mobile: 0.5rem 0 0 30%;
+  --footer-engagement-logo-text-padding-mobile: 0.5rem 0 0 2.5rem;
   --footer-engagement-logo-text-padding: .5rem 0 0 2.1rem;
   --footer-engagement-logo-text-width-mobile: auto;
   --footer-engagement-logo-text-width: auto;
   --footer-engagement-text-max-width:max(17rem, 4vw);
   --footer-engagement-padding-mobile: 0 0 1rem 0;
   --footer-engagement-logo-height: 1.57rem;
+  --footer-engagement-logo-height-mobile:2rem;
+  --footer-engagement-logo-text-color: var(--color);
 
 
   /* --- BUTTON --- */
