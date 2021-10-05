@@ -7,19 +7,18 @@
 html {
   /* --- GLOBAL --- */
   --background-color: #434343;
-  --color: #ffffff;
   --border-color: #919191;
-  --content-spacing: 0;
+  --color: #ffffff;
   --content-spacing-mobile: var(--content-spacing);
+  --content-spacing: 0;
   --content-width-not-web-component: 85%;
   --content-width: 85%;
   --font-family: "GillSansMTMedium", sans-serif;
-  --font-size: 1.3rem;
+  --font-size-mobile: min(18px, 5vw);
+  --font-size: max(32px, 1.1vw);
   --html-background-color: var(--background-color);
-  --line-height: 125%;
 
   /* --- HEADER --- */
-  /* --header-background-color: red; */
   --header-background-color: var(--background-color);
   --header-content-spacing: var(--content-spacing);
   --header-content-width: var(--content-width);
@@ -28,29 +27,73 @@ html {
 
   /* --- BODY --- */
   --body-background-color: var(--background-color);
-  /* --body-background-color: green; */
   --body-content-spacing: var(--content-spacing);
   --body-content-width-not-web-component: var(--content-width);
   --body-content-width: var(--content-width);
   --body-h1-color: var(--color);
   --body-h1-font-family: var(--font-family);
   --body-margin-bottom: 4.85rem;
+  --body-p-margin: 0;
+  --body-title-h1-font-size:3rem;
 
   /* --- FOOTER --- */
+  --footer-a-color-hover:#FB5F3F;
+  --footer-a-font-size: 0.65rem;
+  --footer-a-font-size-mobile: max(1.01rem, 2vw);
   --footer-background-color: var(--background-color);
-  /* --footer-background-color: blue; */
   --footer-border-top: 1px solid var(--border-color);
   --footer-content-width-mobile: var(--content-width-mobile);
   --footer-content-width: var(--content-width);
-  --footer-padding: 2rem 0;
+  --footer-div-padding:0 0 1rem 2.3rem;
+  --footer-div-padding-mobile: 0 0 1rem 0;
   --footer-flex-direction: column;
+  --footer-font-size: 0.65rem;
+  --footer-font-size-mobile: max(0.3rem, 3vw);
+  --footer-li-padding:0 1em 0 0;
+  --footer-meta-font-size: 0.65rem;
+  --footer-meta-padding:1rem 0 1.5rem;
+  --footer-padding: 2rem 0 0;
+  --footer-title-h6-font-size:0.75rem;
+  --footer-title-h6-font-size-mobile: max(0.75rem, auto);
+  --footer-title-padding: 0 0 0.22rem 0;
+  --footer-title-padding-mobile: 0 0 0.22rem 0;
+  --footer-ul-li-padding:0 0 0.22rem 0;
+  --footer-ul-margin: 0;
+  --footer-ul-margin-mobile:0;
+  --footer-ul-padding: 0;
+  --footer-text-decoration: none;
+  --footer-text-decoration-hover: none;
+  --footer-a-text-underline-offset:5px;
+  
+  /* --- FOOTER - ENGAGEMENT --- */
+  --footer-engagement-logo-align-items: flex-start;
+  --footer-engagement-logo-flex-flow: column-reverse;
+  --footer-engagement-logo-height: 1.9rem;
+  --footer-engagement-logo-justify-content: flex-start;
+  --footer-engagement-logo-text-a-color-hover: var(--footer-engagement-logo-text-a-color);
+  --footer-engagement-logo-text-a-color: #f60;
+  --footer-engagement-logo-text-a-text-decoration-hover: none;
+  --footer-engagement-logo-text-color: var(--footer-color);
+  --footer-engagement-logo-text-font-family: "HelveticaNowTextRegular",Helvetica, sans-serif;
+  --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 3vw);
+  --footer-engagement-logo-text-font-size: 0.5rem;
+  --footer-engagement-logo-text-line-height: 1.4em;
+  --footer-engagement-logo-text-padding-mobile: 0 0 0 5rem;
+  --footer-engagement-logo-text-padding: 1em 0 0 5em;
+  --footer-engagement-logo-text-width-mobile: auto;
+  --footer-engagement-logo-text-width: auto;
+  --footer-engagement-text-max-width:max(17rem, 4vw);
+  --engagement-padding-mobile: 0 0 1rem 0;
 
   /* --- BUTTON --- */
-  --button-width: auto;
-  --button-font-family: var(--font-family, var(--font-family-bold));
-  --button-font-weight: var(--font-weight, var(--font-weight, normal));
+  --button-background-color-hover: yellow;
   --button-background-color: #fb5f3f;
-  --button-padding: 0.8rem 1.2rem;
-  --background-color-hover: red;
+  --button-font-family: var(--font-family, var(--font-family-bold));
   --button-font-size: var(--font-size);
+  --button-font-weight: var(--font-weight, var(--font-weight, normal));
+  --button-padding: 0.8rem 1.2rem;
+  --button-width: auto;
+
+  /* --- TITLE --- */
+  --title-margin: 1rem 0;
 }

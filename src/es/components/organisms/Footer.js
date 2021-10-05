@@ -13,39 +13,44 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * @type {CustomElementConstructor}
  * @attribute {}
  * @css {
- *  NOTE: grid-area: footer;
- *  var(--background-color, black)
- *  var(--z-index, 100)
- *  var(--content-spacing, 0)
- *  var(--content-width, 80%)
- *  var(--align-content, normal)
- *  var(--box-sizing, content-box)
- *  var(--color, white)
- *  var(--display, flex)
- *  var(--flex-direction, row)
- *  var(--justify-content, normal)
- *  var(--padding, 0)
- *  var(--ul-list-style-type, none)
- *  var(--ul-padding, 0)
- *  var(--li-line-height, 1.5em)
- *  var(--wrapper-language-align-items, flex-start)
- *  var(--wrapper-language-display, flex)
- *  var(--wrapper-language-flex-direction, column)
- *  var(--wrapper-language-justify-content, space-between)
- *  var(--language-switcher-li-float, left)
- *  var(--language-switcher-li-padding, 0 1.4em 0 0)
- *  var(--wrapper-logo-display, flex)
- *  var(--wrapper-logo-flex-direction, column)
- *  var(--wrapper-logo-justify-content, start)
- *  var(--wrapper-info-links-display, flex)
- *  var(--wrapper-logo-flex-direction, column)
- *  var(--wrapper-logo-justify-content, flex-end)
- *  var(--wrapper-logo-width, 30vw)
- *  var(--wrapper-logo-width-mobile, 30vw)
+ * NOTE: grid-area: footer;
+ * var(--background-color, black)
+ * var(--z-index, 100)
+ * var(--content-spacing, 0) auto
+ * var(--content-width, 80%)
+ * var(--align-content, normal)
+ * var(--border-top, 0)
+ * var(--box-sizing, content-box)
+ * var(--color, white)
+ * var(--display, flex)
+ * var(--flex-direction, row)
+ * var(--justify-content, normal)
+ * var(--padding, 0)
+ * var(--ul-list-style-type, none)
+ * var(--ul-margin, 0)
+ * var(--ul-padding, 0)
+ * var(--li-padding, 0)
+ * var(--meta-font-size, 1em)
+ * var(--meta-padding, 0)
+ * var(--engagement-text-max-width, auto)
+ * var(--ul-li-padding, 0)
+ * var(--div-padding, 0)
+ * var(--a-color-hover, #FFFFFF)
+ * var(--a-link-display-mobile)
+ * var(--a-link-display)
+ * var(--a-link-content-spacing, 0)
+ * var(--content-spacing-mobile, 0) auto;
+ * var(--content-width-mobile, 80%)
+ * var(--flex-direction-mobile, column)
+ * var(--ul-margin-mobile, 0.5em 0)
+ * var(--engagement-padding-mobile, 0)
+ * var(--meta-font-size-mobile, 1em)
+ * var(--a-font-size-mobile, 1em)
+ * var(--div-padding-mobile, 0)
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -55,20 +60,23 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */`
+    
       :host {
         background-color: var(--background-color, black);
         grid-area: footer;
         z-index: var(--z-index, 100);
       }
+
       :host > * {
         margin: var(--content-spacing, 0) auto;
         width: var(--content-width, 80%);
       }
+      
       :host > footer {
-        border-top: var(--border-top, 0);
         align-content: var(--align-content, normal);
+        border-top: var(--border-top, 0);
         box-sizing: var(--box-sizing, content-box);
         color: var(--color, white);
         display: var(--display, flex);
@@ -76,53 +84,62 @@ export default class Footer extends BaseFooter {
         justify-content: var(--justify-content, normal);
         padding: var(--padding, 0);
       }
+
       :host > footer ul {
         list-style-type: var(--ul-list-style-type, none);
+        margin: var(--ul-margin, 0);
         padding: var(--ul-padding, 0);
-        margin: var(--ul-margin, 1em 0);
       }
+
       :host > footer li {
-        line-height:var(--li-line-height, 1.5em);
+        float: left;
+        padding:var(--li-padding, 0);
       }
-      :host .wrapper-language {
-        align-items: var(--wrapper-language-align-items, flex-start);
-        display:var(--wrapper-language-display, flex);
-        flex-direction: var(--wrapper-language-flex-direction, column);
-        justify-content: var(--wrapper-language-justify-content, space-between);
+
+      :host .footer__main, .footer__meta {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
-      :host .language-switcher li {
-        float:var(--language-switcher-li-float, left);
-        padding:var(--language-switcher-li-padding, 0 1.4em 0 0);
+
+      :host .footer__meta {
+        font-size:var(--meta-font-size, 1em);
+        padding:var(--meta-padding, 0);
       }
-      :host .language-block-links li {
-        padding:var(--language-switcher-li-padding, 0 1.4em 0 0);
+
+      :host .footer__engagement {
+        max-width:var(--engagement-text-max-width, auto);
       }
-      :host .wrapper-logo {
-        display: var(--wrapper-logo-display, flex);
-        flex-direction:var(--wrapper-logo-flex-direction, column);
-        justify-content: var(--wrapper-logo-justify-content, start);
-        align-items: var(--wrapper-logo-align-items, normal);
-        width: var(--wrapper-logo-width, 30vw);
+
+      :host .footer__nav {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
-      :host .wrapper-info-links {
-        display:var(--wrapper-info-links-display, flex);
-        flex-direction: var(--wrapper-logo-flex-direction, column);
-        justify-content: var(--wrapper-logo-justify-content, flex-end); 
+
+      :host .footer__nav ul > li {
+        float: initial;
+        padding: var(--ul-li-padding, 0);
       }
+
+      :host .footer__nav > div {
+        padding: var(--div-padding, 0);
+      }
+
       :host a-link {
-        --padding: var(--a-link-content-spacing, 0);
-        --display: var(--a-link-display);
+        --color-hover: var(--a-color-hover, #FFFFFF);
         --display-mobile: var(--a-link-display-mobile);
+        --display: var(--a-link-display);
+        --font-size:var(--a-font-size, 1em);
+        --font-size-mobile: var(--a-font-size-mobile, 1em);
+        --padding: var(--a-link-content-spacing, 0);
       }
 
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        :host {
-          --wrapper-language-align-items: var(--wrapper-language-align-items-mobile);
-          --engagement-logo-text-margin: var(--engagement-logo-text-margin-mobile);
-        }
+      
         :host > * {
-          width: var(--content-width-mobile, 80%);
           margin: var(--content-spacing-mobile, 0) auto; 
+          width: var(--content-width-mobile, 80%);
         }
         :host > footer {     
           flex-direction: var(--flex-direction-mobile, column);
@@ -130,12 +147,31 @@ export default class Footer extends BaseFooter {
         :host > footer ul {
           margin: var(--ul-margin-mobile, 0.5em 0);
         }
-        :host .language-block-links li {
-          float: var(--language-switcher-li-float-mobile, left);
+
+        :host .footer__main, .footer__meta {
+          flex-direction: column;
         }
-        :host .wrapper-logo {
-          width: var(--wrapper-logo-width-mobile, max(60%, 2vw));
+
+        :host .footer__engagement {
+          padding: var(--engagement-padding-mobile, 0);
         }
+
+        :host .footer__nav {
+          flex-direction: column;
+        }
+
+        :host .footer__meta {
+          font-size:var(--meta-font-size-mobile, 1em);
+        }
+
+        :host a-link {
+          --font-size: var(--a-font-size-mobile, 1em);
+        }
+
+        :host .footer__nav > div {
+          padding: var(--div-padding-mobile, 0);
+        }
+        
       }
     `
   }
