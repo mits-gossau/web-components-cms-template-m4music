@@ -30,11 +30,22 @@ html {
   --body-content-spacing: var(--content-spacing);
   --body-content-width-not-web-component: var(--content-width);
   --body-content-width: var(--content-width);
-  --body-h1-color: var(--color);
-  --body-h1-font-family: var(--font-family);
+/*  --body-h1-color: var(--color);
+  --body-h1-font-family: var(--font-family);*/
   --body-margin-bottom: 4.85rem;
   --body-p-margin: 0;
-  --body-title-h1-font-size:3rem;
+
+  --body-title-h1-font-size: 3rem;
+  --body-title-h2-font-size: 2rem;
+  --body-title-h3-font-size: 1.5rem;
+  --body-title-h4-font-size: 1.25rem;
+  --body-title-h5-font-size: 1rem;
+  --body-title-h6-font-size: 0.75rem;
+  
+  --body-title-h-margin: 0 0 16px;
+  --body-title-h-padding: 0;
+  --body-title-h-font-weight: normal;
+  /* --body-title-h-color:yellow; */
 
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
@@ -55,8 +66,8 @@ html {
   --footer-padding: 2rem 0 0;
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-font-size-mobile: max(0.75rem, auto);
-  --footer-title-padding: 0 0 0.22rem 0;
-  --footer-title-padding-mobile: 0 0 0.22rem 0;
+  --footer-title-h6-padding: 0 0 0.22rem 0;
+  --footer-title-h6-padding-mobile: 0 0 0.22rem 0;
   --footer-ul-li-padding:0 0 0.22rem 0;
   --footer-ul-margin: 0;
   --footer-ul-margin-mobile:0;
@@ -95,5 +106,5 @@ html {
   --button-width: auto;
 
   /* --- TITLE --- */
-  --title-margin: 1rem 0;
+  /*--title-margin: 1rem 0;*/
 }
