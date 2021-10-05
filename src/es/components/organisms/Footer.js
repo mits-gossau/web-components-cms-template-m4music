@@ -18,7 +18,7 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -28,7 +28,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
     
       :host {
@@ -52,11 +52,13 @@ export default class Footer extends BaseFooter {
         justify-content: var(--justify-content, normal);
         padding: var(--padding, 0);
       }
+
       :host > footer ul {
         list-style-type: var(--ul-list-style-type, none);
         padding: var(--ul-padding, 0);
         margin: var(--ul-margin, 0);
       }
+
       :host > footer li {
         padding:var(--li-padding, 0);
         float: left;
@@ -68,24 +70,24 @@ export default class Footer extends BaseFooter {
         justify-content: space-between;
       }
 
-      :host .footer__meta{
+      :host .footer__meta {
         font-size:var(--meta-font-size, 1em);
-        line-height:normal;
         padding:var(--meta-padding, 0);
       }
 
       :host .footer__cp {
         max-width:var(--engagement-text-max-width, auto);
       }
+
       :host .footer__nav {
         display:flex;
         flex-direction: row;
+        flex-wrap: wrap;
       }
 
       :host .footer__nav ul > li {
         float: initial;
         padding: var(--ul-li-padding, 0);
-    
       }
 
       :host .footer__nav > div {
@@ -119,6 +121,14 @@ export default class Footer extends BaseFooter {
 
         :host .footer__nav {
           flex-direction: column;
+        }
+
+        :host .footer__meta {
+          font-size:var(--meta-font-size-mobile, 1em);
+        }
+
+        :host a-link {
+          --font-size: var(--a-font-size-mobile, 1em);
         }
         
       }
