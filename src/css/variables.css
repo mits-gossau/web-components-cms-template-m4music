@@ -48,7 +48,8 @@ html {
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
   --footer-a-font-size: 0.65rem;
-  --footer-a-font-size-mobile: min(1rem, 3vw);
+  /* --footer-a-font-size-mobile: min(1rem, 3vw); */
+  --footer-a-font-size-mobile: min(18px, 3vw);
   --footer-a-text-underline-offset:5px;
   --footer-background-color: var(--background-color);
   --footer-border-top: 1px solid var(--border-color);
@@ -59,11 +60,12 @@ html {
   --footer-flex-direction: column;
   --footer-li-padding:0 1em 0 0;
   --footer-meta-font-size: 0.65rem;
-  --footer-meta-font-size-mobile: min(1rem, 3vw);
+  /* --footer-meta-font-size-mobile: min(1rem, 3vw); */
+  --footer-meta-font-size-mobile: min(18px, 3vw);
   --footer-meta-padding:1rem 0 1.5rem;
   --footer-padding: 2rem 0 0;
   --footer-title-h6-font-size:0.75rem;
-  --footer-title-h6-font-size-mobile: max(0.75rem, 4vw);
+  --footer-title-h6-font-size-mobile: min(18px, 3vw);
   --footer-title-h6-padding: 0 0 0.22rem 0;
   --footer-title-h6-padding-mobile: 0 0 0.22rem 0;
   --footer-ul-li-padding:0 0 0.22rem 0;
@@ -82,7 +84,8 @@ html {
   --footer-engagement-logo-text-a-text-decoration-hover: none;
   --footer-engagement-logo-text-color: var(--footer-color);
   --footer-engagement-logo-text-font-family: "HelveticaNowTextRegular",Helvetica, sans-serif;
-  --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 2vw); 
+  /* --footer-engagement-logo-text-font-size-mobile: max(0.3rem, 2vw);  */
+  --footer-engagement-logo-text-font-size-mobile: max(0.6rem, 2vw); 
   --footer-engagement-logo-text-font-size: 0.5rem;
   --footer-engagement-logo-text-line-height: 1.4em;
   --footer-engagement-logo-text-padding-mobile: 0.5rem 0 0 2.5rem;
