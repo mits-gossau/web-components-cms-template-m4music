@@ -14,7 +14,7 @@ html {
   --content-width-not-web-component:85%;
   --content-width:85%;
   --font-family:"GillSansMTMedium", sans-serif;
-  --font-size-mobile:18px;
+  --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
   --html-background-color:var(--background-color);
 
@@ -24,7 +24,7 @@ html {
   --header-content-width:var(--content-width);
   --header-content-width-mobile:var(--content-width);
   --header-height:176px;
-  --header-height-mobile:min(6rem, 20vw);
+  --header-height-mobile:max(6rem, 20vw);
   --header-position:static;
   --header-logo-width:195px;
   --header-logo-height:32px;
@@ -37,7 +37,8 @@ html {
   --body-content-width-not-web-component:var(--content-width);
   --body-content-width:var(--content-width);
   --body-margin-bottom:4.85rem;
-  --body-p-margin:0;
+  --body-p-margin:0 0 1rem;
+  --body-p-margin-mobile: 0 0 1.35rem;
   --body-title-h1-font-size:3rem;
   --body-title-h1-font-size-mobile:min(1.8rem, 8vw);
   --body-title-h2-font-size:2rem;
@@ -115,8 +116,10 @@ html {
   --button-background-color-hover: yellow;
   --button-background-color: #fb5f3f;
   --button-font-family:var(--font-family, var(--font-family-bold));
-  --button-font-size:var(--font-size);
+  --button-font-size-mobile:min(16px, 5vw);
+  --button-font-size:0.75rem;
   --button-font-weight:var(--font-weight, var(--font-weight, normal));
-  --button-padding:0.8rem 1.2rem;
+  --button-margin: 0 0.5rem 0.5rem 0;
+  --button-padding:0.5rem 0.75rem;
   --button-width:auto;
 }
