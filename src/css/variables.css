@@ -114,7 +114,10 @@ html {
 
   /* --- BUTTON --- */
   --button-background-color-hover: yellow;
-  --button-background-color: #fb5f3f;
+  --button-background-color-primary: #fb5f3f;
+  --button-background-color-secondary: #FFFFFF;
+  --button-color-primary: #FFFFFF;
+  --button-color-secondary: #000000;
   --button-font-family:var(--font-family, var(--font-family-bold));
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
