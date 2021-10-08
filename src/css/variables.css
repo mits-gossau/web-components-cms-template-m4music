@@ -22,8 +22,15 @@ html {
   --header-background-color: var(--background-color);
   --header-content-spacing: var(--content-spacing);
   --header-content-width: var(--content-width);
-  --header-height: 185px;
+  --header-content-width-mobile: var(--content-width);
+  --header-height: 176px;
+  --header-height-mobile:min(6rem, 20vw);
   --header-position: static;
+  --header-logo-width:195px;
+  --header-logo-height: 32px;
+  --header-logo-height-mobile: min(16px, 8vw);
+  --header-logo-justify-content: start;
+
 
   /* --- BODY --- */
   --body-background-color: var(--background-color);

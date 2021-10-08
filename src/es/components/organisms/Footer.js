@@ -14,43 +14,43 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * @attribute {}
  * @css {
  * NOTE: grid-area: footer;
- * var(--background-color, black)
- * var(--z-index, 100)
- * var(--content-spacing, 0) auto
- * var(--content-width, 80%)
+ * var(--a-color-hover, #FFFFFF)
+ * var(--a-font-size-mobile, 1em)
+ * var(--a-link-content-spacing, 0)
+ * var(--a-link-display-mobile)
+ * var(--a-link-display)
  * var(--align-content, normal)
+ * var(--background-color, black)
  * var(--border-top, 0)
  * var(--box-sizing, content-box)
  * var(--color, white)
+ * var(--content-spacing-mobile, 0) auto;
+ * var(--content-spacing, 0) auto
+ * var(--content-width-mobile, 80%)
+ * var(--content-width, 80%)
  * var(--display, flex)
+ * var(--div-padding-mobile, 0)
+ * var(--div-padding, 0)
+ * var(--engagement-padding-mobile, 0)
+ * var(--engagement-text-max-width, auto)
+ * var(--flex-direction-mobile, column)
  * var(--flex-direction, row)
  * var(--justify-content, normal)
- * var(--padding, 0)
- * var(--ul-list-style-type, none)
- * var(--ul-margin, 0)
- * var(--ul-padding, 0)
  * var(--li-padding, 0)
+ * var(--meta-font-size-mobile, 1em)
  * var(--meta-font-size, 1em)
  * var(--meta-padding, 0)
- * var(--engagement-text-max-width, auto)
+ * var(--padding, 0)
  * var(--ul-li-padding, 0)
- * var(--div-padding, 0)
- * var(--a-color-hover, #FFFFFF)
- * var(--a-link-display-mobile)
- * var(--a-link-display)
- * var(--a-link-content-spacing, 0)
- * var(--content-spacing-mobile, 0) auto;
- * var(--content-width-mobile, 80%)
- * var(--flex-direction-mobile, column)
+ * var(--ul-list-style-type, none)
  * var(--ul-margin-mobile, 0.5em 0)
- * var(--engagement-padding-mobile, 0)
- * var(--meta-font-size-mobile, 1em)
- * var(--a-font-size-mobile, 1em)
- * var(--div-padding-mobile, 0)
+ * var(--ul-margin, 0)
+ * var(--ul-padding, 0)
+ * var(--z-index, 100)
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -60,7 +60,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
     
       :host {
