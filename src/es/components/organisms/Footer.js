@@ -175,6 +175,10 @@ export default class Footer extends BaseFooter {
         :host .icons div {
           padding:var(--icons-div-padding-mobile, 1em);
         }
+        :host .icons div > img {
+          width: var(--icons-img-width-mobile, 1em);
+          height: var(--icons-img-height-mobile, 1em);
+        }
       }
     `
   }
