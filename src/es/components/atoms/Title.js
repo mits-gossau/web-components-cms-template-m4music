@@ -15,7 +15,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class Title extends Shadow() {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -25,7 +25,7 @@ export default class Title extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -34,7 +34,7 @@ export default class Title extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML () {
+  shouldComponentRenderHTML() {
     return !this.root.querySelector(`${this.type}`)
   }
 
@@ -43,7 +43,7 @@ export default class Title extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */ `
     :host :is(h1, h2, h3, h4, h5, h6) {
       --font-family: var(--h-font-family, var(--font-family, inherit));
@@ -101,13 +101,22 @@ export default class Title extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
 
       :host h1 {
-       /* font-size:var(--h1-font-size-mobile, 3em);*/
+        font-size:var(--h1-font-size-mobile, 6em);
       }
-  
+      :host h2 {
+        font-size:var(--h2-font-size-mobile, 5em);
+      }
+      :host h3 {
+        font-size:var(--h3-font-size-mobile, 4em);
+      }
+      :host h4 {
+        font-size:var(--h4-font-size-mobile, 3em);
+      }
+      :host h5 {
+        font-size:var(--h5-font-size-mobile, 2em);
+      }  
       :host h6 {
         font-size:var(--h6-font-size-mobile, 1em);
-        margin: var(--h6-margin-mobile, 0);
-        padding:var(--h6-padding-mobile, 0);
       }
     }
   `
@@ -118,14 +127,14 @@ export default class Title extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML () {
+  renderHTML() {
     this.html = `<${this.type}>${this.getAttribute('title') || 'No title attribute set!'}</${this.type}>`
   }
 
   /**
    * get title type
    */
-  get type () {
+  get type() {
     return this.getAttribute('type') || 'h1'
   }
 }
