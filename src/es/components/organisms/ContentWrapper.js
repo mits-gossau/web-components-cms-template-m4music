@@ -8,10 +8,17 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * As an organism, this component shall hold molecules and/or atoms
  *
  * @export
- * @class Wrapper
+ * @class ContentWrapper
  * @type {CustomElementConstructor}
- * @attribute {}
- * @css {}
+ * @attribute {
+ * {number} [columns=3] example 3 column container
+ * }
+ * @css {
+ * var(--margin-bottom, 0)
+ * var(--div-margin, 0)
+ * var(--margin-bottom-mobile, 0)
+ * var(--div-margin-mobile, 0)
+ * }
  */
 export default class ContentWrapper extends Shadow() {
   connectedCallback () {
@@ -56,7 +63,7 @@ export default class ContentWrapper extends Shadow() {
       margin:var(--div-margin, 0);
     }
     :host > section > div:last-of-type {
-      margin:0 0 0 0;
+      margin:0;
     }
     :host p {
       margin:0;
