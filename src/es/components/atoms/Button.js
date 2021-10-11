@@ -31,6 +31,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * var(--padding, 1em)
  * var(--width, 100%)
  * var(--width-mobile, 100%)
+ * }
  */
 export default class Button extends Shadow() {
   constructor (...args) {
@@ -120,6 +121,7 @@ export default class Button extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
         font-size: var(--font-size-mobile, 1em);
+        margin: var(--margin-mobile, 1em);
         width: var(--width-mobile, 100%);
       }
     }

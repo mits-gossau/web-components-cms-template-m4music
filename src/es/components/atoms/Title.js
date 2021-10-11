@@ -58,6 +58,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * var(--h6-font-weight, var(--font-weight, normal))
  * var(--h6-margin, var(--margin, 0))
  * var(--h6-padding, var(--padding, 0))
+ * }
  */
 export default class Title extends Shadow() {
   connectedCallback () {

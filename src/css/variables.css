@@ -51,10 +51,16 @@ html {
   --body-title-h5-font-size-mobile:min(1rem, 4vw);
   --body-title-h6-font-size:0.75rem;
   --body-title-h6-font-size-mobile:min(0.9rem, 3vw);
-  --body-title-h-margin:0 0 16px;
+  --body-title-h-margin: 0 0 min(0.5rem, 3vw) 0;
   --body-title-h-padding:0;
   --body-title-h-font-weight:normal;
   --body-title-h-color:var(--color, white); 
+
+  /* --- CONTENT-WRAPPER --- */
+  --body-content-wrapper-margin-bottom:3rem;
+  --body-content-wrapper-margin-bottom-mobile:2rem;
+  --body-content-wrapper-div-margin:0 2rem 0 0;
+  --body-content-wrapper-div-margin-mobile:0 0 2rem 0;
 
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
@@ -122,7 +128,8 @@ html {
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
   --button-font-weight:var(--font-weight, var(--font-weight, normal));
-  --button-margin: 0 0.5rem 0.5rem 0;
+  --button-margin: 1rem 0.5rem 0.5rem 0;
+  --button-margin-mobile: 0.5rem 0 0 0;
   --button-padding:0.5rem 0.75rem;
   --button-width:auto;
 }
