@@ -14,7 +14,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class ContentWrapper extends Shadow() {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -24,7 +24,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -33,7 +33,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('section')
   }
 
@@ -42,7 +42,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */ `
     :host > section {
       align-items:flex-start;
@@ -83,7 +83,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -95,7 +95,7 @@ export default class ContentWrapper extends Shadow() {
    * get number of columns
    *
    */
-  get columns() {
+  get columns () {
     return this.getAttribute('columns') || 1
   }
 }
