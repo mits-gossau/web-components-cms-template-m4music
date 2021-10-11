@@ -11,8 +11,53 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @export
  * @class Title
  * @type {CustomElementConstructor}
- * @attribute {}
- * @css {}
+ * @attribute {
+ * {string} [type] used to determine what h- type is set
+ * }
+ * @css {
+ * var(--h-font-family, var(--font-family, inherit))
+ * var(--h-font-weight, var(--font-weight, normal))
+ * var(--h-line-height, var(--line-height, normal))
+ * var(--h-margin, 0)
+ * var(--h-padding, 0)
+ * var(--h-text-transform, none)
+ * var(--h1-color, var(--h-color, white))
+ * var(--h1-font-family, var(--font-family, inherit))
+ * var(--h1-font-size-mobile, 6em)
+ * var(--h1-font-size, 6em)
+ * var(--h1-font-weight, var(--font-weight, normal))
+ * var(--h1-margin, var(--margin, 0))
+ * var(--h1-padding, var(--padding, 0))
+ * var(--h2-color, var(--h-color, white))
+ * var(--h2-font-size-mobile, 5em)
+ * var(--h2-font-size, 5em)
+ * var(--h2-font-weight, var(--font-weight, normal))
+ * var(--h2-margin, var(--margin, 0))
+ * var(--h2-padding, var(--padding, 0))
+ * var(--h3-color, var(--h-color, white))
+ * var(--h3-font-size-mobile, 4em)
+ * var(--h3-font-size, 4em)
+ * var(--h3-font-weight, var(--font-weight, normal))
+ * var(--h3-margin, var(--margin, 0))
+ * var(--h3-padding, var(--padding, 0))
+ * var(--h4-color, var(--h-color, white))
+ * var(--h4-font-size-mobile, 3em)
+ * var(--h4-font-size, 3em)
+ * var(--h4-font-weight, var(--font-weight, normal))
+ * var(--h4-margin, var(--margin, 0))
+ * var(--h4-padding, var(--padding, 0))
+ * var(--h5-color, var(--h-color, white))
+ * var(--h5-font-size-mobile, 2em)
+ * var(--h5-font-size, 2em)
+ * var(--h5-font-weight, var(--font-weight, normal))
+ * var(--h5-margin, var(--margin, 0))
+ * var(--h5-padding, var(--padding, 0))
+ * var(--h6-color, var(--h-color, white))
+ * var(--h6-font-size-mobile, 1em)
+ * var(--h6-font-size, 1em)
+ * var(--h6-font-weight, var(--font-weight, normal))
+ * var(--h6-margin, var(--margin, 0))
+ * var(--h6-padding, var(--padding, 0))
  */
 export default class Title extends Shadow() {
   connectedCallback () {
@@ -53,7 +98,6 @@ export default class Title extends Shadow() {
       --padding: var(--h-padding, 0);
       --text-transform: var(--h-text-transform, none);
     }
-
     :host h1 {
       color: var(--h1-color, var(--h-color, white));
       font-family:var(--h1-font-family, var(--font-family, inherit));
@@ -97,9 +141,7 @@ export default class Title extends Shadow() {
       margin: var(--h6-margin, var(--margin, 0));
       padding:var(--h6-padding, var(--padding, 0));
     }
-  
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-
       :host h1 {
         font-size:var(--h1-font-size-mobile, 6em);
       }
@@ -133,6 +175,7 @@ export default class Title extends Shadow() {
 
   /**
    * get title type
+   *
    */
   get type () {
     return this.getAttribute('type') || 'h1'

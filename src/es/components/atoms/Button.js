@@ -12,8 +12,25 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @export
  * @class Button
  * @type {CustomElementConstructor}
- * @attribute {}
- * @css {}
+ * @attribute {
+ * {string} [type] used to determine what type is set
+ * }
+ * @css {
+ * var(--background-color-${this.type}, transparent)
+ * var(--background-color-hover, --background-color)
+ * var(--color-hover, --color)
+ * var(--border, none)
+ * var(--color-${this.type}, white)
+ * var(--cursor, pointer)
+ * var(--font-family, var(--font-family-bold))
+ * var(--font-size-mobile, 1em)
+ * var(--font-size, 1em)
+ * var(--font-weight, var(--font-weight, normal))
+ * var(--height, 100%)
+ * var(--margin, 1em)
+ * var(--padding, 1em)
+ * var(--width, 100%)
+ * var(--width-mobile, 100%)
  */
 export default class Button extends Shadow() {
   constructor (...args) {
