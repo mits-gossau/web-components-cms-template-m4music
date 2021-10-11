@@ -57,10 +57,10 @@ html {
   --body-title-h-color:var(--color, white); 
 
   /* --- CONTENT-WRAPPER --- */
-  --body-content-wrapper-margin-bottom:3rem;
-  --body-content-wrapper-margin-bottom-mobile:2rem;
-  --body-content-wrapper-div-margin:0 2rem 0 0;
   --body-content-wrapper-div-margin-mobile:0 0 2rem 0;
+  --body-content-wrapper-div-margin:0 2rem 0 0;
+  --body-content-wrapper-margin-bottom-mobile:2rem;
+  --body-content-wrapper-margin-bottom:3rem;
 
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
@@ -109,7 +109,7 @@ html {
   --footer-engagement-logo-text-font-size:0.5rem;
   --footer-engagement-logo-text-line-height:1.4em;
   --footer-engagement-logo-text-padding-mobile:0.5rem 0 0 2.5rem;
-  --footer-engagement-logo-text-padding:.5rem 0 0 2.1rem;
+  --footer-engagement-logo-text-padding:0.5rem 0 0 2.1rem;
   --footer-engagement-logo-text-width-mobile:auto;
   --footer-engagement-logo-text-width:30vw;
   --footer-engagement-text-max-width:max(17rem, 4vw);
@@ -128,7 +128,7 @@ html {
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
   --button-font-weight:var(--font-weight, var(--font-weight, normal));
-  --button-margin: 1rem 0.5rem 0.5rem 0;
+  --button-margin:1rem 0.5rem 0.5rem 0;
   --button-margin-mobile: 0.5rem 0 0 0;
   --button-padding:0.5rem 0.75rem;
   --button-width:auto;

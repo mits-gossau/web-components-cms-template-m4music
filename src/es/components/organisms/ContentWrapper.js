@@ -14,14 +14,15 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * {number} [columns=3] example 3 column container
  * }
  * @css {
- * var(--margin-bottom, 0)
+ * var(--div-margin-mobile, 0)
  * var(--div-margin, 0)
  * var(--margin-bottom-mobile, 0)
- * var(--div-margin-mobile, 0)
+ * var(--margin-bottom, 0)
  * }
  */
 export default class ContentWrapper extends Shadow() {
-  connectedCallback () {
+
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -31,7 +32,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -40,7 +41,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML () {
+  shouldComponentRenderHTML() {
     return !this.root.querySelector('section')
   }
 
@@ -49,10 +50,10 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */ `
     :host > section {
-      align-items:flex-start;
+      align-items:${this.contentAlign.flexAlignItems};
       display:flex;
       flex-direction:row;
       justify-content:space-between;
@@ -61,6 +62,7 @@ export default class ContentWrapper extends Shadow() {
     :host > section > div {
       flex-basis:${100 / this.columns}%;
       margin:var(--div-margin, 0);
+      text-align:${this.contentAlign.textAlign}
     }
     :host > section > div:last-of-type {
       margin:0;
@@ -70,6 +72,7 @@ export default class ContentWrapper extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
+        align-items:${this.contentAlignMobile.flexAlignItems};
         display:flex;
         flex-direction:column;
         margin-bottom:var(--margin-bottom-mobile, 0);
@@ -77,6 +80,7 @@ export default class ContentWrapper extends Shadow() {
       :host > section > div {
         flex-basis:${100 / this.columns}%;
         margin:var(--div-margin-mobile, 0);
+        text-align:${this.contentAlignMobile.textAlign}
       }
       :host > section > div:last-of-type {
         margin:0;
@@ -90,7 +94,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML () {
+  renderHTML() {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -102,7 +106,33 @@ export default class ContentWrapper extends Shadow() {
    * get number of columns
    *
    */
-  get columns () {
+  get columns() {
     return this.getAttribute('columns') || 1
+  }
+
+  /**
+   * 
+   */
+  get contentAlignMobile() {
+    return this.setContentAlign(this.getAttribute('align-content-mobile'))
+  }
+
+  /**
+   * 
+   */
+  get contentAlign() {
+    return this.setContentAlign(this.getAttribute('align-content'))
+  }
+
+  /**
+   * 
+   * @param {*} values 
+   * @returns 
+   */
+  setContentAlign(values) {
+    return {
+      flexAlignItems: values ? 'center' : 'flex-start',
+      textAlign: values ? values : 'left'
+    }
   }
 }
