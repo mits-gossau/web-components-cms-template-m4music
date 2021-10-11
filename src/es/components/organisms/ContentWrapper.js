@@ -14,7 +14,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class ContentWrapper extends Shadow() {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -24,7 +24,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -33,7 +33,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('section')
   }
 
@@ -42,18 +42,18 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */ `
     :host > section {
       align-items:flex-start;
       display:flex;
       flex-direction:row;
       justify-content:space-between;
-      margin-bottom:3rem;
+      margin-bottom:var(--margin-bottom, 0);
     }
     :host > section > div {
       flex-basis:${100 / this.columns}%;
-      margin:0 2rem 0 0S;
+      margin:var(--div-margin, 0);
     }
     :host > section > div:last-of-type {
       margin:0 0 0 0;
@@ -65,11 +65,11 @@ export default class ContentWrapper extends Shadow() {
       :host > section {
         display:flex;
         flex-direction:column;
-        margin-bottom:2rem;
+        margin-bottom:var(--margin-bottom-mobile, 0);
       }
       :host > section > div {
         flex-basis:${100 / this.columns}%;
-        margin:0 0 1rem 0;
+        margin:var(--div-margin-mobile, 0);
       }
       :host > section > div:last-of-type {
         margin:0 0 0 0;
@@ -83,7 +83,7 @@ export default class ContentWrapper extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -91,13 +91,11 @@ export default class ContentWrapper extends Shadow() {
     this.html = section
   }
 
-
   /**
    * get number of columns
-   * 
+   *
    */
-  get columns() {
+  get columns () {
     return this.getAttribute('columns') || 1
   }
-
 }

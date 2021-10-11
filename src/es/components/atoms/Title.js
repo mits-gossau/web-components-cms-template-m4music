@@ -61,7 +61,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * }
  */
 export default class Title extends Shadow() {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -71,7 +71,7 @@ export default class Title extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -80,7 +80,7 @@ export default class Title extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector(`${this.type}`)
   }
 
@@ -89,7 +89,7 @@ export default class Title extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */ `
     :host :is(h1, h2, h3, h4, h5, h6) {
       --font-family: var(--h-font-family, var(--font-family, inherit));
@@ -170,7 +170,7 @@ export default class Title extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     this.html = `<${this.type}>${this.getAttribute('title') || 'No title attribute set!'}</${this.type}>`
   }
 
@@ -178,7 +178,7 @@ export default class Title extends Shadow() {
    * get title type
    *
    */
-  get type() {
+  get type () {
     return this.getAttribute('type') || 'h1'
   }
 }
