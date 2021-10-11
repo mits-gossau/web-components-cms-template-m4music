@@ -18,6 +18,7 @@ html {
   --font-size:32px;
   --html-background-color:var(--background-color);
 
+
   /* --- HEADER --- */
   --header-background-color:var(--background-color);
   --header-content-spacing:var(--content-spacing);
@@ -51,7 +52,7 @@ html {
   --body-title-h5-font-size-mobile:min(1rem, 4vw);
   --body-title-h6-font-size:0.75rem;
   --body-title-h6-font-size-mobile:min(0.9rem, 3vw);
-  --body-title-h-margin:0 0 16px;
+  --body-title-h-margin: 0 0 min(0.5rem, 3vw) 0;
   --body-title-h-padding:0;
   --body-title-h-font-weight:normal;
   --body-title-h-color:var(--color, white); 
