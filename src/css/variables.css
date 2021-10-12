@@ -133,12 +133,14 @@ html {
   --footer-ul-padding:0;
   --footer-text-decoration:none;
   --footer-text-decoration-hover:none;
-  --footer-icons-div-padding:0.25rem 0;
-  --footer-icons-div-padding-mobile:0.25rem 0.5rem 0 0;
-  --footer-icons-img-width:0.9rem;
-  --footer-icons-img-height:0.9rem;
-  --footer-icons-img-width-mobile:min(1.2rem, 5vw);
-  --footer-icons-img-height-mobile:min(1.2rem, 5vw);
+  --footer-social-logo-padding:0;
+  --footer-social-logo-padding-mobile:0.25rem 0.5rem 0 0;
+  --footer-social-logo-width:0.8rem;
+  --footer-social-logo-height:0.8rem;
+  --footer-social-logo-object-fit: fill;
+  --footer-social-logo-width-mobile:min(1.2rem, 5vw);
+  --footer-social-logo-height-mobile:min(1.2rem, 5vw);
+
   
   /* --- FOOTER - ENGAGEMENT --- */
   --footer-engagement-logo-align-items:flex-start;

@@ -22,7 +22,7 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * }
  */
 export default class Wrapper extends BaseBody {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -32,7 +32,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -41,7 +41,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML () {
+  shouldComponentRenderHTML() {
     return !this.root.querySelector('section')
   }
 
@@ -50,7 +50,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     const bodyCss = this.css.replace(/\s>\smain/g, '')
     this.css = ''
@@ -71,7 +71,7 @@ export default class Wrapper extends BaseBody {
       list-style-type: none;
     }
     :host ul > li  {
-      background: url('../../../img/check.png') no-repeat 0 0.3rem transparent; 
+      background: url('../../../img/check.svg') no-repeat 0 0.3rem transparent; 
       background-size: var(--wrapper-li-background-size);
       list-style-type: none;
       padding:var(--wrapper-li-padding, 0);
@@ -112,7 +112,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderHTML () {
+  renderHTML() {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -124,21 +124,21 @@ export default class Wrapper extends BaseBody {
    * get number of columns
    *
    */
-  get columns () {
+  get columns() {
     return this.getAttribute('columns') || 1
   }
 
   /**
    * value for content align on mobile
    */
-  get contentAlignMobile () {
+  get contentAlignMobile() {
     return this.setContentAlign(this.getAttribute('align-content-mobile'))
   }
 
   /**
    * value for content align
    */
-  get contentAlign () {
+  get contentAlign() {
     return this.setContentAlign(this.getAttribute('align-content'))
   }
 
@@ -147,7 +147,7 @@ export default class Wrapper extends BaseBody {
    * @param {*} value
    * @returns
    */
-  setContentAlign (value) {
+  setContentAlign(value) {
     return {
       flexAlignItems: value ? 'center' : 'flex-start',
       textAlign: value || 'left'

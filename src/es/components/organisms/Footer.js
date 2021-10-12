@@ -54,7 +54,7 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -64,7 +64,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
       :host {
         background-color:var(--background-color, black);
@@ -129,13 +129,6 @@ export default class Footer extends BaseFooter {
         flex-direction:row;
         justify-content:space-between;
       }
-      :host .icons div {
-        padding:var(--icons-div-padding, 1em);
-      }
-      :host .icons div > img {
-        width:var(--icons-img-width, 1em);
-        height:var(--icons-img-height, 1em);
-      }
       :host a-link {
         --color-hover:var(--a-color-hover, #FFFFFF);
         --display-mobile:var(--a-link-display-mobile);
@@ -183,13 +176,6 @@ export default class Footer extends BaseFooter {
           flex-direction:row;
           justify-content:flex-start;
           align-items:center;
-        }
-        :host .icons div {
-          padding:var(--icons-div-padding-mobile, 1em);
-        }
-        :host .icons div > img {
-          width:var(--icons-img-width-mobile, 1em);
-          height:var(--icons-img-height-mobile, 1em);
         }
       }
     `
