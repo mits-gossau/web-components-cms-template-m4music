@@ -22,8 +22,7 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * }
  */
 export default class Wrapper extends BaseBody {
-
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -33,7 +32,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -42,7 +41,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('section')
   }
 
@@ -51,14 +50,14 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     super.renderCSS()
     const bodyCss = this.css.replace(/\s>\smain/g, '')
     this.css = ''
     this._css.textContent = bodyCss
     this.css = /* css */ `
     :host > section {
-      ${this.hasAttribute('no-space') ? `--wrapper-margin-bottom: 0` : ''};
+      ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom: 0' : ''};
       align-items:${this.contentAlign.flexAlignItems};
       display:flex;
       flex-direction:row;
@@ -88,7 +87,7 @@ export default class Wrapper extends BaseBody {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
-        ${this.hasAttribute('no-space') ? `--wrapper-margin-bottom-mobile: 0` : ''};
+        ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
         align-items:${this.contentAlignMobile.flexAlignItems};
         display:flex;
         flex-direction:column;
@@ -113,7 +112,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -125,33 +124,33 @@ export default class Wrapper extends BaseBody {
    * get number of columns
    *
    */
-  get columns() {
+  get columns () {
     return this.getAttribute('columns') || 1
   }
 
   /**
    * value for content align on mobile
    */
-  get contentAlignMobile() {
+  get contentAlignMobile () {
     return this.setContentAlign(this.getAttribute('align-content-mobile'))
   }
 
   /**
    * value for content align
    */
-  get contentAlign() {
+  get contentAlign () {
     return this.setContentAlign(this.getAttribute('align-content'))
   }
 
   /**
    * set flex align items and text align value
-   * @param {*} value 
-   * @returns 
+   * @param {*} value
+   * @returns
    */
-  setContentAlign(value) {
+  setContentAlign (value) {
     return {
       flexAlignItems: value ? 'center' : 'flex-start',
-      textAlign: value ? value : 'left'
+      textAlign: value || 'left'
     }
   }
 }
