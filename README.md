@@ -7,14 +7,12 @@ Using web-components-cms-template Repository
 
 ## Web Components
 
-- [ ] Title
 - [ ] Footer
 - [ ] Header
 - [ ] Logo
-- [ ] Content-Text
+- [ ] Content-Wrapper
 - [ ] Button
 - [ ] Video
-- [ ] Text-Container
 - [ ] Link
 - [ ] Card-Container
 - [ ] Highlight-Box
