@@ -172,6 +172,12 @@ export default class Footer extends BaseFooter {
         :host .footer__nav > div {
           padding:var(--div-padding-mobile, 0);
         }
+        :host .footer__nav > div > h6 {
+          font-size:var(--title-h6-font-size-mobile, inherit);
+          padding:var(--title-h6-padding-mobile, 0);
+          font-weight:var(--title-h6-font-weight-mobile, normal);
+          margin:var(--title-h6-margin-mobile, 0);
+        }
         :host .icons {
           display:flex;
           flex-direction:row;

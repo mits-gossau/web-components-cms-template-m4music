@@ -99,7 +99,7 @@ html {
   
 
   /* --- CONTENT-WRAPPER --- */
-  --content-wrapper-div-margin-mobile:0 0 2rem 0;
+  --content-wrapper-div-margin-mobile:0;
   --content-wrapper-div-margin:0 2rem 0 0;
   --content-wrapper-margin-bottom-mobile:2rem;
   --content-wrapper-margin-bottom:3rem;

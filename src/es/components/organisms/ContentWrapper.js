@@ -66,6 +66,9 @@ export default class ContentWrapper extends BaseBody {
       margin-bottom:var(--content-wrapper-margin-bottom, 0);
       width: 100% !important;
     }
+    :host ul  {
+      margin:var(--ul-margin, 0);
+    }
     :host > section > div  {
       flex-basis:${100 / this.columns}%;
       margin:var(--content-wrapper-div-margin, 0);
