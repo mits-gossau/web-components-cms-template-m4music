@@ -13,10 +13,13 @@ html {
   --content-spacing:0;
   --content-width-not-web-component:85%;
   --content-width:85%;
+  --content-width-mobile:85%;
   --font-family:"GillSansMTMedium", sans-serif;
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
   --html-background-color:var(--background-color);
+  --p-margin:0 0 1rem;
+  --p-margin-mobile: 0 0 1.35rem;
 
   /* --- HEADER --- */
   --header-background-color:var(--background-color);
@@ -32,35 +35,74 @@ html {
   --header-logo-justify-content:start;
 
   /* --- BODY --- */
-  --body-background-color:var(--background-color);
-  --body-content-spacing:var(--content-spacing);
-  --body-content-width-not-web-component:var(--content-width);
-  --body-content-width:var(--content-width);
-  --body-margin-bottom:4.85rem;
-  --body-p-margin:0 0 1rem;
-  --body-p-margin-mobile: 0 0 1.35rem;
-  --body-title-h1-font-size:3rem;
-  --body-title-h1-font-size-mobile:min(1.8rem, 8vw);
-  --body-title-h2-font-size:2rem;
-  --body-title-h2-font-size-mobile:min(1.6rem, 7vw);
-  --body-title-h3-font-size:1.5rem;
-  --body-title-h3-font-size-mobile:min(1.35rem, 6vw);
-  --body-title-h4-font-size:1.25rem;
-  --body-title-h4-font-size-mobile:min(1.25rem, 5vw);
-  --body-title-h5-font-size:1rem;
-  --body-title-h5-font-size-mobile:min(1rem, 4vw);
-  --body-title-h6-font-size:0.75rem;
-  --body-title-h6-font-size-mobile:min(0.9rem, 3vw);
-  --body-title-h-margin: 0 0 min(0.5rem, 3vw) 0;
-  --body-title-h-padding:0;
-  --body-title-h-font-weight:normal;
-  --body-title-h-color:var(--color, white); 
+  --h-title-margin: 0 0 min(0.5rem, 3vw) 0;
+  --h-title-padding:0;
+  --h-title-font-weight:normal;
+  --h-title-text-transform: uppercase;
+
+  --h1-color:var(--color);
+  --h1-font-family:var(--font-family);
+  --h1-margin:var(--h-title-margin);
+  --h1-padding:var(--h-title-padding);
+  --h1-font-weight: var(--h-title-font-weight);
+  --h1-text-transform: var(--h-title-text-transform);
+  --h1-font-size:3rem;
+  --h1-font-size-mobile:min(1.8rem, 8vw);
+
+  --h2-color:var(--color);
+  --h2-font-family:var(--font-family);
+  --h2-margin:var(--h-title-margin);
+  --h2-padding:var(--h-title-padding);
+  --h2-font-weight: var(--h-title-font-weight);
+  --h2-text-transform: var(--h-title-text-transform);
+  --h2-font-size:2rem;
+  --h2-font-size-mobile:min(1.6rem, 7vw);
+
+  --h3-color:var(--color);
+  --h3-font-family:var(--font-family);
+  --h3-margin:var(--h-title-margin);
+  --h3-padding:var(--h-title-padding);
+  --h3-font-weight: var(--h-title-font-weight);
+  --h3-text-transform: var(--h-title-text-transform);
+  --h3-font-size:1.5rem;
+  --h3-font-size-mobile:min(1.35rem, 6vw);
+
+  --h4-color:var(--color);
+  --h4-font-family:var(--font-family);
+  --h4-margin:var(--h-title-margin);
+  --h4-padding:var(--h-title-padding);
+  --h4-font-weight: var(--h-title-font-weight);
+  --h4-text-transform: var(--h-title-text-transform);
+  --h4-font-size:1.25rem;
+  --h4-font-size-mobile:min(1.25rem, 5vw);
+
+  --h5-color:var(--color);
+  --h5-font-family:var(--font-family);
+  --h5-margin:var(--h-title-margin);
+  --h5-padding:var(--h-title-padding);
+  --h5-font-weight: var(--h-title-font-weight);
+  --h5-text-transform: var(--h-title-text-transform);
+  --h5-font-size:1rem;
+  --h5-font-size-mobile:min(1rem, 4vw);
+
+  --h6-color:var(--color);
+  --h6-font-family:var(--font-family);
+  --h6-margin:var(--h-title-margin);
+  --h6-padding:var(--h-title-padding);
+  --h6-font-weight: var(--h-title-font-weight);
+  --h6-text-transform: var(--h-title-text-transform);
+  --h6-font-size:0.75rem;
+  --h6-font-size-mobile:min(0.9rem, 3vw);
+
+
+
+  
 
   /* --- CONTENT-WRAPPER --- */
-  --body-content-wrapper-div-margin-mobile:0 0 2rem 0;
-  --body-content-wrapper-div-margin:0 2rem 0 0;
-  --body-content-wrapper-margin-bottom-mobile:2rem;
-  --body-content-wrapper-margin-bottom:3rem;
+  --content-wrapper-div-margin-mobile:0 0 2rem 0;
+  --content-wrapper-div-margin:0 2rem 0 0;
+  --content-wrapper-margin-bottom-mobile:2rem;
+  --content-wrapper-margin-bottom:3rem;
 
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
@@ -128,7 +170,7 @@ html {
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
   --button-font-weight:var(--font-weight, var(--font-weight, normal));
-  --button-margin:1rem 0.5rem 0.5rem 0;
+  --button-margin:0 0.5rem 0.5rem 0;
   --button-margin-mobile: 0.5rem 0 0 0;
   --button-padding:0.5rem 0.75rem;
   --button-width:auto;

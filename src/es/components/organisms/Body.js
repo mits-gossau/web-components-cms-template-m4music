@@ -16,19 +16,19 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * }
  */
 export default class Body extends BaseBody {
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */ `
     :host {
       margin-bottom: var(--margin-bottom, 0);
     }
     :host > main > * {
-      margin: var(--content-spacing, 0) auto;
-      width: var(--content-width, 80%);
+      margin:var(--content-spacing, 0) auto;
+      width:var(--content-width, 80%);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > main > *[content-width] {
-        width: var(--content-width-mobile, 80%);
+        width:var(--content-width-mobile, 80%);
         margin-bottom: var(--content-spacing-mobile);
       }
     }

@@ -1,5 +1,6 @@
 // @ts-check
-import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
+//import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
+import BaseBody from '../web-components-cms-template/src/es/components/organisms/Body.js'
 
 /* global self */
 
@@ -14,13 +15,13 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * {number} [columns=3] example 3 column container
  * }
  * @css {
- * var(--div-margin-mobile, 0)
- * var(--div-margin, 0)
- * var(--margin-bottom-mobile, 0)
- * var(--margin-bottom, 0)
+ * var(--content-wrapper-div-margin-mobile, 0)
+ * var(--content-wrapper-div-margin, 0)
+ * var(--content-wrapper-margin-bottom-mobile, 0)
+ * var(--content-wrapper-margin-bottom, 0)
  * }
  */
-export default class ContentWrapper extends Shadow() {
+export default class ContentWrapper extends BaseBody {
 
   connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
@@ -51,35 +52,41 @@ export default class ContentWrapper extends Shadow() {
    * @return {void}
    */
   renderCSS() {
+    super.renderCSS()
+    const bodyCss = this.css.replace(/\s>\smain/g, '')
+    this.css = ''
+    this._css.textContent = bodyCss
     this.css = /* css */ `
     :host > section {
+      ${this.hasAttribute('no-space') ? `--content-wrapper-margin-bottom: 0` : ''};
       align-items:${this.contentAlign.flexAlignItems};
       display:flex;
       flex-direction:row;
       justify-content:space-between;
-      margin-bottom:var(--margin-bottom, 0);
+      margin-bottom:var(--content-wrapper-margin-bottom, 0);
+      width: 100% !important;
     }
-    :host > section > div {
+    :host > section > div  {
       flex-basis:${100 / this.columns}%;
-      margin:var(--div-margin, 0);
+      margin:var(--content-wrapper-div-margin, 0);
       text-align:${this.contentAlign.textAlign}
     }
     :host > section > div:last-of-type {
       margin:0;
     }
-    :host p {
-      margin:0;
-    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
+        ${this.hasAttribute('no-space') ? `--content-wrapper-margin-bottom-mobile: 0` : ''};
         align-items:${this.contentAlignMobile.flexAlignItems};
         display:flex;
         flex-direction:column;
-        margin-bottom:var(--margin-bottom-mobile, 0);
+        margin-bottom:var(--content-wrapper-margin-bottom-mobile, 0);
       }
-      :host > section > div {
+      :host > section > div  {
         flex-basis:${100 / this.columns}%;
-        margin:var(--div-margin-mobile, 0);
+        margin:var(--content-wrapper-div-margin-mobile, 0);
+      }
+      :host > section > div *  {
         text-align:${this.contentAlignMobile.textAlign}
       }
       :host > section > div:last-of-type {
@@ -111,28 +118,28 @@ export default class ContentWrapper extends Shadow() {
   }
 
   /**
-   * 
+   * value for content align on mobile
    */
   get contentAlignMobile() {
     return this.setContentAlign(this.getAttribute('align-content-mobile'))
   }
 
   /**
-   * 
+   * value for content align
    */
   get contentAlign() {
     return this.setContentAlign(this.getAttribute('align-content'))
   }
 
   /**
-   * 
-   * @param {*} values 
+   * set flex align item and text align value
+   * @param {*} value 
    * @returns 
    */
-  setContentAlign(values) {
+  setContentAlign(value) {
     return {
-      flexAlignItems: values ? 'center' : 'flex-start',
-      textAlign: values ? values : 'left'
+      flexAlignItems: value ? 'center' : 'flex-start',
+      textAlign: value ? value : 'left'
     }
   }
 }
