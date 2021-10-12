@@ -15,10 +15,10 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * {n.a} no-space
  * }
  * @css {
- * var(--div-margin-mobile, 0)
- * var(--div-margin, 0)
- * var(--margin-bottom-mobile, 0)
- * var(--margin-bottom, 0)
+ * var(--wrapper-div-margin-mobile, 0)
+ * var(--wrapper-div-margin, 0)
+ * var(--wrapper-margin-bottom-mobile, 0)
+ * var(--wrapper-margin-bottom, 0)
  * }
  */
 export default class Wrapper extends BaseBody {
@@ -58,51 +58,51 @@ export default class Wrapper extends BaseBody {
     this._css.textContent = bodyCss
     this.css = /* css */ `
     :host > section {
-      ${this.hasAttribute('no-space') ? `--margin-bottom: 0` : ''};
+      ${this.hasAttribute('no-space') ? `--wrapper-margin-bottom: 0` : ''};
       align-items:${this.contentAlign.flexAlignItems};
       display:flex;
       flex-direction:row;
       justify-content:space-between;
-      margin-bottom:var(--margin-bottom, 0);
+      margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
     }
     :host ul  {
-      padding:var(--ul-padding, 0);
-      margin:var(--ul-margin, 0);
+      padding:var(--wrapper-ul-padding, 0);
+      margin:var(--wrapper-ul-margin, 0);
       list-style-type: none;
     }
     :host ul > li  {
       background: url('../../../img/check.png') no-repeat 0 0.3rem transparent; 
-      background-size: var(--li-background-size);
+      background-size: var(--wrapper-li-background-size);
       list-style-type: none;
-      padding:var(--li-padding, 0);
+      padding:var(--wrapper-li-padding, 0);
       vertical-align: middle;
     }
     :host > section > div  {
       flex-basis:${100 / this.columns}%;
-      margin:var(--div-margin, 0);
+      margin:var(--wrapper-div-margin, 0);
       text-align:${this.contentAlign.textAlign}
     }
     :host > section > div:last-of-type {
-      margin:var(--last-margin, 0);
+      margin:var(--wrapper-last-margin, 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
-        ${this.hasAttribute('no-space') ? `--margin-bottom-mobile: 0` : ''};
+        ${this.hasAttribute('no-space') ? `--wrapper-margin-bottom-mobile: 0` : ''};
         align-items:${this.contentAlignMobile.flexAlignItems};
         display:flex;
         flex-direction:column;
-        margin-bottom:var(--margin-bottom-mobile, 0);
+        margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
       }
       :host > section > div  {
         flex-basis:${100 / this.columns}%;
-        margin:var(--div-margin-mobile, 0);
+        margin:var(--wrapper-div-margin-mobile, 0);
       }
       :host > section > div *  {
         text-align:${this.contentAlignMobile.textAlign}
       }
       :host > section > div:last-of-type {
-        margin:var(--last-margin-mobile, 0);
+        margin:var(--wrapper-last-margin-mobile, 0);
       }
     }
   `
@@ -144,7 +144,7 @@ export default class Wrapper extends BaseBody {
   }
 
   /**
-   * set flex align item and text align value
+   * set flex align items and text align value
    * @param {*} value 
    * @returns 
    */
