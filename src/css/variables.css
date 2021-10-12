@@ -99,10 +99,12 @@ html {
   
 
   /* --- CONTENT-WRAPPER --- */
-  --content-wrapper-div-margin-mobile:0;
-  --content-wrapper-div-margin:0 2rem 0 0;
-  --content-wrapper-margin-bottom-mobile:2rem;
-  --content-wrapper-margin-bottom:3rem;
+  --div-margin-mobile:0;
+  --div-margin:0 2rem 0 0;
+  --li-background-size: 1rem;
+  --li-padding:0 0 0.5rem 2rem;
+  --margin-bottom-mobile:2rem;
+  --margin-bottom:3rem;
 
   /* --- FOOTER --- */
   --footer-a-color-hover:#FB5F3F;
