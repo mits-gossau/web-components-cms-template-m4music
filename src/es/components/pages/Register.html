@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=../../../css/variables.css rel=stylesheet>
+  <link href=../../../css/misc.css rel=stylesheet>
+  <link href=../../../css/fonts.css rel=stylesheet>
+  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <!-- NOTE: Remove line Debugging.js below for none localhost -->
+  <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
+  <title>M4Music</title>
+</head>
+
+<body>
+  <p-general>
+    <o-header namespace="header-" namespace-fallback>
+      <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
+    </o-header>
+    <m4music-o-body namespace="body-" namespace-fallback>
+      <div>
+        <m4music-o-wrapper>
+          <div>
+            <h1>Anmelden</h1>
+            <p>Anmeldeschluss bis am 5. Januar 2022 um 23:59. ACHTUNG: Lies vorher das Reglement und den Ablauf des
+              Wettbewerbs gut durch, damit deine Einsendung berücksichtigt werden kann!</p>
+            <m4music-a-button namespace="button-" namespace-fallback type="secondary">Reglement Demotape Clinic
+            </m4music-a-button>
+          </div>
+        </m4music-o-wrapper>
+      </div>
+      <div>
+        <m4music-o-wrapper namespace="register-form-wrapper-">
+          <div>
+            <m-form type="newsletter" namespace-fallback namespace="register-" namespace-children="register-field-"
+              use-html-submit>
+              <form action="" method="post" id="online_form">
+                <label for="Name">Bandname, Artist oder Producer</label>
+                <input id="Name" type="text" required="" value="" name="Name" placeholder="Name hier eingeben..."
+                  autocomplete="off" validation-message="Name ist ungültig">
+                <label for="Firstname">Vorname</label>
+                <input id="Firstname" type="text" required="" value="" name="Vorname"
+                  placeholder="Vorname hier eingeben..." autocomplete="off" validation-message="Vorname ist ungültig">
+                <label for="Email">E-Mail</label>
+                <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
+                  autocomplete="off" validation-message="Ungültige Email Ungültige Email Ungültige Email">
+                <button type="submit">Registrieren</button>
+              </form>
+            </m-form>
+          </div>
+        </m4music-o-wrapper>
+      </div>
+    </m4music-o-body>
+    <m4music-o-footer namespace="footer-" namespace-fallback>
+      <div class="footer__main">
+        <div class="footer__engagement">
+          <a-logo namespace="footer-engagement-logo-" src="../../../img/kulturprozent.svg"
+            href="https://www.migros-engagement.ch/engagement" target="_blank" lang="de">
+            <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der
+              Migros-Gruppe:
+              <br /><a href="http://migros-engagement.ch/" target="_blank">migros-engagement.ch</a>
+            </p>
+          </a-logo>
+        </div>
+        <div class="footer__nav">
+          <div>
+            <h6>ÜBER UNS</h6>
+            <ul>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Team</a></a-link>
+              </li>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Partner</a></a-link>
+              </li>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Festival History</a></a-link>
+              </li>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Locations</a></a-link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6>SERVICES</h6>
+            <ul>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Medien</a></a-link>
+              </li>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">Professionals</a></a-link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6>KONTAKT</h6>
+            <ul>
+              <li>
+                <a-link namespace="footer-" namespace-fallback><a href="#">info@m4music.ch</a></a-link>
+              </li>
+              <li>
+                <div class="icons">
+                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/facebook.svg"
+                    href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
+                  </a-logo>
+                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/instagram.svg"
+                    href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
+                  </a-logo>
+                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/spotify.svg"
+                    href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
+                  </a-logo>
+                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/youtube.svg"
+                    href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
+                  </a-logo>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__meta">
+        <div>
+          <ul>
+            <li>
+              &copy; m4music
+            </li>
+            <li>
+              <a-link namespace-fallback><a href="#">Impressum & Datenschutz</a></a-link>
+            </li>
+            <li>
+              <a-link namespace-fallback><a href="#">Rechliche Hinweise</a></a-link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a href="#"> DE </a></a-link>
+            </li>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a href="#"> FR </a></a-link>
+            </li>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a href="#"> EN </a></a-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </m4music-o-footer>
+  </p-general>
+  <script rel=preload type=module>
+    self.Environment = {
+        mobileBreakpoint: '800px'
+    }
+</script>
+</body>
+
+</html>
