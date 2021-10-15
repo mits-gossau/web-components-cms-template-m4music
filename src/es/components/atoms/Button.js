@@ -109,7 +109,6 @@ export default class Button extends Shadow() {
       font-family: var(--font-family, var(--font-family-bold));
       font-size: var(--font-size, 1em);
       font-weight: var(--font-weight, var(--font-weight, normal));
-      height: var(--height, 100%);
       margin: var(--margin, 1em);
       padding:var(--padding, 1em);
       width: var(--width, 100%);
@@ -120,6 +119,7 @@ export default class Button extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
+        height: var(--height-mobile, 100%);
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);
         width: var(--width-mobile, 100%);
