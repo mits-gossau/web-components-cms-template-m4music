@@ -22,13 +22,34 @@
       <div>
         <m4music-o-wrapper>
           <div>
-
             <h1>Anmelden</h1>
             <p>Anmeldeschluss bis am 5. Januar 2022 um 23:59. ACHTUNG: Lies vorher das Reglement und den Ablauf des
               Wettbewerbs gut durch, damit deine Einsendung berücksichtigt werden kann!</p>
-
+            <m4music-a-button namespace="button-" namespace-fallback type="secondary">Reglement Demotape Clinic
+            </m4music-a-button>
           </div>
-
+        </m4music-o-wrapper>
+      </div>
+      <div>
+        <m4music-o-wrapper>
+          <div>
+            <m-form type="newsletter" namespace-fallback namespace="register-" namespace-children="register-field-"
+              use-html-submit>
+              <form action="https://nlink.migros-kulturprozent-classics.ch/dispatcher/service" method="post"
+                id="online_form">
+                <label for="Name">Name</label>
+                <input id="Name" type="text" required="" value="" name="Name" placeholder="Name hier eingeben..."
+                  autocomplete="off" validation-message="Name ist ungültig">
+                <label for="Firstname">Vorname</label>
+                <input id="Firstname" type="text" required="" value="" name="Vorname"
+                  placeholder="Vorname hier eingeben..." autocomplete="off" validation-message="Vorname ist ungültig">
+                <label for="Email">E-Mail</label>
+                <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
+                  autocomplete="off" validation-message="Ungültige Email Ungültige Email Ungültige Email">
+                <button type="submit">Registrieren</button>
+              </form>
+            </m-form>
+          </div>
         </m4music-o-wrapper>
       </div>
     </m4music-o-body>

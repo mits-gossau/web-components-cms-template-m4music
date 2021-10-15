@@ -156,4 +156,12 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  
+  --register-form-display:flex;
+  --register-form-flex-direction: column;
+  --register-form-align-items: flex-start;
+  --register-form-justify-content: flex-start;
+  --register-form-margin:0;
+  --register-field-text-align:left;
+  --register-field-label-width:100%;
 }
