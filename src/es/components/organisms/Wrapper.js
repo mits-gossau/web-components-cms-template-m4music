@@ -24,7 +24,7 @@ import BaseBody from './Body.js'
  * }
  */
 export default class Wrapper extends BaseBody {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
@@ -34,7 +34,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -43,7 +43,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('section')
   }
 
@@ -52,7 +52,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     super.renderCSS()
     const bodyCss = this.css.replace(/\s>\smain/g, '')
     this.css = ''
@@ -103,7 +103,7 @@ export default class Wrapper extends BaseBody {
    *
    * @return {void}
    */
-  renderHTML() {
+  renderHTML () {
     const section = document.createElement('section')
     Array.from(this.root.children).forEach(node => {
       if (node.tagName !== 'STYLE') section.appendChild(node)
@@ -115,7 +115,7 @@ export default class Wrapper extends BaseBody {
    * get number of columns
    *
    */
-  get columns() {
+  get columns () {
     return this.getAttribute('columns') || 1
   }
 
@@ -124,7 +124,7 @@ export default class Wrapper extends BaseBody {
    * @param {*} alignDirection
    * @returns
    */
-  getAlignment(alignDirection) {
+  getAlignment (alignDirection) {
     const alignment = {
       right: { flex: 'flex-end', text: 'right' },
       center: { flex: 'center', text: 'center' },
