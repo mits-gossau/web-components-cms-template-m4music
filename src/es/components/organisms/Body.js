@@ -26,12 +26,14 @@ export default class Body extends BaseBody {
       margin:var(--content-spacing, 0) auto;
       width:var(--content-width, 80%);
     }
-    :host ul.check  {
+    /* :host ul.check */
+    :host ul{
       padding:var(--wrapper-ul-padding, 0);
       margin:var(--wrapper-ul-margin, 0);
       list-style-type: none;
     }
-    :host ul.check > li  {
+    /* :host ul.check > li */
+    :host ul > li {
       background: url('../../../img/check.svg') no-repeat 0 0.3rem transparent; 
       background-size: var(--wrapper-li-background-size);
       list-style-type: none;
