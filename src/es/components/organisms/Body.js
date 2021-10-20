@@ -27,7 +27,7 @@ export default class Body extends BaseBody {
       width:var(--content-width, 80%);
     }
     /* :host ul.check */
-    :host ul{
+    :host ul {
       padding:var(--wrapper-ul-padding, 0);
       margin:var(--wrapper-ul-margin, 0);
       list-style-type: none;
@@ -39,6 +39,9 @@ export default class Body extends BaseBody {
       list-style-type: none;
       padding:var(--wrapper-li-padding, 0);
       vertical-align: middle;
+    }
+    :host ul > li > p {
+      margin: var(--li-p-margin, 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > main > *[content-width] {
