@@ -5,7 +5,7 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
 html {
-  --background-color: #434343;
+  --background-color: #232323;
   --border-color: #919191;
   --button-background-color-hover: yellow;
   --button-background-color-primary:var(--color-orange);
@@ -27,7 +27,7 @@ html {
   --content-spacing-mobile:var(--content-spacing);
   --content-spacing:0;
   --content-width-mobile:85%;
-  --content-width-not-web-component:85%;
+  --content-width-not-web-component: 85%;
   --content-width:85%;
   --font-family:"GillSansMTMedium", sans-serif;
   --font-size-mobile:min(18px, 5vw);
@@ -183,4 +183,14 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --highlightbox-h3-color: var(--h3-color);
+  --highlightbox-h3-font-size: var(--h3-font-size);
+  --highlightbox-h3-font-family: var(--h3-font-family);
+  --highlightbox-h3-font-weight: var(--h3-font-weight);
+  --highlightbox-h3-line-height: var(--h3-line-height);
+  --highlightbox-h3-text-align: var(--h3-text-align);
+  --highlightbox-h3-word-break: var(--h3-word-break);
+  --highlightbox-h3-text-transform: var(--h3-text-transform);
+  --highlightbox-h3-margin: var(--h3-margin);
+  --highlightbox-h3-padding: var(--h3-padding);
 }
