@@ -8,7 +8,6 @@ export default class Highlightbox extends BaseBody {
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
-    if (this.shouldComponentRenderHTML()) this.renderHTML()
   }
 
 
@@ -30,13 +29,13 @@ export default class Highlightbox extends BaseBody {
   renderCSS () {
     this.css = /* css */`
       :host {
-        background: #434343;
-        padding: 144px 128px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 96px;
+        background: var(--background);
+        padding: var(--padding);
+        display: var(--display);
+        flex-direction: var(--flex-direction);
+        justify-content: var(--justify-content);
+        align-items: var(--align-items);
+        margin-bottom: var(--margin-botton);
       }
       :host > h3 {
         color: var(--h3-color);
@@ -51,7 +50,7 @@ export default class Highlightbox extends BaseBody {
         padding: var(--h3-padding);
       }
       :host > * {
-        text-align: center;
+        text-align: var(--text-align);
       }
     `
   }
