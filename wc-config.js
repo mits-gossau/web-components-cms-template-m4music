@@ -172,6 +172,10 @@
       url: 'atoms/'
     },
     {
+      selector: 'm4music-m-',
+      url: 'molecules/'
+    },
+    {
       selector: 'm4music-o-',
       url: 'organisms/'
     }
