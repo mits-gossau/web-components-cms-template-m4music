@@ -33,6 +33,7 @@ html {
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
   --footer-a-color-hover:var(--color-orange);
+  --footer-color:var(--color);
   --footer-a-font-size-mobile:min(18px, 3vw);
   --footer-a-font-size:0.65rem;
   --footer-a-text-underline-offset:5px;
