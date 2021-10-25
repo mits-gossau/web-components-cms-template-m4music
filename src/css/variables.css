@@ -158,12 +158,12 @@ html {
   --highlightbox-h3-line-height: var(--h3-line-height);
   --highlightbox-h3-margin: var(--h3-margin);
   --highlightbox-h3-padding: var(--h3-padding);
-  --highlightbox-h3-text-align: var(--h3-text-align);
   --highlightbox-h3-text-transform: var(--h3-text-transform);
   --highlightbox-h3-word-break: var(--h3-word-break);
   --highlightbox-justify-content: center;
-  --highlightbox-margin-botton: 96px;
-  --highlightbox-padding: 144px 128px;
+  --highlightbox-margin-botton: 3rem;
+  --highlightbox-padding: 6vw 5vw;
+  --highlightbox-mobile-padding: 0.9rem;
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
   --p-margin-mobile:0 0 1.35rem;
