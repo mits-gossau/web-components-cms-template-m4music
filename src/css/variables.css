@@ -11,9 +11,10 @@ html {
   --background-color: #232323;
   --border-color: #919191;
   --link-underline-color:#CCCCCC;
-  --button-background-color-hover: yellow;
+  --button-background-color-hover-primary: #E53C1A;
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
+  --button-background-color-hover-secondary:var(--link-underline-color);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
   --button-font-family:var(--font-family, var(--font-family-bold));
