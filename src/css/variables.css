@@ -6,10 +6,11 @@
  */
 html {
   --a-text-decoration-hover: underline var(--color-orange) 1px solid;
-  --a-text-decoration: underline var(--border-color) solid 1px;
+  --a-text-decoration: underline var(--link-underline-color) solid 1px;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --border-color: #919191;
+  --link-underline-color:#CCCCCC;
   --button-background-color-hover: yellow;
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
@@ -79,7 +80,7 @@ html {
   --footer-social-logo-width:0.8rem;
   --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
   --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
-  --footer-text-decoration:underline var(--border-color) solid 1px;
+  --footer-text-decoration:underline var(--link-underline-color) solid 1px;
   --footer-title-h6-font-size-mobile:min(18px, 3vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;
