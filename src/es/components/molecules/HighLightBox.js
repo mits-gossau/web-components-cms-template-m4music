@@ -1,15 +1,9 @@
 import BaseBody from '../organisms/Body.js'
 
 export default class Highlightbox extends BaseBody {
-  constructor (...args) {
-    super(...args)
-
-  }
-
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
   }
-
 
   /**
    * evaluates if a render is necessary
@@ -19,7 +13,6 @@ export default class Highlightbox extends BaseBody {
   shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
-
 
   /**
    * renders the css
@@ -60,5 +53,4 @@ export default class Highlightbox extends BaseBody {
       }
     `
   }
-
 }
