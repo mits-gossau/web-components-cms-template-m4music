@@ -34,7 +34,6 @@ export default class Highlightbox extends BaseBody {
         display: var(--display);
         flex-direction: var(--flex-direction);
         justify-content: var(--justify-content);
-        align-items: var(--align-items);
         margin-bottom: var(--margin-botton);
       }
       :host > h3 {
@@ -43,7 +42,6 @@ export default class Highlightbox extends BaseBody {
         font-family: var(--h3-font-family);
         font-weight: var(--h3-font-weight);
         line-height: var(--h3-line-height);
-        text-align: var(--h3-text-align);
         word-break: var(--h3-word-break);
         text-transform: var(--h3-text-transform);
         margin: var(--h3-margin) auto;
@@ -51,6 +49,14 @@ export default class Highlightbox extends BaseBody {
       }
       :host > * {
         text-align: var(--text-align);
+      }
+      @media only screen and (max-width: 800px) {
+        :host {
+          padding: var(--mobile-padding);
+        }
+        :host > h3 {
+          margin-top: var(--mobile-padding);
+        }
       }
     `
   }
