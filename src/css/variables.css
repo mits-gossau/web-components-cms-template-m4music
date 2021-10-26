@@ -175,6 +175,7 @@ html {
   --register-field-button-font-size:var(--button-font-size);
   --register-field-button-height:auto;
   --register-field-button-padding:var(--button-padding);
+
   --register-field-color:var(--color);
   --register-field-input-background:#232323;
   --register-field-input-box-shadow:none;
@@ -189,15 +190,16 @@ html {
   --register-field-label-font-size:var(--font-size);
   --register-field-label-font-size-mobile: var(--font-size-mobile);
   --register-field-input-font-size-mobile:var(--font-size-mobile);
-  --register-field-label-padding:0;
+  --register-field-label-padding:0 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding:0 0 0.5rem 0;
-  --register-field-padding-mobile:0 0 3.5rem 0;
+  --register-field-padding:0 0 0.8rem 0;
+  /* --register-field-padding-mobile:0 0 31.5rem 0; */
   --register-field-placeholder-color:var(--color);
   --register-field-text-align:left;
   --register-field-width:100%;
-  --register-field-input-width-mobile:10px;
+  --register-field-height:auto;
+  --register-field-input-width-mobile:100%;
   --register-form-align-items: flex-start;
   --register-form-align-items-mobile: flex-start;
   --register-form-display:flex;
@@ -207,6 +209,8 @@ html {
   --register-form-wrapper-wrapper-background-color:#5f5f5f;
   --register-width:100%;
   --register-width-mobile:100%;
+  /* --register-field-input-align-self: flex-start; */
+
   --wrapper-div-margin-mobile:0;
   --wrapper-div-margin:0 2rem 0 0;
   --wrapper-li-background-size: 1rem;
