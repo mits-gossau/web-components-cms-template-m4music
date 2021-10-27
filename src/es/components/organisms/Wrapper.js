@@ -94,9 +94,6 @@ export default class Wrapper extends BaseBody {
       :host > section > div:last-of-type {
         margin:var(--wrapper-last-margin-mobile, 0);
       }
-      :host > section > div > .check {
-        margin-top: 0;
-      }
     }
   `
   }

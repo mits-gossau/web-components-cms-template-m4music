@@ -49,6 +49,9 @@ export default class Body extends BaseBody {
         width:var(--content-width-mobile, 80%);
         margin-bottom: var(--content-spacing-mobile);
       }
+      :host ul {
+        margin-top: 0;
+      }
     }
     `
   }
