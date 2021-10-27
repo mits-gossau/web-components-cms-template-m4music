@@ -76,9 +76,6 @@ export default class Wrapper extends BaseBody {
     :host > section > div:last-of-type {
       margin:var(--wrapper-last-margin, 0);
     }
-    :host > section > div > .check {
-      margin-top: var(--wrapper-check-margin, 75px);
-    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};

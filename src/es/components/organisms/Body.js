@@ -31,6 +31,7 @@ export default class Body extends BaseBody {
       padding:var(--wrapper-ul-padding, 0);
       margin:var(--wrapper-ul-margin, 0);
       list-style-type: none;
+      margin-top: var(--wrapper-check-margin, 75px);
     }
     /* :host ul.check > li */
     :host ul > li {
