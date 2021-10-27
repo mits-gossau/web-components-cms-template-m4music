@@ -24,7 +24,6 @@ export default class Video extends BaseVideo {
       :host > iframe, video{
         border: var(--border);
         width: var(--child-width);
-        margin: var(--margin);
       }
       :host > iframe{
         height: var(--iframe-height);
