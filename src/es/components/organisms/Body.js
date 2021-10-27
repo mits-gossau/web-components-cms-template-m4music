@@ -35,7 +35,7 @@ export default class Body extends BaseBody {
     }
     /* :host ul.check > li */
     :host ul > li {
-      background: url('../../../img/check.svg') no-repeat 0 0.3rem transparent; 
+      background: url('https://testadmin.m4music.ch/assets/img/check.svg') no-repeat 0 0.3rem transparent; 
       background-size: var(--wrapper-li-background-size);
       list-style-type: none;
       padding:var(--wrapper-li-padding, 0);
