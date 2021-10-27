@@ -13,7 +13,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @class Button
  * @type {CustomElementConstructor}
  * @attribute {
- * {string} [type] used to determine what type is set
+ * {string} [type] used to determine what type is set valid values: primary, secondary, arrow, download
  * }
  * @css {
  * var(--background-color-${this.type}, transparent)
@@ -110,12 +110,25 @@ export default class Button extends Shadow() {
       font-size: var(--font-size, 1em);
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
-      padding:var(--padding, 1em);
+      padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
       width: var(--width, 100%);
     }
     :host button:hover,  button:active, button:focus {
       background-color: var(--background-color-hover-${this.type}, --background-color);
       color: var(--color-hover-${this.type}, --color);
+    }
+    ${this.icon
+        ? `
+        :host > button > svg {
+          margin-left: var(--icon-margin-left);
+        }`
+        : ''
+      }
+    ${this.type == 'arrow'
+        ? `:host > button > svg:hover {
+          
+        }`
+        : ''
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
@@ -135,7 +148,54 @@ export default class Button extends Shadow() {
    */
   renderHTML () {
     // @ts-ignore
+    if (this.icon) this.constructor.addIconToButton(this.button, this.type)    
     this.html = this.button
+  }
+
+  
+  /**
+   * Prepend icon to button
+   *
+   * @param {HTMLButtonElement} button
+   * @param {string} type
+   * @return {HTMLElement}
+   */
+  static addIconToButton(button, type){
+    let iconImg
+    if (type == 'arrow') {
+      iconImg = document.createElement('div')
+      iconImg.innerHTML = `
+        <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 7.5H0.5V10.5H2V7.5ZM34 9L19 0.339746V17.6603L34 9ZM2 10.5H20.5V7.5H2V10.5Z" fill="#FB5F3F"/>
+        </svg>
+      `
+      iconImg = iconImg.children[0]
+
+    } else if (type == 'download'){
+      iconImg = document.createElement('div')
+      iconImg.innerHTML = `
+      <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+      <title>Button Download</title>
+      <desc>Created with Sketch.</desc>
+      <g id="Button-Download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-2">
+              <circle id="Oval" fill="var(--button-background-color)" cx="30" cy="30" r="30"></circle>
+              <g id="Group" transform="translate(19.000000, 14.000000)" stroke="#FB5F3F" stroke-width="3">
+                  <line x1="0" y1="30.5" x2="23" y2="30.5" id="Line-3" stroke-linecap="square"></line>
+                  <line x1="11.5" y1="22" x2="11.5" y2="-6.10622664e-16" id="Line-3-Copy" stroke-linecap="square"></line>
+                  <polyline id="Path-2" points="0 12.5 11.5 24.5 23 12.5"></polyline>
+              </g>
+          </g>
+      </g>
+    </svg>
+      `
+      iconImg = iconImg.children[0]
+    }
+
+    button.append(iconImg)
+    button.classList.add('icon')
+    return button
   }
 
   /**
@@ -152,5 +212,9 @@ export default class Button extends Shadow() {
    */
   get type () {
     return this.getAttribute('type') || 'primary'
+  }
+
+  get icon () {
+    return this.type == 'arrow' || this.type == 'download'
   }
 }
