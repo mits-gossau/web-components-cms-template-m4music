@@ -103,6 +103,7 @@ html {
   --h1-font-size-mobile:min(1.8rem, 8vw);
   --h1-font-size:3rem;
   --h1-font-weight: var(--h-title-font-weight);
+  --h1-line-height:100%;
   --h1-margin:var(--h-title-margin);
   --h1-padding:var(--h-title-padding);
   --h1-text-transform: var(--h-title-text-transform);
@@ -111,6 +112,7 @@ html {
   --h2-font-size-mobile:min(1.6rem, 7vw);
   --h2-font-size:2rem;
   --h2-font-weight: var(--h-title-font-weight);
+  --h2-line-height:100%;
   --h2-margin:var(--h-title-margin);
   --h2-padding:var(--h-title-padding);
   --h2-text-transform: var(--h-title-text-transform);
@@ -119,6 +121,7 @@ html {
   --h3-font-size-mobile:min(1.35rem, 6vw);
   --h3-font-size:1.5rem;
   --h3-font-weight: var(--h-title-font-weight);
+  --h3-line-height:100%;
   --h3-margin:var(--h-title-margin);
   --h3-padding:var(--h-title-padding);
   --h3-text-transform: var(--h-title-text-transform);
@@ -127,6 +130,7 @@ html {
   --h4-font-size-mobile:min(1.25rem, 5vw);
   --h4-font-size:1.25rem;
   --h4-font-weight: var(--h-title-font-weight);
+  --h4-line-height:125%;
   --h4-margin:var(--h-title-margin);
   --h4-padding:var(--h-title-padding);
   --h4-text-transform: var(--h-title-text-transform);
@@ -135,6 +139,7 @@ html {
   --h5-font-size-mobile:min(1rem, 4vw);
   --h5-font-size:1rem;
   --h5-font-weight: var(--h-title-font-weight);
+  --h5-line-height:125%;
   --h5-margin:var(--h-title-margin);
   --h5-padding:var(--h-title-padding);
   --h5-text-transform: var(--h-title-text-transform);
@@ -143,6 +148,7 @@ html {
   --h6-font-size-mobile:min(0.9rem, 3vw);
   --h6-font-size:0.75rem;
   --h6-font-weight: var(--h-title-font-weight);
+  --h6-line-height:125%;
   --h6-margin:var(--h-title-margin);
   --h6-padding:var(--h-title-padding);
   --h6-text-transform: var(--h-title-text-transform);
