@@ -111,6 +111,7 @@ export default class Button extends Shadow() {
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
       padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
+      transition: var(--button-transition, 0.3s all);
       width: var(--width, 100%);
     }
     :host button:hover,  button:active, button:focus {
@@ -131,6 +132,10 @@ export default class Button extends Shadow() {
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);
         width: var(--width-mobile, 100%);
+      }
+      :host button:hover,  button:active, button:focus {
+        background-color: var(--background-color-hover-${this.type}, --background-color);
+        color: var(--color-hover-${this.type}, --color);
       }
     }
   `

@@ -16,6 +16,7 @@ html {
   --button-background-color-secondary:var(--color);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
+  --button-color-hover-secondary: var(--color-black);
   --button-font-family:var(--font-family, var(--font-family-bold));
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
