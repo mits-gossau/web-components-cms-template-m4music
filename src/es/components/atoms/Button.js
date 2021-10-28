@@ -118,18 +118,13 @@ export default class Button extends Shadow() {
       color: var(--color-hover-${this.type}, --color);
     }
     ${this.icon
-        ? `
-        :host > button > svg {
-          margin-left: var(--icon-margin-left);
-        }`
+        ? ':host > button > svg {margin-left: var(--icon-margin-left)}'
         : ''
       }
-    ${this.type == 'arrow'
-        ? `:host > button > svg:hover {
-          
-        }`
+    ${this.type === 'arrow'
+        ? ':host > button > svg:hover {}'
         : ''
-    }
+      }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
         height: var(--height-mobile, 100%);
@@ -148,11 +143,10 @@ export default class Button extends Shadow() {
    */
   renderHTML () {
     // @ts-ignore
-    if (this.icon) this.constructor.addIconToButton(this.button, this.type)    
+    if (this.icon) this.constructor.addIconToButton(this.button, this.type)
     this.html = this.button
   }
 
-  
   /**
    * Prepend icon to button
    *
@@ -160,9 +154,9 @@ export default class Button extends Shadow() {
    * @param {string} type
    * @return {HTMLElement}
    */
-  static addIconToButton(button, type){
+  static addIconToButton (button, type) {
     let iconImg
-    if (type == 'arrow') {
+    if (type === 'arrow') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
         <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,8 +164,7 @@ export default class Button extends Shadow() {
         </svg>
       `
       iconImg = iconImg.children[0]
-
-    } else if (type == 'download'){
+    } else if (type === 'download') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
       <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -215,6 +208,6 @@ export default class Button extends Shadow() {
   }
 
   get icon () {
-    return this.type == 'arrow' || this.type == 'download'
+    return this.type === 'arrow' || this.type === 'download'
   }
 }

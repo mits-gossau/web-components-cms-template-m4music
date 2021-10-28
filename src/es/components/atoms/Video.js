@@ -1,4 +1,4 @@
-import BaseVideo from '../web-components-cms-template/src/es/components/atoms/Video.js';
+import BaseVideo from '../web-components-cms-template/src/es/components/atoms/Video.js'
 
 export default class Video extends BaseVideo {
   constructor (...args) {
@@ -28,6 +28,6 @@ export default class Video extends BaseVideo {
       :host > iframe{
         height: var(--iframe-height);
       }
-    `;
+    `
   }
 }
