@@ -9,14 +9,16 @@ html {
   --a-text-decoration: underline var(--link-underline-color) solid 1px;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
+  --body-spacer-height-mobile:min(1rem, 5vw);
+  --body-spacer-height:min(1rem, 5vw);
   --border-color: #919191;
   --button-background-color-hover-primary: #E53C1A;
   --button-background-color-hover-secondary:var(--link-underline-color);
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
+  --button-color-hover-secondary: var(--color-black);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
-  --button-color-hover-secondary: var(--color-black);
   --button-font-family:var(--font-family, var(--font-family-bold));
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
