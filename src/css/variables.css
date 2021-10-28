@@ -95,7 +95,7 @@ html {
   --footer-ul-margin:0;
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
-  --h-title-margin: 0 0 min(0.5rem, 3vw) 0;
+  --h-title-margin: 0  0 0.5rem;
   --h-title-padding:0;
   --h-title-text-transform: uppercase;
   --h1-color:var(--color);
