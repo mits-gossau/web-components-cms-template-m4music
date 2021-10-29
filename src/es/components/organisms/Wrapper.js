@@ -17,6 +17,8 @@ import BaseBody from './Body.js'
  * {string} [align-content="center"] valid values: left, center, right
  * }
  * @css {
+ * var(--p-line-height-mobile, normal)
+ * var(--p-line-height, normal)
  * var(--wrapper-div-margin-mobile, 0)
  * var(--wrapper-div-margin, 0)
  * var(--wrapper-margin-bottom-mobile, 0)
@@ -68,6 +70,9 @@ export default class Wrapper extends BaseBody {
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
     }
+    :host > section * p {
+      line-height:var(--p-line-height, normal);
+    }
     :host > section > div  {
       flex-basis:${100 / this.columns}%;
       margin:var(--wrapper-div-margin, 0);
@@ -83,6 +88,9 @@ export default class Wrapper extends BaseBody {
         display:flex;
         flex-direction:column;
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
+      }
+      :host > section * p {
+        line-height:var(--p-line-height-mobile, normal);
       }
       :host > section > div  {
         flex-basis:${100 / this.columns}%;
