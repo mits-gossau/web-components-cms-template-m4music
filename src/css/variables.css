@@ -96,7 +96,7 @@ html {
   --footer-ul-margin:0;
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
-  --h-title-margin: 0  0 0.5rem;
+  --h-title-margin:0 0 0.5rem 0;
   --h-title-padding:0;
   --h-title-text-transform: uppercase;
   --h1-color:var(--color);
@@ -107,6 +107,7 @@ html {
   --h1-line-height-mobile:100%;
   --h1-line-height:100%;
   --h1-margin:var(--h-title-margin);
+  --h1-margin-mobile:var(--h-title-margin);
   --h1-padding:var(--h-title-padding);
   --h1-text-transform: var(--h-title-text-transform);
   --h2-color:var(--color);
@@ -117,6 +118,7 @@ html {
   --h2-line-height-mobile:100%;
   --h2-line-height:100%;
   --h2-margin:var(--h-title-margin);
+  --h2-margin-mobile:var(--h-title-margin);
   --h2-padding:var(--h-title-padding);
   --h2-text-transform: var(--h-title-text-transform);
   --h3-color:var(--color);
@@ -127,6 +129,7 @@ html {
   --h3-line-height-mobile:100%;
   --h3-line-height:100%;
   --h3-margin:var(--h-title-margin);
+  --h3-margin-mobile:var(--h-title-margin);
   --h3-padding:var(--h-title-padding);
   --h3-text-transform: var(--h-title-text-transform);
   --h4-color:var(--color);
@@ -137,6 +140,7 @@ html {
   --h4-line-height-mobile:125%;
   --h4-line-height:125%;
   --h4-margin:var(--h-title-margin);
+  --h4-margin-mobile:var(--h-title-margin);
   --h4-padding:var(--h-title-padding);
   --h4-text-transform: var(--h-title-text-transform);
   --h5-color:var(--color);
@@ -147,6 +151,7 @@ html {
   --h5-line-height-mobile:125%;
   --h5-line-height:125%;
   --h5-margin:var(--h-title-margin);
+  --h5-margin-mobile:var(--h-title-margin);
   --h5-padding:var(--h-title-padding);
   --h5-text-transform: var(--h-title-text-transform);
   --h6-color:var(--color);
@@ -157,6 +162,7 @@ html {
   --h6-line-height-mobile:125%;
   --h6-line-height:125%;
   --h6-margin:var(--h-title-margin);
+  --h6-margin-mobile:var(--h-title-margin);
   --h6-padding:var(--h-title-padding);
   --h6-text-transform: var(--h-title-text-transform);
   --header-background-color:var(--background-color);
