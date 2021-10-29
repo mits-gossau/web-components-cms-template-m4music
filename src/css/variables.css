@@ -242,7 +242,6 @@ html {
   --video-height: 100%;
   --video-iframe-height: calc(((100vw * 0.85) - 2*var(--video-border-width)) * 0.5625);
   --video-width: 100%;
-  --wrapper-check-margin: 2.34375rem;
   --wrapper-div-margin-mobile:0;
   --wrapper-div-margin:0 2rem 0 0;
   --wrapper-li-background-size: 1rem;
