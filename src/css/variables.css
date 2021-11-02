@@ -9,6 +9,7 @@ html {
   --a-text-decoration: underline var(--link-underline-color) solid 1px;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
+  --balloon-font-size:var(--h6-font-size);
   --body-picture-margin: 0 0 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
@@ -207,9 +208,8 @@ html {
   --register-field-button-font-size:var(--button-font-size);
   --register-field-button-height:auto;
   --register-field-button-padding:var(--button-padding);
-  --register-field-button-width:max(25%, 5vw);
+  --register-field-button-width:auto;
   --register-field-checkbox-flex-direction: row;
-
   --register-field-color:var(--color);
   --register-field-height-mobile:auto;
   --register-field-height:auto;
