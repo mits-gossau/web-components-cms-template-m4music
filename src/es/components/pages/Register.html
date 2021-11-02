@@ -35,6 +35,11 @@
 
           <m-form type="newsletter" namespace-fallback namespace="register-" namespace-children="register-field-"
             use-html-submit>
+            <style>
+              label.small {
+                font-size: var(--font-size-label-small, inherit)
+              }
+            </style>
             <form action="" method="post" id="online_form">
               <label for="Artist">Band / Producer / Artist</label>
               <input id="Artist" type="text" required="" value="" name="Artist" placeholder="Name hier eingeben..."
@@ -51,7 +56,7 @@
               <label for="Email">E-Mail</label>
               <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
                 autocomplete="off" validation-message="Ungültige Email">
-              <label class="normal" for="Policy">Ich bestätige, dass ich die <a
+              <label class="small" for="Policy">Ich bestätige, dass ich die <a
                   href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a> und die
                 darin umschriebene Bearbeitung meiner Personendaten zur Kenntnis genommen haben.</label>
               <input reverse id="Policy" name="Policy" required="" type="checkbox" value="false"

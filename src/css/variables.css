@@ -9,6 +9,7 @@ html {
   --a-text-decoration: underline var(--link-underline-color) solid 1px;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
+  --balloon-font-size:var(--h6-font-size);
   --body-picture-margin: 0 0 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
@@ -40,6 +41,7 @@ html {
   --content-width-not-web-component:85%;
   --content-width:85%;
   --font-family:"GillSansMTMedium", sans-serif;
+  --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
   --footer-a-font-size-mobile:min(18px, 3vw);
@@ -96,7 +98,7 @@ html {
   --footer-ul-margin:0;
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
-  --h-title-margin: 0  0 0.5rem;
+  --h-title-margin:0 0 0.5rem 0;
   --h-title-padding:0;
   --h-title-text-transform: uppercase;
   --h1-color:var(--color);
@@ -106,6 +108,7 @@ html {
   --h1-font-weight: var(--h-title-font-weight);
   --h1-line-height-mobile:100%;
   --h1-line-height:100%;
+  --h1-margin-mobile:var(--h-title-margin);
   --h1-margin:var(--h-title-margin);
   --h1-padding:var(--h-title-padding);
   --h1-text-transform: var(--h-title-text-transform);
@@ -116,6 +119,7 @@ html {
   --h2-font-weight: var(--h-title-font-weight);
   --h2-line-height-mobile:100%;
   --h2-line-height:100%;
+  --h2-margin-mobile:var(--h-title-margin);
   --h2-margin:var(--h-title-margin);
   --h2-padding:var(--h-title-padding);
   --h2-text-transform: var(--h-title-text-transform);
@@ -126,6 +130,7 @@ html {
   --h3-font-weight: var(--h-title-font-weight);
   --h3-line-height-mobile:100%;
   --h3-line-height:100%;
+  --h3-margin-mobile:var(--h-title-margin);
   --h3-margin:var(--h-title-margin);
   --h3-padding:var(--h-title-padding);
   --h3-text-transform: var(--h-title-text-transform);
@@ -136,6 +141,7 @@ html {
   --h4-font-weight: var(--h-title-font-weight);
   --h4-line-height-mobile:125%;
   --h4-line-height:125%;
+  --h4-margin-mobile:var(--h-title-margin);
   --h4-margin:var(--h-title-margin);
   --h4-padding:var(--h-title-padding);
   --h4-text-transform: var(--h-title-text-transform);
@@ -146,6 +152,7 @@ html {
   --h5-font-weight: var(--h-title-font-weight);
   --h5-line-height-mobile:125%;
   --h5-line-height:125%;
+  --h5-margin-mobile:var(--h-title-margin);
   --h5-margin:var(--h-title-margin);
   --h5-padding:var(--h-title-padding);
   --h5-text-transform: var(--h-title-text-transform);
@@ -156,6 +163,7 @@ html {
   --h6-font-weight: var(--h-title-font-weight);
   --h6-line-height-mobile:125%;
   --h6-line-height:125%;
+  --h6-margin-mobile:var(--h-title-margin);
   --h6-margin:var(--h-title-margin);
   --h6-padding:var(--h-title-padding);
   --h6-text-transform: var(--h-title-text-transform);
@@ -200,6 +208,7 @@ html {
   --register-field-button-font-size:var(--button-font-size);
   --register-field-button-height:auto;
   --register-field-button-padding:var(--button-padding);
+  --register-field-button-width:auto;
   --register-field-checkbox-flex-direction: row;
   --register-field-color:var(--color);
   --register-field-height-mobile:auto;
@@ -208,13 +217,14 @@ html {
   --register-field-input-background:#232323;
   --register-field-input-box-shadow-mobile:none;
   --register-field-input-box-shadow:none;
+  --register-field-input-checkbox-margin-mobile:0 0.2rem 0 0;
+  --register-field-input-checkbox-margin:0 0.2rem 0 0;
   --register-field-input-color:var(--color);
   --register-field-input-font-size-mobile:var(--h6-font-size-mobile);
   --register-field-input-font-size:var(--h6-font-size);
   --register-field-input-height-mobile:min(1.5rem, 8vw);
   --register-field-input-margin:0;
   --register-field-input-padding:0.2rem;
-  --register-field-input-width-mobile:100%;
   --register-field-input-width-mobile:100%;
   --register-field-input-width:max(50%, 10vw);
   --register-field-label-align-self:left;
