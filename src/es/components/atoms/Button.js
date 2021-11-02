@@ -70,6 +70,9 @@ export default class Button extends Shadow() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('click', this.clickListener)
+    if (this.hasAttribute("submit")) {
+      this.button.setAttribute("type", "submit");
+    }
   }
 
   disconnectedCallback () {
