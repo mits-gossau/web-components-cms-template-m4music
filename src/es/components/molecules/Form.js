@@ -16,8 +16,8 @@ export default class Form extends BaseForm {
 
   renderCSS () {
     this.css = /* css */`
-      :host a-input[type='radio'] { 
-        background-color: red;
+      :host fieldset {
+        border: var(--fieldset-border, none);
       }
     
     `
