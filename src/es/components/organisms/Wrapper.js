@@ -70,6 +70,9 @@ export default class Wrapper extends BaseBody {
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
     }
+    :host > section .lowercase {
+      text-transform: lowercase;
+    }
     :host > section * p {
       line-height:var(--p-line-height, normal);
     }
