@@ -206,6 +206,7 @@ html {
   --register-field-button-font-size:var(--button-font-size);
   --register-field-button-height:auto;
   --register-field-button-padding:var(--button-padding);
+  --register-field-button-width:max(25%, 5vw);
   --register-field-checkbox-flex-direction: row;
   --register-field-color:var(--color);
   --register-field-height-mobile:auto;
@@ -220,7 +221,6 @@ html {
   --register-field-input-height-mobile:min(1.5rem, 8vw);
   --register-field-input-margin:0;
   --register-field-input-padding:0.2rem;
-  --register-field-input-width-mobile:100%;
   --register-field-input-width-mobile:100%;
   --register-field-input-width:max(50%, 10vw);
   --register-field-label-align-self:left;
