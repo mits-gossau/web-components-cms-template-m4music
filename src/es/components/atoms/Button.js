@@ -123,7 +123,35 @@ export default class Button extends Shadow() {
         : ''
       }
     ${this.type === 'arrow'
-        ? ':host > button > svg:hover {}'
+        ? `:host > button:hover .arrow{
+          animation-name: arrowright;
+          animation-duration: 0.5s;
+          animation-fill-mode: both;
+        }
+        :host > button .arrow{
+          animation-name: arrowleft;
+          animation-duration: 0.5s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes arrowright {
+          0%{
+            transform: translateX(0px);
+          }
+          100%{
+            transform: translateX(10px);
+          }
+        }
+
+        @keyframes arrowleft {
+          0%{
+            transform: translateX(10px);
+          }
+          100%{
+            transform: translateX(0px);
+          }
+        }
+        `
         : ''
       }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -164,7 +192,7 @@ export default class Button extends Shadow() {
     if (type === 'arrow') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
-        <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
           <path d="M2 7.5H0.5V10.5H2V7.5ZM34 9L19 0.339746V17.6603L34 9ZM2 10.5H20.5V7.5H2V10.5Z" fill="#FB5F3F"/>
         </svg>
       `
