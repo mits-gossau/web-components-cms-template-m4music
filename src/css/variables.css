@@ -234,7 +234,7 @@ html {
   --register-field-label-padding:0 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding:0 0 0.2rem 0;
+  --register-field-padding:0 0 0.8rem 0;
   --register-field-padding-error:0 0 0.8rem 0;
   --register-field-placeholder-color:var(--color);
   --register-field-text-align:left;
@@ -277,4 +277,9 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --field-description-font-size-mobile: 0.7rem;
+  --field-description-width-mobile:100%;
+  --field-description-font-size: 0.5rem;
+  --field-description-width:max(50%, 10vw);
+  --field-description-padding:0.2rem;
 }

@@ -34,6 +34,13 @@ export default class Form extends BaseForm {
         flex-direction: row;
         align-items: center;
         align-content: center;
+        display:visible;
+      }
+
+      :host .description {
+        font-size:var(--field-description-font-size, inherit);
+        width:var(--field-description-width, auto);
+        padding:var(--field-description-padding, 0);
       }
 
       :host select {
@@ -58,6 +65,14 @@ export default class Form extends BaseForm {
         margin:var(--form-select-margin, 0);
       }
 
+      :host select:focus-visible {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        border: 1px solid var(--form-select-border, white);
+      }
+
       :host .register-label{
         padding:0.2rem;
         font-size:var(--register-form-label-font-size, inherit);
@@ -73,6 +88,11 @@ export default class Form extends BaseForm {
           font-size:var(--form-select-font-size-mobile, inherit);
           width: var(--form-select-width-mobile, auto);
           margin:var(--form-select-margin-mobile, 0);
+        }
+
+        :host .description {
+          font-size:var(--field-description-font-size-mobile, inherit);
+          width:var(--field-description-width-mobile, auto);
         }
       }
     
