@@ -83,21 +83,20 @@ export default class Form extends BaseForm {
       }
 
       :host .error-message {
-        font-size:0.7rem;
-        margin-bottom: 5px;
-        line-height: 150%;
+        font-size:var(--field-error-font-size, inherit);
+        margin-bottom:var(--field-error-margin-bottom, 0);
+        line-height:var(--field-error-line-height, normal);
         color:var(--field-error-color, #FF7373);
         padding:var(--field-padding-error, 0);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
+        display:var(--field-error-display, flex);
+        flex-direction:var(--field-error-flex-direction, row);
+        align-items:var(--field-error-align-items, center);
+        align-content:var(--field-error-align-content, center);
         visibility:hidden;
       }
 
       :host .error-message > img {
         padding: var(--field-error-image-padding, 0);
-
       }
 
       :host .show-error {
@@ -127,6 +126,10 @@ export default class Form extends BaseForm {
         align-self:center;
       }
 
+      :host * label {
+        padding:var(--field-label-padding, 0);
+      }
+
 
       :host select {
         box-sizing: content-box;
@@ -147,6 +150,8 @@ export default class Form extends BaseForm {
         font-size:var(--field-input-font-size, inherit);
         width:var(--form-select-width, auto);
         margin:var(--form-select-margin, 0);
+        height:var(--field-height-mobile);
+        border-radius:var(--field-select-border-radius, 0);
       }
 
       :host select:focus-visible {
@@ -161,6 +166,10 @@ export default class Form extends BaseForm {
         padding:var(--field-padding, 0);
         font-size:var(--form-label-font-size, inherit);
       }
+
+      :host  m4music-a-button {
+        padding-top:0.4rem;
+      }
       
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
@@ -172,6 +181,7 @@ export default class Form extends BaseForm {
           font-size:var(--form-select-font-size-mobile, inherit);
           width:var(--form-select-width-mobile, auto);
           margin:var(--form-select-margin-mobile, 0);
+          height:var(--form-select-height-mobile, auto);
         }
 
         :host .description {
@@ -186,6 +196,10 @@ export default class Form extends BaseForm {
         :host [type=radio] {
           align-items:center;
           margin:var(--radio-margin-mobile, 0);
+        }
+
+        :host * label {
+          padding:var(--field-label-padding-mobile, 0);
         }
         
       }
