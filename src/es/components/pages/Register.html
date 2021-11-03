@@ -33,36 +33,29 @@
       <div>
         <m4music-o-wrapper namespace="register-form-wrapper-">
 
-          <m4music-m-form type="newsletter" namespace-fallback namespace="register-" namespace-children="register-field-"
-            use-html-submit>
-            <style>
-              label.small {
-                font-size: var(--font-size-label-small, inherit)
-              }
-            </style>
+          <m4music-m-form type="newsletter" namespace-fallback namespace="register-"
+            namespace-children="register-field-" use-html-submit>
             <form action="" method="post" id="online_form">
               <label for="Artist">Band / Producer / Artist</label>
               <input id="Artist" type="text" required="" value="" name="Artist" placeholder="Name hier eingeben..."
                 autocomplete="off">
               <label for="Hometown">Hometown</label>
               <input id="Hometown" type="text" required="" value="" name="Hometown"
-                placeholder="Hometown hier eingeben..." autocomplete="off" validation-message="Hometown ist ungültig">
-              <!-- <label for="AnzahlMusiker">Anzahl Musiker</label>
-              <select id="AnzahlMusiker" name="AnzahlMusiker">
-                <option selected>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select> -->
+                placeholder="Hometown hier eingeben..." autocomplete="off">
+              <label for="Hometown" class="register-label">Korrespondenzsprache</label>
+              <select name="Korrespondenzsprache">
+                <option value="">Deutsch</option>
+                <option value="">Französisch</option>
+              </select>
               <label for="Email">E-Mail</label>
               <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
                 autocomplete="off" validation-message="Ungültige Email">
-              <label class="small" for="Policy">Ich bestätige, dass ich die <a
-                  href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a> und die
+              <label for="Policy">Ich bestätige, dass ich die <a href="https://www.migros.ch/de/datenschutz.html"
+                  target="_blank">Datenschutzerklärung</a> und die
                 darin umschriebene Bearbeitung meiner Personendaten zur Kenntnis genommen haben.</label>
-              <input reverse id="Policy" name="Policy" required="" type="checkbox" value="false"
-                validation-message="Datenschutz einverstanden?" />
-              <button type="submit">Registrieren</button>
-              <m4music-a-button type="primary" namespace="button-" namespace-fallback submit>Registrieren 2</m4music-a-button>
+              <input reverse id="Policy" name="Policy" required="" type="checkbox" value="false" />
+              <m4music-a-button type="primary" namespace="button-" namespace-fallback submit>Registrieren
+              </m4music-a-button>
             </form>
           </m4music-m-form>
 
