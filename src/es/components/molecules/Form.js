@@ -68,13 +68,25 @@ export default class Form extends BaseForm {
   renderCSS() {
     super.renderCSS()
     this.css = /* css */`
+      :host {
+        padding: var(--form-padding, 30px);
+      }
+
       :host fieldset {
         border: var(--fieldset-border, none);
+        padding: var(--fieldset-padding, 0);
       }
 
       :host h4.form-caption {
         font-size: var(--h4-font-size, 1.25rem) !important;
         line-height: var(--h4-line-height, 125%) !important;
+        margin: var(--form-caption-margin, 0);
+        text-transform: var(--form-caption-text-transform, uppercase);
+      }
+
+      :host h4.form-caption .number {
+        color: var(--color-orange, #FB5F3F);
+        margin-right: var(--form-caption-number-margin-right, 15px);
       }
 
       :host .error-message span::before {
@@ -95,16 +107,17 @@ export default class Form extends BaseForm {
         visibility:hidden;
       }
 
+      :host .error-message .field-validation-valid {
+        height: var(--field-error-valid-height, 0);
+      }
+
       :host .error-message > img {
         padding: var(--field-error-image-padding, 0);
       }
 
-      :host .show-error {
-        visibility:visible;
-      }
-
       :host .error-message .field-validation-error{
         visibility:visible;
+        height: unset;
       }
 
       :host .description {

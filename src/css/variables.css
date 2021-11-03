@@ -38,8 +38,8 @@ html {
   --content-spacing-mobile:var(--content-spacing);
   --content-spacing:0;
   --content-width-mobile:85%;
-  --content-width-not-web-component:85%;
-  --content-width:85%;
+  --content-width-not-web-component:70%;
+  --content-width:70%;
   --font-family:"GillSansMTMedium", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
@@ -219,7 +219,6 @@ html {
   --register-field-error-font-size:0.7rem;
   --register-field-error-image-padding:0 0.2rem 0 0;
   --register-field-error-line-height:150%;
-  --register-field-error-margin-bottom:0.3rem;
   --register-field-height-mobile:auto;
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
@@ -247,7 +246,6 @@ html {
   --register-field-label-padding:0.8rem 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding-error:0.2rem 0 0 0;
   --register-field-padding:0;
   --register-field-placeholder-color:var(--color);
   --register-field-radio-flex-direction:row-reverse;
@@ -275,7 +273,7 @@ html {
   --register-form-select-padding:0.2rem;
   --register-form-select-width-mobile: 100%;
   --register-form-select-width:var(--register-field-input-width);
-  --register-form-wrapper-wrapper-background-color:#5f5f5f;
+  --register-form-wrapper-wrapper-background-color:#434343;
   --register-radio-group-height:var(--register-field-input-height);
   --register-radio-group-width:auto;
   --register-radio-margin-mobile:0 0.5rem 0 0;
@@ -289,7 +287,7 @@ html {
   --video-border: var(--video-border-width) var(--video-border-color) solid;
   --video-child-width: calc(100% - 2*var(--video-border-width));
   --video-height: 100%;
-  --video-iframe-height: calc(((100vw * 0.85) - 2*var(--video-border-width)) * 0.5625);
+  --video-iframe-height: calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
   --video-width: 100%;
   --wrapper-div-margin-mobile:0;
   --wrapper-div-margin:0 2rem 0 0;
