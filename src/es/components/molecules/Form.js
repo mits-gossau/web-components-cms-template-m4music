@@ -26,9 +26,19 @@ export default class Form extends BaseForm {
         line-height: var(--h4-line-height, 125%) !important;
       }
 
+      :host .show-error{
+        font-size:0.5rem;
+        color:#FF7373;
+        padding:var(--field-padding-error, 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+      }
+
       :host select {
-        display: inline-block;
-        box-sizing: border-box;
+        /* display: inline-block;
+        box-sizing: border-box;*/
         padding:var(--form-select-padding, 0);
         border: 1px solid var(--form-select-border, white);
         font: inherit;

@@ -234,7 +234,8 @@ html {
   --register-field-label-padding:0 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding:0 0 0.8rem 0;
+  --register-field-padding:0 0 0.2rem 0;
+  --register-field-padding-error:0 0 0.8rem 0;
   --register-field-placeholder-color:var(--color);
   --register-field-text-align:left;
   --register-field-width:100%;
