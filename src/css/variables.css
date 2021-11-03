@@ -215,7 +215,7 @@ html {
   --register-field-description-font-size: 0.5rem;
   --register-field-description-padding:0 0 0.4rem 0;
   --register-field-description-width-mobile:100%;
-  --register-field-description-width:max(50%, 10vw);
+  --register-field-description-width:max(30%, 10vw);
   --register-field-height-mobile:auto;
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
@@ -231,7 +231,7 @@ html {
   --register-field-input-margin:0;
   --register-field-input-padding:0.2rem;
   --register-field-input-width-mobile:100%;
-  --register-field-input-width:max(50%, 10vw);
+  --register-field-input-width:max(30%, 10vw);
   --register-field-label-align-self:left;
   --register-field-label-color:var(--color);
   --register-field-label-font-size-mobile: var(--h6-font-size-mobile);
@@ -260,14 +260,14 @@ html {
   --register-form-select-font-size-mobile:var(--h6-font-size-mobile);
   --register-form-select-font-size:var(--h6-font-size);
   --register-form-select-margin-mobile:0 0 0.2rem 0;
-  --register-form-select-margin:0 0 0.2rem 0;
+  --register-form-select-margin:0;
   --register-form-select-padding-mobile:0.4rem;
   --register-form-select-padding:0.2rem;
   --register-form-select-width-mobile: 100%;
   --register-form-select-width: var(--register-field-input-width);
   --register-form-select-width:var(--register-field-input-width);
   --register-form-wrapper-wrapper-background-color:#5f5f5f;
-  --register-radio-group-width:max(50%, 10vw);
+  --register-radio-group-width:max(30%, 10vw);
   --register-radio-margin-mobile:0 0.5rem 0 0;
   --register-radio-margin:0.1rem 0.2rem 0.2rem 0;
   --register-width-mobile:100%;
@@ -287,4 +287,5 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --register-field-error-image-padding:0 0.2rem 0 0;
 }
