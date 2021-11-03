@@ -119,6 +119,12 @@ export default class Form extends BaseForm {
         align-items:flex-start;
         width:var(--radio-group-width, auto);
         justify-content: space-between;
+        height:var(--radio-group-height, auto);
+      }
+
+      :host .radio-group label {
+        padding:0;
+        align-self:center;
       }
 
       :host [type=radio] {
@@ -170,6 +176,7 @@ export default class Form extends BaseForm {
       :host  m4music-a-button {
         padding-top:0.4rem;
       }
+
       
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
