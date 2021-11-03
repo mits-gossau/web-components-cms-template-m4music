@@ -13,20 +13,17 @@ export default class Form extends BaseForm {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
-/**
+  /**
   * renders the a-text-field html
   *
   * @return {void}
   */
- renderHTML () {
-  this.hasRendered = true
-  this.loadChildComponents().then(children => {
-    const inputArray = Array.from(this.root.querySelectorAll('input'));
-    const selectArray = Array.from(this.root.querySelectorAll('select'));
-    const allInputArray = inputArray.concat(selectArray);
-
-    allInputArray
-      .filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
+  renderHTML() {
+    this.hasRendered = true
+    this.loadChildComponents().then(children => {
+      const inputArray = Array.from(this.root.querySelectorAll('input'))
+      const selectArray = Array.from(this.root.querySelectorAll('select'))
+      inputArray.concat(selectArray).filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
         this.inputFields.push(input)
         const label = this.root.querySelector(`label[for='${input.getAttribute('id')}']`) || this.root.querySelector(`label[for='${input.getAttribute('name')}']`)
         const aInput = new children[0][1](input, label, { mode: 'false', namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
@@ -54,21 +51,19 @@ export default class Form extends BaseForm {
           }, { once: true })
         }
       })
-    // spam protection
-    if (this.getAttribute('type') === 'newsletter') {
-      this.emptyInput = document.createElement('input')
-      this.emptyInput.type = 'text'
-      this.emptyInput.id = 'oceans'
-      this.form.appendChild(this.emptyInput)
-    }
-    Array.from(this.root.querySelectorAll('button')).forEach(button => {
-      const aButton = new children[1][1](button, { namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
-      button.replaceWith(aButton)
+      // spam protection
+      if (this.getAttribute('type') === 'newsletter') {
+        this.emptyInput = document.createElement('input')
+        this.emptyInput.type = 'text'
+        this.emptyInput.id = 'oceans'
+        this.form.appendChild(this.emptyInput)
+      }
+      Array.from(this.root.querySelectorAll('button')).forEach(button => {
+        const aButton = new children[1][1](button, { namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
+        button.replaceWith(aButton)
+      })
     })
-  })
-}
-
-
+  }
 
   renderCSS() {
     super.renderCSS()
@@ -109,8 +104,7 @@ export default class Form extends BaseForm {
         visibility:visible;
       }
 
-      :host .error-message .field-validation-error
-       {
+      :host .error-message .field-validation-error{
         visibility:visible;
       }
 
