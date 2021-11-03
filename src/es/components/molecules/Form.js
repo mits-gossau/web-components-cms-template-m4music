@@ -35,6 +35,10 @@ export default class Form extends BaseForm {
         align-content: center;
       }
 
+      :host .error-message > img {
+        padding: var(--field-error-image-padding, 0);
+      }
+
       :host .show-error {
         visibility:visible;
       }
@@ -80,7 +84,7 @@ export default class Form extends BaseForm {
         background-size: 5px 5px, 5px 5px;
         background-color:var(--form-select-background-color, white);
         color:var(--form-select-color, white);
-        font-size:var(--form-select-font-size, inherit);
+        font-size:var(--field-input-font-size, inherit);
         width:var(--form-select-width, auto);
         margin:var(--form-select-margin, 0);
       }
@@ -94,8 +98,8 @@ export default class Form extends BaseForm {
       }
 
       :host .register-label{
-        padding:var(--register-field-padding, 0);
-        font-size:var(--register-form-label-font-size, inherit);
+        padding:var(--field-padding, 0);
+        font-size:var(--form-label-font-size, inherit);
       }
       
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
