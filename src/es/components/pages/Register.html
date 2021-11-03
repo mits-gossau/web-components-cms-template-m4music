@@ -55,6 +55,7 @@
               <label for="Song">Wettbewerb-Song / -Track*</label>
               <input id="Song" type="text" required="" value="" name="Song" placeholder="Name hier eingeben..."
                 autocomplete="off">
+              <span class="hide-error error-message"><img src="../../../img/Error.png">Warning ....</span>
               <span class="description">Als Wettbewerbs-Beiträge sind nur Eigenkompositionen zugelassen. Coverversionen,
                 Remixes und Mash-Ups sind nicht erlaubt. Die Beiträge dürfen keine unautorisierten Samples enthalten.
                 Die Songs / Tracks dürfen ausserdem nicht älter als 2 Jahre sein. Der Wettbewerbs-Song/-Track muss auf
@@ -67,17 +68,19 @@
               <label for="Hometown">Hometown</label>
               <input id="Hometown" type="text" required="" value="" name="Hometown"
                 placeholder="Hometown hier eingeben..." autocomplete="off">
-              <span class="hide-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
               <label for="Hometown" class="register-label">Korrespondenzsprache</label>
               <select name="Korrespondenzsprache">
                 <option value="">Deutsch</option>
                 <option value="">Französisch</option>
               </select>
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
               <label for="Email">E-Mail</label>
               <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
-                autocomplete="off" validation-message="Ungültige Email">
-              <label for="Policy">Ich bestätige, dass ich die <a href="https://www.migros.ch/de/datenschutz.html"
-                  target="_blank">Datenschutzerklärung</a> und die
+                autocomplete="off">
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+              <label class="description" for="Policy">Ich bestätige, dass ich die <a
+                  href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a> und die
                 darin umschriebene Bearbeitung meiner Personendaten zur Kenntnis genommen haben.</label>
               <input reverse id="Policy" name="Policy" required="" type="checkbox" value="false" />
               <m4music-a-button type="primary" namespace="button-" namespace-fallback submit>Registrieren

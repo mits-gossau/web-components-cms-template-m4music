@@ -4,16 +4,16 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
 
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */`
       :host fieldset {
@@ -36,11 +36,11 @@ export default class Form extends BaseForm {
       }
 
       :host .show-error {
-        display:visible;
+        visibility:visible;
       }
 
       :host .hide-error{
-        display:none;
+        visibility:hidden;
       }
 
       :host .description {
@@ -94,7 +94,7 @@ export default class Form extends BaseForm {
       }
 
       :host .register-label{
-        padding:0.2rem;
+        padding:var(--register-field-padding, 0);
         font-size:var(--register-form-label-font-size, inherit);
       }
       

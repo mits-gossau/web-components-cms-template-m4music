@@ -213,7 +213,7 @@ html {
   --register-field-color:var(--color);
   --register-field-description-font-size-mobile: 0.7rem;
   --register-field-description-font-size: 0.5rem;
-  --register-field-description-padding:0.2rem;
+  --register-field-description-padding:0 0 0.4rem 0;
   --register-field-description-width-mobile:100%;
   --register-field-description-width:max(50%, 10vw);
   --register-field-height-mobile:auto;
@@ -236,11 +236,11 @@ html {
   --register-field-label-color:var(--color);
   --register-field-label-font-size-mobile: var(--h6-font-size-mobile);
   --register-field-label-font-size:var(--h6-font-size);
-  --register-field-label-padding:0 0 0.2rem 0;
+  --register-field-label-padding:0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding-error:0 0 0.8rem 0;
-  --register-field-padding:0 0 0.8rem 0;
+  --register-field-padding-error:0.2rem 0 0 0;
+  --register-field-padding:0.4rem 0 0 0;
   --register-field-placeholder-color:var(--color);
   --register-field-radio-flex-direction:row-reverse;
   --register-field-radio-width:auto;
