@@ -211,6 +211,11 @@ html {
   --register-field-button-width:auto;
   --register-field-checkbox-flex-direction: row;
   --register-field-color:var(--color);
+  --register-field-description-font-size-mobile: 0.7rem;
+  --register-field-description-font-size: 0.5rem;
+  --register-field-description-padding:0.2rem;
+  --register-field-description-width-mobile:100%;
+  --register-field-description-width:max(50%, 10vw);
   --register-field-height-mobile:auto;
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
@@ -234,9 +239,11 @@ html {
   --register-field-label-padding:0 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
-  --register-field-padding:0 0 0.8rem 0;
   --register-field-padding-error:0 0 0.8rem 0;
+  --register-field-padding:0 0 0.8rem 0;
   --register-field-placeholder-color:var(--color);
+  --register-field-radio-flex-direction:row-reverse;
+  --register-field-radio-width:auto;
   --register-field-text-align:left;
   --register-field-width:100%;
   --register-form-align-items-mobile: flex-start;
@@ -260,6 +267,9 @@ html {
   --register-form-select-width: var(--register-field-input-width);
   --register-form-select-width:var(--register-field-input-width);
   --register-form-wrapper-wrapper-background-color:#5f5f5f;
+  --register-radio-group-width:max(50%, 10vw);
+  --register-radio-margin-mobile:0 0.5rem 0 0;
+  --register-radio-margin:0.1rem 0.2rem 0.2rem 0;
   --register-width-mobile:100%;
   --register-width:100%;
   --spacer-height-mobile: 3.56rem;
@@ -277,9 +287,4 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  --field-description-font-size-mobile: 0.7rem;
-  --field-description-width-mobile:100%;
-  --field-description-font-size: 0.5rem;
-  --field-description-width:max(50%, 10vw);
-  --field-description-padding:0.2rem;
 }

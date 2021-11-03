@@ -37,11 +37,20 @@
             namespace-children="register-field-" use-html-submit>
             <form action="" method="post" id="online_form">
 
+              <div class="radio-group">
+                <label for="category1">Electronic</label>
+                <input id="category1" name="category" type="radio" value="1" />
+                <label for="category2">Lyricy & Beats</label>
+                <input id="category2" name="category" type="radio" value="2" />
+                <label for="category3">Pop</label>
+                <input id="category3" name="category" type="radio" value="3" />
+              </div>
+
 
               <label for="Artist">Band / Producer / Artist</label>
               <input id="Artist" type="text" required="" value="" name="Artist" placeholder="Name hier eingeben..."
                 autocomplete="off">
-              <span class="show-error"><img src="../../../img/Error.png">Warning ....</span>
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
 
               <label for="Song">Wettbewerb-Song / -Track*</label>
               <input id="Song" type="text" required="" value="" name="Song" placeholder="Name hier eingeben..."
@@ -58,6 +67,7 @@
               <label for="Hometown">Hometown</label>
               <input id="Hometown" type="text" required="" value="" name="Hometown"
                 placeholder="Hometown hier eingeben..." autocomplete="off">
+              <span class="hide-error error-message"><img src="../../../img/Error.png">Warning ....</span>
               <label for="Hometown" class="register-label">Korrespondenzsprache</label>
               <select name="Korrespondenzsprache">
                 <option value="">Deutsch</option>
