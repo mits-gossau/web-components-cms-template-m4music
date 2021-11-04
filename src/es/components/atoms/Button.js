@@ -34,7 +34,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * }
  */
 export default class Button extends Shadow() {
-  constructor (...args) {
+  constructor(...args) {
     super(...args)
 
     if (this.hasShadowRoot) {
@@ -66,7 +66,7 @@ export default class Button extends Shadow() {
     }
   }
 
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('click', this.clickListener)
@@ -75,7 +75,7 @@ export default class Button extends Shadow() {
     }
   }
 
-  disconnectedCallback () {
+  disconnectedCallback() {
     this.removeEventListener('click', this.clickListener)
   }
 
@@ -84,7 +84,7 @@ export default class Button extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -93,7 +93,7 @@ export default class Button extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML () {
+  shouldComponentRenderHTML() {
     return !this.root.querySelector('button')
   }
 
@@ -102,7 +102,7 @@ export default class Button extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */ `
     :host button {
       background-color: var(--background-color-${this.type}, transparent);
@@ -121,10 +121,10 @@ export default class Button extends Shadow() {
       background-color: var(--background-color-hover-${this.type}, --background-color);
       color: var(--color-hover-${this.type}, --color);
     }
-    ${this.icon
-        ? ':host > button > svg {margin-left: var(--icon-margin-left)}'
-        : ''
-      }
+    :host > button > svg{
+      margin-left:var(${this.icon ? '--icon-margin-left' : '0'}, 0);
+    }
+    
     ${this.type === 'arrow'
         ? `:host > button:hover .arrow{
           animation-name: arrowright;
@@ -177,7 +177,7 @@ export default class Button extends Shadow() {
    *
    * @return {void}
    */
-  renderHTML () {
+  renderHTML() {
     // @ts-ignore
     if (this.icon) this.constructor.addIconToButton(this.button, this.type)
     this.html = this.button
@@ -190,7 +190,7 @@ export default class Button extends Shadow() {
    * @param {string} type
    * @return {HTMLElement}
    */
-  static addIconToButton (button, type) {
+  static addIconToButton(button, type) {
     let iconImg
     if (type === 'arrow') {
       iconImg = document.createElement('div')
@@ -232,18 +232,18 @@ export default class Button extends Shadow() {
    *
    * @return {HTMLButtonElement}
    */
-  get button () {
+  get button() {
     return this._button || (this._button = document.createElement('button'))
   }
 
   /**
    * get button type
    */
-  get type () {
+  get type() {
     return this.getAttribute('type') || 'primary'
   }
 
-  get icon () {
+  get icon() {
     return this.type === 'arrow' || this.type === 'download'
   }
 }
