@@ -179,7 +179,7 @@ html {
   --header-logo-width:195px;
   --header-position:static;
   --highlightbox-align-items: center;
-  --highlightbox-background:var(--wrapper-background-color);
+  --highlightbox-background:var(--wrapper-background-secondary-color);
   --highlightbox-display: flex;
   --highlightbox-flex-direction: column;
   --highlightbox-h3-color: var(--h3-color);
@@ -279,7 +279,7 @@ html {
   --register-form-steps-counter-color:var(--color-orange);
   --register-form-steps-counter-padding:0 0.4rem 0 0;
   --register-form-steps-title-margin:0 0 0 1rem;
-  --register-form-wrapper-wrapper-background-color:var(--wrapper-background-color);
+  --register-form-wrapper-wrapper-background-color:var(--wrapper-background-secondary-color);
   --register-radio-group-height:var(--register-field-input-height);
   --register-radio-group-width:auto;
   --register-radio-margin-mobile:0 0.5rem 0 0;
@@ -295,7 +295,7 @@ html {
   --video-height: 100%;
   --video-iframe-height: calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
   --video-width: 100%;
-  --wrapper-background-color:#434343;
+  --wrapper-background-secondary-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;
   --wrapper-div-margin:0 2rem 0 0;
   --wrapper-li-background-size: 1rem;
