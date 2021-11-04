@@ -68,33 +68,28 @@ export default class Form extends BaseForm {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host {
-        padding: var(--form-padding, 30px);
+      :host{
+        padding:var(--form-padding, 30px);
       }
-
-      :host fieldset {
-        border: var(--fieldset-border, none);
-        padding: var(--fieldset-padding, 0);
+      :host fieldset{
+        border:var(--fieldset-border, none);
+        padding:var(--fieldset-padding, 0);
       }
-
-      :host h4.form-caption {
-        font-size: var(--h4-font-size, 1.25rem) !important;
-        line-height: var(--h4-line-height, 125%) !important;
-        margin: var(--form-caption-margin, 0);
-        text-transform: var(--form-caption-text-transform, uppercase);
+      :host h4.form-caption{
+        font-size:var(--h4-font-size, 1.25rem) !important;
+        line-height:var(--h4-line-height, 125%) !important;
+        margin:var(--form-caption-margin, 0);
+        text-transform:var(--form-caption-text-transform, uppercase);
       }
-
-      :host h4.form-caption .number {
-        color: var(--color-orange, #FB5F3F);
-        margin-right: var(--form-caption-number-margin-right, 15px);
+      :host h4.form-caption .number{
+        color:var(--color-orange, #FB5F3F);
+        margin-right:var(--form-caption-number-margin-right, 15px);
       }
-
-      :host .error-message span::before {
-        content: url('/assets/img/Error.png');
-        margin-right: 5px;
+      :host .error-message span::before{
+        content:url('/assets/img/Error.png');
+        margin-right:5px;
       }
-
-      :host .error-message {
+      :host .error-message{
         font-size:var(--field-error-font-size, inherit);
         margin-bottom:var(--field-error-margin-bottom, 0);
         line-height:var(--field-error-line-height, normal);
@@ -106,65 +101,55 @@ export default class Form extends BaseForm {
         align-content:var(--field-error-align-content, center);
         visibility:hidden;
       }
-
-      :host .error-message .field-validation-valid {
-        height: var(--field-error-valid-height, 0);
+      :host .error-message .field-validation-valid{
+        height:var(--field-error-valid-height, 0);
       }
-
-      :host .error-message > img {
-        padding: var(--field-error-image-padding, 0);
+      :host .error-message > img{
+        padding:var(--field-error-image-padding, 0);
         width:0.5rem;
       }
-
       :host .error-message .field-validation-error{
         visibility:visible;
-        height: unset;
+        height:unset;
       }
-
-      :host .description {
+      :host .description{
         font-size:var(--field-description-font-size, inherit);
         width:var(--field-description-width, auto);
         padding:var(--field-description-padding, 0);
       }
-
       :host .radio-group{
         display:flex;
         flex-direction:row;
         align-items:flex-start;
         width:var(--radio-group-width, auto);
-        justify-content: space-between;
+        justify-content:space-between;
         height:var(--radio-group-height, auto);
       }
-
-      :host .radio-group label {
+      :host .radio-group label{
         padding:0;
         align-self:center;
       }
-
-      :host [type=radio] {
+      :host [type=radio]{
         margin:var(--radio-margin, 0);
         align-self:center;
       }
-
-      :host * label {
+      :host * label{
         padding:var(--field-label-padding, 0);
       }
-
-
-      :host select {
-        box-sizing: content-box;
+      :host select{
+        box-sizing:content-box;
         padding:var(--form-select-padding, 0);
         border:1px solid var(--form-select-border, white);
-        font: inherit;
-        line-height: inherit;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        appearance: none;
-        background-repeat: no-repeat;
-        background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
-        background-position: right 15px top 0.6rem, right 10px top 0.6rem;
-        background-size: 5px 5px, 5px 5px;
+        font:inherit;
+        line-height:inherit;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        background-repeat:no-repeat;
+        background-image:linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+        background-position:right 15px top 0.6rem, right 10px top 0.6rem;
+        background-size:5px 5px, 5px 5px;
         background-color:var(--form-select-background-color, white);
         color:var(--form-select-color, white);
         font-size:var(--field-input-font-size, inherit);
@@ -173,42 +158,34 @@ export default class Form extends BaseForm {
         height:var(--field-height-mobile);
         border-radius:var(--field-select-border-radius, 0);
       }
-
-      :host select:focus-visible {
-        -webkit-appearance: none;
+      :host select:focus-visible{
+        -webkit-appearance:none;
         -moz-appearance:none;
         -ms-appearance:none;
         appearance:none;
         border:1px solid var(--form-select-border, white);
       }
-
       :host .register-label{
         padding:var(--field-padding, 0);
         font-size:var(--form-label-font-size, inherit);
       }
-
-      :host  m4music-a-button {
+      :host  m4music-a-button{
         padding-top:var(--form-button-padding-top, 0);
       }
-
       :host .steps{
         padding:0;
         margin:var(--form-steps-title-margin, 0);
       }
-
-      :host .steps__title {
+      :host .steps__title{
         font-size:var(--form-steps-font-size, inherit);
         font-weight:var(--form-steps-font-weight, normal);
         padding:0;
         margin:0;
       }
-
       :host .step__counter{
         color:var(--form-steps-counter-color, white);
         padding:var(--form-steps-counter-padding, 0);
       }
-
-      
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -223,31 +200,24 @@ export default class Form extends BaseForm {
           background-position: right 0.7rem top 0.8rem, right 0.5rem top 0.8rem;
           background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
         }
-
         :host .description {
           font-size:var(--field-description-font-size-mobile, inherit);
           width:var(--field-description-width-mobile, auto);
         }
-
         :host .radio-group{
           width:100%;
         }
-
         :host [type=radio] {
           align-items:center;
           margin:var(--radio-margin-mobile, 0);
         }
-
         :host * label {
           padding:var(--field-label-padding-mobile, 0);
         }
-
         :host m4music-a-button {
           padding-top:var(--form-button-padding-top-mobile, 0);
         }
-        
       }
-    
     `
   }
 }
