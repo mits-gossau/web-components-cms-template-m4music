@@ -187,7 +187,24 @@ export default class Form extends BaseForm {
       }
 
       :host  m4music-a-button {
-        padding-top:0.4rem;
+        padding-top:var(--form-button-padding-top, 0);
+      }
+
+      :host .steps{
+        padding:0;
+        margin:var(--form-steps-title-margin, 0);
+      }
+
+      :host .steps__title {
+        font-size:var(--form-steps-font-size, inherit);
+        font-weight:var(--form-steps-font-weight, normal);
+        padding:0;
+        margin:0;
+      }
+
+      :host .step__counter{
+        color:var(--form-steps-counter-color, white);
+        padding:var(--form-steps-counter-padding, 0);
       }
 
       

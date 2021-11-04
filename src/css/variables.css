@@ -255,12 +255,14 @@ html {
   --register-field-width:100%;
   --register-form-align-items-mobile: flex-start;
   --register-form-align-items: flex-start;
+  --register-form-button-padding-top:0.8rem;
   --register-form-display:flex;
   --register-form-flex-direction: column;
   --register-form-justify-content: flex-start;
   --register-form-label-font-size-mobile:var(--h6-font-size-mobile);
   --register-form-label-font-size:var(--h6-font-size);
-  --register-form-margin:1rem;
+  --register-form-margin:0 1rem;
+  --register-form-padding:1rem 0 1rem 0;
   --register-form-select-background-color: var(--register-field-input-background);
   --register-form-select-border:var(--background-color);
   --register-form-select-color:var(--color);
@@ -273,6 +275,9 @@ html {
   --register-form-select-padding:0.2rem;
   --register-form-select-width-mobile: 100%;
   --register-form-select-width:var(--register-field-input-width);
+  --register-form-steps-counter-color:var(--color-orange);
+  --register-form-steps-counter-padding:0 0.4rem 0 0;
+  --register-form-steps-title-margin:0 0 0 1rem;
   --register-form-wrapper-wrapper-background-color:#434343;
   --register-radio-group-height:var(--register-field-input-height);
   --register-radio-group-width:auto;
