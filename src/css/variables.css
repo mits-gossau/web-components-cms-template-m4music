@@ -10,7 +10,7 @@ html {
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
-  --body-picture-margin: 0 0 0.5rem 0;
+  --body-picture-margin: 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
   --border-color: #919191;
