@@ -179,7 +179,7 @@ html {
   --header-logo-width:195px;
   --header-position:static;
   --highlightbox-align-items: center;
-  --highlightbox-background: #434343;
+  --highlightbox-background:var(--wrapper-background-color);
   --highlightbox-display: flex;
   --highlightbox-flex-direction: column;
   --highlightbox-h3-color: var(--h3-color);
@@ -222,7 +222,7 @@ html {
   --register-field-height-mobile:auto;
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
-  --register-field-input-background:#232323;
+  --register-field-input-background:var(--background-color);
   --register-field-input-border-radius:4px;
   --register-field-input-box-shadow-mobile:none;
   --register-field-input-box-shadow:none;
@@ -255,8 +255,8 @@ html {
   --register-field-width:100%;
   --register-form-align-items-mobile: flex-start;
   --register-form-align-items: flex-start;
-  --register-form-button-padding-top:0.8rem;
   --register-form-button-padding-top-mobile:0;
+  --register-form-button-padding-top:0.8rem;
   --register-form-display:flex;
   --register-form-flex-direction: column;
   --register-form-justify-content: flex-start;
@@ -279,7 +279,7 @@ html {
   --register-form-steps-counter-color:var(--color-orange);
   --register-form-steps-counter-padding:0 0.4rem 0 0;
   --register-form-steps-title-margin:0 0 0 1rem;
-  --register-form-wrapper-wrapper-background-color:#434343;
+  --register-form-wrapper-wrapper-background-color:var(--wrapper-background-color);
   --register-radio-group-height:var(--register-field-input-height);
   --register-radio-group-width:auto;
   --register-radio-margin-mobile:0 0.5rem 0 0;
@@ -295,6 +295,7 @@ html {
   --video-height: 100%;
   --video-iframe-height: calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
   --video-width: 100%;
+  --wrapper-background-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;
   --wrapper-div-margin:0 2rem 0 0;
   --wrapper-li-background-size: 1rem;
