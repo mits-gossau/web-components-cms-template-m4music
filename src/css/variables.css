@@ -256,6 +256,7 @@ html {
   --register-form-align-items-mobile: flex-start;
   --register-form-align-items: flex-start;
   --register-form-button-padding-top:0.8rem;
+  --register-form-button-padding-top-mobile:0;
   --register-form-display:flex;
   --register-form-flex-direction: column;
   --register-form-justify-content: flex-start;

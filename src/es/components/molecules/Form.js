@@ -113,6 +113,7 @@ export default class Form extends BaseForm {
 
       :host .error-message > img {
         padding: var(--field-error-image-padding, 0);
+        width:0.5rem;
       }
 
       :host .error-message .field-validation-error{
@@ -219,6 +220,8 @@ export default class Form extends BaseForm {
           width:var(--form-select-width-mobile, auto);
           margin:var(--form-select-margin-mobile, 0);
           height:var(--form-select-height-mobile, auto);
+          background-position: right 0.7rem top 0.8rem, right 0.5rem top 0.8rem;
+          background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
         }
 
         :host .description {
@@ -237,6 +240,10 @@ export default class Form extends BaseForm {
 
         :host * label {
           padding:var(--field-label-padding-mobile, 0);
+        }
+
+        :host m4music-a-button {
+          padding-top:var(--form-button-padding-top-mobile, 0);
         }
         
       }
