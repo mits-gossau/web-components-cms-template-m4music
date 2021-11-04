@@ -4,12 +4,12 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
 
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -18,7 +18,7 @@ export default class Form extends BaseForm {
   *
   * @return {void}
   */
-  renderHTML() {
+  renderHTML () {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
       const inputArray = Array.from(this.root.querySelectorAll('input'))
@@ -65,7 +65,7 @@ export default class Form extends BaseForm {
     })
   }
 
-  renderCSS() {
+  renderCSS () {
     super.renderCSS()
     this.css = /* css */`
       :host {
