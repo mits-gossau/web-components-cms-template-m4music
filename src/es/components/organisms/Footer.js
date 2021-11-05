@@ -136,6 +136,15 @@ export default class Footer extends BaseFooter {
         --font-size:var(--a-font-size, 1em);
         --padding:var(--a-link-content-spacing, 0);
       }
+      :host .active{
+        --color:var(--color-orange);
+        --color-hover:var(--color, #FFFFFF);
+        --text-decoration-hover: none;
+      }
+
+      :host .hide-desktop{
+        display:none;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
         :host > * {
           margin:var(--content-spacing-mobile, 0) auto; 
@@ -154,12 +163,20 @@ export default class Footer extends BaseFooter {
           padding:var(--engagement-padding-mobile, 0);
         }
         :host .footer__nav {
+          align-items:center;
+          text-align: center;
           flex-direction:column;
         }
         :host .footer__meta {
+          align-items:center;
           font-size:var(--meta-font-size-mobile, 1em);
+          flex-direction:column;
+        }
+        :host .languages{
+          padding-top: 0.7rem;
         }
         :host a-link {
+          --text-align:center;
           --font-size:var(--a-font-size-mobile, 1em);
         }
         :host .footer__nav > div {
@@ -172,10 +189,17 @@ export default class Footer extends BaseFooter {
           margin:var(--title-h6-margin-mobile, 0);
         }
         :host .icons {
-          display:flex;
-          flex-direction:row;
-          justify-content:flex-start;
+          justify-content:center;
           align-items:center;
+        }
+        :host .icons > a-logo{
+          margin: 0px 0.3rem;
+        }
+        :host .hide-mobile {
+          display: none;
+        }
+        :host .hide-desktop {
+          display: block;
         }
       }
     `
