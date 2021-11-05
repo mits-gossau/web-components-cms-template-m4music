@@ -30,6 +30,9 @@ export default class Video extends BaseVideo {
       }
 
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
+        :host > iframe{
+          height: var(--iframe-height-mobile);
+        }
         :host > iframe, video{
           border: var(--border-mobile);
         }
