@@ -139,6 +139,7 @@ export default class Footer extends BaseFooter {
       :host .active{
         --color:var(--color-orange);
         --color-hover:var(--color, #FFFFFF);
+        --text-decoration-hover: none;
       }
 
       :host .hide-desktop{
