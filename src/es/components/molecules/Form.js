@@ -4,12 +4,12 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
 
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -18,7 +18,7 @@ export default class Form extends BaseForm {
   *
   * @return {void}
   */
-  renderHTML() {
+  renderHTML () {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
       const inputArray = Array.from(this.root.querySelectorAll('input'))
@@ -65,7 +65,7 @@ export default class Form extends BaseForm {
     })
   }
 
-  renderCSS() {
+  renderCSS () {
     super.renderCSS()
     this.css = /* css */`
       :host{
@@ -121,16 +121,16 @@ export default class Form extends BaseForm {
         display:flex;
         flex-direction:row;
         align-items:flex-start;
-        width:var(--radio-group-width, auto);
+        width:var(--field-radio-group-width, auto);
         justify-content:space-between;
-        height:var(--radio-group-height, auto);
+        height:var(--field-radio-group-height, auto);
       }
       :host .radio-group label{
         padding:0;
         align-self:center;
       }
       :host [type=radio]{
-        margin:var(--radio-margin, 0);
+        margin:var(--field-radio-margin, 0);
         align-self:center;
       }
 
@@ -147,8 +147,8 @@ export default class Form extends BaseForm {
       }
       :host select{
         box-sizing:border-box;
-        padding:var(--form-select-padding, 0);
-        border:1px solid var(--form-select-border, white);
+        padding:var(--field-select-padding, 0);
+        border:1px solid var(--field-select-border, white);
         font:inherit;
         line-height:inherit;
         -webkit-appearance:none;
@@ -159,11 +159,11 @@ export default class Form extends BaseForm {
         background-image:linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
         background-position:right 15px top 0.6rem, right 10px top 0.6rem;
         background-size:5px 5px, 5px 5px;
-        background-color:var(--form-select-background-color, white);
-        color:var(--form-select-color, white);
+        background-color:var(--field-select-background-color, white);
+        color:var(--field-select-color, white);
         font-size:var(--field-input-font-size, inherit);
-        width:var(--form-select-width, auto);
-        margin:var(--form-select-margin, 0);
+        width:var(--field-select-width, auto);
+        margin:var(--field-select-margin, 0);
         height:var(--field-input-height);
         border-radius:var(--field-select-border-radius, 0);
       }
@@ -172,11 +172,11 @@ export default class Form extends BaseForm {
         -moz-appearance:none;
         -ms-appearance:none;
         appearance:none;
-        border:1px solid var(--form-select-border, white);
+        border:1px solid var(--field-select-border, white);
       }
       :host .register-label{
         padding:var(--field-padding, 0);
-        font-size:var(--form-label-font-size, inherit);
+        font-size:var(--field-label-font-size, inherit);
       }
       :host  m4music-a-button{
         padding-top:var(--form-button-padding-top, 0);
@@ -201,11 +201,11 @@ export default class Form extends BaseForm {
           line-height:var(--h4-line-height-mobile, 125%) !important;
         }
         :host select {
-          padding:var(--form-select-padding-mobile, 0);
-          font-size:var(--form-select-font-size-mobile, inherit);
-          width:var(--form-select-width-mobile, auto);
-          margin:var(--form-select-margin-mobile, 0);
-          height:var(--form-select-height-mobile, auto);
+          padding:var(--field-select-padding-mobile, 0);
+          font-size:var(--field-select-font-size-mobile, inherit);
+          width:var(--field-select-width-mobile, auto);
+          margin:var(--field-select-margin-mobile, 0);
+          height:var(--field-select-height-mobile, auto);
           background-position: right 0.7rem top 0.8rem, right 0.5rem top 0.8rem;
           background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
         }
@@ -218,7 +218,7 @@ export default class Form extends BaseForm {
         }
         :host [type=radio] {
           align-items:center;
-          margin:var(--radio-margin-mobile, 0);
+          margin:var(--field-radio-margin-mobile, 0);
         }
         :host * label {
           padding:var(--field-label-padding-mobile, 0);
