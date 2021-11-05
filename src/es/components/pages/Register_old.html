@@ -32,18 +32,11 @@
       </div>
       <div>
         <m4music-o-wrapper namespace="register-form-wrapper-">
+
           <m4music-m-form type="newsletter" namespace-fallback namespace="register-"
             namespace-children="register-field-" use-html-submit>
-            <div class="steps">
-              <h4 class="steps__title"><span class="step__counter">1.</span>ANGABEN ZUR BAND</h4>
-            </div>
             <form action="" method="post" id="online_form">
-              <label for="Artist">Band / Producer / Artist</label>
-              <input id="Artist" type="text" required="" value="" name="Artist" placeholder="Name hier eingeben..."
-                autocomplete="off">
-              <a-input namespace="register-field-" type="text">
-                <label for="Artist">Band / Producer / Artist</label>
-              </a-input>
+
               <div class="radio-group">
                 <label for="category1">Electronic</label>
                 <input id="category1" name="category" type="radio" value="1" />
@@ -52,26 +45,46 @@
                 <label for="category3">Pop</label>
                 <input id="category3" name="category" type="radio" value="3" />
               </div>
+
+
+              <label for="Artist">Band / Producer / Artist</label>
+              <input id="Artist" type="text" required="" value="" name="Artist" placeholder="Name hier eingeben..."
+                autocomplete="off">
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+
               <label for="Song">Wettbewerb-Song / -Track*</label>
               <input id="Song" type="text" required="" value="" name="Song" placeholder="Name hier eingeben..."
                 autocomplete="off">
-              <span class="error-message" style="visibility:visible;"><img src="../../../img/Error.png">Feld muss
-                ausgefüllt werden</span>
+              <span class="hide-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+              <span class="description">Als Wettbewerbs-Beiträge sind nur Eigenkompositionen zugelassen. Coverversionen,
+                Remixes und Mash-Ups sind nicht erlaubt. Die Beiträge dürfen keine unautorisierten Samples enthalten.
+                Die Songs / Tracks dürfen ausserdem nicht älter als 2 Jahre sein. Der Wettbewerbs-Song/-Track muss auf
+                dem mx3-Account während der gesamten Dauer des Wettbewerbs Demotape Clinic (bis 22. März 2020)
+                aufgeschaltet sein. Da wir die Songs / Tracks gegebenenfalls an den Demotape Clinics abspielen, sind wir
+                für eine Codierung der mp3-Dateien von 44.1 kHz, 16 Bit – 192 kbit/s dankbar. mx3 ist für diese
+                Codierung optimiert. </span>
+
+
               <label for="Hometown">Hometown</label>
               <input id="Hometown" type="text" required="" value="" name="Hometown"
                 placeholder="Hometown hier eingeben..." autocomplete="off">
-              <span class="description">Als Wettbewerbs-Beiträge sind nur Eigenkompositionen zugelassen. Coverversionen,
-                Remixes und Mash-Ups sind nicht erlaubt. Die Beiträge dürfen keine unautorisierten Samples
-                enthalten.</span>
-              <label for="Email">E-Mail</label>
-              <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
-                autocomplete="off">
-              <label for="Korrespondenzsprache">Korrespondenzsprache</label>
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+
+              <label for="Hometown" class="register-label">Korrespondenzsprache</label>
               <select name="Korrespondenzsprache">
                 <option value="">Deutsch</option>
                 <option value="">Französisch</option>
               </select>
 
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+              <label for="Email">E-Mail</label>
+              <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
+                autocomplete="off">
+              <span class="show-error error-message"><img src="../../../img/Error.png">Warning ....</span>
+              <label class="description" for="Policy">Ich bestätige, dass ich die <a
+                  href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a> und die
+                darin umschriebene Bearbeitung meiner Personendaten zur Kenntnis genommen haben.</label>
+              <input reverse id="Policy" name="Policy" required="" type="checkbox" value="false" />
               <m4music-a-button type="primary" namespace="button-" namespace-fallback submit>Registrieren
               </m4music-a-button>
             </form>

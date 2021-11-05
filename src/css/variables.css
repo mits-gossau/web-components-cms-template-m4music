@@ -38,8 +38,8 @@ html {
   --content-spacing-mobile:var(--content-spacing);
   --content-spacing:0;
   --content-width-mobile:90%;
-  --content-width-not-web-component:70%;
   --content-width-not-web-component-mobile:90%;
+  --content-width-not-web-component:70%;
   --content-width:70%;
   --font-family:"GillSansMTMedium", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
@@ -216,7 +216,7 @@ html {
   --register-field-description-font-size: 0.5rem;
   --register-field-description-padding:0.2rem 0 0 0;
   --register-field-description-width-mobile:100%;
-  --register-field-description-width:max(30%, 10vw);
+  --register-field-description-width:max(30%, 512px);
   --register-field-error-font-size:0.7rem;
   --register-field-error-image-padding:0 0.2rem 0 0;
   --register-field-error-line-height:150%;
@@ -224,7 +224,10 @@ html {
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
   --register-field-input-background:var(--background-color);
+  --register-field-input-border-mobile:var(--register-field-input-border);
   --register-field-input-border-radius:4px;
+  --register-field-input-border:1px solid var(--register-form-select-border);
+  --register-field-input-border:1px;
   --register-field-input-box-shadow-mobile:none;
   --register-field-input-box-shadow:none;
   --register-field-input-checkbox-margin-mobile:0 0.2rem 0 0;
@@ -232,12 +235,13 @@ html {
   --register-field-input-color:var(--color);
   --register-field-input-font-size-mobile:var(--h6-font-size-mobile);
   --register-field-input-font-size:var(--h6-font-size);
-  --register-field-input-height-mobile:min(1.5rem, 8vw);
-  --register-field-input-height:1.1rem;
+  --register-field-input-height-mobile:min(1.9rem, 8vw);
+  --register-field-input-height:1.5rem;
   --register-field-input-margin:0;
-  --register-field-input-padding:0.2rem;
+  --register-field-input-outline:1px solid var(--color);
+  --register-field-input-padding:0.25rem 0.375rem 0.25rem 0.375rem;
   --register-field-input-width-mobile:100%;
-  --register-field-input-width:max(30%, 10vw);
+  --register-field-input-width:max(30%, 512px);
   --register-field-label-align-self:left;
   --register-field-label-color:var(--color);
   --register-field-label-font-size-mobile: var(--h6-font-size-mobile);
@@ -273,7 +277,7 @@ html {
   --register-form-select-margin-mobile:0 0 0.2rem 0;
   --register-form-select-margin:0;
   --register-form-select-padding-mobile:0.2rem;
-  --register-form-select-padding:0.2rem;
+  --register-form-select-padding:0.375rem 0 0.375rem 0.25rem;
   --register-form-select-width-mobile: 100%;
   --register-form-select-width:var(--register-field-input-width);
   --register-form-steps-counter-color:var(--color-orange);
@@ -283,7 +287,7 @@ html {
   --register-radio-group-height:var(--register-field-input-height);
   --register-radio-group-width:auto;
   --register-radio-margin-mobile:0 0.5rem 0 0;
-  --register-radio-margin:0 0.2rem 0 0;
+  --register-radio-margin:0 1rem 0 0;
   --register-width-mobile:100%;
   --register-width:100%;
   --spacer-height-mobile: 3.56rem;
@@ -293,8 +297,8 @@ html {
   --video-border: var(--video-border-width) var(--video-border-color) solid;
   --video-child-width: calc(100% - 2*var(--video-border-width));
   --video-height: 100%;
-  --video-iframe-height: calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
   --video-iframe-height-mobile: calc(((100vw * 0.9) - 2*var(--video-border-width)) * 0.5625);
+  --video-iframe-height: calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
   --video-width: 100%;
   --wrapper-background-secondary-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;

@@ -4,12 +4,12 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
 
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -18,7 +18,7 @@ export default class Form extends BaseForm {
   *
   * @return {void}
   */
-  renderHTML () {
+  renderHTML() {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
       const inputArray = Array.from(this.root.querySelectorAll('input'))
@@ -65,7 +65,7 @@ export default class Form extends BaseForm {
     })
   }
 
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */`
       :host{
@@ -133,11 +133,20 @@ export default class Form extends BaseForm {
         margin:var(--radio-margin, 0);
         align-self:center;
       }
+
+      :host [type=radio]:focus{
+        outline:none;
+      }
+
+      :host * input{
+        box-sizing: border-box;
+      }
+
       :host * label{
         padding:var(--field-label-padding, 0);
       }
       :host select{
-        box-sizing:content-box;
+        box-sizing:border-box;
         padding:var(--form-select-padding, 0);
         border:1px solid var(--form-select-border, white);
         font:inherit;
@@ -155,7 +164,7 @@ export default class Form extends BaseForm {
         font-size:var(--field-input-font-size, inherit);
         width:var(--form-select-width, auto);
         margin:var(--form-select-margin, 0);
-        height:var(--field-height-mobile);
+        height:var(--field-input-height);
         border-radius:var(--field-select-border-radius, 0);
       }
       :host select:focus-visible{
