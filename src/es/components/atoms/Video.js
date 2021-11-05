@@ -1,5 +1,6 @@
 import BaseVideo from '../web-components-cms-template/src/es/components/atoms/Video.js'
 
+/* global self */
 export default class Video extends BaseVideo {
   constructor (...args) {
     super(...args)
