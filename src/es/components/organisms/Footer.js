@@ -173,7 +173,7 @@ export default class Footer extends BaseFooter {
           flex-direction:column;
         }
         :host .languages{
-          padding-top: 15px;
+          padding-top: 0.7rem;
         }
         :host a-link {
           --text-align:center;
@@ -193,7 +193,7 @@ export default class Footer extends BaseFooter {
           align-items:center;
         }
         :host .icons > a-logo{
-          margin: 0px 8px;
+          margin: 0px 0.3rem;
         }
         :host .hide-mobile {
           display: none;

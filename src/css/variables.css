@@ -276,7 +276,9 @@ html {
   --spacer-height: 5rem;
   --video-border-color: var(--color-orange);
   --video-border-width: 1rem;
+  --video-border-width-mobile: 0.8rem;
   --video-border: var(--video-border-width) var(--video-border-color) solid;
+  --video-border-mobile: var(--video-border-width-mobile) var(--video-border-color) solid;
   --video-child-width: calc(100% - 2*var(--video-border-width));
   --video-height: 100%;
   --video-iframe-height: calc(((100vw * 0.85) - 2*var(--video-border-width)) * 0.5625);
