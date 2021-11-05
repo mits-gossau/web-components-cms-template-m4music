@@ -51,6 +51,7 @@ html {
   --footer-background-color:var(--background-color);
   --footer-border-top:1px solid var(--border-color);
   --footer-color:var(--color);
+  --footer-color-orange:var(--color-orange);
   --footer-content-width-mobile:var(--content-width-mobile);
   --footer-content-width:var(--content-width);
   --footer-div-padding-mobile:0 0 1rem 0;
