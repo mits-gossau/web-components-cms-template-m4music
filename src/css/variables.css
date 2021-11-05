@@ -248,7 +248,7 @@ html {
   --register-field-label-font-size-mobile:var(--h6-font-size-mobile);
   --register-field-label-font-size:var(--h6-font-size);
   --register-field-label-font-size:var(--h6-font-size);
-  --register-field-label-padding-mobile:0.4rem 0 0.2rem 0;
+  --register-field-label-padding-mobile:0.65rem 0 0.2rem 0;
   --register-field-label-padding:0.8rem 0 0.2rem 0;
   --register-field-label-text-align:left;
   --register-field-label-text-transform:none;
