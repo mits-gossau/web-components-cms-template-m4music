@@ -70,9 +70,6 @@ export default class Button extends Shadow() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('click', this.clickListener)
-    if (this.hasAttribute('submit')) {
-      this.button.setAttribute('type', 'submit')
-    }
   }
 
   disconnectedCallback () {
@@ -114,7 +111,7 @@ export default class Button extends Shadow() {
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
       padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
-      transition: var(--button-transition, 0.3s all);
+      transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
     }
     :host button:hover,  button:active, button:focus {

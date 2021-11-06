@@ -26,7 +26,9 @@ export default class Form extends BaseForm {
       inputArray.concat(selectArray).filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
         this.inputFields.push(input)
         const label = this.root.querySelector(`label[for='${input.getAttribute('id')}']`) || this.root.querySelector(`label[for='${input.getAttribute('name')}']`)
+        const description = this.root.querySelector(`.description[data-for='${input.getAttribute('id')}']`) || this.root.querySelector(`.description[data-for='${input.getAttribute('name')}']`)
         const aInput = new children[0][1](input, label, { mode: 'false', namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
+        if (description) aInput.prepend(description)
         aInput.setAttribute('type', input.getAttribute('type'))
         if (input.hasAttribute('reverse')) aInput.setAttribute('reverse', input.getAttribute('reverse'))
         input.replaceWith(aInput)
@@ -81,10 +83,7 @@ export default class Form extends BaseForm {
         margin:var(--form-caption-margin, 0);
         text-transform:var(--form-caption-text-transform, uppercase);
       }
-      :host h4.form-caption .number{
-        color:var(--color-orange, #FB5F3F);
-        margin-right:var(--form-caption-number-margin-right, 15px);
-      }
+      
       :host .error-message span::before{
         content:url('/assets/img/Error.png');
         margin-right:5px;
@@ -100,6 +99,9 @@ export default class Form extends BaseForm {
         align-items:var(--field-error-align-items, center);
         align-content:var(--field-error-align-content, center);
         visibility:hidden;
+      }
+      :host .description {
+        order: 10; /* lazy solution that description is under input-field */
       }
       :host .error-message .field-validation-valid{
         height:var(--field-error-valid-height, 0);
@@ -130,13 +132,73 @@ export default class Form extends BaseForm {
         align-self:center;
       }
       :host [type=radio]{
-        margin:var(--field-radio-margin, 0);
         align-self:center;
+      }
+      :host [type=radio] input {
+        margin-right: var(--field-radio-input-margin-right, 10px);
+      }
+      :host :not(input)[type=radio] {
+        margin:var(--field-radio-margin, 0);
+      }
+
+      :host .form-button-container > * {
+        display: inline;
+      }
+
+      :host .m4music-button-primary {
+        background-color: var(--button-background-color-primary, transparent);
+        border: var(--button-border, none);
+        border-radius: var(--button-border-radius, 0);
+        color: var(--button-color-primary, white);
+        cursor: var(--button-cursor, pointer);
+        font-family: var(--button-font-family, var(--button-font-family-bold));
+        font-size: var(--button-font-size, 1em);
+        font-weight: var(--button-font-weight, var(--button-font-weight, normal));
+        padding:var(--button-padding, 1em);
+        transition: var(--button-transition, 0.3s all);
+        width: var(--button-width, 100%);
+        height: auto;
+        margin: var(--input-button-margin, 1.5em 1em 1em 0);
+      }
+      :host .m4music-button-primary:hover,
+      :host .m4music-button-primary:active,
+      :host .m4music-button-primary:focus {
+        background-color: var(--button-background-color-hover-primary, --button-background-color);
+        color: var(--button-color-hover-primary, --button-color);
+      }
+
+      :host .m4music-button-secondary {
+        background-color: var(--color-grey, transparent);
+        border: var(--button-border, none);
+        border-radius: var(--button-border-radius, 0);
+        color: var(--color, white);
+        cursor: var(--button-cursor, pointer);
+        font-family: var(--button-font-family, var(--button-font-family-bold));
+        font-size: var(--button-font-size, 1em);
+        font-weight: var(--button-font-weight, var(--button-font-weight, normal));
+        padding:var(--button-padding, 1em);
+        transition: var(--button-transition, 0.3s all);
+        width: var(--button-width, 100%);
+        height: auto;
+        margin: var(--input-button-margin, 1.5em 1em 1em 0);
+      }
+      :host .m4music-button-secondary:hover,
+      :host .m4music-button-secondary:active,
+      :host .m4music-button-secondary:focus {
+        background-color: var(--color-light-grey, --button-background-color);
+        color: var(--color, --button-color);
       }
 
       :host [type=radio]:focus{
         outline:none;
       }
+
+      :host [type=checkbox] input{
+        width: var(--checkbox-width, 20px);
+        height: var(--checkbox-height, 20px);
+        margin-top: var(--checkbox-margin-top, 30px);
+      }
+
 
       :host * input{
         box-sizing: border-box;
@@ -199,7 +261,7 @@ export default class Form extends BaseForm {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
           line-height:var(--h4-line-height-mobile, 125%) !important;
-        }
+        } 
         :host select {
           padding:var(--field-select-padding-mobile, 0);
           font-size:var(--field-select-font-size-mobile, inherit);
@@ -219,6 +281,11 @@ export default class Form extends BaseForm {
         :host [type=radio] {
           align-items:center;
           margin:var(--field-radio-margin-mobile, 0);
+        }
+        :host [type=checkbox] input{
+          width: var(--checkbox-width-mobile, 15px);
+          height: var(--checkbox-height-mobile, 15px);
+          margin-top: var(--checkbox-margin-top-mobile, 13px);
         }
         :host * label {
           padding:var(--field-label-padding-mobile, 0);
