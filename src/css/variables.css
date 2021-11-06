@@ -53,6 +53,7 @@ html {
   --footer-background-color:var(--background-color);
   --footer-border-top:1px solid var(--border-color);
   --footer-color:var(--color);
+  --footer-color-orange:var(--color-orange);
   --footer-content-width-mobile:var(--content-width-mobile);
   --footer-content-width:var(--content-width);
   --footer-div-padding-mobile:0 0 1rem 0;
@@ -297,7 +298,9 @@ html {
   --spacer-height: 5rem;
   --video-border-color: var(--color-orange);
   --video-border-width: 1rem;
+  --video-border-width-mobile: 0.8rem;
   --video-border: var(--video-border-width) var(--video-border-color) solid;
+  --video-border-mobile: var(--video-border-width-mobile) var(--video-border-color) solid;
   --video-child-width: calc(100% - 2*var(--video-border-width));
   --video-height: 100%;
   --video-iframe-height-mobile: calc(((100vw * 0.9) - 2*var(--video-border-width)) * 0.5625);

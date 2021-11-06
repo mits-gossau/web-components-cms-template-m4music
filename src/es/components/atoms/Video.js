@@ -34,6 +34,9 @@ export default class Video extends BaseVideo {
         :host > iframe{
           height: var(--iframe-height-mobile);
         }
+        :host > iframe, video{
+          border: var(--border-mobile);
+        }
       }
     `
   }

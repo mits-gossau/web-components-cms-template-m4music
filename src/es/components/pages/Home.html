@@ -118,10 +118,11 @@
           <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden</m4music-a-button>
         </m4music-m-highlightbox>
       </div>
+
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
-        <div class="footer__engagement">
+        <div class="footer__engagement hide-mobile">
           <a-logo namespace="footer-engagement-logo-" src="../../../img/kulturprozent.svg"
             href="https://www.migros-engagement.ch/engagement" target="_blank" lang="de">
             <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der
@@ -131,7 +132,7 @@
           </a-logo>
         </div>
         <div class="footer__nav">
-          <div>
+          <!-- <div>
             <h6>ÜBER UNS</h6>
             <ul>
               <li>
@@ -159,6 +160,7 @@
               </li>
             </ul>
           </div>
+          -->
           <div>
             <h6>KONTAKT</h6>
             <ul>
@@ -192,17 +194,17 @@
               &copy; m4music
             </li>
             <li>
-              <a-link namespace-fallback><a href="#">Impressum & Datenschutz</a></a-link>
+              <a-link namespace="footer-" namespace-fallback><a href="#">Impressum & Datenschutz</a></a-link>
             </li>
             <li>
-              <a-link namespace-fallback><a href="#">Rechliche Hinweise</a></a-link>
+              <a-link namespace="footer-" namespace-fallback><a href="#">Rechliche Hinweise</a></a-link>
             </li>
           </ul>
         </div>
-        <div>
+        <div class="languages">
           <ul>
             <li>
-              <a-link namespace="footer-" namespace-fallback><a href="#"> DE </a></a-link>
+              <a-link class="active" namespace="footer-" namespace-fallback><a href="#"> DE </a></a-link>
             </li>
             <li>
               <a-link namespace="footer-" namespace-fallback><a href="#"> FR </a></a-link>
@@ -212,6 +214,15 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="footer__engagement hide-desktop">
+        <a-logo namespace="footer-engagement-logo-" src="../../../img/kulturprozent.svg"
+          href="https://www.migros-engagement.ch/engagement" target="_blank" lang="de">
+          <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der
+            Migros-Gruppe:
+            <br /><a href="http://migros-engagement.ch/" target="_blank">migros-engagement.ch</a>
+          </p>
+        </a-logo>
       </div>
     </m4music-o-footer>
   </p-general>
