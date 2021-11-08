@@ -170,7 +170,17 @@ export default class Footer extends BaseFooter {
         :host .footer__meta {
           align-items:center;
           font-size:var(--meta-font-size-mobile, 1em);
+        }
+        :host .metalinks > ul{
+          display:flex;
           flex-direction:column;
+          align-items:center;
+        }
+        :host .metalinks > ul > li{
+          padding: var(--footer-ul-li-padding,var(--ul-li-padding, 0));
+        }
+        :host .metalinks > ul > li:first-child{
+          padding: var(--footer-title-h6-padding-mobile,var(--title-h6-padding-mobile, 0));
         }
         :host .languages{
           padding-top: 0.7rem;
