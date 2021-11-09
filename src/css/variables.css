@@ -192,7 +192,7 @@ html {
   --highlightbox-h3-margin: var(--h3-margin);
   --highlightbox-h3-padding: var(--h3-padding);
   --highlightbox-h3-text-transform: var(--h3-text-transform);
-  --highlightbox-h3-word-break: var(--h3-word-break);
+  --highlightbox-h3-word-break:normal;
   --highlightbox-justify-content: center;
   --highlightbox-margin-botton: 3rem;
   --highlightbox-mobile-padding: 0.9rem;
@@ -228,7 +228,6 @@ html {
   --register-field-input-background:var(--background-color);
   --register-field-input-border-mobile:var(--register-field-input-border);
   --register-field-input-border-radius:4px;
-  --register-field-input-border:1px solid var(--register-form-select-border);
   --register-field-input-border:1px;
   --register-field-input-box-shadow-mobile:none;
   --register-field-input-box-shadow:none;
