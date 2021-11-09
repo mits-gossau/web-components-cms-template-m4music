@@ -47,7 +47,7 @@ html {
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
-  --footer-a-font-size-mobile:min(18px, 3vw);
+  --footer-a-font-size-mobile:min(18px, 5vw);
   --footer-a-font-size:0.65rem;
   --footer-a-text-underline-offset:0.2rem;
   --footer-background-color:var(--background-color);
@@ -78,7 +78,7 @@ html {
   --footer-engagement-text-max-width:max(17rem, 4vw);
   --footer-flex-direction:column;
   --footer-li-padding:0 1em 0 0;
-  --footer-meta-font-size-mobile:min(18px, 3vw);
+  --footer-meta-font-size-mobile:min(18px, 5vw);
   --footer-meta-font-size:0.65rem;
   --footer-meta-padding:1rem 0 1.5rem;
   --footer-padding:2rem 0 0;
@@ -92,7 +92,7 @@ html {
   --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
   --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
   --footer-text-decoration:underline var(--link-underline-color) solid 1px;
-  --footer-title-h6-font-size-mobile:min(18px, 3vw);
+  --footer-title-h6-font-size-mobile:min(18px, 5vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;
   --footer-title-h6-padding:0 0 0.22rem 0;
