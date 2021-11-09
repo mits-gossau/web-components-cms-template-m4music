@@ -219,7 +219,7 @@ html {
   --register-field-description-padding:0.2rem 0 0 0;
   --register-field-description-width-mobile:100%;
   --register-field-description-width:max(30%, 512px);
-  --register-field-error-font-size:0.9rem;
+  --register-field-error-font-size:var(--register-field-label-font-size);
   --register-field-error-image-padding:0 0.2rem 0 0;
   --register-field-error-line-height:150%;
   --register-field-height-mobile:auto;
@@ -247,7 +247,6 @@ html {
   --register-field-label-align-self:left;
   --register-field-label-color:var(--color);
   --register-field-label-font-size-mobile: var(--font-size-mobile);
-  --register-field-label-font-size:var(--h6-font-size);
   --register-field-label-font-size:var(--h6-font-size);
   --register-field-label-padding-mobile:0.65rem 0 0.2rem 0;
   --register-field-label-padding:0.8rem 0 0.2rem 0;

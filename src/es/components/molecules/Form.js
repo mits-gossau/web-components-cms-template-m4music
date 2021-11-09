@@ -134,7 +134,7 @@ export default class Form extends BaseForm {
       }
       :host * label{
         padding:var(--field-label-padding, 0);
-        font-weight:(--field-label-font-weight, normal);
+        font-weight:var(--field-label-font-weight, normal);
       }
       :host select{
         box-sizing:border-box;
