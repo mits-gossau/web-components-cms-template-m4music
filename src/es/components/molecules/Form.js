@@ -4,71 +4,8 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  connectedCallback () {
-    if (this.shouldComponentRenderCSS()) this.renderCSS()
-    this.renderHTML()
-  }
-
-  shouldComponentRenderCSS () {
-    return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
-  }
-
-  /**
-  * renders the a-text-field html
-  *
-  * @return {void}
-  */
-  renderHTML () {
-    this.hasRendered = true
-    this.loadChildComponents().then(children => {
-      const inputArray = Array.from(this.root.querySelectorAll('input'))
-      const selectArray = Array.from(this.root.querySelectorAll('select'))
-      inputArray.concat(selectArray).filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
-        this.inputFields.push(input)
-        const label = this.root.querySelector(`label[for='${input.getAttribute('id')}']`) || this.root.querySelector(`label[for='${input.getAttribute('name')}']`)
-        const description = this.root.querySelector(`.description[data-for='${input.getAttribute('id')}']`) || this.root.querySelector(`.description[data-for='${input.getAttribute('name')}']`)
-        const aInput = new children[0][1](input, label, { mode: 'false', namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
-        if (description) aInput.prepend(description)
-        aInput.setAttribute('type', input.getAttribute('type'))
-        if (input.hasAttribute('reverse')) aInput.setAttribute('reverse', input.getAttribute('reverse'))
-        input.replaceWith(aInput)
-        if (input.hasAttribute('validation-message')) {
-          const changeListener = event => {
-            if (input.hasAttribute('valid') ? input.getAttribute('valid') === 'true' : input.validity.valid) {
-              label.removeAttribute('data-balloon-visible')
-              label.removeAttribute('aria-label')
-              label.removeAttribute('data-balloon-pos')
-            } else {
-              label.setAttribute('data-balloon-visible', 'true')
-              label.setAttribute('aria-label', input.getAttribute('validation-message'))
-              label.setAttribute('data-balloon-pos', input.hasAttribute('reverse') ? 'down' : 'up')
-            }
-          }
-          this.validateFunctions.push(changeListener)
-          input.changeListener = changeListener
-          input.addEventListener('blur', changeListener)
-          input.addEventListener('blur', event => {
-            input.addEventListener('change', changeListener)
-            input.addEventListener('keyup', changeListener)
-          }, { once: true })
-        }
-      })
-      // spam protection
-      if (this.getAttribute('type') === 'newsletter') {
-        this.emptyInput = document.createElement('input')
-        this.emptyInput.type = 'text'
-        this.emptyInput.id = 'oceans'
-        this.form.appendChild(this.emptyInput)
-      }
-      Array.from(this.root.querySelectorAll('button')).forEach(button => {
-        const aButton = new children[1][1](button, { namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '' })
-        button.replaceWith(aButton)
-      })
-    })
-  }
-
   renderCSS () {
-    super.renderCSS()
+    super.renderCSS(false)
     this.css = /* css */`
       :host{
         padding:var(--form-padding, 30px);
