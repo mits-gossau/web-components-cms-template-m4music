@@ -82,12 +82,11 @@ html {
   --footer-meta-font-size:0.65rem;
   --footer-meta-padding:1rem 0 1.5rem;
   --footer-padding:2rem 0 0;
-  --footer-social-logo-height-mobile:min(1.2rem, 5vw);
+  --footer-social-logo-height-mobile:min(1.5rem, 8vw);
   --footer-social-logo-height:0.8rem;
   --footer-social-logo-object-fit: fill;
-  --footer-social-logo-padding-mobile:0.25rem 0.5rem 0 0;
+  --footer-social-logo-padding-mobile:0.9rem 0.5rem 0 0;
   --footer-social-logo-padding:0;
-  --footer-social-logo-width-mobile:min(1.2rem, 5vw);
   --footer-social-logo-width:0.8rem;
   --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
   --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
