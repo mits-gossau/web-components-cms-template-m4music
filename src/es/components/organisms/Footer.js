@@ -54,7 +54,7 @@ import BaseFooter from '../web-components-cms-template/src/es/components/organis
  * }
  */
 export default class Footer extends BaseFooter {
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.renderHTML()
   }
@@ -64,7 +64,7 @@ export default class Footer extends BaseFooter {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     this.css = /* css */`
       :host {
         background-color:var(--background-color, black);
@@ -135,6 +135,9 @@ export default class Footer extends BaseFooter {
         --display:var(--a-link-display);
         --font-size:var(--a-font-size, 1em);
         --padding:var(--a-link-content-spacing, 0);
+        --text-decoration-line: var(--text-decoration, none);
+        --text-decoration-color: var(-link-underline-color); 
+        --text-decoration-thickness:var(--text-decoration-thickness); 
       }
       :host .active{
         --color:var(--color-orange);

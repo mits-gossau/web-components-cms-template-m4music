@@ -88,9 +88,16 @@ html {
   --footer-social-logo-padding-mobile:0.9rem 0.5rem 0 0;
   --footer-social-logo-padding:0;
   --footer-social-logo-width:0.8rem;
+
   --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
   --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
-  --footer-text-decoration:underline var(--link-underline-color) solid 1px;
+
+  --footer-text-decoration-line:underline;
+
+  --footer-text-decoration-thickness:1px;
+  --footer-text-decoration-color:var(--link-underline-color);
+  --footer-text-decoration:underline;
+
   --footer-title-h6-font-size-mobile:min(18px, 5vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;
