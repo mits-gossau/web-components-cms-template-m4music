@@ -311,4 +311,5 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --header-flex-direction-mobile:row;
 }
