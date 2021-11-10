@@ -5,14 +5,12 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
  html {
-  --a-text-decoration-color-ext: var(--link-underline-color);
-  --a-text-decoration-color-hover-ext: var(--color-orange);
-  --a-text-decoration-hover: underline solid var(--color-orange) 1px;
-  --a-text-decoration-line-ext: underline;
-  --a-text-decoration-line-hover-ext: underline;
-  --a-text-decoration-style-ext: solid;
-  --a-text-decoration-style-hover-ext: solid;
-  --a-text-decoration: underline solid var(--link-underline-color) 1px;
+  --a-text-decoration-color-ext:var(--link-underline-color);
+  --a-text-decoration-color-hover-ext:var(--color-orange);
+  --a-text-decoration-line-ext:underline;
+  --a-text-decoration-line-hover-ext:underline;
+  --a-text-decoration-style-ext:solid;
+  --a-text-decoration-style-hover-ext:solid;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
@@ -297,6 +295,8 @@
   --register-width:100%;
   --spacer-height-mobile:1rem;
   --spacer-height:1rem;
+  --text-decoration-hover:underline solid var(--color-orange) 1px;
+  --text-decoration:underline solid var(--link-underline-color) 1px;
   --video-border-color: var(--color-orange);
   --video-border-mobile: var(--video-border-width-mobile) var(--video-border-color) solid;
   --video-border-width-mobile: 0.8rem;
