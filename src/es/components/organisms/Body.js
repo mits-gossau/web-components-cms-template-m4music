@@ -55,15 +55,7 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .text-with-button p {
-      margin: var(--text-with-button-p-margin, 0);
-    }
-    :host .text-with-button {
-      margin-bottom: var(--text-with-button-margin-bottom, 0);
-    }
-    :host .text-with-button article {
-      margin: var(--text-with-button-article-margin, 25px auto 40px auto);
-    }
+    
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > main > *[content-width] {
         width:var(--content-width-mobile, 80%);
@@ -72,13 +64,6 @@ export default class Body extends BaseBody {
       :host ul {
         margin-top: 0;
       }
-      :host .text-with-button {
-        margin-bottom: var(--text-with-button-margin-bottom-mobile, 0);
-      }
-      :host .text-with-button article {
-        margin: var(--text-with-button-article-margin-mobile, 25px auto);
-      }
-      
     }
     `
   }
