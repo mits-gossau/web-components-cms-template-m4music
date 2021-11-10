@@ -4,9 +4,13 @@
  * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
  * - if a component holds other components you should share the attribute namespace with its children
  */
-html {
-  --a-text-decoration-hover: underline var(--color-orange) 1px solid;
-  --a-text-decoration: underline var(--link-underline-color) solid 1px;
+ html {
+  --a-text-decoration: underline;
+  --a-text-decoration-style: solid;
+  --a-text-decoration-color: var(--link-underline-color);
+  --a-text-decoration-hover: underline;
+  --a-text-decoration-style-hover: solid;
+  --a-text-decoration-color-hover: var(--color-orange);
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
@@ -88,16 +92,15 @@ html {
   --footer-social-logo-padding-mobile:0.9rem 0.5rem 0 0;
   --footer-social-logo-padding:0;
   --footer-social-logo-width:0.8rem;
-
-  --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
-  --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
-
-  --footer-text-decoration-line:underline;
-
+  --footer-text-decoration-line:solid;
+  --footer-text-decoration-line-hover:solid;
   --footer-text-decoration-thickness:1px;
+  --footer-text-decoration-thickness-hover:1px;
   --footer-text-decoration-color:var(--link-underline-color);
+  --footer-text-decoration-color-hover:var(--color-orange);
   --footer-text-decoration:underline;
-
+  --footer-text-decoration-hover:underline;
+  --footer-text-decoration-focus:underline;
   --footer-title-h6-font-size-mobile:min(18px, 5vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;

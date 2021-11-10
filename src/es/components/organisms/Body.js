@@ -26,6 +26,18 @@ export default class Body extends BaseBody {
       margin:var(--content-spacing, 0) auto;
       width:var(--content-width, 80%);
     }
+    :host > main * a {
+      text-decoration-line: var(--a-text-decoration, none);
+      text-decoration-style: var(--a-text-decoration-style, solid);
+      text-decoration-color: var(--a-text-decoration-color, red);
+      text-decoration-thickness:var(--a-text-decoration-thickness, 1px);    
+    }
+    :host > main * a:hover {
+      text-decoration-line: var(--a-text-decoration-hover, none);
+      text-decoration-style: var(--a-text-decoration-style-hover, solid);
+      text-decoration-color: var(--a-text-decoration-color-hover, red);
+      text-decoration-thickness:var(--a-text-decoration-thickness-hover, 1px);    
+    }
     /* :host ul.check */
     :host ul {
       padding:var(--wrapper-ul-padding, 0);
@@ -43,14 +55,12 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-
     .text-with-button p {
       margin: var(--text-with-button-p-margin, 0);
     }
     .text-with-button article {
       margin: var(--text-with-button-margin, 25px auto 40px auto);
     }
-
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > main > *[content-width] {
         width:var(--content-width-mobile, 80%);
