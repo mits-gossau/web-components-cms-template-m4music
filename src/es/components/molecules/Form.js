@@ -4,7 +4,7 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  renderCSS() {
+  renderCSS () {
     super.renderCSS(false)
     this.css = /* css */`
       :host{
