@@ -135,9 +135,6 @@ export default class Footer extends BaseFooter {
         --display:var(--a-link-display);
         --font-size:var(--a-font-size, 1em);
         --padding:var(--a-link-content-spacing, 0);
-        --text-decoration-line: var(--text-decoration, none);
-        --text-decoration-color: var(-link-underline-color); 
-        --text-decoration-thickness:var(--text-decoration-thickness); 
       }
       :host .active{
         --color:var(--color-orange);

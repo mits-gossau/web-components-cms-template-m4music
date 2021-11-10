@@ -26,18 +26,6 @@ export default class Body extends BaseBody {
       margin:var(--content-spacing, 0) auto;
       width:var(--content-width, 80%);
     }
-    :host > main * a {
-      text-decoration-line: var(--a-text-decoration, none);
-      text-decoration-style: var(--a-text-decoration-style, solid);
-      text-decoration-color: var(--a-text-decoration-color, red);
-      text-decoration-thickness:var(--a-text-decoration-thickness, 1px);    
-    }
-    :host > main * a:hover {
-      text-decoration-line: var(--a-text-decoration-hover, none);
-      text-decoration-style: var(--a-text-decoration-style-hover, solid);
-      text-decoration-color: var(--a-text-decoration-color-hover, red);
-      text-decoration-thickness:var(--a-text-decoration-thickness-hover, 1px);    
-    }
     /* :host ul.check */
     :host ul {
       padding:var(--wrapper-ul-padding, 0);
