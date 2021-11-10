@@ -32,6 +32,18 @@ export default class Body extends BaseBody {
       margin:var(--wrapper-ul-margin, 0);
       list-style-type: none;
     }
+    :host > main * a {
+      text-decoration-line: var(--a-text-decoration-line-ext, none);
+      text-decoration-style: var(--a-text-decoration-style-ext, solid);
+      text-decoration-color: var(--a-text-decoration-color-ext, red);
+      text-decoration-thickness:var(--a-text-decoration-thickness-ext, 1px);    
+    }
+    :host > main * a:hover {
+      text-decoration-line: var(--a-text-decoration-line-hover-ext, none);
+      text-decoration-style: var(--a-text-decoration-style-hover-ext, solid);
+      text-decoration-color: var(--a-text-decoration-color-hover-ext, red);
+      text-decoration-thickness:var(--a-text-decoration-thickness-hover-ext, 1px);    
+    }
     /* :host ul.check > li */
     :host ul > li {
       background: url('/assets/img/check.svg') no-repeat 0 0.3rem transparent; 

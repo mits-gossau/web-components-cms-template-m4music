@@ -5,7 +5,13 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
  html {
+  --a-text-decoration-color-ext: var(--link-underline-color);
+  --a-text-decoration-color-hover-ext: var(--color-orange);
   --a-text-decoration-hover: underline solid var(--color-orange) 1px;
+  --a-text-decoration-line-ext: underline;
+  --a-text-decoration-line-hover-ext: underline;
+  --a-text-decoration-style-ext: solid;
+  --a-text-decoration-style-hover-ext: solid;
   --a-text-decoration: underline solid var(--link-underline-color) 1px;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
@@ -88,9 +94,9 @@
   --footer-social-logo-padding-mobile:0.9rem 0.5rem 0 0;
   --footer-social-logo-padding:0;
   --footer-social-logo-width:0.8rem;
-  --footer-text-decoration:underline solid var(--link-underline-color) 1px;
   --footer-text-decoration-focus:underline solid var(--color-orange) 1px;
   --footer-text-decoration-hover:underline solid var(--color-orange) 1px;
+  --footer-text-decoration:underline solid var(--link-underline-color) 1px;
   --footer-title-h6-font-size-mobile:min(18px, 5vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;
