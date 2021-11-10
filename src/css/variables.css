@@ -17,6 +17,8 @@
   --body-picture-margin: 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
+  --body-text-with-button-margin-bottom-mobile:1rem;
+  --body-text-with-button-margin-bottom:1rem;
   --border-color: #919191;
   --button-background-color-hover-primary: #E53C1A;
   --button-background-color-hover-secondary:var(--link-underline-color);

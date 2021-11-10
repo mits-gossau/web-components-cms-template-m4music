@@ -16,7 +16,7 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * }
  */
 export default class Body extends BaseBody {
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */ `
     :host {
@@ -58,6 +58,9 @@ export default class Body extends BaseBody {
     :host .text-with-button p {
       margin: var(--text-with-button-p-margin, 0);
     }
+    :host .text-with-button {
+      margin-bottom: var(--text-with-button-margin-bottom, 0);
+    }
     :host .text-with-button article {
       margin: var(--text-with-button-article-margin, 25px auto 40px auto);
     }
@@ -70,7 +73,7 @@ export default class Body extends BaseBody {
         margin-top: 0;
       }
       :host .text-with-button {
-        margin-bottom: var(--text-with-button-margin-bottom-mobile, 55px);
+        margin-bottom: var(--text-with-button-margin-bottom-mobile, 0);
       }
       :host .text-with-button article {
         margin: var(--text-with-button-article-margin-mobile, 25px auto);
