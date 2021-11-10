@@ -206,6 +206,9 @@ export default class Form extends BaseForm {
         }
         :host .radio-group{
           width:100%;
+          height:var(--field-radio-group-height-mobile, auto);
+          flex-wrap:var(--field-radio-flex-wrap-mobile, nowrap);
+          justify-content:var(--field-radio-justify-content, normal);
         }
         :host [type=radio] {
           align-items:center;
