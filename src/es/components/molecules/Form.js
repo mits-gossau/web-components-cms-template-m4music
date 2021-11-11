@@ -20,7 +20,6 @@ export default class Form extends BaseForm {
         margin:var(--form-caption-margin, 0);
         text-transform:var(--form-caption-text-transform, uppercase);
       }
-      
       :host .error-message span::before{
         content:url('/assets/img/Error.png');
         margin-right:5px;
@@ -77,11 +76,9 @@ export default class Form extends BaseForm {
       :host :not(input)[type=radio] {
         margin:var(--field-radio-margin, 0);
       }
-
       :host .form-button-container > * {
         display: inline;
       }
-
       :host .m4music-button-primary {
         background-color: var(--button-background-color-primary, transparent);
         border: var(--button-border, none);
@@ -103,7 +100,6 @@ export default class Form extends BaseForm {
         background-color: var(--button-background-color-hover-primary, --button-background-color);
         color: var(--button-color-hover-primary, --button-color);
       }
-
       :host .m4music-button-secondary {
         background-color: var(--color-grey, transparent);
         border: var(--button-border, none);
@@ -125,24 +121,20 @@ export default class Form extends BaseForm {
         background-color: var(--color-light-grey, --button-background-color);
         color: var(--color, --button-color);
       }
-
       :host [type=radio]:focus{
         outline:none;
       }
-
       :host [type=checkbox] input{
         width: var(--checkbox-width, 20px);
         height: var(--checkbox-height, 20px);
         margin-top: var(--checkbox-margin-top, 30px);
       }
-
-
       :host * input{
         box-sizing: border-box;
       }
-
       :host * label{
         padding:var(--field-label-padding, 0);
+        font-weight:var(--field-label-font-weight, normal);
       }
       :host select{
         box-sizing:border-box;
@@ -214,6 +206,9 @@ export default class Form extends BaseForm {
         }
         :host .radio-group{
           width:100%;
+          height:var(--field-radio-group-height-mobile, auto);
+          flex-wrap:var(--field-radio-flex-wrap-mobile, nowrap);
+          justify-content:var(--field-radio-justify-content, normal);
         }
         :host [type=radio] {
           align-items:center;

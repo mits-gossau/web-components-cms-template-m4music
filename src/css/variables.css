@@ -4,15 +4,21 @@
  * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
  * - if a component holds other components you should share the attribute namespace with its children
  */
-html {
-  --a-text-decoration-hover: underline var(--color-orange) 1px solid;
-  --a-text-decoration: underline var(--link-underline-color) solid 1px;
+ html {
+  --a-text-decoration-color-ext:var(--link-underline-color);
+  --a-text-decoration-color-hover-ext:var(--color-orange);
+  --a-text-decoration-line-ext:underline;
+  --a-text-decoration-line-hover-ext:underline;
+  --a-text-decoration-style-ext:solid;
+  --a-text-decoration-style-hover-ext:solid;
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
   --body-picture-margin: 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
+  --body-text-with-button-margin-bottom-mobile:1rem;
+  --body-text-with-button-margin-bottom:1rem;
   --border-color: #919191;
   --button-background-color-hover-primary: #E53C1A;
   --button-background-color-hover-secondary:var(--link-underline-color);
@@ -47,7 +53,7 @@ html {
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
-  --footer-a-font-size-mobile:min(18px, 3vw);
+  --footer-a-font-size-mobile:min(18px, 5vw);
   --footer-a-font-size:0.65rem;
   --footer-a-text-underline-offset:0.2rem;
   --footer-background-color:var(--background-color);
@@ -59,7 +65,7 @@ html {
   --footer-div-padding:0 0 1rem 2.3rem;
   --footer-engagement-logo-align-items:flex-start;
   --footer-engagement-logo-flex-flow:column-reverse;
-  --footer-engagement-logo-height-mobile:2rem;
+  --footer-engagement-logo-height-mobile:2.6rem;
   --footer-engagement-logo-height:1.57rem;
   --footer-engagement-logo-justify-content:flex-start;
   --footer-engagement-logo-text-a-color-hover:var(--footer-engagement-logo-text-a-color);
@@ -67,10 +73,10 @@ html {
   --footer-engagement-logo-text-a-text-decoration-hover:none;
   --footer-engagement-logo-text-color:var(--color);
   --footer-engagement-logo-text-font-family:"HelveticaNowTextRegular",Helvetica, sans-serif;
-  --footer-engagement-logo-text-font-size-mobile:min(0.6rem, 3vw);
+  --footer-engagement-logo-text-font-size-mobile:min(0.7rem, 5vw);
   --footer-engagement-logo-text-font-size:0.5rem;
   --footer-engagement-logo-text-line-height:1.4em;
-  --footer-engagement-logo-text-padding-mobile:0.5rem 0 0 2.75rem;
+  --footer-engagement-logo-text-padding-mobile:0.5rem 0 0 3.5rem;
   --footer-engagement-logo-text-padding:0.5rem 0 0 2.1rem;
   --footer-engagement-logo-text-width-mobile:auto;
   --footer-engagement-logo-text-width:30vw;
@@ -78,21 +84,20 @@ html {
   --footer-engagement-text-max-width:max(17rem, 4vw);
   --footer-flex-direction:column;
   --footer-li-padding:0 1em 0 0;
-  --footer-meta-font-size-mobile:min(18px, 3vw);
+  --footer-meta-font-size-mobile:min(18px, 5vw);
   --footer-meta-font-size:0.65rem;
   --footer-meta-padding:1rem 0 1.5rem;
   --footer-padding:2rem 0 0;
-  --footer-social-logo-height-mobile:min(1.2rem, 5vw);
+  --footer-social-logo-height-mobile:min(1.5rem, 8vw);
   --footer-social-logo-height:0.8rem;
   --footer-social-logo-object-fit: fill;
-  --footer-social-logo-padding-mobile:0.25rem 0.5rem 0 0;
+  --footer-social-logo-padding-mobile:0.9rem 0.5rem 0 0;
   --footer-social-logo-padding:0;
-  --footer-social-logo-width-mobile:min(1.2rem, 5vw);
   --footer-social-logo-width:0.8rem;
-  --footer-text-decoration-focus:underline var(--color-orange) 1px solid;
-  --footer-text-decoration-hover:underline var(--color-orange) 1px solid;
-  --footer-text-decoration:underline var(--link-underline-color) solid 1px;
-  --footer-title-h6-font-size-mobile:min(18px, 3vw);
+  --footer-text-decoration-focus:underline solid var(--color-orange) 1px;
+  --footer-text-decoration-hover:underline solid var(--color-orange) 1px;
+  --footer-text-decoration:underline solid var(--link-underline-color) 1px;
+  --footer-title-h6-font-size-mobile:min(18px, 5vw);
   --footer-title-h6-font-size:0.75rem;
   --footer-title-h6-padding-mobile:0 0 0.22rem 0;
   --footer-title-h6-padding:0 0 0.22rem 0;
@@ -193,7 +198,7 @@ html {
   --highlightbox-h3-margin: var(--h3-margin);
   --highlightbox-h3-padding: var(--h3-padding);
   --highlightbox-h3-text-transform: var(--h3-text-transform);
-  --highlightbox-h3-word-break: var(--h3-word-break);
+  --highlightbox-h3-word-break:normal;
   --highlightbox-justify-content: center;
   --highlightbox-margin-botton: 3rem;
   --highlightbox-mobile-padding: 0.9rem;
@@ -220,7 +225,7 @@ html {
   --register-field-description-padding:0.2rem 0 0 0;
   --register-field-description-width-mobile:100%;
   --register-field-description-width:max(30%, 512px);
-  --register-field-error-font-size:0.9rem;
+  --register-field-error-font-size:var(--register-field-label-font-size);
   --register-field-error-image-padding:0 0.2rem 0 0;
   --register-field-error-line-height:150%;
   --register-field-height-mobile:auto;
@@ -229,7 +234,6 @@ html {
   --register-field-input-background:var(--background-color);
   --register-field-input-border-mobile:var(--register-field-input-border);
   --register-field-input-border-radius:4px;
-  --register-field-input-border:1px solid var(--register-form-select-border);
   --register-field-input-border:1px;
   --register-field-input-box-shadow-mobile:none;
   --register-field-input-box-shadow:none;
@@ -249,7 +253,6 @@ html {
   --register-field-label-color:var(--color);
   --register-field-label-font-size-mobile: var(--font-size-mobile);
   --register-field-label-font-size:var(--h6-font-size);
-  --register-field-label-font-size:var(--h6-font-size);
   --register-field-label-padding-mobile:0.65rem 0 0.2rem 0;
   --register-field-label-padding:0.8rem 0 0.2rem 0;
   --register-field-label-text-align:left;
@@ -257,7 +260,8 @@ html {
   --register-field-padding:0;
   --register-field-placeholder-color:var(--color);
   --register-field-radio-flex-direction:row-reverse;
-  --register-field-radio-group-height:var(--register-field-input-height);
+  --register-field-radio-flex-wrap-mobile:wrap;
+  --register-field-radio-group-height:auto;
   --register-field-radio-group-width:var(--register-field-input-width);
   --register-field-radio-margin-mobile:0 0.5rem 0 0;
   --register-field-radio-margin:0 1rem 0 0;
@@ -292,8 +296,10 @@ html {
   --register-form-wrapper-wrapper-background-color:var(--wrapper-background-secondary-color);
   --register-width-mobile:100%;
   --register-width:100%;
-  --spacer-height-mobile: 3.56rem;
-  --spacer-height: 5rem;
+  --spacer-height-mobile:1rem;
+  --spacer-height:1rem;
+  --text-decoration-hover:underline solid var(--color-orange) 1px;
+  --text-decoration:underline solid var(--link-underline-color) 1px;
   --video-border-color: var(--color-orange);
   --video-border-mobile: var(--video-border-width-mobile) var(--video-border-color) solid;
   --video-border-width-mobile: 0.8rem;
@@ -311,5 +317,4 @@ html {
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  --header-flex-direction-mobile:row;
 }

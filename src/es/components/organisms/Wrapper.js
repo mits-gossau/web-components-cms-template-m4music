@@ -80,6 +80,7 @@ export default class Wrapper extends BaseBody {
       flex-basis:${100 / this.columns}%;
       margin:var(--wrapper-div-margin, 0);
       text-align: ${this.hasAttribute('align-content') ? this.getAlignment(this.getAttribute('align-content')).text : 'var(--text-align, left)'};
+      width:var(--wrapper-div-width, 100%);
     }
     :host > section > div:last-of-type {
       margin:var(--wrapper-last-margin, 0);
