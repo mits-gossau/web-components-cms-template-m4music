@@ -14,6 +14,8 @@
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
+  --body-p-margin-mobile:0.5rem 0 0.5rem 0;
+  --body-p-margin:0.75rem 0 0.75rem 0;
   --body-picture-margin: 0.5rem 0;
   --body-spacer-height-mobile:min(1rem, 5vw);
   --body-spacer-height:min(1rem, 5vw);
