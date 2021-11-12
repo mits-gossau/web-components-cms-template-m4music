@@ -317,4 +317,9 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --header-flex-direction-mobile:row;
+
+  --header-m-navigation-background-color-mobile: var(--color-orange);
+  --header-background-color-open:var(--color-orange);
+  --header-padding:0 5% 0 5%;
 }
