@@ -39,6 +39,13 @@ export default class Form extends BaseForm {
       :host .description {
         order: 10; /* lazy solution that description is under input-field */
       }
+      :host .description a {
+        color: var(--register-field-color, white);
+        text-decoration: var(--description-link-text-decoration, underline);
+      }
+      :host .description.copyrightText {
+        width: var(--copyright-desc-width, 100%);
+      }
       :host .error-message .field-validation-valid{
         height:var(--field-error-valid-height, 0);
       }
