@@ -14,6 +14,8 @@
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
+  --body-main-padding-mobile:2rem;
+  --body-main-padding:3rem;
   --body-p-margin-mobile:0.5rem 0 0.5rem 0;
   --body-p-margin:0.75rem 0 0.75rem 0;
   --body-picture-margin: 0.5rem 0;
@@ -177,16 +179,21 @@
   --h6-margin:var(--h-title-margin);
   --h6-padding:var(--h-title-padding);
   --h6-text-transform: var(--h-title-text-transform);
+  --header-background-color-open:var(--color-orange);
   --header-background-color:var(--background-color);
   --header-content-spacing:var(--content-spacing);
   --header-content-width-mobile:var(--content-width-mobile);
   --header-content-width:var(--content-width);
+  --header-flex-direction-mobile:row;
   --header-height-mobile:max(6rem, 20vw);
   --header-height:176px;
   --header-logo-height-mobile:min(16px, 8vw);
   --header-logo-height:32px;
   --header-logo-justify-content:start;
   --header-logo-width:195px;
+  --header-m-navigation-background-color-mobile: var(--color-orange);
+  --header-m-navigation-padding-open-mobile:5rem 0 0 0;
+  --header-padding:0 5% 0 5%;
   --header-position:static;
   --highlightbox-align-items: center;
   --highlightbox-background:var(--wrapper-background-secondary-color);
@@ -208,6 +215,10 @@
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
   --link-underline-color:#CCCCCC;
+  --navigation-a-link-font-size-mobile:var(--h3-font-size);
+  --navigation-arrow-display:none;
+  --navigation-hr-color:none;
+  --navigation-margin-bottom-mobile:1.75rem;
   --newsletter-align-items: center;
   --newsletter-background-color:#E63C1A;
   --newsletter-background:var(--wrapper-background-secondary-color);
@@ -396,16 +407,4 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  --header-flex-direction-mobile:row;
-
-  --header-m-navigation-background-color-mobile: var(--color-orange);
-  --header-background-color-open:var(--color-orange);
-  --header-padding:0 5% 0 5%;
-  --navigation-a-link-font-size-mobile:var(--h3-font-size);
-  --navigation-hr-color:none;
-  --header-m-navigation-padding-open-mobile:5rem 0 0 0;
-  --navigation-margin-bottom-mobile:1.75rem;
-  --navigation-arrow-display:none;
-
-
 }
