@@ -7,13 +7,9 @@ export default class Navigation extends BaseNavigation {
   renderCSS() {
     super.renderCSS()
     this.css = /* css */`
-      :host {
-        margin:30px;
-      }
+      :host {}
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
-        :host {
-          margin:30px;
-        }
+        :host {}
       }
     `
   }
