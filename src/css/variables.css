@@ -396,4 +396,16 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --header-flex-direction-mobile:row;
+
+  --header-m-navigation-background-color-mobile: var(--color-orange);
+  --header-background-color-open:var(--color-orange);
+  --header-padding:0 5% 0 5%;
+  --navigation-a-link-font-size-mobile:var(--h3-font-size);
+  --navigation-hr-color:none;
+  --header-m-navigation-padding-open-mobile:5rem 0 0 0;
+  --navigation-margin-bottom-mobile:1.75rem;
+  --navigation-arrow-display:none;
+
+
 }
