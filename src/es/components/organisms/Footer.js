@@ -141,6 +141,9 @@ export default class Footer extends BaseFooter {
         --color-hover:var(--color, #FFFFFF);
         --text-decoration-hover: none;
       }
+      :host h6{
+        text-transform:var(--h6-text-transform);
+      }
 
       :host .hide-desktop{
         display:none;
