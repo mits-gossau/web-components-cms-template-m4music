@@ -403,6 +403,7 @@
   --wrapper-background-secondary-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;
   --wrapper-div-margin:0 2rem 0 0;
+  --wrapper-last-margin-mobile:var(--wrapper-div-margin-mobile);
   --wrapper-li-background-size: 1rem;
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
