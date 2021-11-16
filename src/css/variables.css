@@ -189,8 +189,9 @@
   --header-logo-height:32px;
   --header-logo-justify-content:start;
   --header-logo-width:195px;
-  --header-m-navigation-background-color-mobile: var(--color-orange);
-  --header-m-navigation-padding-open-mobile:5rem 0 0 0;
+  --header-m4music-m-navigation-background-color-mobile: var(--color-orange);
+  --header-m4music-m-navigation-padding-open-mobile:5rem 0 0 0;
+  --header-m4music-m-navigation-height:100vh;
   --header-padding:0 5% 0 5%;
   --header-position:static;
   --highlightbox-align-items: center;
@@ -213,10 +214,18 @@
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
   --link-underline-color:#CCCCCC;
+  
   --navigation-a-link-font-size-mobile:var(--h3-font-size);
   --navigation-arrow-display:none;
   --navigation-hr-color:none;
   --navigation-margin-bottom-mobile:1.75rem;
+  --navigation-background-color:var(--color-orange);
+  --navigation-color:var(--color-black);
+  --navigation-text-decoration:none;
+  --navigation-color-hover:var(--color);
+  --navigation-text-decoration-hover:none;
+
+
   --newsletter-align-items: center;
   --newsletter-background-color:#E63C1A;
   --newsletter-background:var(--wrapper-background-secondary-color);

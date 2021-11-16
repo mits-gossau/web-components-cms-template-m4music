@@ -5,11 +5,21 @@ import BaseNavigation from '../web-components-cms-template/src/es/components/mol
 
 export default class Navigation extends BaseNavigation {
   renderCSS() {
+    console.log(this)
     super.renderCSS()
     this.css = /* css */`
-      :host {}
+      :host .icons {
+        display:flex;
+        /* TODO: Remove! */
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        /* ============= */
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
-        :host {}
+        :host .open {
+          border-bottom:1px solid red;
+          margin:0 10% 0 10%;
+        }
       }
     `
   }
