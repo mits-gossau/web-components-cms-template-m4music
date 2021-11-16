@@ -235,4 +235,41 @@ export default class Form extends BaseForm {
       }
     `
   }
+  /**
+   * fetch children when first needed
+   *
+   * @returns {Promise<[string, CustomElementConstructor][]>}
+   */
+   loadChildComponents () {
+    if (this.childComponentsPromise) return this.childComponentsPromise
+    let inputPromise
+    try {
+      inputPromise = Promise.resolve({ default: Input })
+    } catch (error) {
+      inputPromise = import('../web-components-cms-template/src/es/components/atoms/Input.js')
+    }
+    let buttonPromise
+    try {
+      buttonPromise = Promise.resolve({ default: Button })
+    } catch (error) {
+      buttonPromise = import('../atoms/Button.js')
+    }
+    return (this.childComponentsPromise = Promise.all([
+      inputPromise.then(
+        /** @returns {[string, CustomElementConstructor]} */
+        module => ['a-input', module.default]
+      ),
+      buttonPromise.then(
+        /** @returns {[string, CustomElementConstructor]} */
+        module => ['m4music-a-button', module.default]
+      )
+    ]).then(elements => {
+      elements.forEach(element => {
+        // don't define already existing customElements
+        // @ts-ignore
+        if (!customElements.get(element[0])) customElements.define(...element)
+      })
+      return elements
+    }))
+  }
 }

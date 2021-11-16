@@ -34,8 +34,10 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * }
  */
 export default class Button extends Shadow() {
-  constructor (...args) {
+  constructor (button, ...args) {
     super(...args)
+
+    this._button = button
 
     if (this.hasShadowRoot) {
       // @ts-ignore
@@ -110,6 +112,7 @@ export default class Button extends Shadow() {
       font-size: var(--font-size, 1em);
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
+      height: var(--height, auto);
       padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
       transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
