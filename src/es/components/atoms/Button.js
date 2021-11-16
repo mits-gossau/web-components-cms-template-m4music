@@ -128,7 +128,10 @@ export default class Button extends Shadow() {
     :host .icon {
       display:var(--icon-display, flex);
       align-items:var(--icon-align-items, center);
-      justify-content:var(--justify-content, center);
+      justify-content:var(--icon-justify-content, center);
+    }
+    :host > .icon > svg {
+      width:var(--icon-width, 100%);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
@@ -141,6 +144,10 @@ export default class Button extends Shadow() {
         background-color: var(--background-color-hover-${this.type}, --background-color);
         color: var(--color-hover-${this.type}, --color);
       }
+      :host > .icon > svg {
+        width:var(--icon-width-mobile, 100%);
+      }
+
     }
   `
   }
@@ -168,7 +175,7 @@ export default class Button extends Shadow() {
     if (type === 'arrow') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
-        <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
+        <svg viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
           <path d="M2 7.5H0.5V10.5H2V7.5ZM34 9L19 0.339746V17.6603L34 9ZM2 10.5H20.5V7.5H2V10.5Z" fill="#FB5F3F"/>
         </svg>
       `

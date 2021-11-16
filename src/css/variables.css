@@ -36,6 +36,8 @@
   --button-height-mobile:auto;
   --button-icon-margin-left: 8px;
   --button-icon-padding: 0, 0.75rem;
+  --button-icon-width-mobile:1.5rem;
+  --button-icon-width:1.2rem;
   --button-margin-mobile: 0.5rem 0 0 0;
   --button-margin:0 0.5rem 0.5rem 0;
   --button-padding:0.5rem 0.75rem;
