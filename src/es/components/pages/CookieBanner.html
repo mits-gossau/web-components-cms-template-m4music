@@ -15,8 +15,52 @@
 
 <body>
   <p-general>
-    <o-header namespace="header-" namespace-fallback>
+    <o-header namespace="header-" namespace-fallback menu-icon="true">
       <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
+      <!--<m-navigation hover="false" namespace="navigation-" no-scroll="nav-open" namespace-fallback
+        focus-lost-close-mobile>
+        <ul>
+          <li>
+            <a href="/index.html" target="">Startseite</a>
+          </li>
+          <li>
+            <a href="#" target="">Demotape Clinic</a>
+          </li>
+          <li>
+            <a href="#" target="">Conference</a>
+          </li>
+          <li>
+            <a href="#" target="">Best Swiss Videoclip</a>
+          </li>
+          <li>
+            <a href="#" target="">Festival</a>
+            <ul>
+              <li>
+                <a href="#" target="">Presse & Medien </a>
+              </li>
+              <li>
+                <a href="#" target="">Über uns</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="icons">
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/facebook.svg"
+                href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/instagram.svg"
+                href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/spotify.svg"
+                href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/youtube.svg"
+                href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
+              </a-logo>
+            </div>
+          </li>
+        </ul>
+      </m-navigation>-->
     </o-header>
     <m4music-o-body namespace="body-" namespace-fallback>
       <div>
@@ -262,6 +306,54 @@
       mobileBreakpoint: '960px'
     }
   </script>
+  <style>
+    .optanon-alert-box-wrapper {
+      background-color: #434343 !important;
+    }
+
+    .optanon-alert-box-wrapper * {
+      font-family: "GillSansMTMedium", sans-serif;
+    }
+
+    .optanon-alert-box-wrapper .optanon-button-allow .optanon-alert-box-button-middle button:before {
+      content: " "
+    }
+
+    .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+      background-color: white !important;
+    }
+
+    .optanon-alert-box-wrapper .optanon-alert-box-button-middle button {
+      background-color: white !important;
+      color: black !important;
+      font-weight: normal;
+    }
+
+    @media only screen and (max-width: 47em) {
+      .optanon-alert-box-wrapper .optanon-alert-box-button {
+        display: inline-block;
+        margin-right: 0;
+        width: 100%;
+        margin: 0 10px 20px 20px;
+      }
+
+      .optanon-alert-box-bg .optanon-alert-box-button-container {
+        padding-right: 0;
+      }
+
+      .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+        text-align: center;
+        margin: 0 0 0 20px;
+      }
+    }
+  </style>
+  <!-- OneTrust Cookies Consent Notice start for m4music.ch -->
+  <script src="https://optanon.blob.core.windows.net/langswitch/7fecea19-205b-424f-b455-1d544730602d.js"
+    type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for m4music.ch -->
 
 </body>
 
