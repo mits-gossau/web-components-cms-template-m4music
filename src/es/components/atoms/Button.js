@@ -125,6 +125,11 @@ export default class Button extends Shadow() {
       margin-left:var(${this.icon ? '--icon-margin-left' : '0'}, 0);
     }
     ${this.type === 'arrow' ? this.arrowCSS : ''}
+    :host .icon {
+      display:var(--icon-display, flex);
+      align-items:var(--icon-align-items, center);
+      justify-content:var(--justify-content, center);
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
         height: var(--height-mobile, 100%);
