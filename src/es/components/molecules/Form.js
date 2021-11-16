@@ -9,18 +9,15 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 export default class Form extends BaseForm {
   constructor (...args) {
     super(...args)
-    console.log('test', this)
+
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
 
-      console.log(this.root)
       if (!this.submitEventListener(event)) {
         return
       }
 
-      console.log(this.form)
       this.form.style.display = 'none'
-      this.policy.hidden.style.display = 'none'
       this.afterSubmit.style.display = 'block'
     }
   }
@@ -229,6 +226,9 @@ export default class Form extends BaseForm {
         align-items:var(--simple-form-align-items, center);
         justify-content:var(--simple-form-justify-content, center);
       }
+      :host #afterSubmit {
+        display: none;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -311,7 +311,7 @@ export default class Form extends BaseForm {
   }
 
   get afterSubmit () {
-    return this.root.querySelector('#after_submit')
+    return this.root.querySelector('#afterSubmit')
   }
 
   get policy () {

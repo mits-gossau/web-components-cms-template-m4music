@@ -88,31 +88,31 @@
               <h3 class="lowercase">Newsletter</h3>
               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
               <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-"
-              namespace-children="newsletter-field-" namespace-button="newsletter-button-" use-html-submit>
+                              namespace-children="newsletter-field-" namespace-button="newsletter-button-" redirect="false">
                   <form action="https://nlink.m4music.ch/dispatcher/service" method="post" id="online_form">
-                    <div>
-                      <input type="hidden" name="ac" value="reg">
-                      <input type="hidden" name="clientCode" value="i5xQjPweeKv68ksuCl">
-                      <input type="hidden" name="doubleOptin" value="1">
-                      <input type="hidden" name="xp_sendBackParams" value="3">
-                      <input type="hidden" name="trackId" value="null" id="trackId">
-                      <input type="hidden" name="xp_redirectLP" value="0">
-                      <input type="hidden" name="Sprache" value="DE" id="Sprache">  
+                      <div>
+                          <input type="hidden" name="ac" value="reg">
+                          <input type="hidden" name="clientCode" value="i5xQjPweeKv68ksuCl">
+                          <input type="hidden" name="doubleOptin" value="1">
+                          <input type="hidden" name="xp_sendBackParams" value="3">
+                          <input type="hidden" name="trackId" value="null" id="trackId">
+                          <input type="hidden" name="xp_redirectLP" value="0">
+                          <input type="hidden" name="Sprache" value="DE" id="Sprache">
 
-                      <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..." autocomplete="off">
-                    </div>
+                          <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..." autocomplete="off">
+                      </div>
 
-                    <div>
-                      <button type="submit">Anmelden</button>
-                    </div>
+                      <div>
+                          <button type="submit">Anmelden</button>
+                      </div>
                   </form>
-                  <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
 
-                  <div id="after_submit" style="display:none">
+                  <div id="afterSubmit">
                       <p>Bestätigung kommt per Email</p>
                   </div>
               </m4music-m-form>
-              
+              <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+
           </m4music-m-newsletter>
       </div>
       <div>
