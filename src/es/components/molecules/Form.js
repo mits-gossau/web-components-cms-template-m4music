@@ -2,8 +2,39 @@
 import BaseForm from '../web-components-cms-template/src/es/components/molecules/Form.js'
 
 /* global self */
+/* global Input */
+/* global Button */
+/* global customElements */
 
 export default class Form extends BaseForm {
+  constructor (...args) {
+    super(...args)
+    console.log('test', this)
+    this.submitM4MusicEventListener = event => {
+      event.preventDefault()
+
+      console.log(this.root)
+      if (!this.submitEventListener(event)) {
+        return
+      }
+
+      console.log(this.form)
+      this.form.style.display = 'none'
+      this.policy.hidden.style.display = 'none'
+      this.afterSubmit.style.display = 'block'
+    }
+  }
+
+  connectedCallback () {
+    if (this.shouldComponentRenderCSS()) this.renderCSS()
+    if (this.shouldComponentRenderHTML()) this.renderHTML()
+    this.addEventListener('form-submit', this.submitM4MusicEventListener)
+  }
+
+  disconnectedCallback () {
+    this.removeEventListener('form-submit', this.submitM4MusicEventListener)
+  }
+
   renderCSS () {
     super.renderCSS(false)
     this.css = /* css */`
@@ -235,12 +266,13 @@ export default class Form extends BaseForm {
       }
     `
   }
+
   /**
    * fetch children when first needed
    *
    * @returns {Promise<[string, CustomElementConstructor][]>}
    */
-   loadChildComponents () {
+  loadChildComponents () {
     if (this.childComponentsPromise) return this.childComponentsPromise
     let inputPromise
     try {
@@ -271,5 +303,13 @@ export default class Form extends BaseForm {
       })
       return elements
     }))
+  }
+
+  get afterSubmit () {
+    return this.root.querySelector('#after_submit')
+  }
+
+  get policy () {
+    return this.root.querySelector('.policy')
   }
 }

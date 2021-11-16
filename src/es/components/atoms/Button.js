@@ -59,8 +59,19 @@ export default class Button extends Shadow() {
         } else {
           self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
         }
+      } else {
+        this.dispatchEvent(new CustomEvent('form-submit',
+          {
+            detail: {
+              button: event.target
+            },
+            bubbles: true,
+            cancelable: true,
+            composed: true
+          }))
       }
     }
+
     // link behavior made accessible
     if (this.hasAttribute('href')) {
       this.setAttribute('data-href', this.getAttribute('href'))
