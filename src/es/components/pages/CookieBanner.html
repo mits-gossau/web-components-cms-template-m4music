@@ -15,9 +15,9 @@
 
 <body>
   <p-general>
-    <o-header namespace="header-" namespace-fallback menu-icon="true" m-navigation="m4music-m-navigation">
+    <o-header namespace="header-" namespace-fallback menu-icon="true">
       <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
-      <m4music-m-navigation hover="false" namespace="navigation-" no-scroll="nav-open" namespace-fallback
+      <!--<m-navigation hover="false" namespace="navigation-" no-scroll="nav-open" namespace-fallback
         focus-lost-close-mobile>
         <ul>
           <li>
@@ -43,7 +43,7 @@
               </li>
             </ul>
           </li>
-          <!-- <li>
+          <li>
             <div class="icons">
               <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/facebook.svg"
                 href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
@@ -58,10 +58,9 @@
                 href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
               </a-logo>
             </div>
-          </li> -->
+          </li>
         </ul>
-
-      </m4music-m-navigation>
+      </m-navigation>-->
     </o-header>
     <m4music-o-body namespace="body-" namespace-fallback>
       <div>
@@ -133,20 +132,22 @@
           <h3 class="lowercase">Newsletter</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
 
-            <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-" namespace-children="newsletter-field-" namespace-button="button-" use-html-submit>
-              <form action="" method="post" id="online_form">
-                <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..." autocomplete="off">
+          <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-"
+            namespace-children="newsletter-field-" use-html-submit>
+            <form action="" method="post" id="online_form">
+              <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
+                autocomplete="off">
+              <m4music-a-button type="secondary" namespace="button-" namespace-fallback submit>
                 <style>
                   :host {
                     --button-margin: 0;
-                    --button-height: var(--newsletter-field-input-height);
-                    --button-padding: 0 0.75rem;
                   }
-                </style>
-                <button type="submit">Anmelden</button>
-              </form>
-            </m4music-m-form>
-            <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+                </style>Anmelden
+              </m4music-a-button>
+            </form>
+          </m4music-m-form>
+          <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a
+              href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
         </m4music-m-newsletter>
       </div>
       <div>
@@ -194,7 +195,6 @@
           <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden</m4music-a-button>
         </m4music-m-highlightbox>
       </div>
-
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
@@ -303,9 +303,59 @@
   </p-general>
   <script rel=preload type=module>
     self.Environment = {
-        mobileBreakpoint: '960px'
+      mobileBreakpoint: '960px'
     }
-</script>
+  </script>
+  <style>
+    .optanon-alert-box-wrapper {
+      background-color: #434343 !important;
+    }
+
+    .optanon-alert-box-wrapper * {
+      font-family: "GillSansMTMedium", sans-serif;
+    }
+
+    .optanon-alert-box-wrapper .optanon-button-allow .optanon-alert-box-button-middle button:before {
+      content: " "
+    }
+
+    .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+      background-color: white !important;
+      border-color: #989898 !important;
+    }
+
+    .optanon-alert-box-wrapper .optanon-alert-box-button-middle button {
+      background-color: white !important;
+      color: black !important;
+      font-weight: normal;
+    }
+
+    @media only screen and (max-width: 47em) {
+      .optanon-alert-box-wrapper .optanon-alert-box-button {
+        display: inline-block;
+        margin-right: 0;
+        width: 100%;
+        margin: 0 10px 20px 20px;
+      }
+
+      .optanon-alert-box-bg .optanon-alert-box-button-container {
+        padding-right: 0;
+      }
+
+      .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+        text-align: center;
+        margin: 0 0 0 20px;
+      }
+    }
+  </style>
+  <!-- OneTrust Cookies Consent Notice start for m4music.ch -->
+  <script src="https://optanon.blob.core.windows.net/langswitch/7fecea19-205b-424f-b455-1d544730602d.js"
+    type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for m4music.ch -->
+
 </body>
 
 </html>

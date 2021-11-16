@@ -34,8 +34,10 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * }
  */
 export default class Button extends Shadow() {
-  constructor (...args) {
+  constructor (button, ...args) {
     super(...args)
+
+    this._button = button
 
     if (this.hasShadowRoot) {
       // @ts-ignore
@@ -110,6 +112,7 @@ export default class Button extends Shadow() {
       font-size: var(--font-size, 1em);
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
+      height: var(--height, auto);
       padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
       transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
@@ -122,6 +125,11 @@ export default class Button extends Shadow() {
       margin-left:var(${this.icon ? '--icon-margin-left' : '0'}, 0);
     }
     ${this.type === 'arrow' ? this.arrowCSS : ''}
+    :host .icon {
+      display:var(--icon-display, flex);
+      align-items:var(--icon-align-items, center);
+      justify-content:var(--justify-content, center);
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
         height: var(--height-mobile, 100%);

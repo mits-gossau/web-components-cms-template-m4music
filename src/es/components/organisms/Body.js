@@ -16,9 +16,10 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  * }
  */
 export default class Body extends BaseBody {
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */ `
+ 
     :host {
       margin-bottom: var(--margin-bottom, 0);
     }
