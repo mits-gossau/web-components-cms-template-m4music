@@ -8,7 +8,12 @@ export default class Navigation extends BaseNavigation {
     super.connectedCallback()
     this.addEventListener("click", function (e) {
       console.log(e);
-    });
+    })
+  }
+
+  disconnectedCallback () {
+    super.disconnectedCallback()
+    this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
   }
 
   renderCSS() {
