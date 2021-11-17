@@ -221,12 +221,15 @@
   --navigation-arrow-display:none;
   --navigation-hr-color:none;
   --navigation-margin-bottom-mobile:1.75rem;
-  --navigation-background-color:var(--color-orange);
+  --navigation-line-height-mobile:1rem;
+  --navigation-background-color-mobile:var(--color-orange);
+  --navigation-background-color:var(--background-color);
   --navigation-color:var(--color-black);
   --navigation-text-decoration:none;
   --navigation-color-hover:var(--color);
   --navigation-text-decoration-hover:none;
-
+  --navigation-color-open-mobile:var(--color);
+  --navigation-background-color-child-mobile:var(--color-orange);
 
   --newsletter-align-items: center;
   --newsletter-background-color:#E63C1A;
