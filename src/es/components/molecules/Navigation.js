@@ -4,6 +4,13 @@ import BaseNavigation from '../web-components-cms-template/src/es/components/mol
 /* global self */
 
 export default class Navigation extends BaseNavigation {
+  connectedCallback() {
+    super.connectedCallback()
+    this.addEventListener("click", function (e) {
+      console.log(e);
+    });
+  }
+
   renderCSS() {
     console.log(this)
     super.renderCSS()
