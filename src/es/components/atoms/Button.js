@@ -116,6 +116,7 @@ export default class Button extends Shadow() {
       padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
       transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
+      border-radius:var(--border-radius, unset);
     }
     :host button:hover,  button:active, button:focus {
       background-color: var(--background-color-hover-${this.type}, --background-color);

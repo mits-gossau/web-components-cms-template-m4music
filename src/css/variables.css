@@ -26,6 +26,7 @@
   --button-background-color-hover-secondary:var(--link-underline-color);
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
+  --button-border-radius:4px;
   --button-color-hover-secondary: var(--color-black);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
