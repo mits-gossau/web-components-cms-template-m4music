@@ -235,12 +235,13 @@ export default class Form extends BaseForm {
       }
     `
   }
+
   /**
    * fetch children when first needed
    *
    * @returns {Promise<[string, CustomElementConstructor][]>}
    */
-   loadChildComponents () {
+  loadChildComponents () {
     if (this.childComponentsPromise) return this.childComponentsPromise
     let inputPromise
     try {
