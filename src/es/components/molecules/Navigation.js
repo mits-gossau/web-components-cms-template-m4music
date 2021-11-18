@@ -61,9 +61,9 @@ export default class Navigation extends BaseNavigation {
           background-color:inherit;
         }
 
-        :host .open  {
+        :host > nav > ul li.open  {
           color:white;
-          font-size:30px;
+          font-size:130px;
           
         }
         :host > nav > ul li > a-link:hover {
