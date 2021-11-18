@@ -38,6 +38,9 @@ export default class Form extends BaseForm {
       :host{
         padding:var(--form-padding, 30px);
       }
+      :host form {
+        justify-content: var(--justify-content, center);
+      }
       :host fieldset{
         border:var(--fieldset-border, none);
         padding:var(--fieldset-padding, 0);
