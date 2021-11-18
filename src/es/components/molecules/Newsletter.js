@@ -20,7 +20,7 @@ export default class Newsletter extends BaseBody {
    * @return {void}
    */
   renderCSS () {
-    super.renderCSS();
+    super.renderCSS()
     this.css = /* css */`
       :host {
         background: var(--background);

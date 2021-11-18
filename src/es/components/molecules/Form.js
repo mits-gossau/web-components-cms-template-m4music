@@ -2,8 +2,36 @@
 import BaseForm from '../web-components-cms-template/src/es/components/molecules/Form.js'
 
 /* global self */
+/* global Input */
+/* global Button */
+/* global customElements */
 
 export default class Form extends BaseForm {
+  constructor (...args) {
+    super(...args)
+
+    this.submitM4MusicEventListener = event => {
+      event.preventDefault()
+
+      if (!this.submitEventListener(event)) {
+        return
+      }
+
+      this.form.style.display = 'none'
+      this.afterSubmit.style.display = 'block'
+    }
+  }
+
+  connectedCallback () {
+    if (this.shouldComponentRenderCSS()) this.renderCSS()
+    if (this.shouldComponentRenderHTML()) this.renderHTML()
+    this.addEventListener('form-submit', this.submitM4MusicEventListener)
+  }
+
+  disconnectedCallback () {
+    this.removeEventListener('form-submit', this.submitM4MusicEventListener)
+  }
+
   renderCSS () {
     super.renderCSS(false)
     this.css = /* css */`
@@ -193,6 +221,14 @@ export default class Form extends BaseForm {
         color:var(--form-steps-counter-color, white);
         padding:var(--form-steps-counter-padding, 0);
       }
+      :host .simple-form{
+        flex-direction:var(--simple-form-flex-direction, row);
+        align-items:var(--simple-form-align-items, center);
+        justify-content:var(--simple-form-justify-content, center);
+      }
+      :host #afterSubmit {
+        display: none;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -235,12 +271,13 @@ export default class Form extends BaseForm {
       }
     `
   }
+
   /**
    * fetch children when first needed
    *
    * @returns {Promise<[string, CustomElementConstructor][]>}
    */
-   loadChildComponents () {
+  loadChildComponents () {
     if (this.childComponentsPromise) return this.childComponentsPromise
     let inputPromise
     try {
@@ -271,5 +308,13 @@ export default class Form extends BaseForm {
       })
       return elements
     }))
+  }
+
+  get afterSubmit () {
+    return this.root.querySelector('#afterSubmit')
+  }
+
+  get policy () {
+    return this.root.querySelector('.policy')
   }
 }
