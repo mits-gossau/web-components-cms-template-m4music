@@ -13,18 +13,39 @@ export default class Form extends BaseForm {
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
 
-      if (!this.submitEventListener(event)) {
-        return
-      }
+      this.loadDependency().then(grecaptcha => {
+        grecaptcha.ready(() => {
+          grecaptcha.execute(this.getAttribute('site-key'), { action: 'newsletter' }).then(token => {
+            fetch('/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha', {
+              method: 'post',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ recaptchaToken: token })
+            })
+              .then(response => {
+                if (response.ok) return response.json()
+              })
+              .then(response => {
+                if (response) { // passed captcha
+                  if (!this.submitEventListener(event)) {
+                    // TODO if wanted include validation here
+                    return
+                  }
 
-      this.form.style.display = 'none'
-      this.afterSubmit.style.display = 'block'
+                  this.form.style.display = 'none'
+                  this.afterSubmit.style.display = 'block'
+                } else console.error('Failed captcha')
+              })
+              .catch(error => console.error('Something went wrong while verifying captcha: ', error))
+          })
+        })
+      })
     }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
+    this.loadDependency()
     this.addEventListener('form-submit', this.submitM4MusicEventListener)
   }
 
@@ -310,6 +331,29 @@ export default class Form extends BaseForm {
         if (!customElements.get(element[0])) customElements.define(...element)
       })
       return elements
+    }))
+  }
+
+  /**
+   * fetch dependency
+   *
+   * @returns {Promise<{components: any}>}
+   */
+  loadDependency () {
+    return this.dependencyPromise || (this.dependencyPromise = new Promise(resolve => {
+      // needs markdown
+      if ('grecaptcha' in self === true) {
+        resolve(self.grecaptcha) // eslint-disable-line
+      } else {
+        const vendorsMainScript = document.createElement('script')
+        vendorsMainScript.setAttribute('type', 'text/javascript')
+        vendorsMainScript.setAttribute('async', '')
+        vendorsMainScript.setAttribute('src', `https://www.google.com/recaptcha/api.js?render=${this.getAttribute('site-key')}`)
+        vendorsMainScript.onload = () => {
+          if ('grecaptcha' in self === true ) resolve(self.grecaptcha) // eslint-disable-line
+        }
+        this.html = [vendorsMainScript]
+      }
     }))
   }
 
