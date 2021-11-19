@@ -12,10 +12,10 @@ export default class Form extends BaseForm {
 
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
-      const outerThis = this
-      if (grecaptcha) {
-        grecaptcha.ready(function () {
-          grecaptcha.execute(outerThis.getAttribute("site-key"), { action: 'newsletter' }).then(function (token) {
+      
+      this.loadDependency().then(grecaptcha => {
+        grecaptcha.ready(() => {
+          grecaptcha.execute(this.getAttribute("site-key"), { action: 'newsletter' }).then(token => {
               fetch("/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha", {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json'},
@@ -25,29 +25,31 @@ export default class Form extends BaseForm {
               })
               .then(response => {
                 if (response) { // passed captcha
-                  if (!outerThis.submitEventListener(event)) {
+                  if (!this.submitEventListener(event)) {
+                    //TODO if wanted include validation here
                     return
                   }
             
-                  outerThis.form.style.display = 'none'
-                  outerThis.afterSubmit.style.display = 'block'
+                  this.form.style.display = 'none'
+                  this.afterSubmit.style.display = 'block'
                 } else console.error("Failed captcha")
               })
               .catch(error => console.error("Something went wrong while verifying captcha: ", error))
           });
       });    
-      }
+      })
     }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
-    this.addEventListener('form-submit', this.submitM4MusicEventListener.bind(this))
+    this.loadDependency()
+    this.addEventListener('form-submit', this.submitM4MusicEventListener)
   }
 
   disconnectedCallback () {
-    this.removeEventListener('form-submit', this.submitM4MusicEventListener.bind(this))
+    this.removeEventListener('form-submit', this.submitM4MusicEventListener)
   }
 
   renderCSS () {
@@ -330,6 +332,30 @@ export default class Form extends BaseForm {
       return elements
     }))
   }
+
+ /**
+   * fetch dependency
+   *
+   * @returns {Promise<{components: any}>}
+   */
+  loadDependency () {
+    return this.dependencyPromise || (this.dependencyPromise = new Promise(resolve => {
+      // needs markdown
+      if ('grecaptcha' in self === true) {
+        resolve(self.grecaptcha) // eslint-disable-line
+      } else {
+        const vendorsMainScript = document.createElement('script')
+        vendorsMainScript.setAttribute('type', 'text/javascript')
+        vendorsMainScript.setAttribute('async', '')
+        vendorsMainScript.setAttribute('src', `https://www.google.com/recaptcha/api.js?render=${this.getAttribute('site-key')}`)
+        vendorsMainScript.onload = () => {
+          if ('grecaptcha' in self === true ) resolve(self.grecaptcha) // eslint-disable-line
+        }
+        this.html = [vendorsMainScript]
+      }
+    }))
+  }
+
 
   get afterSubmit () {
     return this.root.querySelector('#afterSubmit')
