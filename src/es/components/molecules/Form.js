@@ -12,24 +12,42 @@ export default class Form extends BaseForm {
 
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
-
-      if (!this.submitEventListener(event)) {
-        return
+      const outerThis = this
+      if (grecaptcha) {
+        grecaptcha.ready(function () {
+          grecaptcha.execute(outerThis.getAttribute("site-key"), { action: 'newsletter' }).then(function (token) {
+              fetch("/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha", {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json'},
+                body: JSON.stringify({ recaptchaToken: token }) })
+              .then(response => {
+                if (response.ok) return response.json()
+              })
+              .then(response => {
+                if (response) { // passed captcha
+                  if (!outerThis.submitEventListener(event)) {
+                    return
+                  }
+            
+                  outerThis.form.style.display = 'none'
+                  outerThis.afterSubmit.style.display = 'block'
+                } else console.error("Failed captcha")
+              })
+              .catch(error => console.error("Something went wrong while verifying captcha: ", error))
+          });
+      });    
       }
-
-      this.form.style.display = 'none'
-      this.afterSubmit.style.display = 'block'
     }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
-    this.addEventListener('form-submit', this.submitM4MusicEventListener)
+    this.addEventListener('form-submit', this.submitM4MusicEventListener.bind(this))
   }
 
   disconnectedCallback () {
-    this.removeEventListener('form-submit', this.submitM4MusicEventListener)
+    this.removeEventListener('form-submit', this.submitM4MusicEventListener.bind(this))
   }
 
   renderCSS () {
