@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -15,7 +15,7 @@
 
 <body>
   <p-general>
-    <o-header namespace="header-" namespace-fallback menu-icon="true" m-navigation="m4music-m-navigation">
+    <o-header namespace="header-" namespace-fallback>
       <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
       <m4music-m-navigation hover="false" namespace="header-navigation-" no-scroll="nav-open" namespace-fallback focus-lost-close-mobile>
         <ul>
@@ -132,23 +132,20 @@
           <h3 class="lowercase">Newsletter</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
 
-          <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-"
-            namespace-children="newsletter-field-" namespace-button="button-" use-html-submit>
-            <form action="" method="post" id="online_form">
-              <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..."
-                autocomplete="off">
-              <style>
-                :host {
-                  --button-margin: 0;
-                  --button-height: var(--newsletter-field-input-height);
-                  --button-padding: 0 0.75rem;
-                }
-              </style>
-              <button type="submit">Anmelden</button>
-            </form>
-          </m4music-m-form>
-          <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a
-              href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+            <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-" namespace-children="newsletter-field-" namespace-button="button-" use-html-submit>
+              <form action="" method="post" id="online_form">
+                <input id="Email" type="email" required="" value="" name="Email" placeholder="Email hier eingeben..." autocomplete="off">
+                <style>
+                  :host {
+                    --button-margin: 0;
+                    --button-height: var(--newsletter-field-input-height);
+                    --button-padding: 0 0.75rem;
+                  }
+                </style>
+                <button type="submit">Anmelden</button>
+              </form>
+            </m4music-m-form>
+            <p class="policy">Die Bearbeitung Ihrer Personendaten erfolgt gemäss unserer <a href="https://migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
         </m4music-m-newsletter>
       </div>
       <div>
@@ -196,7 +193,6 @@
           <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden</m4music-a-button>
         </m4music-m-highlightbox>
       </div>
-
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
@@ -305,9 +301,10 @@
   </p-general>
   <script rel=preload type=module>
     self.Environment = {
-        mobileBreakpoint: '960px'
+      mobileBreakpoint: '960px'
     }
-</script>
+  </script>
+
 </body>
 
 </html>
