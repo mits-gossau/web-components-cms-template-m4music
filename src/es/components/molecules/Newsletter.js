@@ -80,7 +80,6 @@ export default class Newsletter extends BaseBody {
         flex-direction: var(--newsletter-m4music-m-form-flex-direction);
       }
 
-
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host .container {
           width: 294px;

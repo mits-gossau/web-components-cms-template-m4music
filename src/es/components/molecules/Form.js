@@ -267,6 +267,9 @@ export default class Form extends BaseForm {
       :host #afterSubmit {
         display: none;
       }
+      :host #afterSubmit p {
+        font-size: 20px;
+      }
       :host .hidden {
         display: none;
       }
