@@ -312,6 +312,9 @@ export default class Form extends BaseForm {
         :host m4music-a-button {
           padding-top:var(--form-button-padding-top-mobile, 0);
         }
+        :host #afterSubmit p {
+          font-size: var(--font-size-mobile, 10px);
+        }
       }
     `
   }
