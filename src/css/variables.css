@@ -225,6 +225,7 @@
   --newsletter-background:var(--wrapper-background-secondary-color);
   --newsletter-button-background-color-hover-primary:var(--button-background-color-hover-secondary);
   --newsletter-button-background-color-primary:var(--button-background-color-secondary);
+  --newsletter-button-border-radius:var(--button-border-radius);
   --newsletter-button-color-hover-primary:var(--button-color-hover-secondary);
   --newsletter-button-color-primary:var(--button-color-secondary);
   --newsletter-button-font-size-mobile:var(--button-font-size-mobile);
@@ -280,7 +281,7 @@
   --newsletter-form-flex-direction: row;
   --newsletter-form-justify-content: space-between;
   --newsletter-form-margin:0;
-  --newsletter-form-padding:1rem 0 1rem 0;
+  --newsletter-form-padding:1rem 0 0 0;
   --newsletter-form-steps-counter-color:var(--color-orange);
   --newsletter-form-steps-counter-padding:0 0.4rem 0 0;
   --newsletter-form-steps-title-margin:0 0 0 1rem;

@@ -59,10 +59,20 @@ export default class Newsletter extends BaseBody {
       }
       :host > p {
         margin: var(--p-margin);
+        margin-bottom: 0;
+      }
+      :host .container {
+        margin: 0 auto;
+        width: 450px;
       }
       :host .policy{
         margin: var(--policy-margin);
         font-size: var(--policy-font-size);
+        text-align: var(--policy-text-align, start);
+      }
+
+      :host .policy p {
+        margin: var(--policy-p-margin, 0);
       }
       :host > m4music-m-form {
         padding: var(--newsletter-m4music-m-form-padding);
@@ -70,6 +80,13 @@ export default class Newsletter extends BaseBody {
         flex-direction: var(--newsletter-m4music-m-form-flex-direction);
       }
 
+
+      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host .container {
+          width: 294px;
+        }
+      }
+      
       @media only screen and (max-width: 800px) {
         :host {
           padding: var(--mobile-padding);
@@ -77,6 +94,8 @@ export default class Newsletter extends BaseBody {
         :host > h3 {
           margin-top: var(--mobile-padding);
         }
+        
+        
       }
     `
   }
