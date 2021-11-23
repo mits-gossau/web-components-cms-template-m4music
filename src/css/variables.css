@@ -218,6 +218,8 @@
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
   --link-underline-color:#CCCCCC;
+
+  
   
   --header-navigation-a-link-font-size-mobile:var(--h3-font-size);
   --header-navigation-a-link-font-size:0.75rem;
@@ -239,7 +241,7 @@
   --header-header-logo-margin:0 1rem 0 0;
   --header-navigation-height:auto;
   --header-navigation-padding:0;
-  --header-navigation-line-height:0;
+  --header-navigation-line-height:normal;
   --header-navigation-a-link-content-spacing:0.25rem;
   --header-navigation-a-link-second-level-font-size-nav-open-mobile:1rem;
   --header-navigation-a-link-second-level-font-size-nav-open:0.75rem;

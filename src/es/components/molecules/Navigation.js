@@ -4,23 +4,7 @@ import BaseNavigation from '../web-components-cms-template/src/es/components/mol
 /* global self */
 
 export default class Navigation extends BaseNavigation {
-  // constructor (...args) {
-  //   super(...args)
-  // }
-
-  // connectedCallback () {
-  //   super.connectedCallback()
-  //   this.addEventListener('click', function (e) {
-  //     console.log(e)
-  //     console.log(this.root.querySelector('li.open'))
-  //     console.log(this.root.querySelector('li.open > a-link').getBoundingClientRect())
-  //   })
-  // }
-
-  // disconnectedCallback () {
-  //   super.disconnectedCallback()
-  //   this.root.querySelectorAll('a-link').forEach(link => link.removeEventListener('click', this.clickListener))
-  // }
+  
 
   renderCSS () {
     super.renderCSS()
