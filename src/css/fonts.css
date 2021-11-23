@@ -11,17 +11,9 @@
 @font-face {
   font-family: "GillSansMTBook";
   font-style: normal;
-  font-weight: 400;
   font-stretch: normal;
-  src: url('webFonts/GillSansMTBook/normal_normal_400.woff') format('woff'), url('webFonts/GillSansMTBook/normal_normal_400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: "GillSansMTLight";
-  font-style: normal;
-  font-weight: 300;
-  font-stretch: normal;
-  src: url('webFonts/GillSansMTLight/normal_normal_300.woff') format('woff'), url('webFonts/GillSansMTLight/normal_normal_300.woff2') format('woff2');
+  src: url("../fonts/GillSansMTBook/normal_normal_400.woff") format("woff"),
+    url("../fonts/GillSansMTBook/normal_normal_400.woff2") format("woff2");
 }
 
 @font-face {
