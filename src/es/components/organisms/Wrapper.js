@@ -88,7 +88,53 @@ export default class Wrapper extends BaseBody {
     :host article {
       width: var(--article-width, 100%);
     }
-    
+
+    :host .heading2 {
+      font-size: var(--h2-font-size, min(4rem, 10vw));
+      line-height: var(--h2-line-height, normal);
+      text-align: var(--h2-text-align, start);
+      word-break: var(--h2-word-break, normal);
+      text-transform: var(--h2-text-transform, none);
+      margin: var(--h2-margin, var(--content-spacing, unset)) auto;
+      padding: var(--h2-padding, unset);
+    }
+    :host .heading3 {
+      font-size: var(--h3-font-size, min(3rem, 10vw));
+      line-height: var(--h3-line-height, normal);
+      text-align: var(--h3-text-align, start);
+      word-break: var(--h3-word-break, normal);
+      text-transform: none;
+      margin: var(--h3-margin, var(--content-spacing, unset)) auto;
+      padding: var(--h3-padding, unset);
+    }
+    :host .heading4 {
+      font-size: var(--h4-font-size, min(2rem, 10vw));
+      line-height: var(--h4-line-height, normal);
+      text-align: var(--h4-text-align, start);
+      word-break: var(--h4-word-break, normal);
+      text-transform: none;
+      margin: var(--h4-margin, var(--content-spacing, unset)) auto;
+      padding: var(--h4-padding, unset);
+    }
+    :host .heading5 {
+      font-size: var(--h5-font-size, min(1.5rem, 10vw));
+      line-height: var(--h5-line-height, normal);
+      text-align: var(--h5-text-align, start);
+      word-break: var(--h5-word-break, normal);
+      text-transform: none;
+      margin: var(--h5-margin, var(--content-spacing, unset)) auto;
+      padding: var(--h5-padding, unset);
+    }
+    :host .heading6 {
+      font-size: var(--h6-font-size, min(1.5rem, 10vw));
+      line-height: var(--h6-line-height, normal);
+      text-align: var(--h6-text-align, start);
+      word-break: var(--h6-word-break, normal);
+      text-transform: none;
+      margin: var(--h6-margin, var(--content-spacing, unset)) auto;
+      padding: var(--h6-padding, unset);
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
