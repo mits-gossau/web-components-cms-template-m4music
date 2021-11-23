@@ -5,6 +5,17 @@
 /* HelveticaNow for Kulturprozent Logo */
 @import url("https://cdn.fonts.net/kit/3340f570-162c-11ec-861a-06a1935d90d4/3340f570-162c-11ec-861a-06a1935d90d4.css");
 
+/* GillSans */
+@import url("https://cdn.fonts.net/kit/cccd2390-2102-11ec-bcae-02a6d29600a2/cccd2390-2102-11ec-bcae-02a6d29600a2.css");
+
+@font-face {
+  font-family: "GillSansMTLight";
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url('webFonts/GillSansMTLight/normal_normal_300.woff') format('woff'), url('webFonts/GillSansMTLight/normal_normal_300.woff2') format('woff2');
+}
+
 @font-face {
   font-family: "GillSansMTMedium";
   font-style: normal;
