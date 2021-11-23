@@ -232,7 +232,7 @@
   --header-navigation-color:var(--color);
   --header-navigation-color-mobile:var(--color-black);
   --header-navigation-text-decoration:none;
-  --header-navigation-color-hover:var(--color);
+  --header-navigation-color-hover:var(--color-orange);
   --header-navigation-text-decoration-hover:none;
   --header-navigation-color-open-mobile:var(--color);
   --header-navigation-color-open:var(--color);
