@@ -88,8 +88,11 @@ export default class Wrapper extends BaseBody {
     :host article {
       width: var(--article-width, 100%);
     }
-    :host :is(h1, h2, h3, h4, h5, h6) {
+    :host :is(h1, h2, h3, h4) {
       margin: var(--h-title-margin, 0);
+    }
+    :host :is(h5, h6) {
+      margin: var(--h56-title-margin, 0);
     }
 
     :host .heading2 {
@@ -159,8 +162,11 @@ export default class Wrapper extends BaseBody {
       :host > section > div:last-of-type {
         margin:var(--wrapper-last-margin-mobile, 0);
       }
-      :host :is(h1, h2, h3, h4, h5, h6) {
+      :host :is(h1, h2, h3, h4) {
         margin:var(--h-title-margin, 0)
+      }
+      :host :is(h5, h6) {
+        margin: var(--h56-title-margin, 0);
       }
     }
   `

@@ -169,6 +169,7 @@
   --h5-margin:var(--h-title-margin);
   --h5-padding:var(--h-title-padding);
   --h5-text-transform: var(--h-title-text-transform);
+  --h56-title-margin:var(--h-title-margin);
   --h6-color:var(--color);
   --h6-font-family:var(--font-family);
   --h6-font-size-mobile:min(0.9rem, 3vw);
@@ -215,6 +216,7 @@
   --highlightbox-padding: 6vw 5vw;
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
+  --juryWrapper-h56-title-margin:0;
   --link-underline-color:#CCCCCC;
   --navigation-a-link-font-size-mobile:var(--h3-font-size);
   --navigation-arrow-display:none;
