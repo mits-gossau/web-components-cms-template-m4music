@@ -219,6 +219,8 @@
   --header-navigation-color:var(--color);
   --header-navigation-flex-wrap:no-wrap;
   --header-navigation-height:auto;
+  --header-navigation-li-ul-margin-bottom-mobile:0.9rem;
+  --header-navigation-padding-top:0.85rem;
   --header-navigation-hr-color:none;
   --header-navigation-li-padding:0 0 0 0.5rem;
   --header-navigation-line-height-mobile:1rem;
