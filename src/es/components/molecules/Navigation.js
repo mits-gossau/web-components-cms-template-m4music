@@ -16,7 +16,6 @@ export default class Navigation extends BaseNavigation {
       :host > nav > ul > li {
         margin:0 0.5rem 0 0;
       }
-      
       :host > nav > ul li > a-link:hover {
         background-color:#434343;
       }
