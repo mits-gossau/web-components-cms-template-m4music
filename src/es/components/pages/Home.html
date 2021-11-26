@@ -17,8 +17,52 @@
 
 <body>
   <p-general>
-    <o-header namespace="header-" namespace-fallback>
+    <o-header namespace="header-" namespace-fallback menu-icon="true" m-navigation="m4music-m-navigation">
       <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
+      <m4music-m-navigation hover="false" namespace="header-navigation-" no-scroll="nav-open" namespace-fallback focus-lost-close-mobile>
+        <ul>
+          <li>
+            <a href="/index.html" target="">Startseite</a>
+          </li>
+          <li>
+            <a href="#" target="">Demotape Clinic</a>
+          </li>
+          <li>
+            <a href="#" target="">Conference</a>
+          </li>
+          <li>
+            <a href="#" target="">Best Swiss Videoclip</a>
+          </li>
+          <li>
+            <a href="#" target="">Festival</a>
+            <ul>
+              <li>
+                <a href="#" target="">Presse & Medien </a>
+              </li>
+              <li>
+                <a href="#" target="">Über uns</a>
+              </li>
+            </ul>
+          </li>
+          <li class="icon-list">
+            <div class="icons">
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/facebook.svg"
+                href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/instagram.svg"
+                href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/spotify.svg"
+                href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
+              </a-logo>
+              <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/youtube.svg"
+                href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
+              </a-logo>
+            </div>
+          </li>
+        </ul>
+
+      </m4music-m-navigation>
     </o-header>
     <m4music-o-body namespace="body-" namespace-fallback>
       <div>
@@ -38,30 +82,30 @@
       </div>
       <div class="spacer"></div>
       <div>
-        <m4music-a-video namespace="video-" namespace-fallback>
+        <m4music-a-video namespace="video-">
           <!-- More examples at \src\es\components\web-components-cms-template\src\es\components\atoms\Video.html -->
           <iframe width="560" height="315" src="https://www.youtube.com/embed/7THS7my2gsw" title="YouTube video player"
-          frameborder="0"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          </m4music-a-video>
+        </m4music-a-video>
       </div>
       <div class="spacer"></div>
       <div>
-        <m4music-o-wrapper no-space>
-          <h2 id="infosAblauf">Infos & Ablauf</h2>
-        </m4music-o-wrapper>
+        <h2>Infos & Ablauf</h2>
       </div>
       <div>
         <m4music-o-wrapper columns="2">
           <div>
             <p>Die Demotape Clinic von m4music, dem Popmusikfestival des Migros-Kulturprozent, sucht jedes Jahr die
-              besten Schweizer Nachwuchs-Songs. <a href=""> Die 60 überzeugendsten Demos</a>, aufgeteilt in die vier Kategorien Pop,
-              Rock, Lyrics & Beats und Electronic, werden am Festival in Zürich durch eine Jury aus Musikprofis bewertet.</p>
+              besten Schweizer Nachwuchs-Songs. <a href=""> Die 60 überzeugendsten Demos</a>, aufgeteilt in die vier
+              Kategorien Pop,
+              Rock, Lyrics & Beats und Electronic, werden am Festival in Zürich durch eine Jury aus Musikprofis
+              bewertet. </p>
           </div>
           <div>
-            <ul>
-              <li>Persönliches Feedback von Szenenprofis</li>
+            <ul class=check>
+              <li>Persönliches Feedback von Szeneprofis</li>
               <li>FONDATION-SUISA-Awards im Gesamtwert von 17’000 Franken</li>
               <li>Radio-Airplay, Interviews, Festival-Auftritte, Aufmerksamkeit in der Schweizer Musikszene</li>
               <li>Coaching durch «Double», der Mentorats-Plattform des Migros-Kulturprozent</li>
@@ -150,7 +194,7 @@
                   <input type="hidden" name="trackId" value="null" id="trackId">
                   <input type="hidden" name="xp_redirectLP" value="0">
                   <input type="hidden" name="Sprache" value="DE" id="Sprache">
-                  
+
                   <input id="Email" type="email" required name="Email" placeholder="E-Mail Adresse" autocomplete="off">
                 </div>
 
