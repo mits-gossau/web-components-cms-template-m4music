@@ -24,18 +24,23 @@
   --border-color: #919191;
   --button-background-color-hover-primary: #E53C1A;
   --button-background-color-hover-secondary:var(--link-underline-color);
+  --button-background-color-hover-arrowDown:var(--button-background-color-hover-secondary);
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
+  --button-background-color-arrowDown:var(--button-background-color-secondary);
   --button-border-radius:4px;
   --button-color-hover-secondary: var(--color-black);
+  --button-color-hover-arrowDown: var(--button-color-hover-secondary);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
+  --button-color-arrowDown: var(--button-color-secondary);
   --button-font-family:var(--font-family, var(--font-family-bold));
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;
   --button-font-weight:var(--font-weight, var(--font-weight, normal));
   --button-height-mobile:auto;
   --button-icon-margin-left: 8px;
+  --button-icon-margin-right: 8px;
   --button-icon-padding: 0, 0.75rem;
   --button-icon-width-mobile:1.5rem;
   --button-icon-width:1.2rem;
@@ -54,7 +59,7 @@
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:70%;
   --content-width:70%;
-  --font-family:"GillSansMTMedium", sans-serif;
+  --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
   --font-size:32px;
@@ -169,6 +174,7 @@
   --h5-margin:var(--h-title-margin);
   --h5-padding:var(--h-title-padding);
   --h5-text-transform: var(--h-title-text-transform);
+  --h56-title-margin:var(--h-title-margin);
   --h6-color:var(--color);
   --h6-font-family:var(--font-family);
   --h6-font-size-mobile:min(0.9rem, 3vw);
@@ -217,6 +223,7 @@
   --highlightbox-padding: 6vw 5vw;
   --highlightbox-text-align: center;
   --html-background-color:var(--background-color);
+  --juryWrapper-h56-title-margin:0;
   --link-underline-color:#CCCCCC;
 
   
@@ -252,6 +259,7 @@
   --newsletter-background:var(--wrapper-background-secondary-color);
   --newsletter-button-background-color-hover-primary:var(--button-background-color-hover-secondary);
   --newsletter-button-background-color-primary:var(--button-background-color-secondary);
+  --newsletter-button-border-radius:var(--button-border-radius);
   --newsletter-button-color-hover-primary:var(--button-color-hover-secondary);
   --newsletter-button-color-primary:var(--button-color-secondary);
   --newsletter-button-font-size-mobile:var(--button-font-size-mobile);
@@ -307,7 +315,7 @@
   --newsletter-form-flex-direction: row;
   --newsletter-form-justify-content: space-between;
   --newsletter-form-margin:0;
-  --newsletter-form-padding:1rem 0 1rem 0;
+  --newsletter-form-padding:1rem 0 0 0;
   --newsletter-form-steps-counter-color:var(--color-orange);
   --newsletter-form-steps-counter-padding:0 0.4rem 0 0;
   --newsletter-form-steps-title-margin:0 0 0 1rem;

@@ -7,29 +7,64 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global customElements */
 
 export default class Form extends BaseForm {
+  
   constructor (...args) {
     super(...args)
 
+    
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
 
-      if (!this.submitEventListener(event)) {
-        return
+      if (this.getAttribute("type") === "newsletter") {
+        this.loadDependency().then(grecaptcha => {
+          grecaptcha.ready(() => {
+            grecaptcha.execute(this.getAttribute('site-key'), { action: 'newsletter' }).then(token => {
+              fetch('/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ recaptchaToken: token })
+              })
+                .then(response => {
+                  if (response.ok) return response.json()
+                })
+                .then(response => {
+                  if (response) { // passed captcha
+                    if (!this.submitEventListener(event)) {
+                      // TODO if wanted include validation here
+                      return
+                    }
+  
+                    this.form.style.display = 'none'
+                    this.afterSubmit.style.display = 'block'
+                  } else console.error('Failed captcha')
+                })
+                .catch(error => console.error('Something went wrong while verifying captcha: ', error))
+            })
+          })
+        })
       }
-
-      this.form.style.display = 'none'
-      this.afterSubmit.style.display = 'block'
     }
+
+      this.previousButtonClickedEventListener = () => {
+        this.form.submit()
+      }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
+    this.loadDependency()
     this.addEventListener('form-submit', this.submitM4MusicEventListener)
+    if (this.previousButton) {
+      this.previousButton.addEventListener('click', this.previousButtonClickedEventListener)
+    }
   }
 
   disconnectedCallback () {
     this.removeEventListener('form-submit', this.submitM4MusicEventListener)
+    if (this.previousButton) {
+      this.previousButton.removeEventListener('click', this.previousButtonClickedEventListener)
+    }
   }
 
   renderCSS () {
@@ -232,6 +267,12 @@ export default class Form extends BaseForm {
       :host #afterSubmit {
         display: none;
       }
+      :host #afterSubmit p {
+        font-size: 27px;
+      }
+      :host .hidden {
+        display: none;
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -270,6 +311,9 @@ export default class Form extends BaseForm {
         }
         :host m4music-a-button {
           padding-top:var(--form-button-padding-top-mobile, 0);
+        }
+        :host #afterSubmit p {
+          font-size: var(--font-size-mobile, 10px);
         }
       }
     `
@@ -313,10 +357,37 @@ export default class Form extends BaseForm {
     }))
   }
 
+  /**
+   * fetch dependency
+   *
+   * @returns {Promise<{components: any}>}
+   */
+  loadDependency () {
+    return this.dependencyPromise || (this.dependencyPromise = new Promise(resolve => {
+      // needs markdown
+      if ('grecaptcha' in self === true) {
+        resolve(self.grecaptcha) // eslint-disable-line
+      } else {
+        const vendorsMainScript = document.createElement('script')
+        vendorsMainScript.setAttribute('type', 'text/javascript')
+        vendorsMainScript.setAttribute('async', '')
+        vendorsMainScript.setAttribute('src', `https://www.google.com/recaptcha/api.js?render=${this.getAttribute('site-key')}`)
+        vendorsMainScript.onload = () => {
+          if ('grecaptcha' in self === true ) resolve(self.grecaptcha) // eslint-disable-line
+        }
+        this.html = [vendorsMainScript]
+      }
+    }))
+  }
+
   get afterSubmit () {
     return this.root.querySelector('#afterSubmit')
   }
 
+  get previousButton () {
+    return this.root.querySelector('input[name="__prev"]')
+  }
+  
   get policy () {
     return this.root.querySelector('.policy')
   }

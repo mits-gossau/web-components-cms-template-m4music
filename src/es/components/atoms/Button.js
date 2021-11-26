@@ -124,7 +124,7 @@ export default class Button extends Shadow() {
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
       height: var(--height, auto);
-      padding:var(${this.icon ? '--icon-padding' : '--padding'}, 1em);
+      padding:var(${(this.icon && this.type != "arrowDown") ? '--icon-padding' : '--padding'}, 1em);
       transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
       border-radius:var(--border-radius, unset);
@@ -134,9 +134,12 @@ export default class Button extends Shadow() {
       color: var(--color-hover-${this.type}, --color);
     }
     :host > button > svg{
-      margin-left:var(${this.icon ? '--icon-margin-left' : '0'}, 0);
+      margin-left: ${this.iconEnd ? "var(--icon-margin-left, 0)" : '0'};
+      margin-right: ${this.iconFront ? "var(--icon-margin-right, 0)" : '0'};
     }
-    ${this.type === 'arrow' ? this.arrowCSS : ''}
+    ${this.type === 'arrowRight' ? this.arrowRightCSS : ''}
+    ${this.type === 'arrowDown' ? this.arrowDownCSS : ''}
+    ${this.type === 'arrowLeft' ? this.arrowLeftCSS : ''}
     :host .icon {
       display:var(--icon-display, flex);
       align-items:var(--icon-align-items, center);
@@ -159,7 +162,6 @@ export default class Button extends Shadow() {
       :host > .icon > svg {
         width:var(--icon-width-mobile, 100%);
       }
-
     }
   `
   }
@@ -184,36 +186,37 @@ export default class Button extends Shadow() {
    */
   static addIconToButton (button, type) {
     let iconImg
-    if (type === 'arrow') {
+    if (type === 'arrowRight') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
-        <svg viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
-          <path d="M2 7.5H0.5V10.5H2V7.5ZM34 9L19 0.339746V17.6603L34 9ZM2 10.5H20.5V7.5H2V10.5Z" fill="#FB5F3F"/>
+        <svg viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
+          <path d="M2 10.5C1.17157 10.5 0.5 11.1716 0.5 12C0.5 12.8284 1.17157 13.5 2 13.5V10.5ZM43.0607 13.0607C43.6464 12.4749 43.6464 11.5251 43.0607 10.9393L33.5147 1.3934C32.9289 0.807611 31.9792 0.807611 31.3934 1.3934C30.8076 1.97919 30.8076 2.92893 31.3934 3.51472L39.8787 12L31.3934 20.4853C30.8076 21.0711 30.8076 22.0208 31.3934 22.6066C31.9792 23.1924 32.9289 23.1924 33.5147 22.6066L43.0607 13.0607ZM2 13.5H42V10.5H2V13.5Z" fill="#FB5F3F"/>
         </svg>
       `
       iconImg = iconImg.children[0]
-    } else if (type === 'download') {
+      button.append(iconImg)
+
+    } else if (type === 'arrowDown') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
-      <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-      <title>Button Download</title>
-      <desc>Created with Sketch.</desc>
-      <g id="Button-Download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Group-2">
-              <circle id="Oval" fill="var(--button-background-color)" cx="30" cy="30" r="30"></circle>
-              <g id="Group" transform="translate(19.000000, 14.000000)" stroke="#FB5F3F" stroke-width="3">
-                  <line x1="0" y1="30.5" x2="23" y2="30.5" id="Line-3" stroke-linecap="square"></line>
-                  <line x1="11.5" y1="22" x2="11.5" y2="-6.10622664e-16" id="Line-3-Copy" stroke-linecap="square"></line>
-                  <polyline id="Path-2" points="0 12.5 11.5 24.5 23 12.5"></polyline>
-              </g>
-          </g>
-      </g>
-    </svg>
+        <svg viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
+          <path d="M6.75 1.5C6.75 1.08579 6.41421 0.75 6 0.75C5.58579 0.75 5.25 1.08579 5.25 1.5L6.75 1.5ZM5.46967 18.0303C5.76256 18.3232 6.23744 18.3232 6.53033 18.0303L11.3033 13.2574C11.5962 12.9645 11.5962 12.4896 11.3033 12.1967C11.0104 11.9038 10.5355 11.9038 10.2426 12.1967L6 16.4393L1.75736 12.1967C1.46447 11.9038 0.989592 11.9038 0.696699 12.1967C0.403805 12.4896 0.403805 12.9645 0.696699 13.2574L5.46967 18.0303ZM5.25 1.5L5.25 17.5L6.75 17.5L6.75 1.5L5.25 1.5Z" fill="black"/>
+        </svg>
       `
       iconImg = iconImg.children[0]
+      button.append(iconImg)
+
+    } else if (type === 'arrowLeft') {
+      iconImg = document.createElement('div')
+      iconImg.innerHTML = `
+        <svg viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
+          <path d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.93934 10.9393ZM42 13.5C42.8284 13.5 43.5 12.8284 43.5 12C43.5 11.1716 42.8284 10.5 42 10.5V13.5ZM2 13.5H42V10.5H2V13.5Z" fill="#FB5F3F"/>
+        </svg>
+      `
+      iconImg = iconImg.children[0]
+      button.prepend(iconImg)
     }
-    button.append(iconImg)
+
     button.classList.add('icon')
     return button
   }
@@ -235,17 +238,32 @@ export default class Button extends Shadow() {
   }
 
   /**
-   * get icon type
+   * has icon
    */
   get icon () {
-    return this.type === 'arrow' || this.type === 'download'
+    return this.iconEnd || this.iconFront;
   }
 
   /**
-   * CSS Styles if button has arrow icon
+   * Icon at end 
    */
-  get arrowCSS () {
-    return `:host > button:hover .arrow{
+  get iconEnd (){
+    return this.type === 'arrowRight' || this.type === 'arrowDown';
+  }
+
+  /**
+   * Icon at front 
+   */
+  get iconFront (){
+    return this.type === 'arrowLeft'
+  }
+
+  /**
+   * CSS Styles if button has arrowRight icon
+   */
+  get arrowRightCSS () {
+    return /* css */ `
+    :host > button:hover .arrow{
       animation-name: arrowright;
       animation-duration: 0.5s;
       animation-fill-mode: both;
@@ -270,6 +288,57 @@ export default class Button extends Shadow() {
       100%{
         transform: translateX(0px);
       }
+    }
+    `
+  }
+
+  /**
+   * CSS Styles if button has arrowLeft icon
+   */
+  get arrowLeftCSS () {
+    return /* css */ `
+    :host > button:hover .arrow{
+      animation-name: arrowright;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+    }
+    :host > button .arrow{
+      animation-name: arrowleft;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+    }
+    @keyframes arrowright {
+      0%{
+        transform: translateX(0px);
+      }
+      100%{
+        transform: translateX(-10px);
+      }
+    }
+    @keyframes arrowleft {
+      0%{
+        transform: translateX(-10px);
+      }
+      100%{
+        transform: translateX(0px);
+      }
+    }
+    `
+  }
+
+  /**
+   * CSS Styles if button has arrowDown icon
+   */
+  get arrowDownCSS () {
+    return /* css */ `
+    :host > button .arrow {
+      height: 1rem;
+    }
+    :host > button:hover .arrow > path{
+      fill: var(--color-orange);
+    }
+    :host > button .arrow > path{
+      fill: var(--color-black);
     }
     `
   }
