@@ -1,5 +1,7 @@
 import BaseBody from '../organisms/Body.js'
 
+/* global self */
+
 export default class Newsletter extends BaseBody {
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()

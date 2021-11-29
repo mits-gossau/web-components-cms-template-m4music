@@ -4,9 +4,7 @@ import BaseNavigation from '../web-components-cms-template/src/es/components/mol
 /* global self */
 
 export default class Navigation extends BaseNavigation {
-
-
-  renderCSS() {
+  renderCSS () {
     super.renderCSS()
     this.css = /* css */`
       :host > nav > ul {

@@ -124,7 +124,7 @@ export default class Button extends Shadow() {
       font-weight: var(--font-weight, var(--font-weight, normal));
       margin: var(--margin, 1em);
       height: var(--height, auto);
-      padding:var(${(this.icon && this.type != "arrowDown") ? '--icon-padding' : '--padding'}, 1em);
+      padding:var(${(this.icon && this.type !== 'arrowDown') ? '--icon-padding' : '--padding'}, 1em);
       transition: var(--transition, 0.3s all);
       width: var(--width, 100%);
       border-radius:var(--border-radius, unset);
@@ -134,8 +134,8 @@ export default class Button extends Shadow() {
       color: var(--color-hover-${this.type}, --color);
     }
     :host > button > svg{
-      margin-left: ${this.iconEnd ? "var(--icon-margin-left, 0)" : '0'};
-      margin-right: ${this.iconFront ? "var(--icon-margin-right, 0)" : '0'};
+      margin-left: ${this.iconEnd ? 'var(--icon-margin-left, 0)' : '0'};
+      margin-right: ${this.iconFront ? 'var(--icon-margin-right, 0)' : '0'};
     }
     ${this.type === 'arrowRight' ? this.arrowRightCSS : ''}
     ${this.type === 'arrowDown' ? this.arrowDownCSS : ''}
@@ -195,7 +195,6 @@ export default class Button extends Shadow() {
       `
       iconImg = iconImg.children[0]
       button.append(iconImg)
-
     } else if (type === 'arrowDown') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
@@ -205,7 +204,6 @@ export default class Button extends Shadow() {
       `
       iconImg = iconImg.children[0]
       button.append(iconImg)
-
     } else if (type === 'arrowLeft') {
       iconImg = document.createElement('div')
       iconImg.innerHTML = `
@@ -241,20 +239,20 @@ export default class Button extends Shadow() {
    * has icon
    */
   get icon () {
-    return this.iconEnd || this.iconFront;
+    return this.iconEnd || this.iconFront
   }
 
   /**
-   * Icon at end 
+   * Icon at end
    */
-  get iconEnd (){
-    return this.type === 'arrowRight' || this.type === 'arrowDown';
+  get iconEnd () {
+    return this.type === 'arrowRight' || this.type === 'arrowDown'
   }
 
   /**
-   * Icon at front 
+   * Icon at front
    */
-  get iconFront (){
+  get iconFront () {
     return this.type === 'arrowLeft'
   }
 

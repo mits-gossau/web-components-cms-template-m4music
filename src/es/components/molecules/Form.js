@@ -7,15 +7,13 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global customElements */
 
 export default class Form extends BaseForm {
-  
   constructor (...args) {
     super(...args)
 
-    
     this.submitM4MusicEventListener = event => {
       event.preventDefault()
 
-      if (this.getAttribute("type") === "newsletter") {
+      if (this.getAttribute('type') === 'newsletter') {
         this.loadDependency().then(grecaptcha => {
           grecaptcha.ready(() => {
             grecaptcha.execute(this.getAttribute('site-key'), { action: 'newsletter' }).then(token => {
@@ -33,7 +31,7 @@ export default class Form extends BaseForm {
                       // TODO if wanted include validation here
                       return
                     }
-  
+
                     this.form.style.display = 'none'
                     this.afterSubmit.style.display = 'block'
                   } else console.error('Failed captcha')
@@ -45,9 +43,9 @@ export default class Form extends BaseForm {
       }
     }
 
-      this.previousButtonClickedEventListener = () => {
-        this.form.submit()
-      }
+    this.previousButtonClickedEventListener = () => {
+      this.form.submit()
+    }
   }
 
   connectedCallback () {
@@ -319,23 +317,21 @@ export default class Form extends BaseForm {
     `
   }
 
-  
   /**
   * renders the a-text-field html
   *
   * @return {void}
   */
-   renderHTML () {
+  renderHTML () {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
       Array.from(this.root.querySelectorAll('input[type=submit]')).forEach(input => {
-        const button = document.createElement("button");
-        button.textContent = input.getAttribute("value")
-        button.setAttribute("name",input.getAttribute("name"))
+        const button = document.createElement('button')
+        button.textContent = input.getAttribute('value')
+        button.setAttribute('name', input.getAttribute('name'))
         const aButton = new children[1][1](button, { namespace: 'button-', namespaceFallback: this.hasAttribute('namespace-fallback-children') || this.hasAttribute('namespace-fallback') })
-        aButton.setAttribute("name",input.getAttribute("name"))
+        aButton.setAttribute('name', input.getAttribute('name'))
         input.replaceWith(aButton)
-       
       })
       this.inputAll
         .filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
@@ -381,7 +377,6 @@ export default class Form extends BaseForm {
       })
     })
   }
-
 
   /**
    * fetch children when first needed
@@ -451,7 +446,7 @@ export default class Form extends BaseForm {
   get previousButton () {
     return this.root.querySelector('input[name="__prev"]')
   }
-  
+
   get policy () {
     return this.root.querySelector('.policy')
   }
