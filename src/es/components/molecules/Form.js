@@ -319,6 +319,70 @@ export default class Form extends BaseForm {
     `
   }
 
+  
+  /**
+  * renders the a-text-field html
+  *
+  * @return {void}
+  */
+   renderHTML () {
+    this.hasRendered = true
+    this.loadChildComponents().then(children => {
+      Array.from(this.root.querySelectorAll('input[type=submit]')).forEach(input => {
+        const button = document.createElement("button");
+        button.textContent = input.getAttribute("value")
+        button.setAttribute("name",input.getAttribute("name"))
+        const aButton = new children[1][1](button, { namespace: 'button-', namespaceFallback: this.hasAttribute('namespace-fallback-children') || this.hasAttribute('namespace-fallback') })
+        aButton.setAttribute("name",input.getAttribute("name"))
+        input.replaceWith(aButton)
+       
+      })
+      this.inputAll
+        .filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
+          this.inputFields.push(input)
+          const label = this.root.querySelector(`label[for='${input.getAttribute('id')}']`) || this.root.querySelector(`label[for='${input.getAttribute('name')}']`)
+          const description = this.getDescription(input)
+          const aInput = new children[0][1](input, label, description, { mode: 'false', namespace: this.getAttribute('namespace-children') || this.getAttribute('namespace') || '', namespaceFallback: this.hasAttribute('namespace-fallback-children') || this.hasAttribute('namespace-fallback') })
+          aInput.setAttribute('type', input.getAttribute('type'))
+          if (input.hasAttribute('reverse')) aInput.setAttribute('reverse', input.getAttribute('reverse'))
+          input.replaceWith(aInput)
+          if (input.hasAttribute('validation-message')) {
+            const changeListener = event => {
+              if (input.hasAttribute('valid') ? input.getAttribute('valid') === 'true' : input.validity.valid) {
+                label.removeAttribute('data-balloon-visible')
+                label.removeAttribute('aria-label')
+                label.removeAttribute('data-balloon-pos')
+              } else {
+                label.setAttribute('data-balloon-visible', 'true')
+                label.setAttribute('aria-label', input.getAttribute('validation-message'))
+                label.setAttribute('data-balloon-pos', input.hasAttribute('reverse') ? 'down' : 'up')
+              }
+            }
+            this.validateFunctions.push(changeListener)
+            input.changeListener = changeListener
+            input.addEventListener('blur', changeListener)
+            input.addEventListener('blur', event => {
+              input.addEventListener('change', changeListener)
+              input.addEventListener('keyup', changeListener)
+            }, { once: true })
+          }
+        })
+      // spam protection
+      if (this.getAttribute('type') === 'newsletter') {
+        this.emptyInput = document.createElement('input')
+        this.emptyInput.type = 'text'
+        this.emptyInput.id = 'oceans'
+        this.form.appendChild(this.emptyInput)
+      }
+      // TODO: Textarea support => https://github.com/roli81/web-components-cms-template-base/blob/main/src/es/components/molecules/ContactForm.js
+      Array.from(this.root.querySelectorAll('button')).forEach(button => {
+        const aButton = new children[1][1](button, { namespace: this.getAttribute('namespace-button') || this.getAttribute('namespace-children') || this.getAttribute('namespace') || '', namespaceFallback: this.hasAttribute('namespace-fallback-children') || this.hasAttribute('namespace-fallback') })
+        button.replaceWith(aButton)
+      })
+    })
+  }
+
+
   /**
    * fetch children when first needed
    *
