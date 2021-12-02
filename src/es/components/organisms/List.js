@@ -172,6 +172,4 @@ export default class Wrapper extends BaseBody {
     })
     this.html = section
   }
-
-  
 }

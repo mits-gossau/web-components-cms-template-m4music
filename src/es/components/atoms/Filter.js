@@ -14,8 +14,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @attribute {}
  * @css {}
  */
-export default class Filter extends Shadow() {  
-  
+export default class Filter extends Shadow() {
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
   }
@@ -27,15 +26,6 @@ export default class Filter extends Shadow() {
    */
   shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
-  }
-
-  /**
-   * evaluates if a render is necessary
-   *
-   * @return {boolean}
-   */
-  shouldComponentRenderHTML () {
-    return !this.root.querySelector('button')
   }
 
   /**
@@ -55,7 +45,7 @@ export default class Filter extends Shadow() {
     }
     :host > m4music-a-button {
       font-size:unset;
-      padding:0 0.2rem 0 0;
+      padding:0 0.2rem 0.2rem 0;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > m4music-a-button {
@@ -64,14 +54,4 @@ export default class Filter extends Shadow() {
     }
   `
   }
-
-  /**
-   * renders the html
-   *
-   * @return {void}
-   */
-  renderHTML () {
-    this.html = this.button
-  }
-  
 }

@@ -343,19 +343,26 @@ export default class Button extends Shadow() {
     `
   }
 
-  filterCSS(breakpoint){
+  /**
+   * Styling for filter buttons
+   * @param {string} breakpoint
+   */
+  filterCSS (breakpoint) {
+    const padding = breakpoint === 'desktop' ? '--padding' : '--padding-mobile'
+    const fontSize = breakpoint === 'desktop' ? '--font-size' : '--font-size-mobile'
     return /* css */ `
     :host > button {
       border-radius:4px;
-      background-color:#F3F3F3;
-      color:black;
-      font-size:${breakpoint==='desktop'? 0.5:0.9}rem;
+      background-color:var(--background-color, white);
+      color:var(--color, black);
+      font-size:var(${fontSize}, inherit);
       margin:0;
-      padding:8px;
       height:auto;
+      padding:var(${padding}, 0);
     }
     :host > button:hover,  button:active, button:focus {
-      background-color: #FB5F3F;
+      background-color:var(--background-color-hover, white);
+      color:var(--color-hover, white);
     }`
   }
 }
