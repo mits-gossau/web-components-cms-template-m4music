@@ -140,6 +140,7 @@ export default class Button extends Shadow() {
     ${this.type === 'arrowRight' ? this.arrowRightCSS : ''}
     ${this.type === 'arrowDown' ? this.arrowDownCSS : ''}
     ${this.type === 'arrowLeft' ? this.arrowLeftCSS : ''}
+    ${this.type === 'filter' ? this.filterCSS('desktop') : ''}
     :host .icon {
       display:var(--icon-display, flex);
       align-items:var(--icon-align-items, center);
@@ -162,6 +163,7 @@ export default class Button extends Shadow() {
       :host > .icon > svg {
         width:var(--icon-width-mobile, 100%);
       }
+      ${this.type === 'filter' ? this.filterCSS('mobile') : ''}
     }
   `
   }
@@ -339,5 +341,28 @@ export default class Button extends Shadow() {
       fill: var(--color-black);
     }
     `
+  }
+
+  /**
+   * Styling for filter buttons
+   * @param {string} breakpoint
+   */
+  filterCSS (breakpoint) {
+    const padding = breakpoint === 'desktop' ? '--padding' : '--padding-mobile'
+    const fontSize = breakpoint === 'desktop' ? '--font-size' : '--font-size-mobile'
+    return /* css */ `
+    :host > button {
+      border-radius:4px;
+      background-color:var(--background-color, white);
+      color:var(--color, black);
+      font-size:var(${fontSize}, inherit);
+      margin:0;
+      height:auto;
+      padding:var(${padding}, 0);
+    }
+    :host > button:hover,  button:active, button:focus {
+      background-color:var(--background-color-hover, white);
+      color:var(--color-hover, white);
+    }`
   }
 }
