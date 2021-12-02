@@ -1,10 +1,11 @@
 // @ts-check
 import BaseForm from '../web-components-cms-template/src/es/components/molecules/Form.js'
 
-/* global self */
-/* global Input */
 /* global Button */
 /* global customElements */
+/* global fetch */
+/* global Input */
+/* global self */
 
 export default class Form extends BaseForm {
   constructor (...args) {
@@ -15,7 +16,9 @@ export default class Form extends BaseForm {
 
       if (this.getAttribute('type') === 'newsletter') {
         this.loadDependency().then(grecaptcha => {
+          // @ts-ignore
           grecaptcha.ready(() => {
+            // @ts-ignore
             grecaptcha.execute(this.getAttribute('site-key'), { action: 'newsletter' }).then(token => {
               fetch('/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha', {
                 method: 'post',

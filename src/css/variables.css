@@ -226,6 +226,7 @@
   --header-navigation-color-open:var(--color);
   --header-navigation-color:var(--color);
   --header-navigation-flex-wrap:no-wrap;
+  --header-navigation-flex-wrap:wrap;
   --header-navigation-height:auto;
   --header-navigation-hr-color:none;
   --header-navigation-li-padding:0 0 0 0.5rem;

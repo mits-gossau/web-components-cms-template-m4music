@@ -6,7 +6,7 @@ import BaseNavigation from '../web-components-cms-template/src/es/components/mol
 export default class Navigation extends BaseNavigation {
   renderCSS () {
     super.renderCSS()
-    this.css = /* css */`
+    this.css = /* css */ `
       :host > nav > ul {
         background-color:var(--background-color, white);
         flex-wrap:var(--flex-wrap, unset);
