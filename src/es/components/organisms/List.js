@@ -53,6 +53,7 @@ export default class Wrapper extends BaseBody {
       display: flex;
       flex-direction: column;
       width:100%;
+      background-color:var(--section-background-color, transparent);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host  {}

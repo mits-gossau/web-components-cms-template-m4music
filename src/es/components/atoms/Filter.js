@@ -42,6 +42,7 @@ export default class Filter extends Shadow() {
       flex-direction:row;
       flex-wrap:wrap;
       justify-content:flex-start;
+      margin-bottom:0.9rem;
     }
     :host > m4music-a-button {
       font-size:unset;

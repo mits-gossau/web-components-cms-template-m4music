@@ -261,6 +261,7 @@
   --html-background-color:var(--background-color);
   --juryWrapper-h56-title-margin:0;
   --link-underline-color:#CCCCCC;
+  --list-wrapper-flex-direction:column;
   --newsletter-align-items: center;
   --newsletter-background-color:#E63C1A;
   --newsletter-background:var(--wrapper-background-secondary-color);

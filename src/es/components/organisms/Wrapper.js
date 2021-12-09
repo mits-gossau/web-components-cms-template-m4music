@@ -65,7 +65,7 @@ export default class Wrapper extends BaseBody {
       align-items: ${this.hasAttribute('align-content') ? this.getAlignment(this.getAttribute('align-content')).flex : 'var(--align-items, flex-start)'};
       background-color:var(--wrapper-background-color, transparent);
       display:flex;
-      flex-direction:row;
+      flex-direction:var(--flex-direction, row);
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
@@ -146,7 +146,7 @@ export default class Wrapper extends BaseBody {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
         align-items: ${this.hasAttribute('align-content-mobile') ? this.getAlignment(this.getAttribute('align-content-mobile')).flex : 'var(--align-items-mobile, var(--align-items, flex-start))'};
         display:flex;
-        flex-direction:column;
+        flex-direction:var(--flex-direction-mobile, column);
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
       }
       :host > section * p {

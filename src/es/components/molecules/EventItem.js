@@ -2,6 +2,7 @@
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
 /* global self */
+/* global Image */
 
 /**
  * Wrapper for a event item element (event or artist)
@@ -25,7 +26,7 @@ export default class EventItem extends Shadow() {
    *
    * @return {boolean}
    */
-   shouldComponentRenderHTML () {
+  shouldComponentRenderHTML () {
     return !this.root.querySelector('div')
   }
 
@@ -47,19 +48,42 @@ export default class EventItem extends Shadow() {
     this.css = /* css */ `
     :host {
       display:flex;
-      flex-direction: row;
-      align-content: flex-start;
-      justify-content: flex-start;
-      align-items: flex-start;
+      flex-direction:row;
+      align-items:flex-start;
+      justify-content:flex-start;
+      align-content:flex-start;
+      margin-bottom:0.9rem;
+      background-color:transparent;
     }
-    :host .item-content{
+    :host p  {
+      padding:0;
+      margin:0 0 0.25rem 0;
+    }
+    :host .image-wrapper{
+      margin-right:0.45rem;
+      
+    }
+    :host .content-wrapper{
       display:flex;
+      flex-direction:column;
+      align-content:flex-start;
+      justify-content:flex-start;
+      align-items:flex-start;
     }
-    :host .item-content__date{
-      font-size:8px;
+    :host .date{
+      color:var(--date-color, #616161);
+      font-size:18px;
+      line-height:125%;    
     }
-    :host .item-content__description{
-      font-size:20px;
+    :host .name{
+      font-size:28px;
+      line-height:100%;   
+      color:var(--name-color, #000000); 
+    }
+    :host .description{
+      font-size:18px;
+      line-height:125%;
+      color:var(--description-color, #000000); 
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host { }
@@ -72,57 +96,49 @@ export default class EventItem extends Shadow() {
    *
    * @return {void}
    */
-   renderHTML () {
-    const iW = this.createContentWrapper("item-image")
-    //const eventImageWrapper = document.createElement('div')
-    //eventImageWrapper.className="item-image"
+  renderHTML () {
+    const imageWrapper = this.createContentWrapper('image-wrapper')
+    const contentWrapper = this.createContentWrapper('content-wrapper')
 
-    const eI = this.createEventImage(this.eventImage)
-    //const eventImage = new Image()
-    //eventImage.src = this.eventImage
-    //eventImageWrapper.appendChild(eventImage)
-    iW.appendChild(eI)
+    const image = this.createEventImage(this.image)
+    imageWrapper.appendChild(image)
 
-    const cW = this.createContentWrapper("item-content")
-    //const eventContentWrapper = document.createElement('div')
-    //eventContentWrapper.className="item-content"
-    
-    const eD = this.createContentElement(this.eventDate, 'p', 'item-content__name__date')
-    //const eventDate = document.createElement('p')
-    //eventDate.className="item-content__name__date"
-    //eventDate.innerHTML = this.eventDate
+    const date = this.createContentElement(this.date, 'p', 'date')
+    const name = this.createContentElement(this.name, 'p', 'name')
+    const description = this.createContentElement(this.description, 'p', 'description')
 
-    const eDesc = this.createContentElement(this.eventDescription, 'p', 'item-content__description')
-    //const eventDescription = document.createElement('p')
-    //eventDescription.className="item-content__description"
-    //eventDescription.innerHTML = this.eventDescription
+    this.appendChildElement(contentWrapper, [date, name, description])
 
-    //eventContentWrapper.append(eventDescription,eventDate)
-    cW.append(eDesc,eD)
-
-    this.html = [iW,cW]
-    //this.html = [eventImageWrapper,eventContentWrapper]
-    //content.appendChild(eventContentWrapper)
-    //this.html = content
+    this.html = [imageWrapper, contentWrapper]
   }
 
+  /**
+   * @param {HTMLDivElement} parent
+   * @param {HTMLElement[]} children
+   */
+  appendChildElement (parent, children) {
+    children.forEach(child => {
+      if (child.innerHTML !== '') parent.appendChild(child)
+    })
+    return parent
+  }
 
   /**
-   * @param {any} htmlContent
+   * @param {any} content
    * @param {string} element
    * @param {string} className
    */
-  createContentElement(htmlContent, element, className){
+  createContentElement (content, element, className) {
     const el = document.createElement(element)
     el.className = className
-    el.innerHTML = htmlContent
+    el.innerHTML = content
     return el
   }
-  
-   /**
+
+  /**
    * @param {string} className
    */
-   createContentWrapper(className){
+  createContentWrapper (className) {
     const element = document.createElement('div')
     element.className = className
     return element
@@ -131,7 +147,7 @@ export default class EventItem extends Shadow() {
   /**
    * @param {string} img
    */
-  createEventImage(img){
+  createEventImage (img) {
     const image = new Image()
     image.src = img
     return image
@@ -141,16 +157,19 @@ export default class EventItem extends Shadow() {
    * get event date
    *
    */
-   get eventDate () {
-    return this.getAttribute('event-date') || ""
+  get date () {
+    return this.getAttribute('date') || ''
   }
 
-  get eventDescription () {
-    return this.getAttribute('event-description') || ""
+  get name () {
+    return this.getAttribute('name') || ''
   }
 
-  get eventImage () {
-    return this.getAttribute('event-image') || null
+  get description () {
+    return this.getAttribute('description') || ''
   }
 
+  get image () {
+    return this.getAttribute('image') || null
+  }
 }
