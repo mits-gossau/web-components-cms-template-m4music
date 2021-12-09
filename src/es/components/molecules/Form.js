@@ -328,14 +328,6 @@ export default class Form extends BaseForm {
   renderHTML () {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
-      Array.from(this.root.querySelectorAll('input[type=submit]')).forEach(input => {
-        const button = document.createElement('button')
-        button.textContent = input.getAttribute('value')
-        button.setAttribute('name', input.getAttribute('name'))
-        const aButton = new children[1][1](button, { namespace: 'button-', namespaceFallback: this.hasAttribute('namespace-fallback-children') || this.hasAttribute('namespace-fallback') })
-        aButton.setAttribute('name', input.getAttribute('name'))
-        input.replaceWith(aButton)
-      })
       this.inputAll
         .filter(i => i.getAttribute('type') !== 'hidden').forEach(input => {
           this.inputFields.push(input)
