@@ -61,7 +61,6 @@ export default class EventItem extends Shadow() {
     }
     :host .image-wrapper{
       margin-right:0.45rem;
-      
     }
     :host .content-wrapper{
       display:flex;
@@ -71,22 +70,33 @@ export default class EventItem extends Shadow() {
       align-items:flex-start;
     }
     :host .date{
-      color:var(--date-color, #616161);
-      font-size:18px;
-      line-height:125%;    
+      color:var(--date-font-color, #616161);
+      font-size:var(--date-font-size, 0.65rem);
+      line-height:var(--date-line-height, 125%);   
     }
     :host .name{
-      font-size:28px;
-      line-height:100%;   
-      color:var(--name-color, #000000); 
+      color:var(--name-font-color, #000000); 
+      font-size:var(--name-font-size, 0.9rem);
+      line-height:var(--name-font-size, 100%);
     }
     :host .description{
-      font-size:18px;
-      line-height:125%;
-      color:var(--description-color, #000000); 
+      color:var(--description-font-color, #000000); 
+      font-size:var(--description-font-size, 0.65rem);
+      line-height:var(--description-line-height, 125%);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host { }
+      :host p  {
+        margin:0 0 0.1rem 0;
+      }
+      :host .date{
+        font-size:var(--date-font-size-mobile, 1rem);
+      }
+      :host .name{
+        font-size:var(--name-font-size-mobile, 1.5rem);
+      }
+      :host .description{
+        font-size:var(--description-font-size-mobile, 1rem);
+      }
     }
   `
   }
@@ -100,14 +110,14 @@ export default class EventItem extends Shadow() {
     const imageWrapper = this.createContentWrapper('image-wrapper')
     const contentWrapper = this.createContentWrapper('content-wrapper')
 
-    const image = this.createEventImage(this.image)
+    const image = this.createImage(this.image)
     imageWrapper.appendChild(image)
 
     const date = this.createContentElement(this.date, 'p', 'date')
     const name = this.createContentElement(this.name, 'p', 'name')
     const description = this.createContentElement(this.description, 'p', 'description')
 
-    this.appendChildElement(contentWrapper, [date, name, description])
+    this.appendChildElements(contentWrapper, [date, name, description])
 
     this.html = [imageWrapper, contentWrapper]
   }
@@ -116,7 +126,7 @@ export default class EventItem extends Shadow() {
    * @param {HTMLDivElement} parent
    * @param {HTMLElement[]} children
    */
-  appendChildElement (parent, children) {
+  appendChildElements (parent, children) {
     children.forEach(child => {
       if (child.innerHTML !== '') parent.appendChild(child)
     })
@@ -147,16 +157,12 @@ export default class EventItem extends Shadow() {
   /**
    * @param {string} img
    */
-  createEventImage (img) {
+  createImage (img) {
     const image = new Image()
-    image.src = img
+    image.src = img || ''
     return image
   }
-
-  /**
-   * get event date
-   *
-   */
+  
   get date () {
     return this.getAttribute('date') || ''
   }
