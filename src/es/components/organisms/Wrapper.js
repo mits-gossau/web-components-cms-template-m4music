@@ -168,6 +168,15 @@ export default class Wrapper extends BaseBody {
       :host :is(h5, h6) {
         margin: var(--h56-title-margin, 0);
       }
+      :host .process-step-count{
+        font-size:4.5rem;
+      }
+      :host .process-step-date{
+        font-size:1rem;
+      }
+      :host .process-step-action{
+        font-size:1.5rem;
+      }
     }
   `
   }
