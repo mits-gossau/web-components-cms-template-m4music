@@ -2,7 +2,6 @@
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
 /* global self */
-/* global Image */
 
 /**
  * Wrapper for a event item element (event or artist)
@@ -17,17 +16,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  */
 export default class EventItem extends Shadow() {
   connectedCallback () {
-    if (this.shouldComponentRenderHTML()) this.renderHTML()
     if (this.shouldComponentRenderCSS()) this.renderCSS()
-  }
-
-  /**
-   * evaluates if a render is necessary
-   *
-   * @return {boolean}
-   */
-  shouldComponentRenderHTML () {
-    return !this.root.querySelector('div')
   }
 
   /**
@@ -99,83 +88,5 @@ export default class EventItem extends Shadow() {
       }
     }
   `
-  }
-
-  /**
-   * renders the html
-   *
-   * @return {void}
-   */
-  renderHTML () {
-    const imageWrapper = this.createContentWrapper('image-wrapper')
-    const contentWrapper = this.createContentWrapper('content-wrapper')
-
-    const image = this.createImage(this.image)
-    imageWrapper.appendChild(image)
-
-    const date = this.createContentElement(this.date, 'p', 'date')
-    const name = this.createContentElement(this.name, 'p', 'name')
-    const description = this.createContentElement(this.description, 'p', 'description')
-
-    this.appendChildElements(contentWrapper, [date, name, description])
-
-    this.html = [imageWrapper, contentWrapper]
-  }
-
-  /**
-   * @param {HTMLDivElement} parent
-   * @param {HTMLElement[]} children
-   */
-  appendChildElements (parent, children) {
-    children.forEach(child => {
-      if (child.innerHTML !== '') parent.appendChild(child)
-    })
-    return parent
-  }
-
-  /**
-   * @param {any} content
-   * @param {string} element
-   * @param {string} className
-   */
-  createContentElement (content, element, className) {
-    const el = document.createElement(element)
-    el.className = className
-    el.innerHTML = content
-    return el
-  }
-
-  /**
-   * @param {string} className
-   */
-  createContentWrapper (className) {
-    const element = document.createElement('div')
-    element.className = className
-    return element
-  }
-
-  /**
-   * @param {string} img
-   */
-  createImage (img) {
-    const image = new Image()
-    image.src = img || ''
-    return image
-  }
-  
-  get date () {
-    return this.getAttribute('date') || ''
-  }
-
-  get name () {
-    return this.getAttribute('name') || ''
-  }
-
-  get description () {
-    return this.getAttribute('description') || ''
-  }
-
-  get image () {
-    return this.getAttribute('image') || null
   }
 }
