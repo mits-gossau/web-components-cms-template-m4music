@@ -66,6 +66,7 @@ export default class Wrapper extends BaseBody {
       background-color:var(--wrapper-background-color, transparent);
       display:flex;
       flex-direction:var(--flex-direction, row);
+      flex-wrap: wrap;
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
@@ -77,8 +78,7 @@ export default class Wrapper extends BaseBody {
       line-height:var(--p-line-height, normal);
     }
     :host > section > div  {
-      flex-basis:${100 / this.columns}%;
-      margin:var(--wrapper-div-margin, 0);
+      flex-basis: calc(${100 / this.columns}% - 1rem);
       text-align: ${this.hasAttribute('align-content') ? this.getAlignment(this.getAttribute('align-content')).text : 'var(--text-align, left)'};
       width:var(--wrapper-div-width, 100%);
     }
@@ -94,7 +94,6 @@ export default class Wrapper extends BaseBody {
     :host :is(h5, h6) {
       margin: var(--h56-title-margin, 0);
     }
-
     :host .heading2 {
       font-size: var(--h2-font-size, min(4rem, 10vw));
       line-height: var(--h2-line-height, normal);
@@ -140,7 +139,6 @@ export default class Wrapper extends BaseBody {
       margin: var(--h6-margin, var(--content-spacing, unset)) auto;
       padding: var(--h6-padding, unset);
     }
-
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
@@ -153,7 +151,7 @@ export default class Wrapper extends BaseBody {
         line-height:var(--p-line-height-mobile, normal);
       }
       :host > section > div  {
-        flex-basis:${100 / this.columns}%;
+        flex-basis: calc(${100 / this.columns}% - 1rem);
         margin:var(--wrapper-div-margin-mobile, 0);
       }
       :host > section > div *  {
