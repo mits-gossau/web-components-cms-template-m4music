@@ -360,7 +360,17 @@ export default class Button extends Shadow() {
       height:auto;
       padding:var(${padding}, 0);
     }
-    :host > button:hover,  button:active, button:focus {
+
+    :host(:not([data-filter-value='show_all'])) > button::after {
+      content: "  +";
+    }
+    :host(:not([data-filter-value='show_all']).active) > button::after {
+      content: "  x";
+    }
+    
+    :host > button:hover,
+    :host > button:active,
+    :host(.active) > button {
       background-color:var(--background-color-hover, white);
       color:var(--color-hover, white);
     }`

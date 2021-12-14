@@ -5,6 +5,18 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 
 /**
  * Wrapper for a filter element
+ * Structure:
+ *    <m4music-o-list>
+ *      <m4music-a-filter>
+ *        <m4music-a-button type="filter" data-filter-value="show_all" class="active">Alle</m4music-a-button>
+ *        <m4music-a-button type="filter" data-filter-value="[VALUE]">[TRANSLATED_VALUE]</m4music-a-button>
+ *      </m4music-a-filter>
+ *      <m4music-o-wrapper type="event-wrapper">
+ *        <m4music-m-event-item type="event" data-tags="[TAGS]"> // TAGS separated by whitespace
+ *            (...)
+ *        </m4music-m-event-item>
+ *      </m4music-o-wrapper>
+ *    </m4music-o-list>
  * Example at: /src/es/components/pages/Events.html
  * As an atom, this component can not hold further children (those would be quantum)
  *
@@ -15,8 +27,51 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class Filter extends Shadow() {
+  constructor (...args) {
+    super(...args)
+
+    this.filterToggle = e => {
+      const showAllFilter = this.root.querySelector("[type='filter'][data-filter-value='show_all']")
+      const filter = e.target
+
+      if (filter.getAttribute("data-filter-value") === "show_all") {
+        if (!filter.classList.contains("active")) {
+          this.root.querySelectorAll("[type='filter']").forEach(button => button.classList.remove("active"))
+          filter.classList.add("active")
+        } // do nothing if user tries to unselect show_all
+        } else {
+        if (filter.classList.contains("active")) {
+          filter.classList.remove("active")
+          if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) showAllFilter.classList.add("active") 
+        } else {
+          filter.classList.add("active")
+          if (showAllFilter) showAllFilter.classList.remove("active")
+        }
+      }
+      // send filter-change event to m4music-o-list
+      this.dispatchEvent(new CustomEvent('filter-change',
+      {
+        detail: {
+          button: filter
+        },
+        bubbles: true,
+        cancelable: true,
+        composed: true
+      }))
+    }
+  }
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
+    this.root.querySelectorAll("[type='filter']").forEach(button => {
+      button.addEventListener("click", this.filterToggle)
+    })
+    
+  }
+
+  disconnectedCallback() {
+    this.root.querySelectorAll("[type='filter']").forEach(button => {
+      button.removeEventListener("click", this.filterToggle)
+    })
   }
 
   /**

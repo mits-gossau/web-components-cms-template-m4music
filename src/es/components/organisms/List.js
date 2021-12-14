@@ -4,7 +4,19 @@ import BaseBody from './Body.js'
 /* global self */
 
 /**
- * Example at: /src/es/components/pages/Home.html
+ * Structure:
+ *    <m4music-o-list>
+ *      <m4music-a-filter>
+ *        <m4music-a-button type="filter" data-filter-value="show_all" class="active">Alle</m4music-a-button>
+ *        <m4music-a-button type="filter" data-filter-value="[VALUE]">[TRANSLATED_VALUE]</m4music-a-button>
+ *      </m4music-a-filter>
+ *      <m4music-o-wrapper type="event-wrapper">
+ *        <m4music-m-event-item type="event" data-tags="[TAGS]"> // TAGS separated by whitespace
+ *            (...)
+ *        </m4music-m-event-item>
+ *      </m4music-o-wrapper>
+ *    </m4music-o-list>
+ * Example at: /src/es/components/pages/Events.html
  * As an organism, this component shall hold molecules and/or atoms
  *
  * @export
@@ -14,9 +26,55 @@ import BaseBody from './Body.js'
  * @css {}
  */
 export default class Wrapper extends BaseBody {
+  constructor (...args) {
+    super(...args)
+
+    let activeFilters = []
+
+    this.filterChange = e => {
+      const filterButton = e.detail.button
+      const filterValue = filterButton.getAttribute("data-filter-value")
+      const eventWrapper = this.root.querySelector("[type='event-wrapper']")
+
+      if (filterValue === "show_all") activeFilters = []
+      if (filterButton.classList.contains("active")) {
+        activeFilters.push(filterValue)
+      } else {
+        activeFilters = activeFilters.filter(f => f !== filterValue)
+      }
+
+      if (eventWrapper) {
+        const events = eventWrapper.root.querySelectorAll("[type='event']")
+
+        if (activeFilters.length === 1 && activeFilters[0] === "show_all") {
+          events.forEach(event => event.classList.remove("hidden"))
+        } else {
+          events.forEach(event => {
+            const tags = event.getAttribute("data-tags").split(" ")
+            event.classList.remove("hidden")
+
+            activeFilters.forEach(filter => {
+              if (!tags.includes(filter)) {
+                event.classList.add("hidden")
+              }
+            })
+          });
+
+          
+        }
+      }
+      
+    }
+  }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
+    this.addEventListener("filter-change", this.filterChange)
+  }
+
+  disconnectedCallback () {
+    this.removeEventListener("filter-change", this.filterChange)
   }
 
   /**

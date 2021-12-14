@@ -33,43 +33,43 @@
       <div>
         <m4music-o-list namespace="list-">
           <m4music-a-filter>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Alle</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Keynote</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Workshop</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Panel</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Deutsch</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">English</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Français</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter">Kostenlos</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" class="active" data-filter-value="show_all">Alle</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Keynote">Keynote</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Workshop">Workshop</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Panel">Panel</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Deutsch">Deutsch</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="English">English</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Français">Français</m4music-a-button>
+            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Kostenlos">Kostenlos</m4music-a-button>
           </m4music-a-filter>              
-          <m4music-o-wrapper namespace="list-wrapper-" namespace-fallback no-space>
-            <m4music-m-event-item namespace="event-item-">
+          <m4music-o-wrapper type="event-wrapper" namespace="list-wrapper-" namespace-fallback no-space>
+            <m4music-m-event-item type="event" namespace="event-item-" data-tags="Deutsch Kostenlos">
               <div class="image-wrapper">
                 <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
               </div>
               <div class="content-wrapper">
                 <p class="date">20.12.2022 - 18:30</p>
-                <p class="name">Neque pellentsures fusce</p>
+                <p class="name">DE Kostenlos Neque pellentsures fusce</p>
                 <p class="description">Optional description.....</p>
               </div>
             </m4music-m-event-item>
-            <m4music-m-event-item namespace="event-item-">
+            <m4music-m-event-item type="event" namespace="event-item-" data-tags="English Kostenlos">
               <div class="image-wrapper">
                 <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
               </div>
               <div class="content-wrapper">
                 <p class="date">17.12.2022 - 14:30</p>
-                <p class="name">Pharetra et ut</p>
+                <p class="name">EN Kostenlos Pharetra et ut</p>
                 <p class="description">Optional description.....</p>
               </div>
             </m4music-m-event-item>
-            <m4music-m-event-item namespace="event-item-">
+            <m4music-m-event-item type="event" namespace="event-item-" data-tags="Français Panel">
               <div class="image-wrapper">
                 <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
               </div>
               <div class="content-wrapper">
                 <p class="date">01.01.2022 - 11:30</p>
-                <p class="name">At vestibulum enim</p>
+                <p class="name">FR Panel At vestibulum enim</p>
               </div>
             </m4music-m-event-item>
           </m4music-o-wrapper>

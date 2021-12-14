@@ -73,6 +73,10 @@ export default class EventItem extends Shadow() {
       font-size:var(--description-font-size, 0.65rem);
       line-height:var(--description-line-height, 125%);
     }
+
+    :host(.hidden) {
+      display: none;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host p  {
         margin:0 0 0.1rem 0;
