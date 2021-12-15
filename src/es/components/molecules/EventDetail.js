@@ -44,13 +44,15 @@ export default class EventDetail extends Shadow() {
     }
     :host > div {
       position: absolute;
-      bottom:0;
+      top: 1rem;
+      left: 1rem;
+      top:1rem;
       background:red;
       color:black;
-      margin:0 0 0 1rem;
+      margin:0 1rem 2rem 1rem;
     }
     :host h1{
-      font-size:3rem;
+      font-size:max(3vw, 3rem);
       line-height:100%;
       margin:0;
     }
