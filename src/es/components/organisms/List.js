@@ -36,7 +36,7 @@ export default class Wrapper extends BaseBody {
       const filterValue = filterButton.getAttribute("data-filter-value")
       const eventWrapper = this.root.querySelector("[type='event-wrapper']")
 
-      if (filterValue === "show_all") activeFilters = []
+      if (filterValue === "show_all" || (activeFilters.length === 1 && activeFilters[0] === "show_all")) activeFilters = []
       if (filterButton.classList.contains("active")) {
         activeFilters.push(filterValue)
       } else {

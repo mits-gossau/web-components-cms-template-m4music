@@ -38,7 +38,7 @@ export default class Filter extends Shadow() {
         if (!filter.classList.contains("active")) {
           this.root.querySelectorAll("[type='filter']").forEach(button => button.classList.remove("active"))
           filter.classList.add("active")
-        } // do nothing if user tries to unselect show_all
+        } else return // do nothing if user tries to unselect show_all
         } else {
         if (filter.classList.contains("active")) {
           filter.classList.remove("active")
