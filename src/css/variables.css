@@ -67,6 +67,16 @@
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:70%;
   --content-width:70%;
+  --event-detail-button-background-color-hover-primary:var(--button-background-color-hover-primary);
+  --event-detail-button-background-color-primary: var(--button-background-color-primary);
+  --event-detail-button-border-radius:var(--button-border-radius);
+  --event-detail-button-font-size:0.75rem;
+  --event-detail-button-margin-mobile:0;
+  --event-detail-button-margin:0;
+  --event-detail-button-padding-mobile:0.7rem 0.9rem;
+  --event-detail-button-padding:0.5rem 0.75rem;
+  --event-detail-button-width-mobile:auto;
+  --event-detail-button-width:auto;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
