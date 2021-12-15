@@ -66,7 +66,6 @@ export default class Wrapper extends BaseBody {
       background-color:var(--wrapper-background-color, transparent);
       display:flex;
       flex-direction:var(--flex-direction, row);
-      flex-wrap: wrap;
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
