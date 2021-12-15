@@ -36,51 +36,41 @@ export default class EventDetail extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host {
-      position: relative;
-      display: inline-block;
-      margin-bottom:1rem;
+      display:inline-block;
+      margin-bottom:var(--margin-bottom, 1rem);
+      position:relative;
     }
     :host a-picture {
-      display: block;
+      display:block;
     }
-    :host .text {
-      position: absolute;
-      width: 100%;
-      margin: auto;
-      bottom: 1rem;
+    :host .text-wrapper {
+      bottom:var(--text-wrapper-position-bottom, 1rem);
+      margin:auto;
+      position:absolute;
+      width:100%;
     }
     :host h1{
-      color:black;
-      font-size:3rem;
-      line-height:100%;
-      margin:0 1rem 1rem 1rem;
+      color:var(--h1-color, black);
+      font-size:var(--h1-font-size, 3rem);
+      line-height:var(--h1-line-height, 100%);
+      margin:var(--h1-margin, 0 1rem 1rem 1rem);
     }
     :host .date{
-      color:black;
-      font-size:0.75rem;
-      line-height:125%;
-      margin:0 0 0 1rem;
+      color:var(--date-color, black);
+      font-size:var(--date-font-size, 0.75rem);
+      line-height:var(--date-line-height, 125%);
+      margin:var(--date-margin, 0 0 0 1rem);
     }
     :host > div > m4music-a-button {
-      margin:0 0 1rem 1rem;
+      margin:var(--event-button-margin, 0 0 1rem 1rem);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host h1{
-        font-size:1.8rem;
+        font-size:var(--h1-font-size, 1.8rem);
       }
       :host .date{
-        font-size:0.95rem;
+        font-size:var(--date-font-size, 0.95rem);
       }
-     
-
-      :host > div > m4music-a-button > button  {
-        padding:40px !important;
-        margin:40px !important;
-        heigth:140px !important;
-
-        font-size:300px;
-      }
-      
     }
   `
   }
