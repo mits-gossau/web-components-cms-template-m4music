@@ -33,11 +33,11 @@ export default class Wrapper extends BaseBody {
 
     this.filterChange = e => {
       const filterButton = e.detail.button
-      const filterValue = filterButton.getAttribute("data-filter-value")
+      const filterValue = filterButton.getAttribute('data-filter-value')
       const eventWrapper = this.root.querySelector("[type='event-wrapper']")
 
-      if (filterValue === "show_all" || (activeFilters.length === 1 && activeFilters[0] === "show_all")) activeFilters = []
-      if (filterButton.classList.contains("active")) {
+      if (filterValue === 'show_all' || (activeFilters.length === 1 && activeFilters[0] === 'show_all')) activeFilters = []
+      if (filterButton.classList.contains('active')) {
         activeFilters.push(filterValue)
       } else {
         activeFilters = activeFilters.filter(f => f !== filterValue)
@@ -46,35 +46,32 @@ export default class Wrapper extends BaseBody {
       if (eventWrapper) {
         const events = eventWrapper.root.querySelectorAll("[type='event']")
 
-        if (activeFilters.length === 1 && activeFilters[0] === "show_all") {
-          events.forEach(event => event.classList.remove("hidden"))
+        if (activeFilters.length === 1 && activeFilters[0] === 'show_all') {
+          events.forEach(event => event.classList.remove('hidden'))
         } else {
           events.forEach(event => {
-            const tags = event.getAttribute("data-tags").split(" ")
-            event.classList.remove("hidden")
+            const tags = event.getAttribute('data-tags').split(' ')
+            event.classList.remove('hidden')
 
             activeFilters.forEach(filter => {
               if (!tags.includes(filter)) {
-                event.classList.add("hidden")
+                event.classList.add('hidden')
               }
             })
-          });
-
-          
+          })
         }
       }
-      
     }
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
-    this.addEventListener("filter-change", this.filterChange)
+    this.addEventListener('filter-change', this.filterChange)
   }
 
   disconnectedCallback () {
-    this.removeEventListener("filter-change", this.filterChange)
+    this.removeEventListener('filter-change', this.filterChange)
   }
 
   /**

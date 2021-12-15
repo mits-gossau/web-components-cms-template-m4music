@@ -360,12 +360,13 @@ export default class Button extends Shadow() {
       height:auto;
       padding:var(${padding}, 0);
     }
-
     :host(:not([data-filter-value='show_all'])) > button::after {
-      content: "  +";
+      content: url('../../../img/filter.svg');
+      padding-left: 0.2rem;
     }
     :host(:not([data-filter-value='show_all']).active) > button::after {
-      content: "  x";
+      content: url('../../../img/filter-active.svg');
+      padding-left: 0.2rem;
     }
     
     :host > button:hover,

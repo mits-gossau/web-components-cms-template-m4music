@@ -2,6 +2,7 @@
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
 
 /* global self */
+/* global CustomEvent */
 
 /**
  * Wrapper for a filter element
@@ -34,43 +35,43 @@ export default class Filter extends Shadow() {
       const showAllFilter = this.root.querySelector("[type='filter'][data-filter-value='show_all']")
       const filter = e.target
 
-      if (filter.getAttribute("data-filter-value") === "show_all") {
-        if (!filter.classList.contains("active")) {
-          this.root.querySelectorAll("[type='filter']").forEach(button => button.classList.remove("active"))
-          filter.classList.add("active")
+      if (filter.getAttribute('data-filter-value') === 'show_all') {
+        if (!filter.classList.contains('active')) {
+          this.root.querySelectorAll("[type='filter']").forEach(button => button.classList.remove('active'))
+          filter.classList.add('active')
         } else return // do nothing if user tries to unselect show_all
+      } else {
+        if (filter.classList.contains('active')) {
+          filter.classList.remove('active')
+          if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) showAllFilter.classList.add('active')
         } else {
-        if (filter.classList.contains("active")) {
-          filter.classList.remove("active")
-          if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) showAllFilter.classList.add("active") 
-        } else {
-          filter.classList.add("active")
-          if (showAllFilter) showAllFilter.classList.remove("active")
+          filter.classList.add('active')
+          if (showAllFilter) showAllFilter.classList.remove('active')
         }
       }
       // send filter-change event to m4music-o-list
       this.dispatchEvent(new CustomEvent('filter-change',
-      {
-        detail: {
-          button: filter
-        },
-        bubbles: true,
-        cancelable: true,
-        composed: true
-      }))
+        {
+          detail: {
+            button: filter
+          },
+          bubbles: true,
+          cancelable: true,
+          composed: true
+        }))
     }
   }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     this.root.querySelectorAll("[type='filter']").forEach(button => {
-      button.addEventListener("click", this.filterToggle)
+      button.addEventListener('click', this.filterToggle)
     })
-    
   }
 
-  disconnectedCallback() {
+  disconnectedCallback () {
     this.root.querySelectorAll("[type='filter']").forEach(button => {
-      button.removeEventListener("click", this.filterToggle)
+      button.removeEventListener('click', this.filterToggle)
     })
   }
 
