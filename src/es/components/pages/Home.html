@@ -11,7 +11,7 @@
   <!-- NOTE: Remove line Debugging.js below for none localhost -->
   <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
   <link href="../../../../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link rel="stylesheet"  type="text/css" href="../../../css/cccd2390-2102-11ec-bcae-02a6d29600a2.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/cccd2390-2102-11ec-bcae-02a6d29600a2.css">
   <title>M4Music</title>
 </head>
 
@@ -19,7 +19,8 @@
   <p-general>
     <o-header namespace="header-" namespace-fallback menu-icon="true" m-navigation="m4music-m-navigation">
       <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
-      <m4music-m-navigation hover="false" namespace="header-navigation-" no-scroll="nav-open" namespace-fallback focus-lost-close focus-lost-close-mobile>
+      <m4music-m-navigation hover="false" namespace="header-navigation-" no-scroll="nav-open" namespace-fallback
+        focus-lost-close focus-lost-close-mobile hit-area="false">
         <ul>
           <li>
             <a href="/index.html" target="">Startseite</a>
@@ -35,6 +36,8 @@
           </li>
           <li>
             <a href="#" target="">Festival</a>
+          </li>
+          <li class="meta-nav">
             <ul>
               <li>
                 <a href="#" target="">Presse & Medien </a>
@@ -141,13 +144,15 @@
         </m4music-o-wrapper>
         <m4music-o-wrapper columns="2" no-space namespace="juryWrapper-" namespace-fallback>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png" alt="02 DTC Isa"> </a-picture>
+            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
+              alt="02 DTC Isa"> </a-picture>
             <h3>Isi Von Walterskirchen</h3>
             <h6 class="lowercase">Electronic</h6>
             <p>Clubbüro Rote Fabrik</p>
           </div>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png" alt="03 DTC Pablo"> </a-picture>
+            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
+              alt="03 DTC Pablo"> </a-picture>
             <h3>Pablo Vögtli</h3>
             <h6 class="lowercase">Lyrics & Beats</h6>
             <p>Moderator und Redaktor Bounce SRF Virus</p>
@@ -155,13 +160,15 @@
         </m4music-o-wrapper>
         <m4music-o-wrapper columns="2" no-space namespace="juryWrapper-" namespace-fallback>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png" alt="01 DTC THEOQUIBLIER 2"></a-picture>
+            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
+              alt="01 DTC THEOQUIBLIER 2"></a-picture>
             <h3>Théo Quiblier</h3>
             <h6 class="lowercase">Rock</h6>
             <p>Concerts &amp; Touring, Two Gentlemen</p>
           </div>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png" alt="04 DTC Marion"></a-picture>
+            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
+              alt="04 DTC Marion"></a-picture>
             <h3>Marion Meier</h3>
             <h6 class="lowercase">Pop</h6>
             <p>Programmation Blue Balls Festival</p>
@@ -180,10 +187,12 @@
       <div>
         <m4music-m-newsletter namespace="newsletter-" namespace-fallback>
           <h3 class="lowercase">Newsletter</h3>
-          <p>Melde dich für den m4music Newsletter an und erhalte News zur Demotape Clinic, zur Conference und zum Festival.</p>
+          <p>Melde dich für den m4music Newsletter an und erhalte News zur Demotape Clinic, zur Conference und zum
+            Festival.</p>
           <div class="container">
             <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-"
-            namespace-children="newsletter-field-" namespace-button="newsletter-button-" redirect="false" use-url-params>
+              namespace-children="newsletter-field-" namespace-button="newsletter-button-" redirect="false"
+              use-url-params>
               <form action="https://nlink.m4music.ch/dispatcher/service" method="post" id="online_form">
                 <div>
                   <input type="hidden" name="ac" value="reg">
@@ -203,11 +212,13 @@
               </form>
 
               <div id="afterSubmit">
-                <p>Vielen Dank für deine Anmeldung! Bitte bestätige deine Anmeldung über die Mail, die wir dir soeben geschickt haben. Prüfe auch den Spam-Ordner.</p>
+                <p>Vielen Dank für deine Anmeldung! Bitte bestätige deine Anmeldung über die Mail, die wir dir soeben
+                  geschickt haben. Prüfe auch den Spam-Ordner.</p>
               </div>
             </m4music-m-form>
             <div class="policy">
-              <p>Die Bearbeitung deiner Personendaten erfolgt gemäss unserer <a rel="noopener" href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+              <p>Die Bearbeitung deiner Personendaten erfolgt gemäss unserer <a rel="noopener"
+                  href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
             </div>
           </div>
         </m4music-m-newsletter>
@@ -251,7 +262,8 @@
             <h6>Kontakt</h6>
             <ul>
               <li>
-                <a-link namespace="footer-" namespace-fallback><a href="mailto:info@m4music.ch">info@m4music.ch</a></a-link>
+                <a-link namespace="footer-" namespace-fallback><a href="mailto:info@m4music.ch">info@m4music.ch</a>
+                </a-link>
               </li>
               <li>
                 <div class="icons">
@@ -262,7 +274,7 @@
                     href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
                   </a-logo>
                   <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/spotify.svg"
-                  href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
+                    href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
                   </a-logo>
                   <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/youtube.svg"
                     href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
@@ -277,15 +289,24 @@
         <div class="metalinks">
           <ul>
             <li>&copy; m4music</li>
-            <li><a-link namespace="footer-" namespace-fallback><a href="#"> Impressum </a></a-link></li>
-            <li><a-link namespace="footer-" namespace-fallback><a href="https://www.migros.ch/de/rechtliche-informationen.html" target="_blank">Rechtliches</a></a-link></li>
-            <li><a-link namespace="footer-" namespace-fallback><a href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutz</a></a-link></li>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a href="#"> Impressum </a></a-link>
+            </li>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a
+                  href="https://www.migros.ch/de/rechtliche-informationen.html" target="_blank">Rechtliches</a></a-link>
+            </li>
+            <li>
+              <a-link namespace="footer-" namespace-fallback><a href="https://www.migros.ch/de/datenschutz.html"
+                  target="_blank">Datenschutz</a></a-link>
+            </li>
           </ul>
         </div>
         <div>
           <ul class="languages">
             <li>
-              <a-link namespace="footer-" namespace-fallback class="active"><a href="http://www.m4music.ch/">DE</a></a-link>
+              <a-link namespace="footer-" namespace-fallback class="active"><a href="http://www.m4music.ch/">DE</a>
+              </a-link>
             </li>
             <li>
               <a-link namespace="footer-" namespace-fallback><a href="http://www.m4music.ch/fr/">FR</a></a-link>

@@ -241,9 +241,10 @@
   --header-navigation-hr-color:none;
   --header-navigation-li-padding:0 0 0 0.5rem;
   --header-navigation-li-ul-margin-bottom-mobile:0.9rem;
-  --header-navigation-line-height-mobile:1rem;
+  --header-navigation-line-height-mobile:initial;
   --header-navigation-line-height:normal;
   --header-navigation-margin-bottom-mobile:1.75rem;
+  --header-navigation-min-width:auto;
   --header-navigation-padding-top:0.85rem;
   --header-navigation-padding:0;
   --header-navigation-text-decoration-hover:none;
