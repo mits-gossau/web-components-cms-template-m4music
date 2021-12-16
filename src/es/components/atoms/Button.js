@@ -154,6 +154,7 @@ export default class Button extends Shadow() {
         height: var(--height-mobile, 100%);
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);
+        padding:var(${(this.icon && this.type !== 'arrowDown') ? 'var(--icon-padding-mobile, --icon-padding)' : '--padding-mobile'}, 1em);
         width: var(--width-mobile, 100%);
       }
       :host button:hover,  button:active, button:focus {

@@ -36,32 +36,41 @@ export default class EventDetail extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host {
-      position: relative;
-      display: inline-block;
+      display:inline-block;
+      margin-bottom:var(--margin-bottom, 1rem);
+      position:relative;
     }
     :host a-picture {
-      display: block;
+      display:block;
     }
-    :host > div {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      top:1rem;
-      background:red;
-      color:black;
-      margin:0 1rem 2rem 1rem;
+    :host .text-wrapper {
+      bottom:var(--text-wrapper-position-bottom, 1rem);
+      margin:auto;
+      position:absolute;
+      width:100%;
     }
     :host h1{
-      font-size:max(3vw, 3rem);
-      line-height:100%;
-      margin:0;
+      color:var(--h1-color, black);
+      font-size:var(--h1-font-size, 3rem);
+      line-height:var(--h1-line-height, 100%);
+      margin:var(--h1-margin, 0 1rem 1rem 1rem);
     }
     :host .date{
-      font-size:0.75rem;
-      line-height:125%;
-      margin:0;
+      color:var(--date-color, black);
+      font-size:var(--date-font-size, 0.75rem);
+      line-height:var(--date-line-height, 125%);
+      margin:var(--date-margin, 0 0 0 1rem);
+    }
+    :host > div > m4music-a-button {
+      margin:var(--event-button-margin, 0 0 1rem 1rem);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host h1{
+        font-size:var(--h1-font-size, 1.8rem);
+      }
+      :host .date{
+        font-size:var(--date-font-size, 0.95rem);
+      }
     }
   `
   }
