@@ -36,10 +36,10 @@ export default class Quote extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
+      align-items:center;
       background:var(--background-color, white);
       display:flex;
       flex-direction:column;
-      align-items:center;
       justify-content:flex-start;
       padding:var(--padding, 0);
     }
@@ -47,8 +47,8 @@ export default class Quote extends Shadow() {
       text-align:center;
     }
     :host > div > p {
-      padding:0;
       margin:0.4rem 0 0 0;
+      padding:0;
     }
     :host .quote {
       color:var(--text-color, black);
@@ -57,8 +57,8 @@ export default class Quote extends Shadow() {
     }
     :host .quote-person {
       color:var(--person-color, black);
-      line-height:var(--person-line-height, 100%);
       font-size:var(--person-font-size, initial);
+      line-height:var(--person-line-height, 100%);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .quote {
