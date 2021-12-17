@@ -365,6 +365,16 @@
   --p-line-height:125%;
   --p-margin-mobile:0 0 1.35rem;
   --p-margin:0 0 1rem;
+  --quote-padding:1rem;
+  --quote-person-color:#616161;
+  --quote-person-font-size-mobile:1rem;
+  --quote-person-font-size:0.75rem;
+  --quote-person-line-height:125%;
+  --quote-picture-border-radius:50%;
+  --quote-text-color: var(--color-black);
+  --quote-text-font-size-mobile:1.6rem;
+  --quote-text-font-size:2rem;
+  --quote-text-line-height:100%;
   --register-background-color:#E63C1A;
   --register-field-a-text-decoration: underline;
   --register-field-button-background-color-hover:var(--button-background-color-primary);
