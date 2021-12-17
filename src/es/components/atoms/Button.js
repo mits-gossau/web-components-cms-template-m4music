@@ -362,11 +362,11 @@ export default class Button extends Shadow() {
       padding:var(${padding}, 0);
     }
     :host(:not([data-filter-value='show_all'])) > button::after {
-      content: url('../../../img/filter.svg');
+      content: url('/assets/img/filter.svg');
       padding-left: 0.2rem;
     }
     :host(:not([data-filter-value='show_all']).active) > button::after {
-      content: url('../../../img/filter-active.svg');
+      content: url('/assets/img/filter-active.svg');
       padding-left: 0.2rem;
     }
     
