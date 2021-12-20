@@ -463,6 +463,10 @@
   --register-width:100%;
   --spacer-height-mobile:1rem;
   --spacer-height:1rem;
+  --speakers-margin:0 0 2rem 0;
+  --speakers-name-color:var(--color-orange);
+  --speakers-name-font-size-mobile:3.6rem;
+  --speakers-name-font-size:3rem;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
   --text-decoration:underline solid var(--link-underline-color) 1px;
   --video-border-color: var(--color-orange);
@@ -483,8 +487,4 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  --speakers-margin:0 0 2rem 0;
-  --speakers-name-color:var(--color-orange);
-  --speakers-name-font-size:3rem;
-  --speakers-name-font-size-mobile:3.6rem;
 }
