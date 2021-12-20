@@ -32,12 +32,12 @@ export default class Filter extends Shadow() {
     super(...args)
 
     this.activateShowAllFilter = showAllFilter => {
-      showAllFilter.root.querySelector("button").textContent = showAllFilter.getAttribute("data-showall-translation")
+      showAllFilter.root.querySelector('button').textContent = showAllFilter.getAttribute('data-showall-translation')
       showAllFilter.classList.add('active')
     }
 
     this.deactivateShowAllFilter = showAllFilter => {
-      showAllFilter.root.querySelector("button").textContent = showAllFilter.getAttribute("data-reset-translation")
+      showAllFilter.root.querySelector('button').textContent = showAllFilter.getAttribute('data-reset-translation')
       showAllFilter.classList.remove('active')
     }
 
