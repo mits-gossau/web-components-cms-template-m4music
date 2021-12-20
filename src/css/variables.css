@@ -483,4 +483,8 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --speakers-margin:0 0 2rem 0;
+  --speakers-name-color:var(--color-orange);
+  --speakers-name-font-size:3rem;
+  --speakers-name-font-size-mobile:3.6rem;
 }

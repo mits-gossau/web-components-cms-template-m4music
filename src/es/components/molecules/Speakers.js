@@ -36,34 +36,37 @@ export default class Speakers extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
+      align-items:${this.getAlignment(this.getAttribute('align'))};
       display:flex;
-      position:relative;
+      flex-direction:column;
+      justify-content:flex-start;
+      margin:var(--margin, 0);
     }
-    :host .picture {
-      display:block;
-      position:relative;
-      width:100%;
-      height:auto;
-      border:1px solid #b22222;
-      padding:1px;
-    } 
     :host .name {
-      z-index:999;
-      position:absolute;
-      left:20%;
-      font-size:96px;
-      color:#FB5F3F;
-      position:absolute;
-      display:block;
-      width:80%;
-      margin-top:-12%;
-      max-width:610px;
-      font-size:4vw;
-      padding:.6em 1em .6em 1.7em;
+      color:var(--name-color, black);
+      font-size:var(--name-font-size, initial);
+      line-height:100%;
+      margin:0;
+      text-transform:uppercase;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host {}
+      :host .name {
+        font-size:var(--name-font-size-mobile, initial);
+      }
     }
   `
+  }
+
+  /**
+   *
+   * @param {*} alignDirection
+   * @returns
+   */
+  getAlignment (alignDirection) {
+    const alignment = {
+      right: 'flex-end',
+      left: 'flex-start'
+    }
+    return (alignDirection in alignment) ? alignment[alignDirection] : alignment.left
   }
 }
