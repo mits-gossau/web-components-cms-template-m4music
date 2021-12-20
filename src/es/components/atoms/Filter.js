@@ -102,13 +102,16 @@ export default class Filter extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host {
+      ${this.hasAttribute('background-color') ? `--filter-background-color: ${this.getAttribute('background-color')};` : 'black'}
       align-content:center;
       align-items:center;
+      background-color:var(--filter-background-color, red);
       display:flex;
       flex-direction:row;
       flex-wrap:wrap;
       justify-content:flex-start;
-      margin-bottom:0.9rem;
+      padding:0.9rem 0;
+      width:100%;
     }
     :host > m4music-a-button {
       font-size:unset;
