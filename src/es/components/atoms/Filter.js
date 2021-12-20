@@ -31,6 +31,16 @@ export default class Filter extends Shadow() {
   constructor (...args) {
     super(...args)
 
+    this.activateShowAllFilter = showAllFilter => {
+      showAllFilter.root.querySelector("button").textContent = showAllFilter.getAttribute("data-showall-translation")
+      showAllFilter.classList.add('active')
+    }
+
+    this.deactivateShowAllFilter = showAllFilter => {
+      showAllFilter.root.querySelector("button").textContent = showAllFilter.getAttribute("data-reset-translation")
+      showAllFilter.classList.remove('active')
+    }
+
     this.filterToggle = e => {
       const showAllFilter = this.root.querySelector("[type='filter'][data-filter-value='show_all']")
       const filter = e.target
@@ -38,15 +48,15 @@ export default class Filter extends Shadow() {
       if (filter.getAttribute('data-filter-value') === 'show_all') {
         if (!filter.classList.contains('active')) {
           this.root.querySelectorAll("[type='filter']").forEach(button => button.classList.remove('active'))
-          filter.classList.add('active')
+          this.activateShowAllFilter(showAllFilter)
         } else return // do nothing if user tries to unselect show_all
       } else {
         if (filter.classList.contains('active')) {
           filter.classList.remove('active')
-          if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) showAllFilter.classList.add('active')
+          if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) this.activateShowAllFilter(showAllFilter)
         } else {
           filter.classList.add('active')
-          if (showAllFilter) showAllFilter.classList.remove('active')
+          if (showAllFilter) this.deactivateShowAllFilter(showAllFilter)
         }
       }
       // send filter-change event to m4music-o-list
