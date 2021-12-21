@@ -73,6 +73,7 @@ export default class Wrapper extends BaseBody {
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
+      flex-wrap:wrap;
     }
     :host > section .lowercase {
       text-transform: none;
