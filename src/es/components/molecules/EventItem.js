@@ -15,8 +15,27 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class EventItem extends Shadow() {
+  constructor (...args){
+    super(...args)
+
+    this.clickListener = event =>{
+      if (this.getAttribute('href')) {
+        event.stopPropagation()
+        self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
+      }
+    }
+
+    if (this.hasAttribute('href')) {
+      this.setAttribute('data-href', this.getAttribute('href'))
+    }
+  }
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
+    this.addEventListener('click', this.clickListener)
+  }
+
+  disconnectedCallback () {
+    this.removeEventListener('click', this.clickListener)
   }
 
   /**
@@ -43,6 +62,8 @@ export default class EventItem extends Shadow() {
       align-content:flex-start;
       margin-bottom:0.9rem;
       background-color:transparent;
+      ${this.hasAttribute('href') ? "cursor: pointer;" : ""}
+      width: 100%;
     }
     :host p  {
       padding:0;
