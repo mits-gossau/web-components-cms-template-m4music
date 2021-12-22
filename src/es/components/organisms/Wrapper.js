@@ -64,7 +64,7 @@ export default class Wrapper extends BaseBody {
       width:100%;
     }
     :host > section {
-      ${this.hasAttribute('background-color') ? `--wrapper-background-color: ${this.getAttribute('background-color')};` : 'black'}
+      ${this.hasAttribute('background-color') ? `--wrapper-background-color: ${this.getAttribute('background-color')};` : ''}
       ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom: 0' : ''};
       align-items: ${this.hasAttribute('align-content') ? this.getAlignment(this.getAttribute('align-content')).flex : 'var(--align-items, flex-start)'};
       background-color:var(--wrapper-background-color, transparent);

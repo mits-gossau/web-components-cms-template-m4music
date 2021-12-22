@@ -36,7 +36,7 @@ export default class Quote extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
-      ${this.hasAttribute('background-color') ? `--background-color: ${this.getAttribute('background-color')};` : 'black'}
+      ${this.hasAttribute('background-color') ? `--background-color: ${this.getAttribute('background-color')};` : ''}
       align-items:center;
       background:var(--background-color, black);
       display:flex;

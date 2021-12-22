@@ -102,7 +102,7 @@ export default class Filter extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host {
-      ${this.hasAttribute('background-color') ? `--filter-background-color: ${this.getAttribute('background-color')};` : 'black'}
+      ${this.hasAttribute('background-color') ? `--filter-background-color: ${this.getAttribute('background-color')};` : ''}
       align-content:center;
       align-items:center;
       background-color:var(--filter-background-color, red);
