@@ -8,3 +8,11 @@
   font-stretch: normal;
   src: url('../fonts/GillSansMTBook/normal_normal_400.woff') format('woff'), url('../fonts/GillSansMTBook/normal_normal_400.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: "GillSansMTBold";
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url('../fonts/GillSansMTBold/normal_normal.woff') format('woff'), url('../fonts/GillSansMTBold/normal_normal_400.woff2') format('woff2');
+}

@@ -480,6 +480,7 @@
   --speakers-name-color:var(--color-orange);
   --speakers-name-font-size-mobile:3.6rem;
   --speakers-name-font-size:3rem;
+  --strong-font-family:"GillSansMTBold",sans-serif;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
   --text-decoration:underline solid var(--link-underline-color) 1px;
   --video-border-color: var(--color-orange);
