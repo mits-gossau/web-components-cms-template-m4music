@@ -116,7 +116,7 @@ export default class Button extends Shadow() {
     this.css = /* css */ `
     :host button {
       background-color: var(--background-color-${this.type}, transparent);
-      border: var(--border, none);
+      border: var(--border-${this.type}, var(--border), none);
       color: var(--color-${this.type}, white);
       cursor: var(--cursor, pointer);
       font-family: var(--font-family, var(--font-family-bold));
@@ -154,7 +154,7 @@ export default class Button extends Shadow() {
         height: var(--height-mobile, 100%);
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);
-        padding:var(${(this.icon && this.type !== 'arrowDown') ? 'var(--icon-padding-mobile, --icon-padding)' : '--padding-mobile'}, 1em);
+        padding:var(${(this.icon && this.type !== 'arrowDown') ? '--icon-padding-mobile, var(--icon-padding)' : '--padding-mobile, var(--padding)'});
         width: var(--width-mobile, 100%);
       }
       :host button:hover,  button:active, button:focus {
