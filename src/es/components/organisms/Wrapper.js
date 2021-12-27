@@ -69,11 +69,11 @@ export default class Wrapper extends BaseBody {
       align-items: ${this.hasAttribute('align-content') ? this.getAlignment(this.getAttribute('align-content')).flex : 'var(--align-items, flex-start)'};
       background-color:var(--wrapper-background-color, transparent);
       display:flex;
-      flex-direction:var(--flex-direction, row);
+      flex-direction:${this.getType(this.getAttribute('type')).directionDesktop};
+      flex-wrap:${this.getType(this.getAttribute('type')).wrapDesktop};
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
-      flex-wrap:wrap;
     }
     :host > section .lowercase {
       text-transform: none;
@@ -148,7 +148,8 @@ export default class Wrapper extends BaseBody {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
         align-items: ${this.hasAttribute('align-content-mobile') ? this.getAlignment(this.getAttribute('align-content-mobile')).flex : 'var(--align-items-mobile, var(--align-items, flex-start))'};
         display:flex;
-        flex-direction:var(--flex-direction-mobile, column);
+        flex-direction:${this.getType(this.getAttribute('type')).directionMobile};
+        flex-wrap:${this.getType(this.getAttribute('type')).wrapMobile};
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
       }
       :host > section * p {
@@ -205,7 +206,7 @@ export default class Wrapper extends BaseBody {
   }
 
   /**
-   *
+   * Get align direction
    * @param {*} alignDirection
    * @returns
    */
@@ -216,5 +217,18 @@ export default class Wrapper extends BaseBody {
       left: { flex: 'flex-start', text: 'left' }
     }
     return (alignDirection in alignment) ? alignment[alignDirection] : alignment.left
+  }
+
+  /**
+   * Get wrapper type
+   * @param {*} type
+   * @returns
+   */
+   getType (type) {
+    const flexWrap = {
+      default:{directionDesktop:'row', wrapDesktop:'wrap',directionMobile:'row', wrapMobile:'wrap'},
+      speaker:{directionDesktop:'row', wrapDesktop:'nowrap',directionMobile:'column', wrapMobile:'nowrap'}
+    }
+    return (type in flexWrap) ? flexWrap[type] : flexWrap.default
   }
 }

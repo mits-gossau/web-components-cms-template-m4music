@@ -95,7 +95,6 @@ export default class EventItem extends Shadow() {
       font-size:var(--description-font-size, 0.65rem);
       line-height:var(--description-line-height, 125%);
     }
-
     :host(.hidden) {
       display: none;
     }
