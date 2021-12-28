@@ -226,10 +226,10 @@ export default class Wrapper extends BaseBody {
    * @param {*} type
    * @returns
    */
-   getType (type) {
+  getType (type) {
     const flexWrap = {
-      default:{directionDesktop:'row', wrapDesktop:'wrap',directionMobile:'row', wrapMobile:'wrap'},
-      speaker:{directionDesktop:'row', wrapDesktop:'nowrap',directionMobile:'column', wrapMobile:'nowrap'}
+      default: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'row', wrapMobile: 'wrap' },
+      speaker: { directionDesktop: 'row', wrapDesktop: 'nowrap', directionMobile: 'column', wrapMobile: 'nowrap' }
     }
     return (type in flexWrap) ? flexWrap[type] : flexWrap.default
   }

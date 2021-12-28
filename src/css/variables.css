@@ -14,6 +14,7 @@
   --a-text-underline-offset:0.3rem;
   --background-color: #232323;
   --balloon-font-size:var(--h6-font-size);
+  --body-detail-background-color:var(--color);
   --body-p-margin-mobile:0.5rem 0 0.5rem 0;
   --body-p-margin:0.75rem 0 0.75rem 0;
   --body-picture-margin: 0.5rem 0;
@@ -24,21 +25,21 @@
   --border-color: #919191;
   --button-background-color-arrowDown:var(--button-background-color-secondary);
   --button-background-color-hover-arrowDown:var(--button-background-color-hover-secondary);
+  --button-background-color-hover-pass-secondary:var(--button-background-color-hover-secondary);
   --button-background-color-hover-primary: #E53C1A;
   --button-background-color-hover-secondary:var(--link-underline-color);
-  --button-background-color-hover-pass-secondary:var(--button-background-color-hover-secondary);
+  --button-background-color-pass-secondary:var(--button-background-color-secondary);
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
-  --button-background-color-pass-secondary:var(--button-background-color-secondary);
-  --button-border-radius:4px;
   --button-border-pass-secondary: 1px solid black;
+  --button-border-radius:4px;
   --button-color-arrowDown: var(--button-color-secondary);
   --button-color-hover-arrowDown: var(--button-color-hover-secondary);
-  --button-color-hover-secondary: var(--color-black);
   --button-color-hover-pass-secondary: var(--button-color-hover-secondary);
+  --button-color-hover-secondary: var(--color-black);
+  --button-color-pass-secondary: var(--button-color-secondary);
   --button-color-primary: var(--color);
   --button-color-secondary: var(--color-black);
-  --button-color-pass-secondary: var(--button-color-secondary);
   --button-filter-background-color-hover:var(--color-orange);
   --button-filter-background-color:#F3F3F3;
   --button-filter-color-hover:var(--color);
@@ -214,6 +215,12 @@
   --header-content-spacing:var(--content-spacing);
   --header-content-width-mobile:var(--content-width-mobile);
   --header-content-width:var(--content-width);
+  --header-detail-background-color:transparent;
+  --header-detail-button-color-arrowLeft:var(--color-black);
+  --header-detail-button-font-size-mobile:1.3rem;
+  --header-detail-button-icon-padding-mobile:0 1rem 0 0;
+  --header-detail-button-icon-width-mobile:1.5rem;
+  --header-detail-flex-direction-mobile:row;
   --header-flex-direction-mobile:row;
   --header-header-logo-margin:0 1rem 0 0;
   --header-height-mobile:max(6rem, 20vw);
@@ -221,6 +228,7 @@
   --header-logo-height-mobile:min(16px, 8vw);
   --header-logo-height:32px;
   --header-logo-justify-content:space-between;
+  --header-logo-padding-mobile:1rem;
   --header-logo-width:195px;
   --header-m4music-m-navigation-background-color-mobile: var(--color-orange);
   --header-m4music-m-navigation-background-color:transparent;
@@ -492,13 +500,4 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  
-  --header-detail-background-color:transparent;
-  --header-logo-padding-mobile:1rem;
-  --header-detail-button-icon-width-mobile:1.5rem;
-  --header-detail-button-color-arrowLeft:var(--color-black);
-  --header-detail-flex-direction-mobile:row;
-  --header-detail-button-icon-padding-mobile:0 1rem 0 0;
-  --header-detail-button-font-size-mobile:1.3rem;
-  --body-detail-background-color:var(--color);
 }
