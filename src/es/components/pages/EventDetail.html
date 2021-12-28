@@ -18,17 +18,23 @@
   </head>
 
 <body>
+  <style>
+    html {
+      --header-height-mobile:0;
+    }
+  </style>
   <p-general>
-    <o-header namespace="header-" namespace-fallback>
+    <o-header namespace="header-detail-" namespace-fallback>
       <header>
         <a-logo namespace="header-logo-"
           src="https://testadmin.m4music.ch/media/f0bmfna5/logo-weiss-2x.png?anchor=center&mode=crop&height=100&format=png&quality=80&rnd=132797369232570000"
           arial-label="M4Music Logo" href="/">
         </a-logo>
+        <m4music-a-button namespace="header-detail-button-" type="arrowLeft" namespace-fallback>zurück</m4music-a-button>
       </header>
     </o-header>
-    <m4music-o-body namespace="body-" namespace-fallback>
-      <div>
+    <m4music-o-body namespace="body-detail-" namespace-fallback>
+      <div class="detail-image">
         <m4music-m-event-detail namespace="event-detail-">
           <a-picture namespace="event-detail-picture-" namespace-fallback defaultsource="../../../img/Testbild.jpg"
             alt="02 DTC Isa">
@@ -39,7 +45,15 @@
             <m4music-a-button namespace="event-detail-button-" namespace-fallback>Tickets kaufen</m4music-a-button>
           </div>
         </m4music-m-event-detail>
-        <m4music-o-wrapper no-space>
+      </div>
+      <div>
+        <m4music-o-wrapper namespace="detail-wrapper-" namespace-fallback no-space background-color="white" text-color="#000000">
+          <p>Vom Songwriting leben? Wie das geht, erzählen vier Songwriterinnen, die bereits international und national
+            wichtige Erfolge gefeiert haben.</p>
+          <p>Vom Songwriting leben? Wie das geht, erzählen vier Songwriterinnen, die bereits international und national
+            wichtige Erfolge gefeiert haben.</p>
+          <p>Vom Songwriting leben? Wie das geht, erzählen vier Songwriterinnen, die bereits international und national
+            wichtige Erfolge gefeiert haben.</p>
           <p>Vom Songwriting leben? Wie das geht, erzählen vier Songwriterinnen, die bereits international und national
             wichtige Erfolge gefeiert haben.</p>
         </m4music-o-wrapper>

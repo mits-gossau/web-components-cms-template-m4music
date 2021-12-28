@@ -19,7 +19,6 @@ export default class Body extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */ `
- 
     :host {
       margin-bottom: var(--margin-bottom, 0);
     }
@@ -56,8 +55,10 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host .detail-image{
+        width:100%;
+      }
       :host > main > *[content-width] {
         width:var(--content-width-mobile, 80%);
         margin-bottom: var(--content-spacing-mobile);

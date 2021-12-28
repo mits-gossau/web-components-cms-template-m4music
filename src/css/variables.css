@@ -492,4 +492,13 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  
+  --header-detail-background-color:transparent;
+  --header-logo-padding-mobile:1rem;
+  --header-detail-button-icon-width-mobile:1.5rem;
+  --header-detail-button-color-arrowLeft:var(--color-black);
+  --header-detail-flex-direction-mobile:row;
+  --header-detail-button-icon-padding-mobile:0 1rem 0 0;
+  --header-detail-button-font-size-mobile:1.3rem;
+  --body-detail-background-color:var(--color);
 }
