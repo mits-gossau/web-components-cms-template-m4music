@@ -46,7 +46,6 @@ export default class EventDetail extends Shadow() {
     :host .text-wrapper {
       bottom:var(--text-wrapper-position-bottom, 1rem);
       margin:1rem auto;
-      // background-color:red;
       position:absolute;
       width:90%;
       left:0;
