@@ -45,24 +45,28 @@ export default class EventDetail extends Shadow() {
     }
     :host .text-wrapper {
       bottom:var(--text-wrapper-position-bottom, 1rem);
-      margin:auto;
+      margin:1rem auto;
+      // background-color:red;
       position:absolute;
-      width:100%;
+      width:90%;
+      left:0;
+      right:0;
+      bottom:0;
     }
     :host h1{
       color:var(--h1-color, black);
       font-size:var(--h1-font-size, 3rem);
       line-height:var(--h1-line-height, 100%);
-      margin:var(--h1-margin, 0 1rem 1rem 1rem);
+      margin:var(--h1-margin, 0 1rem 1rem 0);
     }
     :host .date{
       color:var(--date-color, black);
       font-size:var(--date-font-size, 0.75rem);
       line-height:var(--date-line-height, 125%);
-      margin:var(--date-margin, 0 0 0 1rem);
+      margin:var(--date-margin, 0 0 0.5rem 0);
     }
     :host > div > m4music-a-button {
-      margin:var(--event-button-margin, 0 0 1rem 1rem);
+      margin:var(--event-button-margin, 0 0 1rem 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host h1{

@@ -56,12 +56,12 @@ export default class Body extends BaseBody {
       margin: var(--li-p-margin, 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host .detail-image{
-        width:100%;
-      }
       :host > main > *[content-width] {
         width:var(--content-width-mobile, 80%);
         margin-bottom: var(--content-spacing-mobile);
+      }
+      :host .detail-image{
+        width:100%;
       }
       :host ul {
         margin-top: 0;

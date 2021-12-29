@@ -75,7 +75,7 @@ export default class Wrapper extends BaseBody {
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
       width: 100% !important;
-      color:var(--wrapper-text-color, red);
+      color:var(--wrapper-text-color, var(--color), red);
     }
     :host > section .lowercase {
       text-transform: none;
@@ -95,11 +95,11 @@ export default class Wrapper extends BaseBody {
       width: var(--article-width, 100%);
     }
     :host :is(h1, h2, h3, h4) {
-      color:var(--wrapper-text-color, red);
+      color:var(--wrapper-text-color, var(--color), red);
       margin: var(--h-title-margin, 0);
     }
     :host :is(h5, h6) {
-      color:var(--wrapper-text-color, red);
+      color:var(--wrapper-text-color, var(--color), red);
       margin: var(--h56-title-margin, 0);
     }
     :host .heading2 {
