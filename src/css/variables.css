@@ -248,7 +248,6 @@
   --header-navigation-color-open-mobile:var(--color);
   --header-navigation-color-open:var(--color);
   --header-navigation-color:var(--color);
-  --header-navigation-flex-wrap:no-wrap;
   --header-navigation-flex-wrap:wrap;
   --header-navigation-height:auto;
   --header-navigation-hr-color:none;
