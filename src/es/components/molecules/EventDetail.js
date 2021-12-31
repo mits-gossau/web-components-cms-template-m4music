@@ -4,7 +4,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 /* global self */
 
 /**
- * Wrapper for a event detail element
+ * Wrapper for an event detail element
  * Example at: /src/es/components/pages/EventDetail.html
  * As an atom, this component can not hold further children (those would be quantum)
  *
@@ -63,9 +63,6 @@ export default class EventDetail extends Shadow() {
       font-size:var(--date-font-size, 0.75rem);
       line-height:var(--date-line-height, 125%);
       margin:var(--date-margin, 0 0 0.5rem 0);
-    }
-    :host > div > m4music-a-button {
-      margin:var(--event-button-margin, 0 0 1rem 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host h1{
