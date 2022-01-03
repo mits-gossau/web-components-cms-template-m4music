@@ -15,8 +15,32 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
  * @css {}
  */
 export default class EventTeaser extends Shadow() {
+  constructor (...args) {
+    super(...args)
+
+    this.mouseoverListener = wrapper => {
+      wrapper.children[0].classList.add("hover")
+    }
+
+    this.mouseleaveListener = wrapper => {
+      wrapper.children[0].classList.remove("hover")
+    }
+
+  }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
+    this.root.querySelectorAll(".wrapper").forEach(wrapper => {
+       wrapper.addEventListener("mouseover", () => this.mouseoverListener(wrapper))
+       wrapper.addEventListener("mouseleave", () => this.mouseleaveListener(wrapper))
+      })
+  }
+
+  disconnectedCallback () {
+    this.root.querySelectorAll(".wrapper").forEach(wrapper => {
+       wrapper.removeEventListener("mouseover", this.mouseoverListener)
+       wrapper.removeEventListener("mouseleave", this.mouseleaveListener)
+      })
   }
 
   /**
@@ -61,6 +85,10 @@ export default class EventTeaser extends Shadow() {
       font-size:3.5vw;
       line-height:100%;
     }
+    :host .wrapper:hover .text {
+      color: var(--color, white);
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host{
         flex-direction: column;
