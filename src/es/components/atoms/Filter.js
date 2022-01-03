@@ -105,7 +105,7 @@ export default class Filter extends Shadow() {
       ${this.hasAttribute('background-color') ? `--filter-background-color: ${this.getAttribute('background-color')};` : ''}
       align-content:center;
       align-items:center;
-      background-color:var(--filter-background-color, red);
+      background-color:var(--list-filter-background-color, var(--filter-background-color, red));
       display:flex;
       flex-direction:row;
       flex-wrap:wrap;
