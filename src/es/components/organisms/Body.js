@@ -21,6 +21,12 @@ export default class Body extends BaseBody {
     this.css = /* css */ `
     :host {
       margin-bottom: var(--margin-bottom, 0);
+      background-color:var(--background-color, inherit);
+    }
+    :host > main {
+      margin:var(--main-spacing, 0) auto;
+      width:var(--main-width, 100%);
+      background-color:var(--main-background-color, inherit);
     }
     :host > main > * {
       margin:var(--content-spacing, 0) auto;
@@ -55,7 +61,18 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
+    :host .detail-image{
+      width:100%;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host {
+        background-color:var(--background-color-mobile, inherit);
+      }
+      :host > main {
+        margin:var(--main-spacing-mobile, 0) auto;
+        width:var(--main-width-mobile, 100%);
+        background-color:var(--main-background-color-mobile, inherit);
+      }
       :host > main > *[content-width] {
         width:var(--content-width-mobile, 80%);
         margin-bottom: var(--content-spacing-mobile);
