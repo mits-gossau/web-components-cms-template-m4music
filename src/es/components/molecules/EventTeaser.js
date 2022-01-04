@@ -19,11 +19,11 @@ export default class EventTeaser extends Shadow() {
     super(...args)
 
     this.mouseoverListener = wrapper => {
-      wrapper.children[0].classList.add("hover")
+      wrapper.children[0].children[0].classList.add("hover")
     }
 
     this.mouseleaveListener = wrapper => {
-      wrapper.children[0].classList.remove("hover")
+      wrapper.children[0].children[0].classList.remove("hover")
     }
 
   }
