@@ -105,15 +105,21 @@ export default class Wrapper extends BaseBody {
     this.css = /* css */ `
     :host > section {
       background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
+      --event-item-name-font-color: var(--color);
+      --event-item-description-font-color: var(--color);
       align-items: flex-start;
       display: flex;
       flex-direction: column;
+      margin: 0;
     }
     ${this.hasAttribute('background-color')
-    ? `/* css */ :host > section {
+    ? /* css */`
+      :host > section {
         --wrapper-background-color: ${this.getAttribute('background-color')};
         --wrapper-main-background-color: ${this.getAttribute('background-color')};
         --filter-background-color: ${this.getAttribute('background-color')};
+        --event-item-name-font-color: var(--color-black);
+        --event-item-description-font-color: var(--color-black);  
         width: calc(100% - 2rem) !important;
         padding: 1rem;
       }`: ""
