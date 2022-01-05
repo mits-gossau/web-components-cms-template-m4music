@@ -99,8 +99,8 @@ export default class EventTeaser extends Shadow() {
         margin:0 0 0.5rem 0;
       }
       :host .text {
-        padding: 12.5% 4.5%;
-        font-size:max(3rem, 15vw);
+        padding: 0 4.5%;
+        font-size: max(3rem, 17vw);
       }
     }
   `
