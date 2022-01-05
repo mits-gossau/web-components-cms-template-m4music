@@ -36,11 +36,12 @@ export default class Speakers extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
+      background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
       align-items:${this.getAlignment(this.getAttribute('align'))};
       display:flex;
       flex-direction:column;
       justify-content:flex-start;
-      margin:var(--margin, 0);
+      padding:var(--padding, 0);
     }
     :host .name {
       color:var(--name-color, black);

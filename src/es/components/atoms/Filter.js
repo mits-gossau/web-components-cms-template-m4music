@@ -110,8 +110,11 @@ export default class Filter extends Shadow() {
       flex-direction:row;
       flex-wrap:wrap;
       justify-content:flex-start;
-      padding:0.9rem 0;
-      width:100%;
+      ${this.hasAttribute('background-color') ? `
+        width: calc(100% - 2rem) !important;
+        padding: 0.9rem 1rem;` 
+      : `padding:0.9rem 0;
+      width: 100% !important;`}
     }
     :host > m4music-a-button {
       font-size:unset;

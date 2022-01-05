@@ -74,8 +74,11 @@ export default class Wrapper extends BaseBody {
       flex-wrap:${this.getType(this.getAttribute('type')).wrapDesktop};
       justify-content:space-between;
       margin-bottom:var(--wrapper-margin-bottom, 0);
-      width: 100% !important;
-      color:${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : 'var(--wrapper-text-color, var(--color, red));'}
+      ${this.hasAttribute('background-color') ? `
+        width: calc(100% - 2rem) !important;
+        padding: 1rem;` 
+        : `width: 100% !important;`}
+      color:${(this.getAttribute('background-color') == "white") ? "var(--color-black, var(--color, red));" : "var(--wrapper-text-color, var(--color, red));"}
     }
     :host > section .lowercase {
       text-transform: none;
