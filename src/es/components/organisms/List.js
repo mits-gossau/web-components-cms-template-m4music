@@ -109,8 +109,8 @@ export default class Wrapper extends BaseBody {
       display: flex;
       flex-direction: column;
     }
-    ${this.hasAttribute('background-color') ? /*css*/`
-      :host > section {
+    ${this.hasAttribute('background-color')
+    ? `/* css */ :host > section {
         --wrapper-background-color: ${this.getAttribute('background-color')};
         --wrapper-main-background-color: ${this.getAttribute('background-color')};
         --filter-background-color: ${this.getAttribute('background-color')};

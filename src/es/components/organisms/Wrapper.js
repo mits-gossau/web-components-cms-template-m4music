@@ -150,15 +150,17 @@ export default class Wrapper extends BaseBody {
       margin: var(--h6-margin, var(--content-spacing, unset)) auto;
       padding: var(--h6-padding, unset);
     }
-    ${this.getAttribute('background-color') == "white" ? /*css*/`
+    ${this.getAttribute('background-color') === 'white'
+    ? `/* css */ 
       :host m4music-a-button {
-        --button-color-arrow:${(this.getAttribute('background-color') == "white") ? "var(--color-black, var(--color, red));" : ""};
-        --color-hover-arrow:${(this.getAttribute('background-color') == "white") ? "var(--color-light-grey, var(--color, red));" : ""};
+        --button-color-arrow:${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
+        --color-hover-arrow:${(this.getAttribute('background-color') === 'white') ? 'var(--color-light-grey, var(--color, red));' : ''};
       }
       :host a {
-        --a-color: ${(this.getAttribute('background-color') == "white") ? "var(--color-black, var(--color, red));" : ""};
-        --a-color-hover: ${(this.getAttribute('background-color') == "white") ? "var(--color-black, var(--color, red));" : ""};
-      } ` : ""
+        --a-color: ${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
+        --a-color-hover: ${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
+      } `
+      : ''
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {

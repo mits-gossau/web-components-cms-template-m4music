@@ -19,28 +19,27 @@ export default class EventTeaser extends Shadow() {
     super(...args)
 
     this.mouseoverListener = wrapper => {
-      wrapper.children[0].classList.add("hover")
+      wrapper.children[0].classList.add('hover')
     }
 
     this.mouseleaveListener = wrapper => {
-      wrapper.children[0].classList.remove("hover")
+      wrapper.children[0].classList.remove('hover')
     }
-
   }
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
-    this.root.querySelectorAll(".wrapper").forEach(wrapper => {
-       wrapper.addEventListener("mouseover", () => this.mouseoverListener(wrapper))
-       wrapper.addEventListener("mouseleave", () => this.mouseleaveListener(wrapper))
-      })
+    this.root.querySelectorAll('.wrapper').forEach(wrapper => {
+      wrapper.addEventListener('mouseover', () => this.mouseoverListener(wrapper))
+      wrapper.addEventListener('mouseleave', () => this.mouseleaveListener(wrapper))
+    })
   }
 
   disconnectedCallback () {
-    this.root.querySelectorAll(".wrapper").forEach(wrapper => {
-       wrapper.removeEventListener("mouseover", this.mouseoverListener)
-       wrapper.removeEventListener("mouseleave", this.mouseleaveListener)
-      })
+    this.root.querySelectorAll('.wrapper').forEach(wrapper => {
+      wrapper.removeEventListener('mouseover', this.mouseoverListener)
+      wrapper.removeEventListener('mouseleave', this.mouseleaveListener)
+    })
   }
 
   /**
