@@ -85,6 +85,9 @@ export default class EventItem extends Shadow() {
       font-size:var(--date-font-size, 0.65rem);
       line-height:var(--date-line-height, 125%);   
     }
+    :host .date > span {
+      color:var(--date-font-color, #616161);
+    }
     :host .name{
       color:var(--name-font-color, #000000); 
       font-size:var(--name-font-size, 0.9rem);
