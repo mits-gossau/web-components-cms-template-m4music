@@ -104,18 +104,19 @@ export default class Wrapper extends BaseBody {
     this._css.textContent = bodyCss
     this.css = /* css */ `
     :host > section {
+      background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
       align-items: flex-start;
       display: flex;
       flex-direction: column;
-      width:100%;
     }
     ${this.hasAttribute('background-color')
     ? `/* css */ :host > section {
         --wrapper-background-color: ${this.getAttribute('background-color')};
         --wrapper-main-background-color: ${this.getAttribute('background-color')};
         --filter-background-color: ${this.getAttribute('background-color')};
-      }`
-      : ''
+        width: calc(100% - 2rem) !important;
+        padding: 1rem;
+      }`: ""
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {

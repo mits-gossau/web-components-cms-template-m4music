@@ -37,12 +37,17 @@ export default class Quote extends Shadow() {
     this.css = /* css */ `
     :host  {
       ${this.hasAttribute('background-color') ? `--background-color: ${this.getAttribute('background-color')};` : ''}
+      ${this.hasAttribute('text-color') ? `--text-color: ${this.getAttribute('text-color')}; --person-color: ${this.getAttribute('text-color')};` : ''}
       align-items:center;
       background:var(--background-color, transparent);
       display:flex;
       flex-direction:column;
       justify-content:flex-start;
       padding:var(--padding, 0);
+      ${this.hasAttribute('background-color') ? `
+      width: calc(100% - 2rem) !important;
+      padding: 1rem;` 
+      : `width: 100% !important;`}
     }
     :host > div {
       text-align:center;

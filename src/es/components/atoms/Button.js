@@ -264,6 +264,12 @@ export default class Button extends Shadow() {
    */
   get arrowRightCSS () {
     return /* css */ `
+    :host button{
+      ${this.getAttribute('background-color') == "white" ? `color: var(--color-black);` : ''}
+    }
+    :host button:hover{
+      ${this.getAttribute('background-color') == "white" ? `color: var(--color-black);` : ''}
+    }
     :host > button:hover .arrow{
       animation-name: arrowright;
       animation-duration: 0.5s;
@@ -298,6 +304,12 @@ export default class Button extends Shadow() {
    */
   get arrowLeftCSS () {
     return /* css */ `
+    :host button{
+      ${this.getAttribute('background-color') == "white" ? `color: var(--color-black);` : ''}
+    }
+    :host button:hover{
+      ${this.getAttribute('background-color') == "white" ? `color: var(--color-black);` : ''}
+    }
     :host > button:hover .arrow{
       animation-name: arrowright;
       animation-duration: 0.5s;

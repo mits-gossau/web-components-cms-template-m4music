@@ -19,10 +19,14 @@ export default class Video extends BaseVideo {
   renderCSS () {
     this.css = /* css */`
       :host { 
+        background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
         width: var(--width);
+        padding: ${this.hasAttribute('background-color') ? 'var(--padding-white-background)' : 'var(--padding)'};
         height: var(--height);
+        display:block;
       }
       :host > iframe, video{
+        background-color: var(--border-color);
         border: var(--border);
         width: var(--child-width);
       }
@@ -36,6 +40,8 @@ export default class Video extends BaseVideo {
         }
         :host > iframe, video{
           border: var(--border-mobile);
+          width: var(--child-width-mobile);
+
         }
       }
     `

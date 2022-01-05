@@ -493,7 +493,7 @@
   --register-width:100%;
   --spacer-height-mobile:1rem;
   --spacer-height:1rem;
-  --speakers-margin:0 0 2rem 0;
+  --speakers-padding:0 1rem 2rem 1rem;
   --speakers-name-color:var(--color-orange);
   --speakers-name-font-size-mobile:3.6rem;
   --speakers-name-font-size:3rem;
@@ -507,10 +507,12 @@
   --video-border-width:1rem;
   --video-border:var(--video-border-width) var(--video-border-color) solid;
   --video-child-width:calc(100% - 2*var(--video-border-width));
+  --video-child-width-mobile:calc(100% - 2*var(--video-border-width-mobile));
   --video-height:100%;
   --video-iframe-height-mobile:calc(((100vw * 0.9) - 2*var(--video-border-width)) * 0.5625);
   --video-iframe-height:calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
-  --video-width:100%;
+  --video-width:calc((100% - 2*var(--video-padding)));
+  --video-padding: 0;
   --wrapper-background-secondary-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;
   --wrapper-div-margin:0 2rem 0 0;
@@ -519,4 +521,6 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+
+  --padding-white-background: 1rem;
 }
