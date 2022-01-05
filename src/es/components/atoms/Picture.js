@@ -2,10 +2,6 @@ import BasePicture from '../web-components-cms-template/src/es/components/atoms/
 
 /* global self */
 export default class Picture extends BasePicture {
-  constructor (...args) {
-    super(...args)
-  }
-
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
