@@ -109,12 +109,13 @@ export default class Wrapper extends BaseBody {
       flex-direction: column;
       width:100%;
     }
-    ${this.hasAttribute('background-color') ? /*css*/`
-      :host > section {
+    ${this.hasAttribute('background-color')
+    ? `/* css */ :host > section {
         --wrapper-background-color: ${this.getAttribute('background-color')};
         --wrapper-main-background-color: ${this.getAttribute('background-color')};
         --filter-background-color: ${this.getAttribute('background-color')};
-      }`: ""
+      }`
+      : ''
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
