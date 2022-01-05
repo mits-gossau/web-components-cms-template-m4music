@@ -19,11 +19,11 @@ export default class EventTeaser extends Shadow() {
     super(...args)
 
     this.mouseoverListener = wrapper => {
-      wrapper.children[0].classList.add('hover')
+      wrapper.children[0].children[0].classList.add("hover")
     }
 
     this.mouseleaveListener = wrapper => {
-      wrapper.children[0].classList.remove('hover')
+      wrapper.children[0].children[0].classList.remove("hover")
     }
   }
 
@@ -74,6 +74,8 @@ export default class EventTeaser extends Shadow() {
       margin:0;
     }
     :host .text {
+      width: 100%;
+      padding: 3.5% 5.5%;
       top:50%;
       left:50%;
       transform:translate(-50%, -50%);
@@ -81,8 +83,9 @@ export default class EventTeaser extends Shadow() {
       color:#FB5F3F;
       text-align:center;
       box-sizing:border-box;
-      font-size:3.5vw;
-      line-height:100%;
+      font-size: 4.7vw;
+      line-height: 100%;
+      word-break: break-word;
     }
     :host .wrapper:hover .text {
       color: var(--color, white);
@@ -96,7 +99,8 @@ export default class EventTeaser extends Shadow() {
         margin:0 0 0.5rem 0;
       }
       :host .text {
-        font-size:max(3rem, 15vw);
+        padding: 0 4.5%;
+        font-size: max(3rem, 17vw);
       }
     }
   `
