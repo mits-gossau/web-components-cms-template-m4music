@@ -3,25 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link href=../../../css/variables.css rel=stylesheet>
   <link href=../../../css/misc.css rel=stylesheet>
   <link href=../../../css/fonts.css rel=stylesheet>
-  <script type="text/javascript" src="../../../../wc-config.js"></script>
+  <script src="../../../../wc-config.js" type="text/javascript"></script>
   <!-- NOTE: Remove line Debugging.js below for none localhost -->
   <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
   <link href="../../../../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="../../../css/cccd2390-2102-11ec-bcae-02a6d29600a2.css">
+  <link href="../../../css/cccd2390-2102-11ec-bcae-02a6d29600a2.css" rel="stylesheet" type="text/css">
   <title>M4Music</title>
 </head>
 
 <body>
   <p-general>
-    <o-header mobile-breakpoint="100vw" no-scroll namespace="header-" namespace-fallback menu-icon="true"
-      m-navigation="m4music-m-navigation">
-      <a-logo namespace="header-logo-" src="../../../img/m4m_white.svg" href="/" namespace-fallback></a-logo>
-      <m4music-m-navigation mobile-breakpoint="0vw" hover="false" namespace="header-navigation-" no-scroll
-        namespace-fallback hit-area="false">
+    <o-header m-navigation="m4music-m-navigation" menu-icon="true" mobile-breakpoint="100vw" namespace="header-"
+      namespace-fallback no-scroll>
+      <a-logo href="/" namespace="header-logo-" namespace-fallback src="../../../img/m4m_white.svg"></a-logo>
+      <m4music-m-navigation hit-area="false" hover="false" mobile-breakpoint="0vw" namespace="header-navigation-"
+        namespace-fallback no-scroll>
         <ul>
           <li>
             <a href="/index.html" target="">Startseite</a>
@@ -38,32 +38,38 @@
           <li>
             <a href="#" target="">Festival</a>
           </li>
-         <li class="meta">
-          <ul>
-            <li>
-              <a href="#" target="">Presse & Medien </a>
-            </li>
-            <li>
-              <a href="#" target="">Über uns</a>
-            </li>
-            <li>
-              <div class="icons">
-                <a-logo namespace="header-social-logo-" namespace-fallback src="../../../img/facebook_black.svg"
-                  href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
-                </a-logo>
-                <a-logo namespace="header-social-logo-" namespace-fallback src="../../../img/instagram_black.svg"
-                  href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
-                </a-logo>
-                <a-logo namespace="header-social-logo-" namespace-fallback src="../../../img/spotify_black.svg"
-                  href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
-                </a-logo>
-                <a-logo namespace="header-social-logo-" namespace-fallback src="../../../img/youtube_black.svg"
-                  href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
-                </a-logo>
-              </div>
-            </li>
-          </ul>
-         </li>
+          <li class="meta">
+            <ul>
+              <li>
+                <a href="#" target="">Presse & Medien </a>
+              </li>
+              <li>
+                <a href="#" target="">Über uns</a>
+              </li>
+              <li>
+                <div class="icons">
+                  <a-logo href="https://www.facebook.com/m4music" lang="de" namespace="header-social-logo-"
+                    namespace-fallback src="../../../img/facebook_black.svg" target="_blank" title="Facebook">
+                  </a-logo>
+                  <a-logo href="https://www.instagram.com/m4musicfestival/" lang="de" namespace="header-social-logo-"
+                    namespace-fallback src="../../../img/instagram_black.svg" target="_blank" title="Instagram">
+                  </a-logo>
+                  <a-logo href="https://open.spotify.com/user/m4musicfestival" lang="de" namespace="header-social-logo-"
+                    namespace-fallback src="../../../img/spotify_black.svg" target="_blank" title="Spotify">
+                  </a-logo>
+                  <a-logo href="https://www.youtube.com/user/m4music1" lang="de" namespace="header-social-logo-"
+                    namespace-fallback src="../../../img/youtube_black.svg" target="_blank" title="Youtube">
+                  </a-logo>
+                </div>
+              </li>
+              <li class="lang">
+                <a-link class="active" namespace="header-lang-navigation-" namespace-fallback><a href="http://www.m4music.ch/">DE</a>
+                </a-link>
+                <a-link namespace="header-lang-navigation-" namespace-fallback><a href="http://www.m4music.ch/fr/">FR</a>
+                </a-link>
+              </li>
+            </ul>
+          </li>
         </ul>
       </m4music-m-navigation>
     </o-header>
@@ -76,10 +82,13 @@
       <div>
         <m4music-o-wrapper>
           <div>
-            <p>Gewinne FONDATION-SUISA-Awards im Gesamtwert von 17’000 Franken und bring deine Musikkarriere auf ein
+            <p>Gewinne FONDATION-SUISA-Awards im Gesamtwert von 17’000 Franken und bring deine Musikkarriere auf
+              ein
               neues Level.</p>
-            <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden</m4music-a-button>
-            <m4music-a-button namespace="button-" namespace-fallback type="pass-secondary">Reglement</m4music-a-button>
+            <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden
+            </m4music-a-button>
+            <m4music-a-button namespace="button-" namespace-fallback type="pass-secondary">Reglement
+            </m4music-a-button>
           </div>
         </m4music-o-wrapper>
       </div>
@@ -126,42 +135,47 @@
         </m4music-o-wrapper>
       </div>
       <!-- <div>
-       <m4music-a-video namespace="video-">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/7THS7my2gsw" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </m4music-a-video>
-      </div> -->
+         <m4music-a-video namespace="video-">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7THS7my2gsw" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </m4music-a-video>
+        </div> -->
       <div>
         <m4music-o-wrapper columns="2">
           <m4music-o-wrapper no-space>
             <h2>Infos & Ablauf</h2>
           </m4music-o-wrapper>
           <div>
-            <p>Die Demotape Clinic von m4music, dem Popmusikfestival des Migros-Kulturprozent, sucht jedes Jahr die
-              besten Schweizer Nachwuchs-Songs. <a href=""> Die 60 überzeugendsten Demos</a>, aufgeteilt in die vier
+            <p>Die Demotape Clinic von m4music, dem Popmusikfestival des Migros-Kulturprozent, sucht jedes Jahr
+              die
+              besten Schweizer Nachwuchs-Songs. <a href=""> Die 60 überzeugendsten Demos</a>, aufgeteilt in
+              die vier
               Kategorien Pop,
-              Rock, Lyrics & Beats und Electronic, werden am Festival in Zürich durch eine Jury aus Musikprofis
+              Rock, Lyrics & Beats und Electronic, werden am Festival in Zürich durch eine Jury aus
+              Musikprofis
               bewertet. </p>
           </div>
           <div>
             <ul class=check>
               <li>Persönliches Feedback von Szeneprofis</li>
               <li>FONDATION-SUISA-Awards im Gesamtwert von 17’000 Franken</li>
-              <li>Radio-Airplay, Interviews, Festival-Auftritte, Aufmerksamkeit in der Schweizer Musikszene</li>
+              <li>Radio-Airplay, Interviews, Festival-Auftritte, Aufmerksamkeit in der Schweizer Musikszene
+              </li>
               <li>Coaching durch «Double», der Mentorats-Plattform des Migros-Kulturprozent</li>
             </ul>
           </div>
         </m4music-o-wrapper>
       </div>
       <div>
-        <m4music-o-wrapper columns="3" align-content-mobile="center">
+        <m4music-o-wrapper align-content-mobile="center" columns="3">
           <div>
             <h1 class="process-step-count">1</h1>
             <h6 class="lowercase process-step-date">bis 16. Januar 2022</h6>
             <h4 class="lowercase process-step-action">Sende dein Demotape ein</h4>
-            <m4music-a-button namespace="button-" namespace-fallback type="arrow">zur Anmeldung</m4music-a-button>
+            <m4music-a-button namespace="button-" namespace-fallback type="arrow">zur Anmeldung
+            </m4music-a-button>
           </div>
           <div>
             <h1 class="process-step-count">2</h1>
@@ -182,33 +196,33 @@
             <h5 class="lowercase">Ein kleiner Auszug aus der Jury:</h5>
           </div>
         </m4music-o-wrapper>
-        <m4music-o-wrapper columns="2" no-space namespace="juryWrapper-" namespace-fallback>
+        <m4music-o-wrapper columns="2" namespace="juryWrapper-" namespace-fallback no-space>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
-              alt="02 DTC Isa"> </a-picture>
+            <a-picture alt="02 DTC Isa" defaultsource="../../../img/portrait.png" namespace="body-picture-"
+              namespace-fallback></a-picture>
             <h3>Isi Von Walterskirchen</h3>
             <h6 class="lowercase">Electronic</h6>
             <p>Clubbüro Rote Fabrik</p>
           </div>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
-              alt="03 DTC Pablo"> </a-picture>
+            <a-picture alt="03 DTC Pablo" defaultsource="../../../img/portrait.png" namespace="body-picture-"
+              namespace-fallback></a-picture>
             <h3>Pablo Vögtli</h3>
             <h6 class="lowercase">Lyrics & Beats</h6>
             <p>Moderator und Redaktor Bounce SRF Virus</p>
           </div>
         </m4music-o-wrapper>
-        <m4music-o-wrapper columns="2" no-space namespace="juryWrapper-" namespace-fallback>
+        <m4music-o-wrapper columns="2" namespace="juryWrapper-" namespace-fallback no-space>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
-              alt="01 DTC THEOQUIBLIER 2"></a-picture>
+            <a-picture alt="01 DTC THEOQUIBLIER 2" defaultsource="../../../img/portrait.png" namespace="body-picture-"
+              namespace-fallback></a-picture>
             <h3>Théo Quiblier</h3>
             <h6 class="lowercase">Rock</h6>
             <p>Concerts &amp; Touring, Two Gentlemen</p>
           </div>
           <div>
-            <a-picture namespace="body-picture-" namespace-fallback defaultsource="../../../img/portrait.png"
-              alt="04 DTC Marion"></a-picture>
+            <a-picture alt="04 DTC Marion" defaultsource="../../../img/portrait.png" namespace="body-picture-"
+              namespace-fallback></a-picture>
             <h3>Marion Meier</h3>
             <h6 class="lowercase">Pop</h6>
             <p>Programmation Blue Balls Festival</p>
@@ -219,9 +233,11 @@
         <m4music-m-highlightbox namespace="highlightbox-" namespace-fallback>
           <h3>Anmeldeschluss: 16. Januar 2022</h3>
           <p>In den vier Kategorien Pop, Rock, Lyrics &amp; Beats und Electronic vergibt die Jury den mit je 3000
-            Franken dotierten FONDATION-SUISA-Award. Der hoffnungsvollste Newcomer unter den vier Gewinner*innen erhält
+            Franken dotierten FONDATION-SUISA-Award. Der hoffnungsvollste Newcomer unter den vier Gewinner*innen
+            erhält
             zusätzlich 5’000 Franken Preisgeld von der FONDATION SUISA.</p>
-          <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden</m4music-a-button>
+          <m4music-a-button namespace="button-" namespace-fallback type="primary">Jetzt anmelden
+          </m4music-a-button>
         </m4music-m-highlightbox>
       </div>
       <div>
@@ -230,20 +246,20 @@
           <p>Melde dich für den m4music Newsletter an und erhalte News zur Demotape Clinic, zur Conference und zum
             Festival.</p>
           <div class="container">
-            <m4music-m-form type="newsletter" namespace-fallback namespace="newsletter-"
-              namespace-children="newsletter-field-" namespace-button="newsletter-button-" redirect="false"
+            <m4music-m-form namespace="newsletter-" namespace-button="newsletter-button-"
+              namespace-children="newsletter-field-" namespace-fallback redirect="false" type="newsletter"
               use-url-params>
-              <form action="https://nlink.m4music.ch/dispatcher/service" method="post" id="online_form">
+              <form action="https://nlink.m4music.ch/dispatcher/service" id="online_form" method="post">
                 <div>
-                  <input type="hidden" name="ac" value="reg">
-                  <input type="hidden" name="clientCode" value="i5xQjPweeKv68ksuCl">
-                  <input type="hidden" name="doubleOptin" value="1">
-                  <input type="hidden" name="xp_sendBackParams" value="3">
-                  <input type="hidden" name="trackId" value="null" id="trackId">
-                  <input type="hidden" name="xp_redirectLP" value="0">
-                  <input type="hidden" name="Sprache" value="DE" id="Sprache">
+                  <input name="ac" type="hidden" value="reg">
+                  <input name="clientCode" type="hidden" value="i5xQjPweeKv68ksuCl">
+                  <input name="doubleOptin" type="hidden" value="1">
+                  <input name="xp_sendBackParams" type="hidden" value="3">
+                  <input id="trackId" name="trackId" type="hidden" value="null">
+                  <input name="xp_redirectLP" type="hidden" value="0">
+                  <input id="Sprache" name="Sprache" type="hidden" value="DE">
 
-                  <input id="Email" type="email" required name="Email" placeholder="E-Mail Adresse" autocomplete="off">
+                  <input autocomplete="off" id="Email" name="Email" placeholder="E-Mail Adresse" required type="email">
                 </div>
 
                 <div>
@@ -252,13 +268,16 @@
               </form>
 
               <div id="afterSubmit">
-                <p>Vielen Dank für deine Anmeldung! Bitte bestätige deine Anmeldung über die Mail, die wir dir soeben
+                <p>Vielen Dank für deine Anmeldung! Bitte bestätige deine Anmeldung über die Mail, die wir
+                  dir soeben
                   geschickt haben. Prüfe auch den Spam-Ordner.</p>
               </div>
             </m4music-m-form>
             <div class="policy">
-              <p>Die Bearbeitung deiner Personendaten erfolgt gemäss unserer <a rel="noopener"
-                  href="https://www.migros.ch/de/datenschutz.html" target="_blank">Datenschutzerklärung</a>.</p>
+              <p>Die Bearbeitung deiner Personendaten erfolgt gemäss unserer <a
+                  href="https://www.migros.ch/de/datenschutz.html" rel="noopener"
+                  target="_blank">Datenschutzerklärung</a>.
+              </p>
             </div>
           </div>
         </m4music-m-newsletter>
@@ -267,8 +286,8 @@
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
         <div class="footer__engagement hide-mobile">
-          <a-logo namespace="footer-engagement-logo-" src="../../../img/kulturprozent.svg"
-            href="https://www.migros-engagement.ch/de/engagement" target="_blank">
+          <a-logo href="https://www.migros-engagement.ch/de/engagement" namespace="footer-engagement-logo-"
+            src="../../../img/kulturprozent.svg" target="_blank">
             <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der
               Migros-Gruppe:
               <br><a href="https://www.migros-engagement.ch/de" target="_blank">migros-engagement.ch</a>
@@ -307,17 +326,17 @@
               </li>
               <li>
                 <div class="icons">
-                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/facebook.svg"
-                    href="https://www.facebook.com/m4music" target="_blank" lang="de" title="Facebook">
+                  <a-logo href="https://www.facebook.com/m4music" lang="de" namespace="footer-social-logo-"
+                    namespace-fallback src="../../../img/facebook.svg" target="_blank" title="Facebook">
                   </a-logo>
-                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/instagram.svg"
-                    href="https://www.instagram.com/m4musicfestival/" target="_blank" lang="de" title="Instagram">
+                  <a-logo href="https://www.instagram.com/m4musicfestival/" lang="de" namespace="footer-social-logo-"
+                    namespace-fallback src="../../../img/instagram.svg" target="_blank" title="Instagram">
                   </a-logo>
-                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/spotify.svg"
-                    href="https://open.spotify.com/user/m4musicfestival" target="_blank" lang="de" title="Spotify">
+                  <a-logo href="https://open.spotify.com/user/m4musicfestival" lang="de" namespace="footer-social-logo-"
+                    namespace-fallback src="../../../img/spotify.svg" target="_blank" title="Spotify">
                   </a-logo>
-                  <a-logo namespace="footer-social-logo-" namespace-fallback src="../../../img/youtube.svg"
-                    href="https://www.youtube.com/user/m4music1" target="_blank" lang="de" title="Youtube">
+                  <a-logo href="https://www.youtube.com/user/m4music1" lang="de" namespace="footer-social-logo-"
+                    namespace-fallback src="../../../img/youtube.svg" target="_blank" title="Youtube">
                   </a-logo>
                 </div>
               </li>
@@ -334,7 +353,8 @@
             </li>
             <li>
               <a-link namespace="footer-" namespace-fallback><a
-                  href="https://www.migros.ch/de/rechtliche-informationen.html" target="_blank">Rechtliches</a></a-link>
+                  href="https://www.migros.ch/de/rechtliche-informationen.html" target="_blank">Rechtliches</a>
+              </a-link>
             </li>
             <li>
               <a-link namespace="footer-" namespace-fallback><a href="https://www.migros.ch/de/datenschutz.html"
@@ -345,18 +365,19 @@
         <div>
           <ul class="languages">
             <li>
-              <a-link namespace="footer-" namespace-fallback class="active"><a href="http://www.m4music.ch/">DE</a>
+              <a-link class="active" namespace="footer-" namespace-fallback><a href="http://www.m4music.ch/">DE</a>
               </a-link>
             </li>
             <li>
-              <a-link namespace="footer-" namespace-fallback><a href="http://www.m4music.ch/fr/">FR</a></a-link>
+              <a-link namespace="footer-" namespace-fallback><a href="http://www.m4music.ch/fr/">FR</a>
+              </a-link>
             </li>
           </ul>
         </div>
       </div>
       <div class="footer__engagement hide-desktop">
-        <a-logo namespace="footer-engagement-logo-" src="../../../img/kulturprozent.svg"
-          href="https://www.migros-engagement.ch/de/engagement" target="_blank">
+        <a-logo href="https://www.migros-engagement.ch/de/engagement" namespace="footer-engagement-logo-"
+          src="../../../img/kulturprozent.svg" target="_blank">
           <p>m4music ist ein Projekt des Migros-Kulturprozent, Teil des gesellschaftlichen Engagements der
             Migros-Gruppe:
             <br><a href="https://www.migros-engagement.ch/de" target="_blank">migros-engagement.ch</a>
@@ -367,9 +388,9 @@
   </p-general>
   <script rel=preload type=module>
     self.Environment = {
-      mobileBreakpoint: '960px'
+        mobileBreakpoint: '960px'
     }
-  </script>
+</script>
 </body>
 
 </html>
