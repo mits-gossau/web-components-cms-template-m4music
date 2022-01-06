@@ -46,8 +46,8 @@ export default class Quote extends Shadow() {
       padding:var(--padding, 0);
       ${this.hasAttribute('background-color') ? `
       width: calc(100% - 2rem) !important;
-      padding: 1rem;` 
-      : `width: 100% !important;`}
+      padding: 1rem;`
+      : 'width: 100% !important;'}
     }
     :host > div {
       text-align:center;

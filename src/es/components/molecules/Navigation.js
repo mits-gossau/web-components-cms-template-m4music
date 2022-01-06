@@ -7,6 +7,16 @@ export default class Navigation extends BaseNavigation {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */ `
+      :host > nav {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        width:100%;
+        height:auto;
+        margin:10% auto;
+      }
       :host .icons {
         display:flex;
         flex-direction:row;
@@ -32,9 +42,9 @@ export default class Navigation extends BaseNavigation {
       }
       :host .lang {
         display:flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+        flex-direction:row;
+        justify-content:space-evenly;
+        align-items:center;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
       }

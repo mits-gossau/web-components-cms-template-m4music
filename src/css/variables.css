@@ -216,6 +216,8 @@
   --h6-margin:var(--h-title-margin);
   --h6-padding:var(--h-title-padding);
   --h6-text-transform:var(--h-title-text-transform);
+  --header-a-menu-icon-height-open-mobile:5px;
+  --header-a-menu-icon-margin-open-mobile:0 0.4rem 0 0;
   --header-background-color-open:var(--color-orange);
   --header-background-color:var(--background-color);
   --header-content-spacing:var(--content-spacing);
@@ -237,14 +239,16 @@
   --header-lang-navigation-font-size:max(20px, 0.65rem);
   --header-lang-navigation-text-decoration:underline solid var(--color-black) 1px;
   --header-lang-navigation-text-underline-offset:3px;
-  --header-logo-height-mobile:min(16px, 8vw);
+  --header-logo-height-mobile:min(24px, 8vw);
   --header-logo-height:32px;
   --header-logo-justify-content:space-between;
+  --header-logo-margin-mobile:0;
+  --header-logo-margin:0 0 0 max(1.25vw, 0.35rem);
   --header-logo-width:195px;
   --header-m4music-m-navigation-background-color-mobile:var(--color-orange);
   --header-m4music-m-navigation-background-color:transparent;
   --header-m4music-m-navigation-height:100vh;
-  --header-m4music-m-navigation-padding-open-mobile:min(3rem, 5vw) 0 0 0;
+  --header-m4music-m-navigation-padding-open-mobile:0;
   --header-navigation-a-link-color-no-scroll:var(--color-black);
   --header-navigation-a-link-content-spacing-no-scroll:0;
   --header-navigation-a-link-content-spacing:0.25rem;
@@ -399,6 +403,7 @@
   --p-line-height:125%;
   --p-margin-mobile:0 0 1.35rem;
   --p-margin:0 0 1rem;
+  --padding-white-background:1rem;
   --quote-padding:1rem 0 1rem 0;
   --quote-person-color:#616161;
   --quote-person-font-size-mobile:1rem;
@@ -497,10 +502,10 @@
   --register-width:100%;
   --spacer-height-mobile:1rem;
   --spacer-height:1rem;
-  --speakers-padding:0 1rem 2rem 1rem;
   --speakers-name-color:var(--color-orange);
   --speakers-name-font-size-mobile:3.6rem;
   --speakers-name-font-size:3rem;
+  --speakers-padding:0 1rem 2rem 1rem;
   --speakers-picture-border-radius-mobile:50%;
   --speakers-picture-border-radius:50%;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
@@ -510,13 +515,13 @@
   --video-border-width-mobile:0.8rem;
   --video-border-width:1rem;
   --video-border:var(--video-border-width) var(--video-border-color) solid;
-  --video-child-width:calc(100% - 2*var(--video-border-width));
   --video-child-width-mobile:calc(100% - 2*var(--video-border-width-mobile));
+  --video-child-width:calc(100% - 2*var(--video-border-width));
   --video-height:100%;
   --video-iframe-height-mobile:calc(((100vw * 0.9) - 2*var(--video-border-width)) * 0.5625);
   --video-iframe-height:calc(((100vw * 0.7) - 2*var(--video-border-width)) * 0.5625);
-  --video-width:calc((100% - 2*var(--video-padding)));
   --video-padding: 0;
+  --video-width:calc((100% - 2*var(--video-padding)));
   --wrapper-background-secondary-color:#434343;
   --wrapper-div-margin-mobile:0 0 1rem 0;
   --wrapper-div-margin:0 2rem 0 0;
@@ -525,6 +530,4 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-
-  --padding-white-background: 1rem;
 }

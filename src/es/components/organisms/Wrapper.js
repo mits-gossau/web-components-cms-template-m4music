@@ -76,9 +76,9 @@ export default class Wrapper extends BaseBody {
       margin-bottom:var(--wrapper-margin-bottom, 0);
       ${this.hasAttribute('background-color') ? `
         width: calc(100% - 2rem) !important;
-        padding: 1rem;` 
-        : `width: 100% !important;`}
-      color:${(this.getAttribute('background-color') == "white") ? "var(--color-black, var(--color, red));" : "var(--wrapper-text-color, var(--color, red));"}
+        padding: 1rem;`
+        : 'width: 100% !important;'}
+      color:${(this.getAttribute('background-color') == 'white') ? 'var(--color-black, var(--color, red));' : 'var(--wrapper-text-color, var(--color, red));'}
     }
     :host > section .lowercase {
       text-transform: none;
