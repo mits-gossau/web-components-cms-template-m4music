@@ -244,7 +244,7 @@
   --header-m4music-m-navigation-background-color-mobile:var(--color-orange);
   --header-m4music-m-navigation-background-color:transparent;
   --header-m4music-m-navigation-height:100vh;
-  --header-m4music-m-navigation-padding-open-mobile:5rem 0 0 0;
+  --header-m4music-m-navigation-padding-open-mobile:min(3rem, 5vw) 0 0 0;
   --header-navigation-a-link-color-no-scroll:var(--color-black);
   --header-navigation-a-link-content-spacing-no-scroll:0;
   --header-navigation-a-link-content-spacing:0.25rem;
