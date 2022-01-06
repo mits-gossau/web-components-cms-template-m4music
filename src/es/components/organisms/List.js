@@ -113,8 +113,8 @@ export default class Wrapper extends BaseBody {
       margin: 0;
     }
     ${this.hasAttribute('background-color')
-    ? /* css */`
-      :host > section {
+    ? /* css */ ` 
+    :host > section {
         --wrapper-background-color: ${this.getAttribute('background-color')};
         --wrapper-main-background-color: ${this.getAttribute('background-color')};
         --filter-background-color: ${this.getAttribute('background-color')};
@@ -122,7 +122,8 @@ export default class Wrapper extends BaseBody {
         --event-item-description-font-color: var(--color-black);  
         width: calc(100% - 2rem) !important;
         padding: 1rem;
-      }` : ''
+      }`
+      : ''
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {

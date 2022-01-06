@@ -44,10 +44,12 @@ export default class Quote extends Shadow() {
       flex-direction:column;
       justify-content:flex-start;
       padding:var(--padding, 0);
-      ${this.hasAttribute('background-color') ? `
+      ${this.hasAttribute('background-color')
+      ? `
       width: calc(100% - 2rem) !important;
       padding: 1rem;`
-      : 'width: 100% !important;'}
+      : 'width: 100% !important;'
+    }
     }
     :host > div {
       text-align:center;

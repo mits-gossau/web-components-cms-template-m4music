@@ -1,6 +1,8 @@
 // @ts-check
 import BaseHeader from '../web-components-cms-template/src/es/components/organisms/Header.js'
 
+/* global self */
+
 /**
  * Header can be sticky and hosts as a flex mostly a logo and a navigation
  * Example at: /src/es/components/pages/Home.html
