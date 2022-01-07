@@ -510,6 +510,14 @@
   --speakers-picture-border-radius:50%;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
   --text-decoration:underline solid var(--link-underline-color) 1px;
+  --tickets-button-background-color-hover-primary:var(--button-background-color-hover-primary);
+  --tickets-button-background-color-primary:var(--color-orange);
+  --tickets-button-border-primary:var(--button-border-radius);
+  --tickets-button-border-radius:var(--button-border-radius);
+  --tickets-button-font-size:0.75rem;
+  --tickets-button-margin-mobile:0;
+  --tickets-button-margin:0;
+  --tickets-button-padding:0.5rem;
   --video-border-color:var(--color-orange);
   --video-border-mobile:var(--video-border-width-mobile) var(--video-border-color) solid;
   --video-border-width-mobile:0.8rem;
