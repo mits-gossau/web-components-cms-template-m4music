@@ -228,7 +228,7 @@
   --header-detail-button-color-arrowLeft:var(--color);
   --header-detail-button-font-size-mobile:1.3rem;
   --header-detail-button-icon-padding-mobile:0 1rem 0 0;
-  --header-detail-button-icon-padding:0;
+  --header-detail-button-icon-padding:0 10px 0 0;
   --header-detail-button-icon-width-mobile:1.5rem;
   --header-detail-button-icon-width:1.2rem;
   --header-detail-flex-direction-mobile:row;
@@ -543,4 +543,5 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --header-detail-position:static;
 }
