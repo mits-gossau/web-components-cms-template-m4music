@@ -41,7 +41,14 @@ export default class EventDetail extends Shadow() {
       position:relative;
     }
     :host a-picture {
-      display:block;
+      display:inline;
+    }
+    :host a-picture:before {
+      background:rgba(255,255,255,0.5);
+      content:"";
+      height:100%;
+      position:absolute;
+      width:100%;
     }
     :host .text-wrapper {
       bottom:var(--text-wrapper-position-bottom, 1rem);

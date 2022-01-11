@@ -309,7 +309,10 @@
   --highlightbox-padding:6vw 5vw;
   --highlightbox-text-align:center;
   --html-background-color:var(--background-color);
-  --juryWrapper-h56-title-margin:0;
+  --jury-wrapper-h56-title-margin:var(--p-margin);
+  --jury-wrapper-h56-title-margin-mobile:var(--p-margin-mobile);
+  --jury-wrapper-p-margin: 0;
+  --jury-wrapper-p-margin-mobile: 0;
   --link-underline-color:#CCCCCC;
   --list-wrapper-flex-direction:column;
   --newsletter-align-items:center;
