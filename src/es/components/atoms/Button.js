@@ -151,6 +151,7 @@ export default class Button extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
+        color: var(--color-${this.type}-mobile, white);
         height: var(--height-mobile, 100%);
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);

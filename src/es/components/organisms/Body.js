@@ -61,9 +61,6 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .detail-image{
-      width:100%;
-    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
