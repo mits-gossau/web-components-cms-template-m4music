@@ -89,6 +89,7 @@
   --event-detail-button-width:auto;
   --event-item-speaker-picture-border-radius-mobile:50%;
   --event-item-speaker-picture-border-radius:50%;
+  --event-carousel-width:100%;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);

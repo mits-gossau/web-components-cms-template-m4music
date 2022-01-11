@@ -17,9 +17,20 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 export default class EventItem extends Shadow() {
   constructor (...args) {
     super(...args)
+    this.mouseX = 0;
+    this.mouseY = 0;
+
+    const between = (x, value, range) => {
+      return x >= value-range && x <= value+range;
+    }
+
+    this.mouseDown = event => {
+      this.mouseX = event.pageX;
+      this.mouseY = event.pageY;
+    }
 
     this.clickListener = event => {
-      if (this.getAttribute('href')) {
+      if (between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
         event.stopPropagation()
         self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
       }
@@ -32,11 +43,13 @@ export default class EventItem extends Shadow() {
 
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
-    this.addEventListener('click', this.clickListener)
+    this.addEventListener('mousedown', this.mouseDown)
+    this.addEventListener('mouseup', this.clickListener)
   }
 
   disconnectedCallback () {
-    this.removeEventListener('click', this.clickListener)
+    this.removeEventListener('mousedown', this.mouseDown)
+    this.removeEventListener('mouseup', this.clickListener)
   }
 
   /**
@@ -79,6 +92,7 @@ export default class EventItem extends Shadow() {
       align-content:flex-start;
       justify-content:flex-start;
       align-items:flex-start;
+      width: var(--width, auto);
     }
     :host .date{
       color:var(--date-font-color, #616161);
@@ -117,4 +131,6 @@ export default class EventItem extends Shadow() {
     }
   `
   }
+
+  get 
 }
