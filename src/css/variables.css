@@ -15,9 +15,8 @@
   --background-color:#232323;
   --balloon-font-size:var(--h6-font-size);
   --body-detail-background-color-mobile:var(--color);
-  --body-detail-main-background-color:var(--color);
-  --body-detail-main-spacing:auto;
-  --body-detail-main-width:85%;
+  --body-detail-main-background-color-mobile:var(--color);
+  --body-detail-main-background-color:var(--color-);
   --body-p-margin-mobile:0.5rem 0 0.5rem 0;
   --body-p-margin:0.75rem 0 0.75rem 0;
   --body-picture-margin:0.5rem 0;
@@ -225,13 +224,15 @@
   --header-content-width-mobile:var(--content-width-mobile);
   --header-content-width:var(--content-width);
   --header-detail-background-color:transparent;
-  --header-detail-button-color-arrowLeft:var(--color-black);
+  --header-detail-button-color-arrowLeft-mobile:var(--color-black);
+  --header-detail-button-color-arrowLeft:var(--color);
   --header-detail-button-font-size-mobile:1.3rem;
   --header-detail-button-icon-padding-mobile:0 1rem 0 0;
-  --header-detail-button-icon-padding:0;
+  --header-detail-button-icon-padding:0 10px 0 0;
   --header-detail-button-icon-width-mobile:1.5rem;
   --header-detail-button-icon-width:1.2rem;
   --header-detail-flex-direction-mobile:row;
+  --header-detail-height-mobile:min(6rem, 170px);
   --header-flex-direction-mobile:row;
   --header-header-logo-margin:0 1rem 0 0;
   --header-height-mobile:min(6rem, 170px);
@@ -309,10 +310,10 @@
   --highlightbox-padding:6vw 5vw;
   --highlightbox-text-align:center;
   --html-background-color:var(--background-color);
-  --jury-wrapper-h56-title-margin:var(--p-margin);
   --jury-wrapper-h56-title-margin-mobile:var(--p-margin-mobile);
-  --jury-wrapper-p-margin: 0;
+  --jury-wrapper-h56-title-margin:var(--p-margin);
   --jury-wrapper-p-margin-mobile: 0;
+  --jury-wrapper-p-margin: 0;
   --link-underline-color:#CCCCCC;
   --list-wrapper-flex-direction:column;
   --newsletter-align-items:center;
@@ -542,4 +543,5 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --header-detail-position:static;
 }
