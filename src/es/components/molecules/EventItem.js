@@ -17,20 +17,20 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 export default class EventItem extends Shadow() {
   constructor (...args) {
     super(...args)
-    this.mouseX = 0;
-    this.mouseY = 0;
+    this.mouseX = 0
+    this.mouseY = 0
 
     const between = (x, value, range) => {
-      return x >= value-range && x <= value+range;
+      return x >= value - range && x <= value + range
     }
 
     this.mouseDown = event => {
-      this.mouseX = event.pageX;
-      this.mouseY = event.pageY;
+      this.mouseX = event.pageX
+      this.mouseY = event.pageY
     }
 
     this.clickListener = event => {
-      if (event.which == 1 && between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
+      if (event.which === 1 && between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
         event.stopPropagation()
         self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
       }
@@ -131,6 +131,4 @@ export default class EventItem extends Shadow() {
     }
   `
   }
-
-  get 
 }
