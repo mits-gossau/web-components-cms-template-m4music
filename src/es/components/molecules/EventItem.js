@@ -17,20 +17,20 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 export default class EventItem extends Shadow() {
   constructor (...args) {
     super(...args)
-    this.mouseX = 0;
-    this.mouseY = 0;
+    this.mouseX = 0
+    this.mouseY = 0
 
     const between = (x, value, range) => {
-      return x >= value-range && x <= value+range;
+      return x >= value - range && x <= value + range
     }
 
     this.mouseDown = event => {
-      this.mouseX = event.pageX;
-      this.mouseY = event.pageY;
+      this.mouseX = event.pageX
+      this.mouseY = event.pageY
     }
 
     this.clickListener = event => {
-      if (between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
+      if (event.which === 1 && between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
         event.stopPropagation()
         self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
       }
@@ -70,14 +70,17 @@ export default class EventItem extends Shadow() {
     this.css = /* css */ `
     :host {
       display:flex;
-      flex-direction:row;
+      flex-direction:column;
       align-items:flex-start;
       justify-content:flex-start;
       align-content:flex-start;
       margin-bottom:0.9rem;
       background-color:transparent;
       ${this.hasAttribute('href') ? 'cursor: pointer;' : ''}
-      width: 100%;
+      flex-wrap:wrap;
+      flex: 1;
+      flex-basis: 25%;
+      max-width:25%;
     }
     :host p  {
       padding:0;
@@ -85,14 +88,16 @@ export default class EventItem extends Shadow() {
     }
     :host .image-wrapper{
       margin-right:0.45rem;
+      width:95%;
     }
     :host .content-wrapper{
       display:flex;
       flex-direction:column;
       align-content:flex-start;
       justify-content:flex-start;
-      align-items:flex-start;
-      width: var(--width, auto);
+      align-items:${this.getAttribute('type') === 'speaker' ? 'center' : 'flex-start'};
+      width:95%;
+      padding-top:16px;
     }
     :host .date{
       color:var(--date-font-color, #616161);
@@ -105,32 +110,49 @@ export default class EventItem extends Shadow() {
     :host .name{
       color:var(--name-font-color, #000000); 
       font-size:var(--name-font-size, 0.9rem);
-      line-height:var(--name-font-size, 100%);
+      line-height:var(--name-line-height, 100%);
+      text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
     }
     :host .description{
       color:var(--description-font-color, #000000); 
       font-size:var(--description-font-size, 0.65rem);
       line-height:var(--description-line-height, 125%);
+      text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
     }
     :host(.hidden) {
       display: none;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host {
+        align-items:${this.getAttribute('type') === 'speaker' ? 'center' : 'flex-start'};
+        flex-wrap:nowrap;
+        flex-direction:row;
+        max-width:100%;
+      }
       :host p  {
         margin:0 0 0.1rem 0;
       }
+      :host .content-wrapper{
+        padding-top:0;
+        align-items:flex-start;
+      }
+      :host .image-wrapper{
+       width:auto;
+      }
       :host .date{
         font-size:var(--date-font-size-mobile, 1rem);
+        line-height:var(--date-line-height-mobile, 125%);   
       }
       :host .name{
         font-size:var(--name-font-size-mobile, 1.5rem);
+        line-height:var(--name-line-height-mobile, 100%);
+        text-align:left;
       }
       :host .description{
         font-size:var(--description-font-size-mobile, 1rem);
+        text-align:left;
       }
     }
   `
   }
-
-  get 
 }

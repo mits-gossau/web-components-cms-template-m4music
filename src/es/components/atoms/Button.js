@@ -151,6 +151,7 @@ export default class Button extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
+        color: var(--color-${this.type}-mobile, white);
         height: var(--height-mobile, 100%);
         font-size: var(--font-size-mobile, 1em);
         margin: var(--margin-mobile, 1em);
@@ -363,6 +364,7 @@ export default class Button extends Shadow() {
   filterCSS (breakpoint) {
     const padding = breakpoint === 'desktop' ? '--padding' : '--padding-mobile'
     const fontSize = breakpoint === 'desktop' ? '--font-size' : '--font-size-mobile'
+    const iconSize = breakpoint === 'desktop' ? '12px' : '8px'
     return /* css */ `
     :host > button {
       border-radius:4px;
@@ -376,12 +378,24 @@ export default class Button extends Shadow() {
     :host(:not([data-filter-value='show_all'])) > button::after {
       content: url('/assets/img/filter.svg');
       padding-left: 0.2rem;
+      display:inline-block;
+      height:${iconSize};
+      width:${iconSize};
     }
     :host(:not([data-filter-value='show_all']).active) > button::after {
       content: url('/assets/img/filter-active.svg');
       padding-left: 0.2rem;
+      display:inline-block;
+      height:${iconSize};
+      width:${iconSize};
     }
-    
+    :host([data-filter-value='show_all']) > button::after {
+      content: url('/assets/img/filter-reset.svg');
+      padding-left: 0.2rem;
+      display:inline-block;
+      height:${iconSize};
+      width:${iconSize};
+    }
     :host > button:hover,
     :host > button:active,
     :host(.active) > button {

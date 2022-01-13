@@ -3,7 +3,8 @@
     "favorited",
     "Formular",
     "highlightbox",
-    "markdownit"
+    "markdownit",
+    "Programm"
   ],
   "editor.tabSize": 2,
   "editor.detectIndentation": false
