@@ -389,7 +389,7 @@ export default class Button extends Shadow() {
       height:${iconSize};
       width:${iconSize};
     }
-    :host([data-filter-value='show_all']) > button::after {
+    :host(:not(.active)[data-filter-value='show_all']) > button::after {
       content: url('/assets/img/filter-reset.svg');
       padding-left: 0.2rem;
       display:inline-block;
