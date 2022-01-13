@@ -76,6 +76,7 @@
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:88%;
   --content-width:88%;
+  --event-carousel-width:100%;
   --event-detail-button-background-color-hover-primary:var(--button-background-color-hover-primary);
   --event-detail-button-background-color-primary: var(--button-background-color-primary);
   --event-detail-button-border-radius:var(--button-border-radius);
@@ -86,9 +87,14 @@
   --event-detail-button-padding:0.5rem 0.75rem;
   --event-detail-button-width-mobile:auto;
   --event-detail-button-width:auto;
+  --event-item-date-font-size-mobile:1rem;
+  --event-item-name-font-size-mobile:1.55rem;
+  --event-item-name-font-size:1.25rem;
+  --event-item-name-line-height:125%;
+  --event-item-picture-width-mobile:4.5rem;
   --event-item-speaker-picture-border-radius-mobile:50%;
   --event-item-speaker-picture-border-radius:50%;
-  --event-carousel-width:100%;
+  --event-item-speaker-picture-width-mobile:4.5rem;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
@@ -233,6 +239,7 @@
   --header-detail-button-icon-width:1.2rem;
   --header-detail-flex-direction-mobile:row;
   --header-detail-height-mobile:min(6rem, 170px);
+  --header-detail-position:static;
   --header-flex-direction-mobile:row;
   --header-header-logo-margin:0 1rem 0 0;
   --header-height-mobile:min(6rem, 170px);
@@ -543,5 +550,4 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
-  --header-detail-position:static;
 }

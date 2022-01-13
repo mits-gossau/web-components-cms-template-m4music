@@ -72,7 +72,7 @@ export default class Wrapper extends BaseBody {
       display:flex;
       flex-direction:${this.getType(this.getAttribute('type')).directionDesktop};
       flex-wrap:${this.getType(this.getAttribute('type')).wrapDesktop};
-      justify-content:space-between;
+      justify-content:${this.getType(this.getAttribute('type')).justifyContentDesktop};
       margin-bottom:var(--wrapper-margin-bottom, 0);
       ${this.hasAttribute('background-color')
       ? `
@@ -250,8 +250,9 @@ export default class Wrapper extends BaseBody {
    */
   getType (type) {
     const flexWrap = {
-      default: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'row', wrapMobile: 'wrap' },
-      speaker: { directionDesktop: 'row', wrapDesktop: 'nowrap', directionMobile: 'column', wrapMobile: 'nowrap' }
+      default: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'row', wrapMobile: 'wrap', justifyContentDesktop:'space-between', justifyContentMobile:'space-between' },
+      speaker: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'column', wrapMobile: 'nowrap', justifyContentDesktop:'flex-start', justifyContentMobile:'space-between' },
+      event: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'column', wrapMobile: 'nowrap', justifyContentDesktop:'flex-start', justifyContentMobile:'space-between' }
     }
     return (type in flexWrap) ? flexWrap[type] : flexWrap.default
   }
