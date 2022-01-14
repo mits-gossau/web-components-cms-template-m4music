@@ -424,6 +424,7 @@
   --quote-person-font-size:0.75rem;
   --quote-person-line-height:125%;
   --quote-picture-border-radius:50%;
+  --quote-picture-border-radius-mobile:50%;
   --quote-text-color:var(--color-black);
   --quote-text-font-size-mobile:1.6rem;
   --quote-text-font-size:2rem;
