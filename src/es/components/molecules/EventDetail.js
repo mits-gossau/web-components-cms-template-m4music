@@ -39,6 +39,7 @@ export default class EventDetail extends Shadow() {
       display:inline-block;
       margin-bottom:var(--margin-bottom, 0);
       position:relative;
+      width:100%;
     }
     :host a-picture {
       display:inline;

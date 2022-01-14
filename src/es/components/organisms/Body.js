@@ -17,6 +17,7 @@ import BaseBody from '../web-components-cms-template/src/es/components/organisms
  */
 export default class Body extends BaseBody {
   constructor (...args) {
+    // @ts-ignore
     super({ mode: self.isBSVC ? 'false' : 'true' }, ...args) // disabling shadow-DOM on BSVC page to allow crowdsignal embed to work
   }
 
@@ -65,10 +66,7 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .detail-image{
-      width:100%;
-    }
-    
+    :host .detail-image{}
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
