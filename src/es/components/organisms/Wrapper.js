@@ -167,6 +167,23 @@ export default class Wrapper extends BaseBody {
       } `
       : ''
     }
+    :host .ticket-button-container {
+      flex-basis: calc(30% - 0.5rem);
+    }
+    :host .ticket-button-container .button {
+      --button-width: calc(50% - 4px);
+      --button-margin: 0 0 0.5rem 0;
+      --button-padding: 0.5rem;
+      --button-font-size: 22px;
+    }
+    :host .ticket-button-container .button:first-of-type {
+      --button-width: 100%;
+      --button-font-size: 24px;
+    }
+    :host .richtext-with-ticket {
+      flex-basis: calc(70% - 0.5rem);
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
@@ -203,6 +220,18 @@ export default class Wrapper extends BaseBody {
       }
       :host .process-step-action{
         font-size:1.5rem;
+      }
+      :host .ticket-button-container {
+        flex-basis: calc(100% - 1rem);
+      }
+      :host .ticket-button-container .button:not(:first-of-type) {
+        width: calc(50% - 4px);
+        display: inline-block;
+        --button-icon-margin-left: 0;
+      }
+      :host .richtext-with-ticket {
+        flex-basis: calc(100% - 1rem);
+        order: -1;
       }
     }
   `

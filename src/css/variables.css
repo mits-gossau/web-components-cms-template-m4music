@@ -36,6 +36,7 @@
   --button-border-pass-secondary:1px solid black;
   --button-border-radius:4px;
   --button-color-arrowDown:var(--button-color-secondary);
+  --button-color-arrowDown-mobile:var(--button-color-arrowDown);
   --button-color-hover-arrow:var(--button-color-hover-secondary);
   --button-color-hover-arrowDown:var(--button-color-hover-secondary);
   --button-color-hover-pass-secondary:var(--button-color-hover-secondary);
@@ -62,6 +63,7 @@
   --button-icon-padding:0 0.75rem;
   --button-icon-width-mobile:1.5rem;
   --button-icon-width:1.2rem;
+  --button-icon-display:inline-flex;
   --button-margin-mobile:0.5rem 0 0 0;
   --button-margin:0 0.5rem 0.5rem 0;
   --button-padding:0.5rem 0.75rem;
@@ -332,6 +334,7 @@
   --newsletter-button-border-radius:var(--button-border-radius);
   --newsletter-button-color-hover-primary:var(--button-color-hover-secondary);
   --newsletter-button-color-primary:var(--button-color-secondary);
+  --newsletter-button-color-primary-mobile:var(--newsletter-button-color-primary);
   --newsletter-button-font-size-mobile:var(--button-font-size-mobile);
   --newsletter-button-font-size:var(--button-font-size);
   --newsletter-button-height:1.95rem;
