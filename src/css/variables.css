@@ -42,8 +42,8 @@
   --button-color-hover-secondary:var(--color-black);
   --button-color-pass-secondary:var(--button-color-secondary);
   --button-color-primary:var(--color);
-  --button-color-secondary:var(--color-black);
   --button-color-secondary-mobile:var(--button-color-secondary);
+  --button-color-secondary:var(--color-black);
   --button-filter-background-color-hover:var(--color-orange);
   --button-filter-background-color:#F3F3F3;
   --button-filter-color-hover:var(--color);
@@ -77,6 +77,7 @@
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:88%;
   --content-width:88%;
+  --detail-wrapper-p-margin:0 0;
   --event-carousel-width:100%;
   --event-detail-button-background-color-hover-primary:var(--button-background-color-hover-primary);
   --event-detail-button-background-color-primary: var(--button-background-color-primary);
