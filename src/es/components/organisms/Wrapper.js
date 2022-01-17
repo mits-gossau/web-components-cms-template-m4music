@@ -171,14 +171,17 @@ export default class Wrapper extends BaseBody {
       flex-basis: calc(30% - 0.5rem);
     }
     :host .ticket-button-container .button {
-      --button-width: calc(50% - 4px);
+      --button-width: 100%;
       --button-margin: 0 0 0.5rem 0;
       --button-padding: 0.5rem;
       --button-font-size: 22px;
     }
-    :host .ticket-button-container .button:first-of-type {
-      --button-width: 100%;
-      --button-font-size: 24px;
+    :host .ticket-button-container .button:not(:first-of-type) {
+      width: 48%;
+      display: inline-block;
+    }
+    :host .ticket-button-container .button:last-of-type {
+      float: right;
     }
     :host .richtext-with-ticket {
       flex-basis: calc(70% - 0.5rem);
@@ -225,9 +228,12 @@ export default class Wrapper extends BaseBody {
         flex-basis: calc(100% - 1rem);
       }
       :host .ticket-button-container .button:not(:first-of-type) {
-        width: calc(50% - 4px);
+        width: 48%;
         display: inline-block;
         --button-icon-margin-left: 0;
+      }
+      :host .ticket-button-container .button:last-of-type {
+        float: right;
       }
       :host .richtext-with-ticket {
         flex-basis: calc(100% - 1rem);
