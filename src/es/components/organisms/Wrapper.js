@@ -102,8 +102,12 @@ export default class Wrapper extends BaseBody {
     :host article {
       width: var(--article-width, 100%);
     }
-    :host :is(h1, h2, h3, h4) {
+    :host :is(h1, h2, h4) {
       color:var(--wrapper-text-color, var(--color), red);
+      margin: var(--h-title-margin, 0);
+    }
+    :host :is(h3) {
+      color:var(--wrapper-h3-text-color, var(--wrapper-text-color), var(--color), red);
       margin: var(--h-title-margin, 0);
     }
     :host :is(h5, h6) {
