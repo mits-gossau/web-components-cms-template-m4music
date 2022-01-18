@@ -32,6 +32,7 @@ export default class EventTeaser extends Shadow() {
     this.root.querySelectorAll('.wrapper').forEach(wrapper => {
       wrapper.addEventListener('mouseover', () => this.mouseoverListener(wrapper))
       wrapper.addEventListener('mouseleave', () => this.mouseleaveListener(wrapper))
+      wrapper.addEventListener('click', () => this.mouseleaveListener(wrapper))
     })
   }
 
@@ -39,6 +40,7 @@ export default class EventTeaser extends Shadow() {
     this.root.querySelectorAll('.wrapper').forEach(wrapper => {
       wrapper.removeEventListener('mouseover', this.mouseoverListener)
       wrapper.removeEventListener('mouseleave', this.mouseleaveListener)
+      wrapper.removeEventListener('click', this.mouseleaveListener)
     })
   }
 
