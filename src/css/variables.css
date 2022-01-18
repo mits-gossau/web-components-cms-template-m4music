@@ -528,6 +528,7 @@
   --speakers-picture-border-radius-mobile:50%;
   --speakers-picture-border-radius:50%;
   --speakers-picture-img-max-width:var(--quote-picture-img-max-width);
+  --speakers-picture-img-width: 43vw;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
   --text-decoration:underline solid var(--link-underline-color) 1px;
   --tickets-button-background-color-hover-primary:var(--button-background-color-hover-primary);

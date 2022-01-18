@@ -51,13 +51,21 @@ export default class Speakers extends Shadow() {
       text-transform:uppercase;
       word-wrap:anywhere;
     }
+    :host .name.right {
+      text-align:right;
+    }
+    :host .name.left {
+      text-align:left;
+    }
     :host .function {
       margin:0;
-      font-size:var(--function-font-size, 20px);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .name {
         font-size:var(--name-font-size-mobile, initial);
+      }
+      :host .function {
+        font-size:var(--function-font-size-mobile, 20px);
       }
     }
   `

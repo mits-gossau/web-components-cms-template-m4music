@@ -82,7 +82,7 @@ export default class EventTeaser extends Shadow() {
       left:50%;
       transform:translate(-50%, -50%);
       position:absolute;
-      color:#FB5F3F;
+      color:var(--color-orange);
       text-align:center;
       box-sizing:border-box;
       font-size: 4.7vw;
@@ -103,6 +103,9 @@ export default class EventTeaser extends Shadow() {
       :host .text {
         padding: 0 4.5%;
         font-size: max(3rem, 17vw);
+      }
+      :host .wrapper:hover .text {
+        color: var(--color-orange, white);
       }
     }
   `
