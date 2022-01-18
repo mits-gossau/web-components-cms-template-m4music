@@ -303,6 +303,7 @@
   --header-position:static;
   --header-social-logo-height-mobile:var(--footer-social-logo-height-mobile);
   --header-social-logo-img-margin:0;
+  --header-transition:none;
   --highlightbox-align-items:center;
   --highlightbox-background:var(--wrapper-background-secondary-color);
   --highlightbox-display:flex;
