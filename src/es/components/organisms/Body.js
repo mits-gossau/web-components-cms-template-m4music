@@ -66,7 +66,13 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .detail-image{}
+    :host .embed-container iframe {
+      width: 90vw;
+      height: 45vw;
+    }
+    :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
+      width: 100%;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);

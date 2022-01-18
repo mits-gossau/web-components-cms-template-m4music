@@ -51,6 +51,10 @@ export default class Speakers extends Shadow() {
       text-transform:uppercase;
       word-wrap:anywhere;
     }
+    :host .function {
+      margin:0;
+      font-size:var(--function-font-size, 20px);
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .name {
         font-size:var(--name-font-size-mobile, initial);
