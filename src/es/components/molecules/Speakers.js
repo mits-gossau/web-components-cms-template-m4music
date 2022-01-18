@@ -49,6 +49,7 @@ export default class Speakers extends Shadow() {
       line-height:100%;
       margin:0;
       text-transform:uppercase;
+      word-wrap:anywhere;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .name {
