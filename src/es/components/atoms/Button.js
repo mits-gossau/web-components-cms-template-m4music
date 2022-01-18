@@ -149,6 +149,13 @@ export default class Button extends Shadow() {
     :host > .icon > svg {
       width:var(--icon-width, 100%);
     }
+    :host button:disabled {
+      opacity: 0.5;
+    }
+    :host button:disabled:hover {
+      background-color: var(--background-color-${this.type}, transparent);
+      cursor: default;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host button {
         color: var(--color-${this.type}-mobile, white);
@@ -178,6 +185,7 @@ export default class Button extends Shadow() {
   renderHTML () {
     // @ts-ignore
     if (this.icon) this.constructor.addIconToButton(this.button, this.type)
+    this.disable()
     this.html = this.button
   }
 
@@ -230,6 +238,13 @@ export default class Button extends Shadow() {
    */
   get button () {
     return this._button || (this._button = document.createElement('button'))
+  }
+
+  /**
+   * Disable button
+   */
+  disable () {
+    this.hasAttribute('disable') ? this.button.disabled = true : false
   }
 
   /**
