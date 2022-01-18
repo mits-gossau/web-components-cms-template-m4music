@@ -7,6 +7,9 @@ export default class Navigation extends BaseNavigation {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */ `
+      :host {
+        top:0;
+      }
       :host > nav {
         position:absolute;
         top:0;

@@ -27,11 +27,43 @@ export default class Header extends BaseHeader {
   }
 
   connectedCallback () {
+    if (this.shouldComponentRenderCSS()) this.renderCSS()
     super.connectedCallback()
     self.addEventListener('keydown', this.keyListener)
   }
 
   disconnectedCallback () {
     this.removeEventListener('keydown', this.keyListener)
+  }
+
+  /**
+   * evaluates if a render is necessary
+   *
+   * @return {boolean}
+   */
+  shouldComponentRenderCSS () {
+    return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
+  }
+
+  /**
+   * renders the css
+   *
+   * @return {void}
+   */
+  renderCSS () {
+    super.renderCSS()
+    this.css = /* css */ `
+    :host > header > a-logo {
+      z-index:100;
+    }
+    :host > header > m4music-m-navigation {
+      top:0;
+    }
+    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host > header > m4music-m-navigation {
+        top:100px;
+      }
+    }
+  `
   }
 }
