@@ -98,6 +98,7 @@ export default class EventItem extends Shadow() {
       align-items:${this.getAttribute('type') === 'speaker' ? 'center' : 'flex-start'};
       width:95%;
       padding-top:16px;
+      word-break:break-all;
     }
     :host .date{
       color:var(--date-font-color, #616161);
