@@ -59,11 +59,7 @@ export default class Header extends BaseHeader {
     :host > header > m4music-m-navigation {
       top:0;
     }
-    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host > header > m4music-m-navigation {
-        top:100px;
-      }
-    }
+    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {}
   `
   }
 }
