@@ -66,12 +66,22 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
+    :host .embed-container .embed-youtube {
+      text-align: left !important;
+    }
     :host .embed-container .embed-youtube iframe {
-      width: 90vw;
-      height: 45vw;
+      width: 32vw;
+      height: 18vw;
     }
     :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
+      width: 50%;
+    }
+    :host .embed-container .css-answer-group.pds-answer-group > div {
       width: 100%;
+    }
+    :host .embed-container .css-answer.pds-answer > span {
+      display: flex;
+      flex-wrap: wrap;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
@@ -91,6 +101,16 @@ export default class Body extends BaseBody {
       }
       :host ul {
         margin-top: 0;
+      }
+      :host .embed-container .embed-youtube iframe {
+        width: 80vw;
+        height: 45vw;
+      }
+      :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
+        width: 100%;
+      }
+      :host .embed-container .css-answer.pds-answer > span {
+        display: inline;
       }
     }
     `
