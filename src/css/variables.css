@@ -295,7 +295,7 @@
   --header-navigation-margin-bottom-mobile:1.75rem;
   --header-navigation-margin-bottom:1rem;
   --header-navigation-min-width:auto;
-  --header-navigation-padding-no-scroll:100px 0 0 0;
+  --header-navigation-padding-no-scroll:min(50px, 15vw) 0 0 0;
   --header-navigation-padding-top:0;
   --header-navigation-padding:0;
   --header-navigation-text-align:center;
