@@ -66,7 +66,7 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .embed-container iframe {
+    :host .embed-container .embed-youtube iframe {
       width: 90vw;
       height: 45vw;
     }

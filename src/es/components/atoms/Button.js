@@ -149,9 +149,6 @@ export default class Button extends Shadow() {
     :host > .icon > svg {
       width:var(--icon-width, 100%);
     }
-    :host button:disabled {
-      opacity: 0.5;
-    }
     :host button:disabled:hover {
       background-color: var(--background-color-${this.type}, transparent);
       cursor: default;
@@ -403,6 +400,9 @@ export default class Button extends Shadow() {
       display:inline-block;
       height:${iconSize};
       width:${iconSize};
+    }
+    :host(:not(.active)[data-filter-value='show_all']) > button:hover::after {
+      content: url('/assets/img/filter-reset-hover.svg');
     }
     :host(:not(.active)[data-filter-value='show_all']) > button::after {
       content: url('/assets/img/filter-reset.svg');

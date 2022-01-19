@@ -190,6 +190,12 @@ export default class Wrapper extends BaseBody {
     :host .richtext-with-ticket {
       flex-basis: calc(70% - 0.5rem);
     }
+    :host(.rich-text-wrapper) section {
+      display: var(--rich-text-section-display, block);
+    }
+    :host(.rich-text-wrapper) section a {
+      line-height: var(--rich-text-a-line-height, 125%);
+    }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {

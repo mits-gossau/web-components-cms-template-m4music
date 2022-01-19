@@ -41,16 +41,6 @@ export default class EventDetail extends Shadow() {
       position:relative;
       width:100%;
     }
-    :host a-picture {
-      display:inline;
-    }
-    :host a-picture:before {
-      background:rgba(255,255,255,0.5);
-      content:"";
-      height:100%;
-      position:absolute;
-      width:100%;
-    }
     :host .text-wrapper {
       bottom:var(--text-wrapper-position-bottom, 1rem);
       margin:1rem auto;
@@ -71,6 +61,13 @@ export default class EventDetail extends Shadow() {
       font-size:var(--date-font-size, 0.75rem);
       line-height:var(--date-line-height, 125%);
       margin:var(--date-margin, 0 0 0.5rem 0);
+    }
+    :host > *:first-child:before {
+      background:rgba(255,255,255,0.5);
+      content:"";
+      height:100%;
+      position:absolute;
+      width:100%;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host h1{

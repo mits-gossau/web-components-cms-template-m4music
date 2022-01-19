@@ -39,7 +39,7 @@ export default class Tickets extends Shadow() {
       display:flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 1rem;
       justify-content: space-between;
       padding-bottom:1rem;
     }
@@ -99,7 +99,7 @@ export default class Tickets extends Shadow() {
       margin:0;
     }
     :host .soldout {
-      filter: contrast(30%);
+      filter: opacity(0.3);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host  {
