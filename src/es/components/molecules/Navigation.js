@@ -18,7 +18,7 @@ export default class Navigation extends BaseNavigation {
         right:0;
         width:100%;
         height:auto;
-        margin:10% auto;
+        margin:max(2.5rem, 5vw) auto;
       }
       :host .icons {
         display:flex;
