@@ -295,7 +295,7 @@ export default class Wrapper extends BaseBody {
    */
   getType (type) {
     const flexWrap = {
-      default: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'row', wrapMobile: 'wrap', justifyContentDesktop: 'space-between', justifyContentMobile: 'space-between' },
+      default: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'column', wrapMobile: 'wrap', justifyContentDesktop: 'space-between', justifyContentMobile: 'space-between' },
       speaker: { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'column', wrapMobile: 'nowrap', justifyContentDesktop: 'flex-start', justifyContentMobile: 'space-between' },
       'event-wrapper': { directionDesktop: 'row', wrapDesktop: 'wrap', directionMobile: 'column', wrapMobile: 'nowrap', justifyContentDesktop: 'flex-start', justifyContentMobile: 'space-between' }
     }
