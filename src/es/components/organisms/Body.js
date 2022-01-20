@@ -110,7 +110,7 @@ export default class Body extends BaseBody {
         height: 45vw;
       }
       :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
-        width: 100%;
+        width: 80vw;
       }
       :host .embed-container .css-answer.pds-answer > span {
         display: inline;
