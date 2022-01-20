@@ -99,6 +99,9 @@ export default class Body extends BaseBody {
       :host .detail-image{
         width:100%;
       }
+      :host > main p {
+        margin: var(--p-margin-mobile, var(--p-margin, var(--content-spacing-mobile, var(--content-spacing, unset))));
+      }
       :host ul {
         margin-top: 0;
       }
