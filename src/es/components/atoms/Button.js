@@ -241,7 +241,7 @@ export default class Button extends Shadow() {
    * Disable button
    */
   disable () {
-    this.hasAttribute('disable') ? this.button.disabled = true : false
+    this.button.disabled = !!this.hasAttribute('disable')
   }
 
   /**
