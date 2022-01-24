@@ -30,9 +30,14 @@ export default class EventItem extends Shadow() {
     }
 
     this.clickListener = event => {
-      if (event.which === 1 && between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')) {
-        event.stopPropagation()
-        self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
+      if (between(event.pageX, this.mouseX, 10) && between(event.pageY, this.mouseY, 10) && this.getAttribute('href')){
+        if (event.which === 1) { // Left Button
+          event.stopPropagation()
+          self.open(this.getAttribute('href'), this.getAttribute('target') || '_self')
+        }else if (event.which === 2) { // Middle Button
+          event.stopPropagation()
+          self.open(this.getAttribute('href'), '_blank')
+        }
       }
     }
 
