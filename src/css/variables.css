@@ -239,10 +239,12 @@
   --header-detail-button-color-arrowLeft-mobile:var(--color-black);
   --header-detail-button-color-arrowLeft:var(--color);
   --header-detail-button-font-size-mobile:1.3rem;
+  --header-detail-button-icon-margin-right:8px;
   --header-detail-button-icon-padding-mobile:0 1rem 0 0;
-  --header-detail-button-icon-padding:0 10px 0 0;
+  --header-detail-button-icon-padding:0;
   --header-detail-button-icon-width-mobile:1.5rem;
   --header-detail-button-icon-width:1.2rem;
+  --header-detail-button-margin:0 max(2vw, 0.35rem) 0 0;
   --header-detail-flex-direction-mobile:row;
   --header-detail-height-mobile:min(6rem, 170px);
   --header-detail-position:static;
