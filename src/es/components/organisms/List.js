@@ -130,7 +130,7 @@ export default class Wrapper extends BaseBody {
         --event-item-name-font-color: var(--color-black);
         --event-item-description-font-color: var(--color-black);  
         width: calc(100% - 2rem) !important;
-        padding: 1rem;
+        padding: 5%;
       }`
       : ''
     }
