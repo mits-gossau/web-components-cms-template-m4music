@@ -14,6 +14,7 @@
   --a-text-underline-offset:0.3rem; 
   --background-color:#232323;
   --balloon-font-size:var(--h6-font-size);
+  --body-content-custom-width:var(--content-width-not-web-component);
   --body-detail-background-color-mobile:var(--color);
   --body-detail-main-background-color-mobile:var(--color);
   --body-detail-main-background-color:var(--color-);
