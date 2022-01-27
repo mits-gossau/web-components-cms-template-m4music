@@ -37,7 +37,7 @@ export default class Wrapper extends BaseBody {
       const eventWrapper = this.root.querySelector("[type='event-wrapper']")
 
       // if show_all was clicked, or only show_all is set (happens when all other filters are deactivated) => reset activeFilters
-      if (filterValue === 'show_all' || (activeFilters.length === 1 && activeFilters[0] === 'show_all')) activeFilters = [] 
+      if (filterValue === 'show_all' || (activeFilters.length === 1 && activeFilters[0] === 'show_all')) activeFilters = []
       if (filterButton.classList.contains('active')) {
         activeFilters.push(filterValue)
       } else {
@@ -60,10 +60,7 @@ export default class Wrapper extends BaseBody {
               }
             })
           })
-          if ([...events].filter(e => !e.classList.contains('hidden')).length == 0)
-            this.noResultsFound.classList.remove("hidden")
-          else
-            this.noResultsFound.classList.add("hidden")
+          if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { this.noResultsFound.classList.remove('hidden') } else { this.noResultsFound.classList.add('hidden') }
         }
       }
     }
@@ -140,7 +137,7 @@ export default class Wrapper extends BaseBody {
     :host h4.noResultsFound {
       text-transform: none;
       margin: 50px 0;
-      color: ${this.hasAttribute('background-color') ? "var(--color-black)" : "var(--color)"};
+      color: ${this.hasAttribute('background-color') ? 'var(--color-black)' : 'var(--color)'};
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -164,12 +161,12 @@ export default class Wrapper extends BaseBody {
     this.html = section
   }
 
-   /**
+  /**
    * Get NoResultsFound Text-Element.
    *
    * @return {HTMLHeadingElement}
    */
-    get noResultsFound () {
-      return this.root.querySelector(".noResultsFound")
-    }
+  get noResultsFound () {
+    return this.root.querySelector('.noResultsFound')
+  }
 }
