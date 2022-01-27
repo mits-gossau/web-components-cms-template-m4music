@@ -127,7 +127,7 @@ export default class Wrapper extends BaseBody {
         --event-item-name-font-color: var(--color-black);
         --event-item-description-font-color: var(--color-black);  
         width: calc(100% - 2rem) !important;
-        padding: 5%;
+        padding: 1rem;
       }`
       : ''
     }
@@ -144,6 +144,13 @@ export default class Wrapper extends BaseBody {
       :host h4.noResultsFound {
         margin: 25px 0;
       }
+      ${this.hasAttribute('background-color')
+    ? /* css */ ` 
+    :host > section {
+        padding: 5%;
+      }`
+      : ''
+    }
     }
   `
   }
