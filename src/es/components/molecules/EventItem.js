@@ -79,13 +79,13 @@ export default class EventItem extends Shadow() {
       align-items:flex-start;
       justify-content:flex-start;
       align-content:flex-start;
-      margin-bottom:0.9rem;
+      margin-bottom:var(--margin-bottom, 0.9rem);
       background-color:transparent;
       ${this.hasAttribute('href') ? 'cursor: pointer;' : ''}
       flex-wrap:wrap;
       flex: 1;
       flex-basis: 25%;
-      max-width:25%;
+      max-width:var(--max-width, 25%);
     }
     :host p  {
       padding:0;
