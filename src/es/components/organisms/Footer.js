@@ -118,6 +118,9 @@ export default class Footer extends BaseFooter {
       :host .footer__nav > div {
         padding:var(--div-padding, 0);
       }
+      :host .footer__nav > social-media-wrapper {
+        padding:var(--div-padding, 0);
+      }
       :host .footer__nav > div > h6 {
         font-size:var(--title-h6-font-size, inherit);
         padding:var(--title-h6-padding, 0);
@@ -144,7 +147,6 @@ export default class Footer extends BaseFooter {
       :host h6{
         text-transform:var(--h6-text-transform);
       }
-
       :host .hide-desktop{
         display:none;
       }

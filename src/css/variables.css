@@ -41,6 +41,7 @@
   --button-color-hover-arrow:var(--button-color-hover-secondary);
   --button-color-hover-arrowDown:var(--button-color-hover-secondary);
   --button-color-hover-pass-secondary:var(--button-color-hover-secondary);
+  --button-color-hover-primary:var(--color);
   --button-color-hover-secondary:var(--color-black);
   --button-color-pass-secondary:var(--button-color-secondary);
   --button-color-primary:var(--color);
@@ -112,7 +113,7 @@
   --footer-color:var(--color);
   --footer-content-width-mobile:var(--content-width-mobile);
   --footer-content-width:var(--content-width);
-  --footer-div-padding-mobile:0 0 1rem 0;
+  --footer-div-padding-mobile:0;
   --footer-div-padding:0 0 1rem 2.3rem;
   --footer-engagement-logo-align-items:flex-start;
   --footer-engagement-logo-flex-flow:column-reverse;
