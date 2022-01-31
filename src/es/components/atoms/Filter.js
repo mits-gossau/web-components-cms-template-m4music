@@ -160,7 +160,7 @@ export default class Filter extends Shadow() {
         min-width: 100%;
       }
       :host .filter, :host .weekdays, :host .locations, :host .eventType, :host .languages {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         padding: 0;
         width: 100%;
       }

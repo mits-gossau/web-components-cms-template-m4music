@@ -88,6 +88,7 @@ export default class EventTeaser extends Shadow() {
       font-size: 4.7vw;
       line-height: 100%;
       word-break: break-word;
+      transition: var(--transition, 0.15s ease-out all);
     }
     :host .wrapper:hover .text {
       color: var(--color, white);
