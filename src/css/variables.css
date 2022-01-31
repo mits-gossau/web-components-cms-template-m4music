@@ -41,6 +41,7 @@
   --button-color-hover-arrow:var(--button-color-hover-secondary);
   --button-color-hover-arrowDown:var(--button-color-hover-secondary);
   --button-color-hover-pass-secondary:var(--button-color-hover-secondary);
+  --button-color-hover-primary:var(--color);
   --button-color-hover-secondary:var(--color-black);
   --button-color-pass-secondary:var(--button-color-secondary);
   --button-color-primary:var(--color);
