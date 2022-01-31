@@ -42,6 +42,7 @@ export default class Tickets extends Shadow() {
       gap: 1rem;
       justify-content: space-between;
       padding-bottom:1rem;
+      color:var(--color-black);
     }
     :host > div {
       background-color: white;
@@ -59,7 +60,7 @@ export default class Tickets extends Shadow() {
       justify-content: flex-start;
     }
     :host .type{
-      color:black;
+      color:var(--color-black);
       font-size:2rem;
       line-height:100%;
       margin:0;
@@ -67,7 +68,7 @@ export default class Tickets extends Shadow() {
       text-transform: uppercase;
     }
     :host .price {
-      color:#FB5F3F;
+      color:var(--color-orange);
       font-size:2rem;
       line-height:100%;
       margin:0;
@@ -81,7 +82,7 @@ export default class Tickets extends Shadow() {
     :host ul > li {
       background-size:1rem;
       background: url('/assets/img/check.svg') no-repeat 0 0.3rem transparent; 
-      color:black;
+      color:var(--color-black);
       font-size:1rem;
       line-height:125%;
       list-style-type: none;
