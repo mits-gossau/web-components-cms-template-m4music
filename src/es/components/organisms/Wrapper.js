@@ -85,6 +85,12 @@ export default class Wrapper extends BaseBody {
       : 'var(--wrapper-text-color, var(--color, red));'
     }
     }
+    :host(.personcontainer-title) > section {
+      flex-direction: column;
+    }
+    :host(.personcontainer-title) p {
+      margin: var(--p-margin);
+    }
     :host > section .lowercase {
       text-transform: none;
     }
