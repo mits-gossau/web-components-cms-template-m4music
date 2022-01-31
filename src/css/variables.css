@@ -113,7 +113,7 @@
   --footer-color:var(--color);
   --footer-content-width-mobile:var(--content-width-mobile);
   --footer-content-width:var(--content-width);
-  --footer-div-padding-mobile:0 0 1rem 0;
+  --footer-div-padding-mobile:0;
   --footer-div-padding:0 0 1rem 2.3rem;
   --footer-engagement-logo-align-items:flex-start;
   --footer-engagement-logo-flex-flow:column-reverse;
