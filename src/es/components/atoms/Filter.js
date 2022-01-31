@@ -51,10 +51,10 @@ export default class Filter extends Shadow() {
           this.activateShowAllFilter(showAllFilter)
         } else return // do nothing if user tries to unselect show_all
       } else {
-        if (filter.classList.contains('active')) {
+        if (filter.classList.contains('active')) { // deactivate filter & and if no active filters left => activate show_all
           filter.classList.remove('active')
           if (this.root.querySelectorAll("[type='filter'].active").length === 0 && showAllFilter) this.activateShowAllFilter(showAllFilter)
-        } else {
+        } else { // activate filter & deactivate show_all
           filter.classList.add('active')
           if (showAllFilter) this.deactivateShowAllFilter(showAllFilter)
         }
@@ -102,29 +102,72 @@ export default class Filter extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host {
-      ${this.hasAttribute('background-color') ? `--filter-background-color: ${this.getAttribute('background-color')};` : ''}
+      ${this.hasAttribute('background-color')
+      ? `
+        --filter-background-color: ${this.getAttribute('background-color')};
+        color: var(--color-black);
+        width: calc(100% - 2rem) !important;
+        padding: 0 0 1rem 0;`
+      : `
+        padding:0.9rem 0;
+        width: 100% !important;
+        `}
       align-content:center;
       align-items:center;
       background-color:var(--list-filter-background-color, var(--filter-background-color, transparent));
       display:flex;
       flex-direction:row;
-      flex-wrap:wrap;
-      justify-content:flex-start;
-      ${this.hasAttribute('background-color')
-      ? `
-        width: calc(100% - 2rem) !important;
-        padding: 0.9rem 1rem;`
-      : `
-      padding:0.9rem 0;
-      width: 100% !important;
-      `}
+      flex-wrap: wrap;
     }
-    :host > m4music-a-button {
+    :host > div {
+      padding-right: 1rem;
+      align-self: flex-start;
+    }
+    :host .filter {
+      width: 130px;
+    }
+    :host .filter > *:not(h5) {
+      display: inline-block;
+    }
+    :host .weekdays {
+      width: 210px;
+    }
+    :host .locations {
+      width: 400px;
+    }
+    :host .eventType {
+      width: 220px;
+    }
+    :host .languages {
+      width: 220px;
+    }
+    :host h5 {
+      margin: 10px 0;
+    }
+    :host .filterButtonContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    :host [type='filter'] {
       font-size:unset;
       padding:0 0.2rem 0.2rem 0;
     }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host > m4music-a-button {
+      :host {
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 100%;
+      }
+      :host .filter, :host .weekdays, :host .locations, :host .eventType, :host .languages {
+        margin-bottom: 0.5rem;
+        padding: 0;
+        width: 100%;
+      }
+      :host h5 {
+        margin: 4px 0;
+      }
+      :host [type='filter'] {
         padding:0 0.2rem 0.2rem 0;
       }
     }

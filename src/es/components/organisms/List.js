@@ -36,6 +36,7 @@ export default class Wrapper extends BaseBody {
       const filterValue = filterButton.getAttribute('data-filter-value')
       const eventWrapper = this.root.querySelector("[type='event-wrapper']")
 
+      // if show_all was clicked, or only show_all is set (happens when all other filters are deactivated) => reset activeFilters
       if (filterValue === 'show_all' || (activeFilters.length === 1 && activeFilters[0] === 'show_all')) activeFilters = []
       if (filterButton.classList.contains('active')) {
         activeFilters.push(filterValue)
@@ -59,6 +60,7 @@ export default class Wrapper extends BaseBody {
               }
             })
           })
+          if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { this.noResultsFound.classList.remove('hidden') } else { this.noResultsFound.classList.add('hidden') }
         }
       }
     }
@@ -103,6 +105,9 @@ export default class Wrapper extends BaseBody {
     this.css = ''
     this._css.textContent = bodyCss
     this.css = /* css */ `
+    :host {
+      display: block;
+    }
     :host > section {
       background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
       --event-item-name-font-color: var(--color);
@@ -111,6 +116,7 @@ export default class Wrapper extends BaseBody {
       display: flex;
       flex-direction: column;
       margin: 0;
+      width: 100%;
     }
     ${this.hasAttribute('background-color')
     ? /* css */ ` 
@@ -125,9 +131,26 @@ export default class Wrapper extends BaseBody {
       }`
       : ''
     }
+    :host .hidden {
+      display: none;
+    }
+    :host h4.noResultsFound {
+      text-transform: none;
+      margin: 50px 0;
+      color: ${this.hasAttribute('background-color') ? 'var(--color-black)' : 'var(--color)'};
+    }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host  {}
+      :host h4.noResultsFound {
+        margin: 25px 0;
+      }
+      ${this.hasAttribute('background-color')
+    ? /* css */ ` 
+    :host > section {
+        padding: 5%;
+      }`
+      : ''
+    }
     }
   `
   }
@@ -143,5 +166,14 @@ export default class Wrapper extends BaseBody {
       if (node.tagName !== 'STYLE') section.appendChild(node)
     })
     this.html = section
+  }
+
+  /**
+   * Get NoResultsFound Text-Element.
+   *
+   * @return {HTMLHeadingElement}
+   */
+  get noResultsFound () {
+    return this.root.querySelector('.noResultsFound')
   }
 }

@@ -83,6 +83,9 @@ export default class Body extends BaseBody {
       display: flex;
       flex-wrap: wrap;
     }
+    :host .custom-width {
+      width:var(--content-custom-width, var(--content-width-not-web-component), 80%);
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
@@ -114,6 +117,9 @@ export default class Body extends BaseBody {
       }
       :host .embed-container .css-answer.pds-answer > span {
         display: inline;
+      }
+      :host .custom-width {
+        width:var(--content-custom-width-mobile, var(--content-width-not-web-component-mobile), 100%);
       }
     }
     `
