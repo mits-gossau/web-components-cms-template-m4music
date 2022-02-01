@@ -138,6 +138,7 @@
   --footer-engagement-padding-mobile:0 0 1rem 0;
   --footer-engagement-text-max-width:max(17rem, 4vw);
   --footer-flex-direction:column;
+  --footer-icon-path-fill:var(--color-orange);
   --footer-li-padding:0 1em 0 0;
   --footer-meta-font-size-mobile:min(18px, 5vw);
   --footer-meta-font-size:0.65rem;
