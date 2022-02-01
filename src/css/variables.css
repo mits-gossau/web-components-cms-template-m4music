@@ -15,7 +15,6 @@
   --background-color:#232323;
   --balloon-font-size:var(--h6-font-size);
   --body-content-custom-width-mobile: var(--content-width-mobile);
-  --body-content-custom-width:var(--content-width-not-web-component);
   --body-detail-background-color-mobile:var(--color);
   --body-detail-main-background-color-mobile:var(--color);
   --body-detail-main-background-color:var(--color-);
@@ -83,7 +82,6 @@
   --content-width-not-web-component:88%;
   --content-width:88%;
   --detail-wrapper-p-margin:0 0;
-  --event-carousel-max-width: 100%;
   --event-carousel-width:100%;
   --event-detail-button-background-color-hover-primary:var(--button-background-color-hover-primary);
   --event-detail-button-background-color-primary: var(--button-background-color-primary);
@@ -103,7 +101,6 @@
   --event-item-speaker-picture-border-radius-mobile:50%;
   --event-item-speaker-picture-border-radius:50%;
   --event-item-speaker-picture-width-mobile:4.5rem;
-  --eventlist-title-h-title-margin:0.5rem 0;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
@@ -138,7 +135,6 @@
   --footer-engagement-padding-mobile:0 0 1rem 0;
   --footer-engagement-text-max-width:max(17rem, 4vw);
   --footer-flex-direction:column;
-  --footer-icon-path-fill:var(--color-orange);
   --footer-li-padding:0 1em 0 0;
   --footer-meta-font-size-mobile:min(18px, 5vw);
   --footer-meta-font-size:0.65rem;
@@ -163,6 +159,7 @@
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
   --h-title-margin:0 0 0.5rem 0;
+  --eventlist-title-h-title-margin:0.5rem 0;
   --h-title-padding:0;
   --h-title-text-transform:uppercase;
   --h1-color:var(--color);
@@ -554,7 +551,6 @@
   --tickets-button-background-color-primary:var(--color-orange);
   --tickets-button-border-primary:var(--button-border-radius);
   --tickets-button-border-radius:var(--button-border-radius);
-  --tickets-button-color-hover-primary:var(--color);
   --tickets-button-font-size:0.75rem;
   --tickets-button-margin-mobile:0;
   --tickets-button-margin:0;
@@ -579,4 +575,6 @@
   --wrapper-li-padding:0 0 0.5rem 2rem;
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
+  --event-carousel-max-width: 100%;
+  --tickets-button-color-hover-primary:var(--color);
 }
