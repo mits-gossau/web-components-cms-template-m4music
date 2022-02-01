@@ -1,9 +1,6 @@
 // @ts-check
 import { Details as BaseDetails } from '../web-components-cms-template/src/es/components/molecules/Details.js'
 import { Mutation } from '../web-components-cms-template/src/es/components/prototypes/Mutation.js'
-import Body from '../organisms/Body.js'
-
-/* global self */
 
 /**
  * Details (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) aka. Bootstrap accordion
@@ -18,12 +15,7 @@ import Body from '../organisms/Body.js'
  * @attribute {
  * }
  */
-export default class Details extends BaseDetails(Mutation(Body)) {
-  constructor (...args) {
-
-    super(...args)
-  }
-
+export default class Details extends BaseDetails(Mutation()) {
   connectedCallback () {
     super.connectedCallback()
     if (super.shouldComponentRenderCSS()) this.renderCSS()
@@ -86,7 +78,7 @@ export default class Details extends BaseDetails(Mutation(Body)) {
     `
   }
 
-  renderHTML(){
+  renderHTML () {
     super.hasRendered = true
     const iconSvg = document.createElement('div')
     iconSvg.innerHTML = `
