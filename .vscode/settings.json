@@ -4,6 +4,7 @@
     "Formular",
     "highlightbox",
     "markdownit",
+    "noopener",
     "Programm"
   ],
   "editor.tabSize": 2,
