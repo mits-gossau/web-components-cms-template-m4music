@@ -37,11 +37,12 @@ export default class Speakers extends Shadow() {
     this.css = /* css */ `
     :host  {
       background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
-      align-items:${this.getAlignment(this.getAttribute('align'))};
+      align-items: center;
       display:flex;
       flex-direction:column;
       justify-content:flex-start;
       padding:var(--padding, 0);
+      width: 30%;
     }
     :host .name {
       color:var(--name-color, black);
@@ -50,22 +51,28 @@ export default class Speakers extends Shadow() {
       margin:0;
       text-transform:uppercase;
       word-wrap:anywhere;
-    }
-    :host .name.right {
-      text-align:right;
-    }
-    :host .name.left {
-      text-align:left;
+      text-align: center;
     }
     :host .function {
+      text-align: center;
       margin:0;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host{
+        align-items:${this.getAlignment(this.getAttribute('align'))};
+        width: 100%;
+      }
       :host .name {
         font-size:var(--name-font-size-mobile, initial);
       }
       :host .function {
         font-size:var(--function-font-size-mobile, 20px);
+      }
+      :host .name.right {
+        text-align:right;
+      }
+      :host .name.left {
+        text-align:left;
       }
     }
   `

@@ -58,6 +58,9 @@ export default class Quote extends Shadow() {
       margin:0.4rem 0 0 0;
       padding:0;
     }
+    :host .quote-wrapper{
+      width: 50%;
+    }
     :host .quote {
       color:var(--text-color, black);
       font-size:var(--text-font-size, initial);
@@ -69,6 +72,9 @@ export default class Quote extends Shadow() {
       line-height:var(--person-line-height, 100%);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host .quote-wrapper{
+        width: 100%;
+      }
       :host .quote {
         font-size:var(--text-font-size-mobile, initial);
       }
