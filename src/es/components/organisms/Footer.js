@@ -84,6 +84,7 @@ export default class Footer extends BaseFooter {
         flex-direction:var(--flex-direction, row);
         justify-content:var(--justify-content, normal);
         padding:var(--padding, 0);
+        max-width:var(--content-max-width, 100vw);
       }
       :host > footer ul {
         list-style-type:var(--ul-list-style-type, none);

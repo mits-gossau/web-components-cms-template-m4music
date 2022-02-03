@@ -36,6 +36,7 @@ export default class Body extends BaseBody {
     :host > main > * {
       margin:var(--content-spacing, 0) auto;
       width:var(--content-width, 80%);
+      max-width:var(--content-max-width, 100vw);
     }
     /* :host ul.check */
     :host ul {
