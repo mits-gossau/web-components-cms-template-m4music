@@ -76,9 +76,10 @@
   --carousel-pagination-background-color-selected: var( --button-background-color-primary);
   --carousel-pagination-background-color: var( --button-background-color-secondary);
   --carousel-pagination-border-radius: 0.5rem;
-  --carousel-pagination-bottom: 0;
   --carousel-pagination-height: 0.25rem;
+  --carousel-pagination-padding: 0.5rem 0;
   --carousel-pagination-width: 0.5rem;
+  --carousel-transition-duration: 1s;
   --color-black:#000000;
   --color-grey:#555555;
   --color-light-grey:#686868;
@@ -463,6 +464,38 @@
   --quote-text-font-size:2rem;
   --quote-text-line-height:100%;
   --register-background-color:#E63C1A;
+
+  --register-input-align-self:flex-start;
+  --register-input-background:var(--background-color);
+  --register-input-border-mobile:var(--register-input-border);
+  --register-input-border-radius:4px;
+  --register-input-border:1px;
+  --register-input-box-shadow-mobile:none;
+  --register-input-box-shadow:none;
+  --register-input-checkbox-margin-mobile:0 0.2rem 0 0;
+  --register-input-checkbox-margin:0 0.2rem 0 0;
+  --register-input-color:var(--color);
+  --register-input-font-size-mobile:var(--font-size-mobile);
+  --register-input-font-size:var(--h6-font-size);
+  --register-input-height-mobile:min(1.9rem, 8vw);
+  --register-input-height:1.5rem;
+  --register-input-margin:0;
+  --register-input-outline:1px solid var(--color);
+  --register-input-padding:0.25rem 0.375rem 0.25rem 0.375rem;
+  --register-input-width-mobile:100%;
+  --register-input-width:max(30%, 512px);
+  --register-input-text-align:left;
+
+  --register-label-align-self:left;
+  --register-label-color:var(--color);
+  --register-label-font-size-mobile:var(--font-size-mobile);
+  --register-label-font-size:var(--h6-font-size);
+  --register-label-padding-mobile:0.65rem 0 0.2rem 0;
+  --register-label-padding:0.8rem 0 0.2rem 0;
+  --register-label-text-align:left;
+  --register-label-text-transform:none;
+
+
   --register-field-a-text-decoration:underline;
   --register-field-button-background-color-hover:var(--button-background-color-primary);
   --register-field-button-background-color:var(--button-background-color-primary);

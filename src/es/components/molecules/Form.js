@@ -280,8 +280,48 @@ export default class Form extends BaseForm {
       }
       :host .checkboxlist{
         background-color: red;
-        
       }
+
+      :host textarea {
+        background: var(--input-background, var(--background-color, none));
+        padding: var(--input-padding, var(--padding, 0 15px));
+        margin: var(--input-margin, var(--margin, 0));
+        border: var(--input-border, var(--border, none));
+        border-radius: var(--input-border-radius, var(--border-radius, 0px));
+        font-family: var(--input-font-family, var(--font-family));
+        font-weight: var(--input-font-weight, var(--font-weight, normal));
+        font-size: var(--input-font-size, var(--p-font-size, var(--font-size)));
+        text-align: var(--input-text-align, var(--text-align, center));
+        color: var(--input-color, var(--color, red));
+        width: var(--input-width, var(--width, 40%));
+        align-self: var(--input-align-self, var(--align-self, center));
+        height: var(--input-height, var(--height, 100%));
+      }
+      :host textarea:focus {
+        outline: var(--input-outline, none);
+      }
+      :host .longanswer > label {
+        background: var(--label-background, var(--background, none));
+        padding: var(--label-padding, var(--padding, 0 15px));
+        margin: var(--label-margin, var(--margin, 0));
+        border: var(--label-border, var(--border, none));
+        border-radius: var(--label-border-radius, var(--border-radius, 0px));
+        font-family: var(--label-font-family-bold, var(--font-family-bold));
+        font-weight: var(--label-font-weight, var(--font-weight, normal));
+        font-size: var(--label-font-size, var(--p-font-size, var(--font-size)));
+        text-align: var(--label-text-align, var(--text-align, center));
+        color: var(--label-color, var(--color, red));
+        width: var(--label-width, var(--width, 40%));
+        align-self: var(--label-align-self, var(--align-self, center));
+        height: var(--label-height, var(--height, 100%));
+        text-transform: var(--label-text-transform, var(--text-transform, uppercase));
+
+        padding: var(--label-padding, 0);
+        font-weight: var(--label-font-weight, normal);
+      
+      }
+
+
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -323,6 +363,32 @@ export default class Form extends BaseForm {
         }
         :host #afterSubmit p {
           font-size: var(--font-size-mobile, 10px);
+        }
+
+        :host textarea {
+          background: var(--input-background-mobile, var(--background-mobile, var(--input-background, var(--background, none))));
+          font-family: var(--input-font-family-mobile, var(--font-family-mobile, var(--input-font-family, var(--font-family))));
+          font-weight: var(--input-font-weight-mobile, var(--font-weight-mobile, var(--input-font-weight, var(--font-weight, normal))));
+          font-size: var(--input-font-size-mobile, var(--input-font-size, var(--p-font-size, var(--font-size))));
+          text-align: var(--input-text-align-mobile, var(--text-align-mobile, var(--input-text-align, var(--text-align, center))));
+          color: var(--input-color-mobile, var(--color-mobile, var(--input-color, var(--color, red))));
+          border: var(--input-border-mobile, var(--border-mobile, var(--input-border, var(--border, none))));
+          border-radius: var(--input-border-radius-mobile, var(--border-radius-mobile, var(--input-border-radius, var(--border-radius, 0px))));
+          height: var(--input-height-mobile, var(--height-mobile, var(--input-height, var(--height, 100%))));
+          width: var(--input-width-mobile, var(--width-mobile, var(--input-width, var(--width, 100%))));
+        }
+
+        :host > label {
+          background: var(--label-background-mobile, var(--background-mobile, var(--label-background, var(--background, none))));
+          font-family: var(--label-font-family-bold-mobile, var(--font-family-bold-mobile, var(--label-font-family-bold, var(--font-family-bold))));
+          font-weight: var(--label-font-weight-mobile, var(--font-weight-mobile, var(--label-font-weight, var(--font-weight, normal))));
+          font-size: var(--label-font-size-mobile, var(--label-font-size, var(--p-font-size, var(--font-size))));
+          text-align: var(--label-text-align-mobile, var(--text-align-mobile, var(--label-text-align, var(--text-align, center))));
+          color: var(--label-color-mobile, var(--color-mobile, var(--label-color, var(--color, red))));
+          border: var(--label-border-mobile, var(--border-mobile, var(--label-border, var(--border, none))));
+          border-radius: var(--label-border-radius-mobile, var(--border-radius-mobile, var(--label-border-radius, var(--border-radius, 0px))));
+          height: var(--label-height-mobile, var(--height-mobile, var(--label-height, var(--height, 100%))));
+          width: var(--label-width-mobile, var(--width-mobile, var(--label-width, var(--width, 100%))));
         }
       }
     `
