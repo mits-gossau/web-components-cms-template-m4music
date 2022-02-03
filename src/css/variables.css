@@ -71,14 +71,15 @@
   --button-margin:0 0.5rem 0.5rem 0;
   --button-padding:0.5rem 0.75rem;
   --button-width:auto;
+  --carousel-pagination-background-color-hover: var(--button-background-color-hover-secondary);
+  --carousel-pagination-background-color-selected-hover: var(--button-background-color-hover-primary);
   --carousel-pagination-background-color-selected: var( --button-background-color-primary);
   --carousel-pagination-background-color: var( --button-background-color-secondary);
-  --carousel-pagination-background-color-selected-hover: var(--button-background-color-hover-primary);
-  --carousel-pagination-background-color-hover: var(--button-background-color-hover-secondary);
   --carousel-pagination-border-radius: 0.5rem;
-  --carousel-pagination-bottom: 0;
   --carousel-pagination-height: 0.25rem;
+  --carousel-pagination-padding: 0.5rem 0;
   --carousel-pagination-width: 0.5rem;
+  --carousel-transition-duration: 1s;
   --color-black:#000000;
   --color-grey:#555555;
   --color-light-grey:#686868;
