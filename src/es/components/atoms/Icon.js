@@ -40,7 +40,7 @@ export default class Icon extends Shadow() {
       padding:0;
     }
     :host svg {
-      height:min(5vw, 27px);
+      height:min(5vw, 28px);
       width:min(5vw, 27px);
       pointer-events:bounding-box;
     }
@@ -48,12 +48,16 @@ export default class Icon extends Shadow() {
       fill: var(--icon-path-fill, black);
       transition:0.3s;
     }
-    :host a > svg path:hover {
+    :host a:hover > svg path {
        fill: var(--icon-path-fill-hover, white);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host{
         padding:0.5rem 0.85rem 0 0;
+      }
+      :host svg {
+        height:1.5rem;
+        width:1.5rem;
       }
       `
   }

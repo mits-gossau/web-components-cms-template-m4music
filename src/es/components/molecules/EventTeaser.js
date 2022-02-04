@@ -85,7 +85,7 @@ export default class EventTeaser extends Shadow() {
       color:var(--color-orange);
       text-align:center;
       box-sizing:border-box;
-      font-size: 4.7vw;
+      font-size: min(4.7vw, 90px);
       line-height: 100%;
       word-break: break-word;
       transition: var(--transition, 0.15s ease-out all);
