@@ -15,6 +15,8 @@
   --background-color:#232323;
   --balloon-font-size:var(--h6-font-size);
   --body-content-custom-width:var(--content-width-not-web-component);
+  --body-content-custom-width-mobile:var(--content-width-not-web-component-mobile);
+  --body-content-custom-width-mobile-white:100%;
   --body-detail-background-color-mobile:var(--color);
   --body-detail-main-background-color-mobile:var(--color);
   --body-detail-main-background-color:var(--color-);
