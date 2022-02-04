@@ -48,7 +48,7 @@ export default class Icon extends Shadow() {
       fill: var(--icon-path-fill, black);
       transition:0.3s;
     }
-    :host a > svg path:hover {
+    :host a:hover > svg path {
        fill: var(--icon-path-fill-hover, white);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
