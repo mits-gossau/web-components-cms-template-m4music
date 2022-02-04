@@ -89,7 +89,7 @@ export default class Wrapper extends BaseBody {
       flex-direction: column;
     }
     :host(.personcontainer-title) p {
-      margin: var(--p-margin);
+      padding: var(--p-margin);
     }
     :host > section .lowercase {
       text-transform: none;
@@ -120,53 +120,8 @@ export default class Wrapper extends BaseBody {
       color:var(--wrapper-text-color, var(--color), red);
       margin: var(--h56-title-margin, 0);
     }
-    :host .heading2 {
-      font-size: var(--h2-font-size, min(4rem, 10vw));
-      line-height: var(--h2-line-height, normal);
-      text-align: var(--h2-text-align, start);
-      word-break: var(--h2-word-break, normal);
-      text-transform: var(--h2-text-transform, none);
-      margin: var(--h2-margin, var(--content-spacing, unset)) auto;
-      padding: var(--h2-padding, unset);
-    }
-    :host .heading3 {
-      font-size: var(--h3-font-size, min(3rem, 10vw));
-      line-height: var(--h3-line-height, normal);
-      text-align: var(--h3-text-align, start);
-      word-break: var(--h3-word-break, normal);
-      text-transform: none;
-      margin: var(--h3-margin, var(--content-spacing, unset)) auto;
-      padding: var(--h3-padding, unset);
-    }
-    :host .heading4 {
-      font-size: var(--h4-font-size, min(2rem, 10vw));
-      line-height: var(--h4-line-height, normal);
-      text-align: var(--h4-text-align, start);
-      word-break: var(--h4-word-break, normal);
-      text-transform: none;
-      margin: var(--h4-margin, var(--content-spacing, unset)) auto;
-      padding: var(--h4-padding, unset);
-    }
-    :host .heading5 {
-      font-size: var(--h5-font-size, min(1.5rem, 10vw));
-      line-height: var(--h5-line-height, normal);
-      text-align: var(--h5-text-align, start);
-      word-break: var(--h5-word-break, normal);
-      text-transform: none;
-      margin: var(--h5-margin, var(--content-spacing, unset)) auto;
-      padding: var(--h5-padding, unset);
-    }
-    :host .heading6 {
-      font-size: var(--h6-font-size, min(1.5rem, 10vw));
-      line-height: var(--h6-line-height, normal);
-      text-align: var(--h6-text-align, start);
-      word-break: var(--h6-word-break, normal);
-      text-transform: none;
-      margin: var(--h6-margin, var(--content-spacing, unset)) auto;
-      padding: var(--h6-padding, unset);
-    }
     ${this.getAttribute('background-color') === 'white'
-    ? `/* css */ 
+    ? /* css */ ` 
       :host m4music-a-button {
         --button-color-arrow:${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
         --color-hover-arrow:${(this.getAttribute('background-color') === 'white') ? 'var(--color-light-grey, var(--color, red));' : ''};
@@ -174,7 +129,13 @@ export default class Wrapper extends BaseBody {
       :host a {
         --a-color: ${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
         --a-color-hover: ${(this.getAttribute('background-color') === 'white') ? 'var(--color-black, var(--color, red));' : ''};
-      } `
+      }
+      :host p {
+        margin:0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: var(--p-margin, var(--content-spacing, unset));
+      }`
       : ''
     }
     :host .ticket-button-container {
@@ -214,6 +175,8 @@ export default class Wrapper extends BaseBody {
       }
       :host > section * p {
         line-height:var(--p-line-height-mobile, normal);
+        margin-block-start: 0;
+        margin-block-end: 0;
       }
       :host > section > div  {
         flex-basis: calc(${100 / this.columns}% - 1rem);
