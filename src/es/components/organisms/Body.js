@@ -85,8 +85,13 @@ export default class Body extends BaseBody {
       flex-wrap: wrap;
     }
     :host .custom-width {
-      padding: 15px 0 0 0;
       width:var(--content-custom-width, var(--content-width-not-web-component), 80%);
+    }
+    :host .custom-width.white {
+      padding: var(--content-custom-width-white-padding, 15px 0 0 0);
+    }
+    :host .custom-width.white.title {
+      padding-top: var(--content-custom-width-white-title-padding-top, 30px);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
@@ -126,6 +131,9 @@ export default class Body extends BaseBody {
       :host .custom-width.white {
         padding: 15px 0 0 0;
         width:var(--content-custom-width-mobile-white, 100%);
+      }
+      :host .custom-width.white.title {
+        padding-top: var(--content-custom-width-white-title-padding-top-mobile, 15px);
       }
       
     }
