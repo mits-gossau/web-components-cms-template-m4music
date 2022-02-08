@@ -8,7 +8,7 @@ import BaseForm from '../web-components-cms-template/src/es/components/molecules
 /* global self */
 
 export default class Form extends BaseForm {
-  constructor(...args) {
+  constructor (...args) {
     super(...args)
 
     this.submitM4MusicEventListener = event => {
@@ -51,7 +51,7 @@ export default class Form extends BaseForm {
     }
   }
 
-  connectedCallback() {
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.loadDependency()
@@ -61,14 +61,14 @@ export default class Form extends BaseForm {
     }
   }
 
-  disconnectedCallback() {
+  disconnectedCallback () {
     this.removeEventListener('form-submit', this.submitM4MusicEventListener)
     if (this.previousButton) {
       this.previousButton.removeEventListener('click', this.previousButtonClickedEventListener)
     }
   }
 
-  renderCSS() {
+  renderCSS () {
     super.renderCSS(false)
     this.css = /* css */`
       :host{
@@ -356,7 +356,7 @@ export default class Form extends BaseForm {
   *
   * @return {void}
   */
-  renderHTML() {
+  renderHTML () {
     this.hasRendered = true
     this.loadChildComponents().then(children => {
       this.inputAll
@@ -409,7 +409,7 @@ export default class Form extends BaseForm {
    *
    * @returns {Promise<[string, CustomElementConstructor][]>}
    */
-  loadChildComponents() {
+  loadChildComponents () {
     if (this.childComponentsPromise) return this.childComponentsPromise
     let inputPromise
     try {
@@ -447,7 +447,7 @@ export default class Form extends BaseForm {
    *
    * @returns {Promise<{components: any}>}
    */
-  loadDependency() {
+  loadDependency () {
     return this.dependencyPromise || (this.dependencyPromise = new Promise(resolve => {
       // needs markdown
       if ('grecaptcha' in self === true) {
@@ -465,15 +465,15 @@ export default class Form extends BaseForm {
     }))
   }
 
-  get afterSubmit() {
+  get afterSubmit () {
     return this.root.querySelector('#afterSubmit')
   }
 
-  get previousButton() {
+  get previousButton () {
     return this.root.querySelector('input[name="__prev"]')
   }
 
-  get policy() {
+  get policy () {
     return this.root.querySelector('.policy')
   }
 }
