@@ -107,6 +107,9 @@ export default class Tickets extends Shadow() {
       :host  {
         flex-direction: column;
       }
+      :host > div {
+        max-width: 100%;
+      }
       :host ul > li {
         background-size:1rem;
       }
