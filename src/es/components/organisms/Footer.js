@@ -216,6 +216,7 @@ export default class Footer extends BaseFooter {
         }
         :host .hide-desktop {
           display: block;
+          margin-top: 2rem;
         }
       }
     `
