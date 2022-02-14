@@ -72,7 +72,7 @@ export default class EventDetail extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .text-wrapper {
-        width:75%;
+        width:80%;
       }
       :host h1{
         font-size:var(--h1-font-size, 1.8rem);
