@@ -74,6 +74,7 @@ export default class Details extends BaseDetails(Mutation()) {
         width: var(--max-width, 25%);
         color:var(--color-black);
         margin-bottom: var(--margin-bottom, 0.9rem);
+        padding:0 2rem 0  0;
       }
       :host details > summary > div.icon {
         display: flex;
