@@ -106,6 +106,9 @@
   --event-detail-button-padding:0.5rem 0.75rem;
   --event-detail-button-width-mobile:auto;
   --event-detail-button-width:auto;
+  --event-detail-picture-opacity: 0.5;
+  --event-detail-picture-background-color: white;
+  --event-detail-picture-img-filter: grayscale(1);
   --event-item-date-font-size-mobile:1rem;
   --event-item-name-font-size-mobile:1.55rem;
   --event-item-name-font-size:1.25rem;
