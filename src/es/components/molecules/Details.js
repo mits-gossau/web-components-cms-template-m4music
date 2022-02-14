@@ -97,6 +97,11 @@ export default class Details extends BaseDetails(Mutation()) {
         margin-block-start: 0;
         margin-block-end: 0;
       }
+      :host .content > p {
+        font-size:0.65rem;
+        line-height:125%;
+        text-align:center;
+      }
       @media only screen and (max-width: 960px){
         :host {
           width: 100%;
