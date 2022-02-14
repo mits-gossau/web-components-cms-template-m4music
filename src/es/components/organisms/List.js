@@ -43,7 +43,6 @@ export default class Wrapper extends BaseBody {
       } else {
         activeFilters = activeFilters.filter(f => f !== filterValue)
       }
-
       if (eventWrapper) {
         const events = eventWrapper.root.querySelectorAll("[type='event']")
 
@@ -60,8 +59,17 @@ export default class Wrapper extends BaseBody {
               }
             })
           })
+          console.log("case 2-2", activeFilters);
         }
-        if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { this.noResultsFound.classList.remove('hidden') } else { this.noResultsFound.classList.add('hidden') }
+        if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { 
+          this.noResultsFound.classList.remove('hidden') 
+          if (activeFilters.length === 0) {
+            events.forEach(event => event.classList.remove('hidden'))
+            this.noResultsFound.classList.add('hidden') 
+          }
+        } else {
+           this.noResultsFound.classList.add('hidden') 
+        }
       }
     }
   }
