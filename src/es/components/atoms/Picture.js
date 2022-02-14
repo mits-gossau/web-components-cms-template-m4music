@@ -12,7 +12,7 @@ export default class Picture extends BasePicture {
         opacity: 0;
       }
       :host(.hover) picture {
-        background-color: var(--color-orange, #FB5F3F);
+        background-color: var(--color-orange, #FA4B46);
       }
       
 
