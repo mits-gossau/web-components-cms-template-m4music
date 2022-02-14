@@ -93,7 +93,7 @@ export default class EventItem extends Shadow() {
     }
     :host .image-wrapper{
       margin-right:0.45rem;
-      width:95%;
+      width:90%;
     }
     :host .content-wrapper{
       display:flex;
