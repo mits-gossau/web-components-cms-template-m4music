@@ -46,6 +46,9 @@ export default class Tickets extends Shadow() {
     }
     :host > div {
       max-width: calc(50% - 1rem);
+      min-width: min(500px, 50% - 1rem);
+      word-break: break-word;
+      box-sizing: border-box;
       background-color: white;
       display:flex;
       flex-direction: column;
