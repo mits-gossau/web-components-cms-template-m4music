@@ -133,12 +133,15 @@ export default class Filter extends Shadow() {
       width: 210px;
     }
     :host .locations {
-      width: 400px;
+      width: 300px;
     }
     :host .eventType {
       width: 220px;
     }
     :host .languages {
+      width: 320px;
+    }
+    :host .genres {
       width: 220px;
     }
     :host h5 {

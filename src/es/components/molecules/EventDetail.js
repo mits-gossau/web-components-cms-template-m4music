@@ -70,6 +70,9 @@ export default class EventDetail extends Shadow() {
       position:absolute;
       width:100%;
     }
+    :host .eventdetail-subtitle {
+      margin: var(--event-detail-h1-subtitle-margin, -1rem 1rem 1rem 0)
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .text-wrapper {
         width:80%;
