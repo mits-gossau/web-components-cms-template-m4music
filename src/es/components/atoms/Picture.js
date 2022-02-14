@@ -14,14 +14,17 @@ export default class Picture extends BasePicture {
       :host(.hover) picture {
         background-color: var(--color-orange, #FA4B46);
       }
-      :host picture{
-        background-color: var(--background-color, none);
+      ${this.getAttribute('namespace') == "event-detail-picture-" ? 
+        /*css*/`
+        :host picture{
+          background-color: var(--background-color, none);
+        }
+        :host img {
+          opacity: var(--opacity, 1);
+          filter: var(--img-filter, none);
+        }
+      ` : ''
       }
-      :host img {
-        opacity: var(--opacity, 1);
-        filter: var(--img-filter, none);
-      }
-
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       }
     `
