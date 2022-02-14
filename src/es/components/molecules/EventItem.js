@@ -93,7 +93,7 @@ export default class EventItem extends Shadow() {
     }
     :host .image-wrapper{
       margin-right:0.45rem;
-      width:95%;
+      width:90%;
     }
     :host .content-wrapper{
       display:flex;
@@ -103,7 +103,7 @@ export default class EventItem extends Shadow() {
       align-items:${this.getAttribute('type') === 'speaker' ? 'center' : 'flex-start'};
       width:95%;
       padding-top:16px;
-      word-break:break-all;
+      word-break:break-word;
     }
     :host .date{
       color:var(--date-font-color, #616161);

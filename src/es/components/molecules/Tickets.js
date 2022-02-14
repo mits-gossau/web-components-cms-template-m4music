@@ -46,6 +46,9 @@ export default class Tickets extends Shadow() {
     }
     :host > div {
       max-width: calc(50% - 1rem);
+      min-width: min(500px, 50% - 1rem);
+      word-break: break-word;
+      box-sizing: border-box;
       background-color: white;
       display:flex;
       flex-direction: column;
@@ -106,6 +109,9 @@ export default class Tickets extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host  {
         flex-direction: column;
+      }
+      :host > div {
+        max-width: 100%;
       }
       :host ul > li {
         background-size:1rem;

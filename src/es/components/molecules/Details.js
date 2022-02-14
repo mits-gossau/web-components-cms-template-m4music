@@ -74,6 +74,7 @@ export default class Details extends BaseDetails(Mutation()) {
         width: var(--max-width, 25%);
         color:var(--color-black);
         margin-bottom: var(--margin-bottom, 0.9rem);
+        padding:0 2rem 0  0;
       }
       :host details > summary > div.icon {
         display: flex;
@@ -96,6 +97,11 @@ export default class Details extends BaseDetails(Mutation()) {
         padding: 1rem 0;
         margin-block-start: 0;
         margin-block-end: 0;
+      }
+      :host .content > p {
+        font-size:0.65rem;
+        line-height:125%;
+        text-align:center;
       }
       @media only screen and (max-width: 960px){
         :host {
