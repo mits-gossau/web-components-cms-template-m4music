@@ -52,11 +52,11 @@ export default class Wrapper extends BaseBody {
         } else {
           events.forEach(event => {
             const tags = event.getAttribute('data-tags').split(' ')
-            event.classList.remove('hidden')
+            event.classList.add('hidden')
 
             activeFilters.forEach(filter => {
-              if (!tags.includes(filter)) {
-                event.classList.add('hidden')
+              if (tags.includes(filter)) {
+                event.classList.remove('hidden')
               }
             })
           })
