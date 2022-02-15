@@ -88,6 +88,9 @@ export default class Wrapper extends BaseBody {
     :host(.personcontainer-title) > section {
       flex-direction: column;
     }
+    :host(.eventdetail.personcontainer-title) h2 {
+      margin: var(--personcontainer-title-margin, 0 0 2rem 0);
+    }
     :host(.personcontainer-title) p {
       padding: var(--p-margin);
     }
