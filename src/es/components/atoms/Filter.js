@@ -161,6 +161,7 @@ export default class Filter extends Shadow() {
         flex-direction: column;
         align-items: flex-start;
         min-width: 100%;
+        flex-wrap: nowrap;
       }
       :host .filter, :host .weekdays, :host .locations, :host .eventType, :host .languages {
         margin-bottom: 0.5rem;
