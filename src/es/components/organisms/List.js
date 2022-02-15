@@ -59,7 +59,6 @@ export default class Wrapper extends BaseBody {
               }
             })
           })
-          console.log("case 2-2", activeFilters);
         }
         if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { 
           this.noResultsFound.classList.remove('hidden') 

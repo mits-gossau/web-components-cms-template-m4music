@@ -142,7 +142,7 @@ export default class Filter extends Shadow() {
       width: 320px;
     }
     :host .genres {
-      width: 220px;
+      width: 380px;
     }
     :host h5 {
       margin: 10px 0;
