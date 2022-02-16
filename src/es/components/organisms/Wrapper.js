@@ -77,7 +77,7 @@ export default class Wrapper extends BaseBody {
       ${this.hasAttribute('background-color')
       ? `
         width: auto;
-        padding: 0 30px;`
+        padding: 0 1rem;`
         : 'width: 100% !important;'
       }
       color:${(this.getAttribute('background-color') === 'white')
