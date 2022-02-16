@@ -103,9 +103,19 @@ export default class Details extends BaseDetails(Mutation()) {
         line-height:125%;
         text-align:center;
       }
+      :host details summary::marker, :host details summary::-webkit-details-marker {
+        display: var(--marker-display, none);
+        content: var(--marker-content, "");
+      }
+      :host details summary, :host details summary:focus {
+        outline: none;
+      }
       @media only screen and (max-width: 960px){
         :host {
           width: 100%;
+        }
+        :host .content > p {
+          text-align:start;
         }
         :host details > summary > div.icon {
           align-items: center;
