@@ -112,6 +112,12 @@
   --event-item-animation-duration: 500;
   --event-item-animation-easing: ease-out;
   --event-item-date-font-size-mobile:1rem;
+  --event-item-detail-a-text-color:inherit;
+  --event-item-detail-a-text-decoration-color-hover:var(--color-orange);
+  --event-item-detail-a-text-decoration-color:var(--color-black);
+  --event-item-detail-a-text-decoration-line: underline;
+  --event-item-detail-a-text-decoration-style:solid;
+  --event-item-detail-a-text-underline-offset:0.1rem; 
   --event-item-icon-transform-open: rotate(45deg);
   --event-item-icon-transition: transform 0.15s ease;
   --event-item-name-font-size-mobile:1.55rem;

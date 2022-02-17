@@ -100,6 +100,18 @@ export default class Details extends BaseDetails(Mutation()) {
         margin-block-start: 0;
         margin-block-end: 0;
       }
+      :host * p > a, a:visited {
+        color: var(--detail-a-text-color);
+        text-decoration-color: var(--detail-a-text-decoration-color, red);
+        text-decoration-line: var(--detail-a-text-decoration-line, none);
+        text-decoration-style: var(--detail-a-text-decoration-style, solid);
+        text-decoration-thickness:var(--detail-a-text-decoration-thickness, 1px);    
+        text-underline-offset: var(--detail-a-text-underline-offset, unset);
+      }
+      :host * p > a:hover {
+        text-decoration-color: var(--detail-a-text-decoration-color-hover, red);  
+      }
+
       :host .content > p {
         font-size:0.65rem;
         line-height:125%;
