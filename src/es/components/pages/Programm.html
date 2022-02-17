@@ -34,11 +34,10 @@
       </div>
       <div>
         <m4music-o-list namespace="list-" background-color="white">
-          <m4music-a-filter>
+          <!-- <m4music-a-filter>
             <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="show_all">
               Zurücksetzen</m4music-a-button>
-            <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Keynote">
-              Keynote</m4music-a-button>
+              <m4music-a-button namespace="button-filter-" data-filter-value="Keynote" namespace-fallback="" type="filter">Keynote</m4music-a-button>
             <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Workshop">
               Workshop</m4music-a-button>
             <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Panel">
@@ -51,10 +50,79 @@
               Français</m4music-a-button>
             <m4music-a-button namespace="button-filter-" namespace-fallback type="filter" data-filter-value="Kostenlos">
               Kostenlos</m4music-a-button>
+          </m4music-a-filter> -->
+          <m4music-a-filter>
+            <div class="filter">
+              <h5>Filter</h5>
+              <m4music-a-button namespace="button-filter-" class="active" data-filter-value="show_all"
+                data-showall-translation="Alle Events" data-reset-translation="Filter zurücksetzen" namespace-fallback
+                type="filter"> Alle Events </m4music-a-button>
+            </div>
+            <div class="weekdays">
+              <h5>Tag</h5>
+              <div class="filterButtonContainer">
+                <m4music-a-button namespace="button-filter-" data-filter-value="Freitag" namespace-fallback
+                  type="filter"> Freitag </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Samstag" namespace-fallback
+                  type="filter"> Samstag </m4music-a-button>
+              </div>
+            </div>
+            <div class="locations">
+              <h5>Location</h5>
+              <div class="filterButtonContainer">
+                <m4music-a-button namespace="button-filter-" data-filter-value="Box_Zürich" namespace-fallback
+                  type="filter"> Box </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Matchbox_Zürich" namespace-fallback
+                  type="filter"> Matchbox </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Moods_Zürich" namespace-fallback
+                  type="filter"> Moods </m4music-a-button>
+              </div>
+            </div>
+            <div class="languages">
+              <h5>Sprache</h5>
+              <div class="filterButtonContainer">
+                <m4music-a-button namespace="button-filter-" data-filter-value="DE" namespace-fallback type="filter">
+                  Deutsch </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="EN" namespace-fallback type="filter">
+                  Englisch </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="FR" namespace-fallback type="filter">
+                  Französisch </m4music-a-button>
+              </div>
+            </div>
+            <div class="genres">
+              <h5>Genre</h5>
+              <div class="filterButtonContainer">
+                <m4music-a-button namespace="button-filter-" data-filter-value="Workshop" namespace-fallback
+                  type="filter"> Workshop </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Panel" namespace-fallback type="filter">
+                  Panel </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Unterhaltung" namespace-fallback
+                  type="filter"> Unterhaltung </m4music-a-button>
+                <m4music-a-button namespace="button-filter-" data-filter-value="Lesung_Gespräch" namespace-fallback
+                  type="filter"> Lesung & Gespräch </m4music-a-button>
+              </div>
+            </div>
           </m4music-a-filter>
           <m4music-o-wrapper type="event-wrapper" namespace="list-wrapper-" namespace-fallback no-space>
-            <m4music-m-event-item type="event" namespace="event-item-" data-tags="Deutsch Kostenlos"
-              href="https://migros.ch">
+            <m4music-m-event-item namespace="event-item-" namespace-fallback
+              data-tags="conference DE Workshop Gratis Freitag Box_Zürich" type="event"
+              href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList">
+              <div class="image-wrapper">
+                <m4music-a-picture namespace="event-item-picture-" namespace-fallback
+                  defaultsource="/media/ulqb4p5g/214a7aoq.jpeg?anchor=center&mode=crop&width=1365&height=1365&format=jpeg&quality=80&rnd=132893531739100000"
+                  sources="[{'src':'/media/ulqb4p5g/214a7aoq.jpeg?anchor=center&mode=crop&width=682&height=682&format=webp&quality=80&rnd=132893531739100000','size':'small','type':'image/webp'},{'src':'/media/ulqb4p5g/214a7aoq.jpeg?anchor=center&mode=crop&width=819&height=819&format=webp&quality=80&rnd=132893531739100000','size':'medium','type':'image/webp'},{'src':'/media/ulqb4p5g/214a7aoq.jpeg?anchor=center&mode=crop&width=955&height=955&format=webp&quality=80&rnd=132893531739100000','size':'large','type':'image/webp'},{'src':'/media/ulqb4p5g/214a7aoq.jpeg?anchor=center&mode=crop&width=1365&height=1365&format=webp&quality=80&rnd=132893531739100000','size':'extra-large','type':'image/webp'}]"
+                  alt="214A7aoq (1)"></m4music-a-picture>
+              </div>
+              <div class="content-wrapper">
+                <p class="date">25.03.2022 – 09:30 – Box</p>
+                <p class="name">Kulturelle Aneignung und Musik:</p>
+                <p class="description">Antirassistisch im Musikbusiness</p>
+              </div>
+            </m4music-m-event-item>
+            <m4music-m-event-item namespace="event-item-" namespace-fallback="" data-tags="Keynote" type="event"
+              href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList"
+              data-href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList"
+              class="">
               <div class="image-wrapper">
                 <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="/assets/img/dummy-item.png"
                   alt="02 DTC Isa"> </a-picture>
@@ -131,154 +199,193 @@
             <m4music-m-details namespace="event-item-" namespace-fallback animation>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">Valeska Steiner</p>
-                        <p class="description">Musikerin, BOY, Zürich</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">Valeska Steiner</p>
+                      <p class="description">Musikerin, BOY, Zürich</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback animation>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">KT Gorique</p>
-                        <p class="description">Musikerin, Sion.</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">KT Gorique</p>
+                      <p class="description">Musikerin, Sion.</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback animation>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">Valeska Steiner</p>
-                        <p class="description">Musikerin, BOY, Zürich</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">Valeska Steiner</p>
+                      <p class="description">Musikerin, BOY, Zürich</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Curabitur <a rel="noopener" href="https://migros.ch/" target="_blank">blandit tempus</a> porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
+                  <p>Curabitur <a rel="noopener" href="https://migros.ch/" target="_blank">blandit tempus</a> porttitor.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere
+                    consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta
+                    gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback animation>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">KT Gorique</p>
-                        <p class="description">Musikerin, Sion.</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">KT Gorique</p>
+                      <p class="description">Musikerin, Sion.</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">Valeska Steiner</p>
-                        <p class="description">Musikerin, BOY, Zürich</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">Valeska Steiner</p>
+                      <p class="description">Musikerin, BOY, Zürich</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">KT Gorique</p>
-                        <p class="description">Musikerin, Sion.</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">KT Gorique</p>
+                      <p class="description">Musikerin, Sion.</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback>
               <details>
                 <summary>
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">Valeska Steiner</p>
-                        <p class="description">Musikerin, BOY, Zürich</p>
-                      </div>
-                    </m4music-m-event-item>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">Valeska Steiner</p>
+                      <p class="description">Musikerin, BOY, Zürich</p>
+                    </div>
+                  </m4music-m-event-item>
                 </summary>
                 <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </div>
               </details>
             </m4music-m-details>
             <m4music-m-details namespace="event-item-" namespace-fallback>
               <details>
-                <summary>                      
-                    <m4music-m-event-item namespace="event-item-" type="speaker">
-                      <div class="image-wrapper">
-                        <a-picture namespace="event-item-speaker-picture-" namespace-fallback
-                          defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
-                      </div>
-                      <div class="content-wrapper">
-                        <p class="name">KT Gorique</p>
-                        <p class="description">Musikerin, Sion.</p>
-                      </div>
-                    </m4music-m-event-item>
-                  </summary>
-                  <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </details>
+                <summary>
+                  <m4music-m-event-item namespace="event-item-" type="speaker">
+                    <div class="image-wrapper">
+                      <a-picture namespace="event-item-speaker-picture-" namespace-fallback
+                        defaultsource="/assets/img/dummy-item.png" alt="02 DTC Isa"> </a-picture>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="name">KT Gorique</p>
+                      <p class="description">Musikerin, Sion.</p>
+                    </div>
+                  </m4music-m-event-item>
+                </summary>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+              </details>
             </m4music-m-details>
             <m4music-m-event-item namespace="event-item-" type="speaker">
               <div class="image-wrapper">
