@@ -118,6 +118,7 @@ export default class Details extends BaseDetails(Mutation()) {
         }
         :host .content > p {
           text-align:start;
+          font-size:0.9rem;
         }
         :host details > summary > div.icon {
           align-items: center;
