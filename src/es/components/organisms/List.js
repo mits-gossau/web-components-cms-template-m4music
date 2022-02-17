@@ -60,14 +60,14 @@ export default class Wrapper extends BaseBody {
             })
           })
         }
-        if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) { 
-          this.noResultsFound.classList.remove('hidden') 
+        if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) {
+          this.noResultsFound.classList.remove('hidden')
           if (activeFilters.length === 0) {
             events.forEach(event => event.classList.remove('hidden'))
-            this.noResultsFound.classList.add('hidden') 
+            this.noResultsFound.classList.add('hidden')
           }
         } else {
-           this.noResultsFound.classList.add('hidden') 
+          this.noResultsFound.classList.add('hidden')
         }
       }
     }

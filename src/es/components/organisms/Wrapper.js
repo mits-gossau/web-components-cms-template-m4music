@@ -158,7 +158,7 @@ export default class Wrapper extends BaseBody {
       float: right;
     }
     :host .richtext-with-ticket {
-      flex-basis: calc(${this.columns == 2 ? "70%" : "30%"} - 0.5rem);
+      flex-basis: calc(${this.columns === 2 ? '70%' : '30%'} - 0.5rem);
     }
     :host(.rich-text-wrapper) section {
       display: var(--rich-text-section-display, block);
