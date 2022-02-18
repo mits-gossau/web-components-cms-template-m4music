@@ -48,7 +48,7 @@ export default class Speakers extends Shadow() {
       color:var(--name-color, black);
       font-size:var(--name-font-size, initial);
       line-height:100%;
-      margin:0;
+      margin:0.5rem 0 0 0;
       text-transform:uppercase;
       word-wrap:anywhere;
       text-align: center;
