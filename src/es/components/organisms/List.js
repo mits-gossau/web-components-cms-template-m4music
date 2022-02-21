@@ -30,40 +30,28 @@ export default class Wrapper extends BaseBody {
   constructor (...args) {
     super(...args)
 
-    this.activeFilters = []
+    this.activeFilters = this.getEmptyFilter
 
     this.filterChange = e => {
       const filterButton = e.detail.button
       const filterValue = filterButton.getAttribute('data-filter-value')
       const eventWrapper = this.root.querySelector("[type='event-wrapper']")
+
       // if show_all was clicked, or only show_all is set (happens when all other filters are deactivated) => reset activeFilters
-      if (filterValue === 'show_all' || (this.activeFilters.length === 1 && this.activeFilters[0] === 'show_all')) this.activeFilters = []
-      if (filterButton.classList.contains('active')) {
-        this.activeFilters.push(filterValue)
-        this.updateLocalStorageFilterValue(this.activeFilters)
-      } else {
-        this.activeFilters = this.activeFilters.filter(f => f !== filterValue)
-        this.updateLocalStorageFilterValue(this.activeFilters)
-      }
-      if (eventWrapper) {
+      if (filterValue === 'show_all' || (this.activeFilters[0].length === 1 && this.activeFilters[0][0] === 'show_all')) this.activeFilters = this.getEmptyFilter
+
+      this.updateLocalStorageFilterValue(filterButton) 
+      if (eventWrapper) { 
         const events = eventWrapper.root.querySelectorAll("[type='event']")
-        if ((this.activeFilters.length === 1 && this.activeFilters[0] === 'show_all') || this.activeFilters.length === 0) {
+        if ((this.activeFilters[0].length === 1 && this.activeFilters[0][0] === 'show_all') || this.isEmptyFilter) {
           events.forEach(event => event.classList.remove('hidden'))
           this.clearFilterValues()
         } else {
-          events.forEach(event => {
-            const tags = event.getAttribute('data-tags').split(' ')
-            event.classList.add('hidden')
-            this.activeFilters.forEach(filter => {
-              if (tags.includes(filter)) {
-                event.classList.remove('hidden')
-              }
-            })
-          })
+          this.filterEventItems(events)
         }
         if ([...events].filter(e => !e.classList.contains('hidden')).length === 0) {
           this.noResultsFound.classList.remove('hidden')
-          if (this.activeFilters.length === 0) {
+          if (this.isEmptyFilter) {
             events.forEach(event => event.classList.remove('hidden'))
             this.noResultsFound.classList.add('hidden')
           }
@@ -182,13 +170,26 @@ export default class Wrapper extends BaseBody {
 
   /**
    * Update session storage with selected filter value
-   * @param {string[]} filterValue
+   * param {[string[], string[], string[], string[], string[]]} filterValue
    */
-  updateLocalStorageFilterValue (filterValue) {
-    if (!filterValue.length) {
+  updateLocalStorageFilterValue (filterButton) {
+    const filterValue = filterButton.getAttribute('data-filter-value')
+    const filterGroup = this.getGroupPosition(filterButton)
+    var filter = this.activeFilters[filterGroup]
+    if(filterButton.classList.contains('active')){
+      filter.push(filterValue)
+    }
+    else{
+      this.activeFilters[filterGroup].push(filterValue)
+      filter = filter.filter(f => f !== filterValue)
+    }
+    this.activeFilters[filterGroup] = filter
+
+    //set Session Storage
+    if (this.isEmptyFilter) {
       sessionStorage.clear()
     } else {
-      sessionStorage.setItem('m4music', JSON.stringify(filterValue))
+      sessionStorage.setItem('m4music', JSON.stringify(this.activeFilters))
     }
   }
 
@@ -196,7 +197,7 @@ export default class Wrapper extends BaseBody {
    * Clear session storage values - only values!
    */
   clearFilterValues () {
-    sessionStorage.setItem('m4music', JSON.stringify([]))
+    sessionStorage.setItem('m4music', JSON.stringify(this.getEmptyFilter))
   }
 
   /**
@@ -205,33 +206,90 @@ export default class Wrapper extends BaseBody {
    */
   setLocalStorageFilterValues () {
     const data = sessionStorage.getItem('m4music')
-    this.activeFilters = JSON.parse(data) || []
+
+    this.activeFilters = JSON.parse(data) || this.getEmptyFilter
     // no active filter set
-    if (!this.activeFilters.length) return
+    if (this.isEmptyFilter) return
 
     // filter buttons
-    // TODO: move to own fn
     this.root.querySelectorAll("[type='filter']").forEach(button => {
-      if (this.activeFilters.includes(button.getAttribute('data-filter-value'))) {
-        button.classList.add('active')
+      if (button.getAttribute('data-filter-value') != 'show_all') {
+        if (this.activeFilters[this.getGroupPosition(button)].includes(button.getAttribute('data-filter-value'))) {
+          button.classList.add('active')
+        }
       }
-      if (button.getAttribute('data-filter-value') === 'show_all') {
+      else{
         button.classList.remove('active')
       }
     })
 
     // event items
-    // TODO: move to own fn
     const eventWrapper = this.root.querySelector("[type='event-wrapper']")
     if (eventWrapper) {
       const events = eventWrapper.root.querySelectorAll("[type='event']")
-      events.forEach(event => {
-        const tags = event.getAttribute('data-tags').split(' ')
-        const found = this.activeFilters.some(r => tags.indexOf(r) >= 0)
-        if (!found) {
-          event.classList.add('hidden')
-        }
-      })
+      this.filterEventItems(events)
     }
+  }
+
+  filterEventItems (events) {
+    var returnEvents = [...events]
+    var falseEvent = []
+
+    events.forEach(event => {
+      const tags = event.getAttribute('data-tags').split(' ')
+      event.classList.add('hidden')
+
+      this.activeFilters.forEach(filter => {
+        if(!falseEvent.includes(event) && filter.length != 0){
+          var filterFound = false
+          filter.forEach(f => {
+            if (tags.includes(f)) {
+              filterFound = true
+            }
+          })
+
+          if(!filterFound && returnEvents.includes(event)){
+            returnEvents.splice(returnEvents.indexOf(event), 1)
+          } else if(!filterFound){
+            falseEvent.push(event)
+          }
+        }
+
+      })
+    })
+    returnEvents.forEach(e => {
+      e.classList.remove('hidden')
+    });
+  }
+
+
+  
+  getGroupPosition(button){
+    const filterGroup = button.getAttribute('data-filter-group')
+    return this.getGroupPositionfromString(filterGroup)
+  }
+  
+  getGroupPositionfromString(group){
+    switch(group){
+      case "day":
+        return 1;      
+      case "location":
+        return 2;
+      case "language":
+        return 3   
+      case "type":
+        return 4;      
+      case "genre":
+        return 5; 
+      default:
+        return 0
+    }
+  }
+
+  get getEmptyFilter(){
+    return [[],[],[],[],[],[]]
+  }
+  get isEmptyFilter(){
+    return !this.activeFilters[1].length && !this.activeFilters[2].length && !this.activeFilters[3].length && !this.activeFilters[4].length && !this.activeFilters[5].length
   }
 }
