@@ -60,6 +60,18 @@ export default class Wrapper extends BaseBody {
         }
       }
     }
+
+    window.onbeforeunload = function () {
+      console.log("test")
+      var pathName = document.location.pathname;
+      var scrollPosition = document.documentElement.scrollTop;
+      var scrollPositionSafari = document.body.scrollTop;
+      if (scrollPosition > scrollPositionSafari){
+        sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+      }else{
+        sessionStorage.setItem("scrollPosition_" + pathName, scrollPositionSafari.toString());
+      }
+    }
   }
 
   connectedCallback () {
@@ -67,6 +79,7 @@ export default class Wrapper extends BaseBody {
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('filter-change', this.filterChange)
     this.setLocalStorageFilterValues()
+    this.jumpToPosition()
   }
 
   disconnectedCallback () {
@@ -157,6 +170,14 @@ export default class Wrapper extends BaseBody {
       if (node.tagName !== 'STYLE') section.appendChild(node)
     })
     this.html = section
+  }
+
+  jumpToPosition (){
+    var pathName = document.location.pathname;
+    if (sessionStorage["scrollPosition_" + pathName]) {
+      document.documentElement.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName));
+      document.body.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName)); //safari
+    }
   }
 
   /**
