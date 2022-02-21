@@ -315,6 +315,7 @@
   --header-navigation-background-color-mobile:var(--color-orange);
   --header-navigation-background-color-no-scroll:var(--color-orange);
   --header-navigation-background-color:var(--background-color);
+  --header-navigation-color-active:var(--color);
   --header-navigation-color-hover:var(--color);
   --header-navigation-color-mobile:var(--color-black);
   --header-navigation-color-open-mobile:var(--color);
