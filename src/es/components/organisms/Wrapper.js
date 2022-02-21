@@ -123,6 +123,17 @@ export default class Wrapper extends BaseBody {
       color:var(--wrapper-text-color, var(--color), red);
       margin: var(--h56-title-margin, 0);
     }
+    :host .event-item {
+      max-width: 25%;
+      margin: 0;
+      text-decoration: none;
+    }
+    :host .event-item:hover {
+      text-decoration: none;
+    }
+    :host .event-item > m4music-m-event-item {
+      --event-item-max-width: 100%;
+    }
     ${this.getAttribute('background-color') === 'white'
     ? /* css */ ` 
       :host m4music-a-button {
