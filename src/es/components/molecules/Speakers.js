@@ -67,6 +67,7 @@ export default class Speakers extends Shadow() {
       }
       :host .function {
         font-size:var(--function-font-size-mobile, 20px);
+        text-align:${this.getAttribute('align') === 'left' ? 'left' : 'right'}
       }
       :host .name.right {
         text-align:right;
