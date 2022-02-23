@@ -94,6 +94,7 @@
   --content-width-not-web-component:88%;
   --content-width:88%;
   --detail-wrapper-p-margin:0 0;
+  --detail-wrapper-padding-with-bg-color:0 4rem;
   --event-carousel-max-width: 100%;
   --event-carousel-width:100%;
   --event-detail-button-background-color-hover-primary:var(--button-background-color-hover-primary);

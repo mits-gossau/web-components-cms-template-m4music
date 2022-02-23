@@ -77,7 +77,7 @@ export default class Wrapper extends BaseBody {
       ${this.hasAttribute('background-color')
       ? `
         width: auto;
-        padding: 0 1rem;`
+        padding: var(--padding-with-bg-color, 0 1rem);`
         : 'width: 100% !important;'
       }
       color:${(this.getAttribute('background-color') === 'white')
@@ -186,6 +186,7 @@ export default class Wrapper extends BaseBody {
         flex-direction:${this.getType(this.getAttribute('type')).directionMobile};
         flex-wrap:${this.getType(this.getAttribute('type')).wrapMobile};
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
+        padding: 0 1rem;
       }
       :host > section * p {
         line-height:var(--p-line-height-mobile, normal);
