@@ -93,6 +93,13 @@ export default class Body extends BaseBody {
     :host .custom-width.white.title {
       padding-top: var(--content-custom-width-white-title-padding-top, 30px);
     }
+    :host .event-detail-module-container {
+      background-color: var(--color, white);
+    }
+    :host .event-detail-inner-container {
+      padding: var(--detail-wrapper-padding-with-bg-color, 0 4rem);
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
@@ -135,7 +142,9 @@ export default class Body extends BaseBody {
       :host .custom-width.white.title {
         padding-top: var(--content-custom-width-white-title-padding-top-mobile, 15px);
       }
-      
+      :host .event-detail-inner-container {
+        padding: 0;
+      }
     }
     `
   }
