@@ -60,10 +60,10 @@ export default class Wrapper extends BaseBody {
         }
       }
     }
+  }
 
-    window.onbeforeunload = function () {
-      console.log("test")
-      var pathName = document.location.pathname;
+  saveScrollPosition() {
+    var pathName = document.location.pathname;
       var scrollPosition = document.documentElement.scrollTop;
       var scrollPositionSafari = document.body.scrollTop;
       if (scrollPosition > scrollPositionSafari){
@@ -71,19 +71,21 @@ export default class Wrapper extends BaseBody {
       }else{
         sessionStorage.setItem("scrollPosition_" + pathName, scrollPositionSafari.toString());
       }
-    }
   }
 
+  terminationEvent = 'onpagehide' in self ? 'pagehide' : 'unload'; // backwards compatibility
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('filter-change', this.filterChange)
+    window.addEventListener(this.terminationEvent, this.saveScrollPosition, false);  
     this.setLocalStorageFilterValues()
     this.jumpToPosition()
   }
 
   disconnectedCallback () {
     this.removeEventListener('filter-change', this.filterChange)
+    window.removeEventListener(this.terminationEvent, this.saveScrollPosition);  
     this.clearFilterValues()
   }
 
@@ -174,6 +176,7 @@ export default class Wrapper extends BaseBody {
 
   jumpToPosition (){
     var pathName = document.location.pathname;
+    console.log(sessionStorage["scrollPosition_" + pathName], Number(sessionStorage.getItem("scrollPosition_" + pathName)), document.documentElement.scrollTop);
     if (sessionStorage["scrollPosition_" + pathName]) {
       document.documentElement.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName));
       document.body.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName)); //safari
@@ -283,8 +286,6 @@ export default class Wrapper extends BaseBody {
     });
   }
 
-
-  
   getGroupPosition(button){
     const filterGroup = button.getAttribute('data-filter-group')
     return this.getGroupPositionfromString(filterGroup)
@@ -311,6 +312,10 @@ export default class Wrapper extends BaseBody {
     return [[],[],[],[],[],[]]
   }
   get isEmptyFilter(){
-    return !this.activeFilters[1].length && !this.activeFilters[2].length && !this.activeFilters[3].length && !this.activeFilters[4].length && !this.activeFilters[5].length
+    var isEmpty = true;
+    this.activeFilters.forEach(f => {
+      if (f.length) isEmpty = false
+    })
+    return isEmpty
   }
 }
