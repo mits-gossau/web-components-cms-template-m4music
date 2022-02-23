@@ -377,6 +377,7 @@
   --jury-wrapper-wrapper-h3-text-color:var(--color-orange);
   --link-underline-color:#CCCCCC;
   --list-wrapper-flex-direction:column;
+  --list-wrapper-wrapper-section-padding-mobile: 0;
   --macro-carousel-pagination-border-selected:var(--color-orange);
   --macro-carousel-pagination-color-selected:var(--color-orange);
   --navigation-icon-path-fill:var(--color-black);
