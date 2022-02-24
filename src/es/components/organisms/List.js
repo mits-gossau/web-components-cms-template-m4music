@@ -40,8 +40,8 @@ export default class Wrapper extends BaseBody {
       // if show_all was clicked, or only show_all is set (happens when all other filters are deactivated) => reset activeFilters
       if (filterValue === 'show_all' || (this.activeFilters[0].length === 1 && this.activeFilters[0][0] === 'show_all')) this.activeFilters = this.getEmptyFilter
 
-      this.updateLocalStorageFilterValue(filterButton)
-      if (eventWrapper) {
+      this.updateLocalStorageFilterValue(filterButton) 
+      if (eventWrapper) { 
         const events = eventWrapper.root.querySelectorAll("[type='event']")
         if ((this.activeFilters[0].length === 1 && this.activeFilters[0][0] === 'show_all') || this.isEmptyFilter) {
           events.forEach(event => event.classList.remove('hidden'))
@@ -60,30 +60,33 @@ export default class Wrapper extends BaseBody {
         }
       }
     }
+  }
 
-    window.onbeforeunload = function () {
-      console.log('test')
-      const pathName = document.location.pathname
-      const scrollPosition = document.documentElement.scrollTop
-      const scrollPositionSafari = document.body.scrollTop
-      if (scrollPosition > scrollPositionSafari) {
-        sessionStorage.setItem('scrollPosition_' + pathName, scrollPosition.toString())
-      } else {
-        sessionStorage.setItem('scrollPosition_' + pathName, scrollPositionSafari.toString())
+  saveScrollPosition() {
+    var pathName = document.location.pathname;
+      var scrollPosition = document.documentElement.scrollTop;
+      var scrollPositionSafari = document.body.scrollTop;
+      if (scrollPosition > scrollPositionSafari){
+        sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+      }else{
+        sessionStorage.setItem("scrollPosition_" + pathName, scrollPositionSafari.toString());
       }
     }
   }
 
+  terminationEvent = 'onpagehide' in self ? 'pagehide' : 'unload'; // backwards compatibility
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.addEventListener('filter-change', this.filterChange)
+    window.addEventListener(this.terminationEvent, this.saveScrollPosition, false);
     this.setLocalStorageFilterValues()
     this.jumpToPosition()
   }
 
   disconnectedCallback () {
     this.removeEventListener('filter-change', this.filterChange)
+    window.removeEventListener(this.terminationEvent, this.saveScrollPosition);
     this.clearFilterValues()
   }
 
@@ -172,11 +175,11 @@ export default class Wrapper extends BaseBody {
     this.html = section
   }
 
-  jumpToPosition () {
-    const pathName = document.location.pathname
-    if (sessionStorage['scrollPosition_' + pathName]) {
-      document.documentElement.scrollTop = Number(sessionStorage.getItem('scrollPosition_' + pathName))
-      document.body.scrollTop = Number(sessionStorage.getItem('scrollPosition_' + pathName)) // safari
+  jumpToPosition (){
+    var pathName = document.location.pathname;
+    if (sessionStorage["scrollPosition_" + pathName]) {
+      document.documentElement.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName));
+      document.body.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName)); //safari
     }
   }
 
@@ -196,16 +199,17 @@ export default class Wrapper extends BaseBody {
   updateLocalStorageFilterValue (filterButton) {
     const filterValue = filterButton.getAttribute('data-filter-value')
     const filterGroup = this.getGroupPosition(filterButton)
-    let filter = this.activeFilters[filterGroup]
-    if (filterButton.classList.contains('active')) {
+    var filter = this.activeFilters[filterGroup]
+    if(filterButton.classList.contains('active')){
       filter.push(filterValue)
-    } else {
+    }
+    else{
       this.activeFilters[filterGroup].push(filterValue)
       filter = filter.filter(f => f !== filterValue)
     }
     this.activeFilters[filterGroup] = filter
 
-    // set Session Storage
+    //set Session Storage
     if (this.isEmptyFilter) {
       sessionStorage.clear()
     } else {
@@ -233,11 +237,12 @@ export default class Wrapper extends BaseBody {
 
     // filter buttons
     this.root.querySelectorAll("[type='filter']").forEach(button => {
-      if (button.getAttribute('data-filter-value') !== 'show_all') {
+      if (button.getAttribute('data-filter-value') != 'show_all') {
         if (this.activeFilters[this.getGroupPosition(button)].includes(button.getAttribute('data-filter-value'))) {
           button.classList.add('active')
         }
-      } else {
+      }
+      else{
         button.classList.remove('active')
       }
     })
@@ -251,62 +256,64 @@ export default class Wrapper extends BaseBody {
   }
 
   filterEventItems (events) {
-    const returnEvents = [...events]
-    const falseEvent = []
+    var returnEvents = [...events]
+    var falseEvent = []
 
     events.forEach(event => {
       const tags = event.getAttribute('data-tags').split(' ')
       event.classList.add('hidden')
 
       this.activeFilters.forEach(filter => {
-        if (!falseEvent.includes(event) && filter.length !== 0) {
-          let filterFound = false
+        if(!falseEvent.includes(event) && filter.length != 0){
+          var filterFound = false
           filter.forEach(f => {
             if (tags.includes(f)) {
               filterFound = true
             }
           })
 
-          if (!filterFound && returnEvents.includes(event)) {
+          if(!filterFound && returnEvents.includes(event)){
             returnEvents.splice(returnEvents.indexOf(event), 1)
-          } else if (!filterFound) {
+          } else if(!filterFound){
             falseEvent.push(event)
           }
         }
+
       })
     })
     returnEvents.forEach(e => {
       e.classList.remove('hidden')
-    })
+    });
   }
 
-  getGroupPosition (button) {
+
+  
+  getGroupPosition(button){
     const filterGroup = button.getAttribute('data-filter-group')
     return this.getGroupPositionfromString(filterGroup)
   }
-
-  getGroupPositionfromString (group) {
-    switch (group) {
-      case 'day':
-        return 1
-      case 'location':
-        return 2
-      case 'language':
-        return 3
-      case 'type':
-        return 4
-      case 'genre':
-        return 5
+  
+  getGroupPositionfromString(group){
+    switch(group){
+      case "day":
+        return 1;      
+      case "location":
+        return 2;
+      case "language":
+        return 3   
+      case "type":
+        return 4;      
+      case "genre":
+        return 5; 
       default:
         return 0
     }
   }
 
-  get getEmptyFilter () {
-    return [[], [], [], [], [], []]
+  get getEmptyFilter(){
+    return [[],[],[],[],[],[]]
   }
-
-  get isEmptyFilter () {
+  get isEmptyFilter(){
     return !this.activeFilters[1].length && !this.activeFilters[2].length && !this.activeFilters[3].length && !this.activeFilters[4].length && !this.activeFilters[5].length
   }
 }
