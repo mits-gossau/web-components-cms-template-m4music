@@ -21,14 +21,15 @@ export default class Navigation extends BaseNavigation {
         margin:max(2.5rem, 5vw) auto;
       }
       :host .icons {
+        align-items:center;
+        border-bottom:1px solid black;
+        border-top:1px solid black;
         display:flex;
         flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
         flex-wrap:wrap;
+        gap:0.5rem;
+        justify-content:space-between;
         padding:0.5rem 0 0.5rem 0;
-        border-top:1px solid black;
-        border-bottom:1px solid black;
       }
       :host .meta {
         padding:0.5rem 0 0 0;
@@ -50,6 +51,9 @@ export default class Navigation extends BaseNavigation {
         align-items:center;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
+        :host .icons {
+          gap:0;
+        }
       }
     `
   }
