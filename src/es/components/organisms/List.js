@@ -68,10 +68,9 @@ export default class Wrapper extends BaseBody {
       var scrollPositionSafari = document.body.scrollTop;
       if (scrollPosition > scrollPositionSafari){
         sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
-      }else{
+      } else{
         sessionStorage.setItem("scrollPosition_" + pathName, scrollPositionSafari.toString());
       }
-    }
   }
 
   terminationEvent = 'onpagehide' in self ? 'pagehide' : 'unload'; // backwards compatibility
