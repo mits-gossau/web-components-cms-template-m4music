@@ -7,13 +7,28 @@ Using web-components-cms-template Repository
 
 ## Web Components
 
-- [ ] Footer
-- [ ] Header
-- [ ] Logo
-- [ ] Content-Wrapper
-- [ ] Button
-- [ ] Video
-- [ ] Link
-- [ ] Card-Container
-- [ ] Highlight-Box
-- [ ] Form
+### Atoms
+- [x] Button 
+- [x] Filter
+- [x] Icon 
+- [x] Picture
+- [x] Video
+### Molecules
+- [x] Details
+- [x] EventDetail
+- [x] EventItem
+- [x] EventTeaser
+- [x] Form
+- [x] HighlightBox
+- [x] Navigation
+- [x] Newsletter
+- [x] Quote
+- [x] Speaker
+- [x] Tickets
+### Organisms
+- [x] Body
+- [x] Footer
+- [x] Header
+- [x] List
+- [x] Wrapper
+
