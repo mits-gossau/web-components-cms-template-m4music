@@ -136,7 +136,7 @@ export default class Filter extends Shadow() {
       width: 300px;
     }
     :host .eventType {
-      width: 220px;
+      width: 270px;
     }
     :host .languages {
       width: 320px;
