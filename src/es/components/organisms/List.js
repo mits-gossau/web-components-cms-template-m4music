@@ -67,9 +67,9 @@ export default class Wrapper extends BaseBody {
       var scrollPosition = document.documentElement.scrollTop;
       var scrollPositionSafari = document.body.scrollTop;
       if (scrollPosition > scrollPositionSafari){
-        sessionStorage.setItem("scrollPosition_" + pathName, scrollPosition.toString());
+        sessionStorage.setItem("m4music-scrollPosition_" + pathName, scrollPosition.toString());
       } else{
-        sessionStorage.setItem("scrollPosition_" + pathName, scrollPositionSafari.toString());
+        sessionStorage.setItem("m4music-scrollPosition_" + pathName, scrollPositionSafari.toString());
       }
   }
 
@@ -176,9 +176,9 @@ export default class Wrapper extends BaseBody {
 
   jumpToPosition (){
     var pathName = document.location.pathname;
-    if (sessionStorage["scrollPosition_" + pathName]) {
-      document.documentElement.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName));
-      document.body.scrollTop = Number(sessionStorage.getItem("scrollPosition_" + pathName)); //safari
+    if (sessionStorage["m4music-scrollPosition_" + pathName]) {
+      document.documentElement.scrollTop = Number(sessionStorage.getItem("m4music-scrollPosition_" + pathName));
+      document.body.scrollTop = Number(sessionStorage.getItem("m4music-scrollPosition_" + pathName)); //safari
     }
   }
 
@@ -212,7 +212,8 @@ export default class Wrapper extends BaseBody {
     if (this.isEmptyFilter) {
       sessionStorage.clear()
     } else {
-      sessionStorage.setItem('m4music', JSON.stringify(this.activeFilters))
+      var pathName = document.location.pathname;  
+      sessionStorage.setItem('m4music-filter_' + pathName, JSON.stringify(this.activeFilters))
     }
   }
 
@@ -220,7 +221,8 @@ export default class Wrapper extends BaseBody {
    * Clear session storage values - only values!
    */
   clearFilterValues () {
-    sessionStorage.setItem('m4music', JSON.stringify(this.getEmptyFilter))
+    var pathName = document.location.pathname;  
+    sessionStorage.setItem('m4music-filter_' + pathName, JSON.stringify(this.getEmptyFilter))
   }
 
   /**
@@ -228,7 +230,8 @@ export default class Wrapper extends BaseBody {
    * @returns void
    */
   setLocalStorageFilterValues () {
-    const data = sessionStorage.getItem('m4music')
+    var pathName = document.location.pathname;  
+    const data = sessionStorage.getItem('m4music-filter_' + pathName)
 
     this.activeFilters = JSON.parse(data) || this.getEmptyFilter
     // no active filter set
