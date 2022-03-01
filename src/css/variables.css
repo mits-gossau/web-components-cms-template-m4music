@@ -22,7 +22,7 @@
   --body-detail-main-background-color:var(--color-);
   --body-p-margin-mobile:0.5rem 0 0.5rem 0;
   --body-p-margin:0.75rem 0 0.75rem 0;
-  --body-picture-margin:0.5rem 0;
+  --body-picture-margin:0;
   --body-spacer-height-mobile:min(1.5rem, 5vw);
   --body-spacer-height:min(1.5rem, 5vw);
   --body-text-with-button-margin-bottom-mobile:1rem;
