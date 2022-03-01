@@ -99,6 +99,10 @@ export default class Body extends BaseBody {
     :host .event-detail-inner-container {
       padding: var(--detail-wrapper-padding-with-bg-color, 0 4rem);
     }
+    .white.embed-container {
+      padding: 1rem 0;
+      width: 100%;
+    }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
@@ -145,6 +149,7 @@ export default class Body extends BaseBody {
       :host .event-detail-inner-container {
         padding: 0;
       }
+      
     }
     `
   }
