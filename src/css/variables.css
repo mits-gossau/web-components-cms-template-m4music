@@ -129,6 +129,7 @@
   --event-item-speaker-picture-border-radius:50%;
   --event-item-speaker-picture-width-mobile:4.5rem;
   --eventlist-title-h-title-margin:0.5rem 0;
+  --eventlist-title-wrapper-section-padding-mobile: 0 5%;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
