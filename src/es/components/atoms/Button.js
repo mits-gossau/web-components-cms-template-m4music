@@ -416,6 +416,13 @@ export default class Button extends Shadow() {
     :host(.active) > button {
       background-color:var(--background-color-hover, white);
       color:var(--color-hover, white);
+    }
+    ${breakpoint != 'desktop' ? /* css */ `
+      :host(:not(.active)) button:hover,
+      :host(:not(.active)) > button:hover {
+        background-color: var(--background-color, transparent);
+        color: var(--color, white);
+      }` : ''
     }`
   }
 }
