@@ -15,7 +15,7 @@ export default class Picture extends BasePicture {
         background-color: var(--color-orange, #FA4B46);
       }
       ${this.getAttribute('namespace') === 'event-detail-picture-'
-      ? `:host picture{
+      ? `:host {
           background-color: var(--background-color, none);
         }
         :host img {

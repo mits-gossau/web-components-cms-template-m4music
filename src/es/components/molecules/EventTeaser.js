@@ -89,6 +89,7 @@ export default class EventTeaser extends Shadow() {
       line-height: 100%;
       word-break: break-word;
       transition: var(--transition, 0.15s ease-out all);
+      z-index: 2;
     }
     :host .wrapper:hover .text {
       color: var(--color, white);

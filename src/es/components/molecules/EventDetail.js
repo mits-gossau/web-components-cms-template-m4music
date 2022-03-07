@@ -50,6 +50,7 @@ export default class EventDetail extends Shadow() {
       right:0;
       bottom:0;
       padding:0;
+      z-index: 2;
     }
     :host h1{
       color:var(--h1-color, black);
