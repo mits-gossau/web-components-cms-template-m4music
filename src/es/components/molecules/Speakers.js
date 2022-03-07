@@ -54,7 +54,8 @@ export default class Speakers extends Shadow() {
       text-align: center;
     }
     :host .function {
-      text-align: center;
+      font-size:0.75rem;
+      text-align:center;
       margin:0;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -64,6 +65,7 @@ export default class Speakers extends Shadow() {
       }
       :host .name {
         font-size:var(--name-font-size-mobile, initial);
+        margin:0.9rem 0;
       }
       :host .function {
         font-size:var(--function-font-size-mobile, 20px);
