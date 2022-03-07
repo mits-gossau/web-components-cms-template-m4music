@@ -6,6 +6,7 @@ export default class Picture extends BasePicture {
     super.renderCSS()
     this.css = /* css */`
       :host picture, :host picture img {
+        
         transition: var(--transition, 0.15s ease-out all);
       }
       :host(.hover) picture img {
@@ -24,7 +25,18 @@ export default class Picture extends BasePicture {
         }`
         : ''
       }
+
+      :host picture{
+        width: 100%;
+        height: 0;
+        padding-bottom: calc(100% * ${this.getAttribute('ratio')});
+      }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        :host picture{
+          width: 100%;
+          height: 0;
+          padding-bottom: calc(100% * ${this.getAttribute('ratioMobile')});
+        }
       }
     `
   }
