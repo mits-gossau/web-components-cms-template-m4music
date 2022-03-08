@@ -17,6 +17,7 @@
   --body-content-custom-width-mobile-white:100%;
   --body-content-custom-width-mobile:var(--content-width-not-web-component-mobile);
   --body-content-custom-width:var(--content-width-not-web-component);
+  --body-home-content-custom-width: 100%;
   --body-detail-background-color-mobile:var(--color);
   --body-detail-main-background-color-mobile:var(--color);
   --body-detail-main-background-color:var(--color-);
