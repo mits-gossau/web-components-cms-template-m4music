@@ -129,8 +129,8 @@
   --event-item-speaker-picture-border-radius:50%;
   --event-item-speaker-picture-width-mobile:4.5rem;
   --eventlist-title-h-title-margin:0.5rem 0;
-  --eventlist-title-wrapper-section-padding-mobile: 0 5%;
   --eventlist-title-padding-with-bg-color: 0 5%;
+  --eventlist-title-wrapper-section-padding-mobile: 0 5%;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
@@ -478,6 +478,8 @@
   --p-margin-mobile:0 0 1.35rem 0;
   --p-margin:0 0 1rem;
   --padding-white-background:1rem;
+  --partner-logo-max-width:200px;
+  --partner-text-color:var(--color-black);
   --quote-padding:1rem 0 1rem 0;
   --quote-person-color:#616161;
   --quote-person-font-size-mobile:1rem;
