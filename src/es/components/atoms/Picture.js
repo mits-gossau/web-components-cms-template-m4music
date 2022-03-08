@@ -26,7 +26,7 @@ export default class Picture extends BasePicture {
       }
 
       :host picture{
-        width: 100%;
+        width: var(--width, 100%);
         ${this.hasAttribute('ratio')
         ? /*css*/`
           aspect-ratio: 1/${this.getAttribute('ratio')};
@@ -35,6 +35,7 @@ export default class Picture extends BasePicture {
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host picture{
+          width: var(--width-mobile, var(--width, 100%));
           ${this.hasAttribute('ratioMobile')
           ? /*css*/`
             aspect-ratio: 1/${this.getAttribute('ratioMobile')};
