@@ -33,7 +33,7 @@ export default class Picture extends BasePicture {
         `
         : '' }
       }
-      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      @media only screen and (max-width: 600px) {
         :host picture{
           ${this.hasAttribute('ratioMobile')
           ? /*css*/`
