@@ -17,10 +17,10 @@
   --body-content-custom-width-mobile-white:100%;
   --body-content-custom-width-mobile:var(--content-width-not-web-component-mobile);
   --body-content-custom-width:var(--content-width-not-web-component);
-  --body-home-content-custom-width: 100%;
   --body-detail-background-color-mobile:var(--color);
   --body-detail-main-background-color-mobile:var(--color);
   --body-detail-main-background-color:var(--color-);
+  --body-home-content-custom-width: 100%;
   --body-p-margin-mobile:0.5rem 0 0.5rem 0;
   --body-p-margin:0.75rem 0 0.75rem 0;
   --body-picture-margin:0;
@@ -612,11 +612,12 @@
   --speakers-name-color:var(--color-orange);
   --speakers-name-font-size-mobile:3.6rem;
   --speakers-name-font-size:2.5rem;
-  --speakers-padding:2rem 0 2rem 0;
+  --speakers-padding:0 0 2rem 0;
   --speakers-picture-border-radius-mobile:50%;
   --speakers-picture-border-radius:50%;
   --speakers-picture-img-max-width:var(--quote-picture-img-max-width);
   --speakers-picture-img-width:100%;
+  --speakers-picture-width-mobile:160px;
   --text-decoration-hover:underline solid var(--color-orange) 1px;
   --text-decoration:underline solid var(--link-underline-color) 1px;
   --tickets-button-background-color-hover-primary:var(--button-background-color-hover-primary);
