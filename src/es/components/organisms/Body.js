@@ -64,6 +64,9 @@ export default class Body extends BaseBody {
       padding:var(--wrapper-li-padding, 0);
       vertical-align: middle;
     }
+    :host > main p {
+      margin: var(--p-margin, var(--content-spacing, unset));
+    }
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
