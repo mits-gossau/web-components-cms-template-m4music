@@ -120,7 +120,6 @@ export default class Filter extends Shadow() {
       flex-wrap: wrap;
     }
     :host > div {
-      padding-right: 1rem;
       align-self: flex-start;
     }
     :host .filter {
