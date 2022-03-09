@@ -196,7 +196,7 @@
   --h-title-text-transform:uppercase;
   --h1-color:var(--color);
   --h1-font-family:var(--font-family);
-  --h1-font-size-mobile:min(1.8rem, 8vw);
+  --h1-font-size-mobile:36px;
   --h1-font-size:3rem;
   --h1-font-weight:var(--h-title-font-weight);
   --h1-line-height-mobile:100%;
