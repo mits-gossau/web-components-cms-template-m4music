@@ -178,7 +178,6 @@ export default class Wrapper extends BaseBody {
     :host(.rich-text-wrapper) section a {
       line-height: var(--rich-text-a-line-height, 125%);
     }
-
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
@@ -188,7 +187,6 @@ export default class Wrapper extends BaseBody {
         flex-wrap:${this.getType(this.getAttribute('type')).wrapMobile};
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
         padding: ${(this.getAttribute('background-color') === 'white') ? 'var(--wrapper-section-padding-mobile-with-bg-color, 0 1rem);' : 'var(--wrapper-section-padding-mobile, 0 1rem);'};
-        
       }
       :host > section * p {
         line-height:var(--p-line-height-mobile, normal);
@@ -238,7 +236,9 @@ export default class Wrapper extends BaseBody {
       :host .event-item {
         max-width: none;
       }
-
+      :host .richtext-with-button-text-container > p {
+        margin:1rem 0;
+      }
     }
   `
   }
