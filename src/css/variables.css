@@ -614,7 +614,7 @@
   --speakers-name-color:var(--color-orange);
   --speakers-name-font-size-mobile:3.6rem;
   --speakers-name-font-size:2.5rem;
-  --speakers-padding:0 0 2rem 0;
+  --speakers-padding:1rem 0 1rem 0;
   --speakers-picture-border-radius-mobile:50%;
   --speakers-picture-border-radius:50%;
   --speakers-picture-img-max-width:var(--quote-picture-img-max-width);
