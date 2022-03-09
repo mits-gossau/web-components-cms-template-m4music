@@ -4,8 +4,9 @@ import BaseBody from '../organisms/Body.js'
 export default class Embed extends BaseBody {
   constructor (...args) {
     super(...args)
-    this.hasRendered = false;
+    this.hasRendered = false
   }
+
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
@@ -16,7 +17,7 @@ export default class Embed extends BaseBody {
    *
    * @return {boolean}
    */
-   shouldComponentRenderCSS () {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -86,14 +87,14 @@ export default class Embed extends BaseBody {
 
   renderHTML () {
     this.hasRendered = true
-    if (this.iframe != null){
+    if (this.iframe != null) {
       if (this.script != null && this.script.getAttribute('src').includes('polldaddy.com')) {
         this.classList.add('embed-polldaddy')
-      } else if (this.iframe.getAttribute('src').includes('youtube.com')){
+      } else if (this.iframe.getAttribute('src').includes('youtube.com')) {
         this.classList.add('embed-youtube')
-      } else if (this.iframe.getAttribute('src').includes('mx3.ch')){
+      } else if (this.iframe.getAttribute('src').includes('mx3.ch')) {
         this.classList.add('embed-mx3')
-      } else if (this.iframe.getAttribute('src').includes('spotify.com')){
+      } else if (this.iframe.getAttribute('src').includes('spotify.com')) {
         this.classList.add('embed-spotify')
       }
     }

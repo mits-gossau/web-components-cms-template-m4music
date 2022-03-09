@@ -28,19 +28,19 @@ export default class Picture extends BasePicture {
       :host picture{
         width: var(--width, 100%);
         ${this.hasAttribute('ratio')
-        ? /*css*/`
+        ? /* css */`
           aspect-ratio: 1/${this.getAttribute('ratio')};
         `
-        : '' }
+        : ''}
       }
       @media only screen and (max-width: 600px) {
         :host picture{
           width: var(--width-mobile, var(--width, 100%));
           ${this.hasAttribute('ratioMobile')
-          ? /*css*/`
+          ? /* css */`
             aspect-ratio: 1/${this.getAttribute('ratioMobile')};
           `
-          : '' }
+          : ''}
         }
       }
     `
