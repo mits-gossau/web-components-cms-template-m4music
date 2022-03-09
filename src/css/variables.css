@@ -66,7 +66,7 @@
   --button-icon-display:inline-flex;
   --button-icon-margin-left:8px;
   --button-icon-margin-right:8px;
-  --button-icon-padding:0 0.75rem;
+  --button-icon-padding:0 0.75rem 0 0;
   --button-icon-width-mobile:1.5rem;
   --button-icon-width:1.2rem;
   --button-margin-mobile:0.5rem 0 0 0;
