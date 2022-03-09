@@ -118,6 +118,7 @@ export default class Wrapper extends BaseBody {
     :host :is(h3) {
       color:var(--wrapper-h3-text-color, var(--wrapper-text-color), var(--color), red);
       margin: var(--h-title-margin, 0);
+      padding: var(--h-title-padding, 0);
     }
     :host :is(h5, h6) {
       color:var(--wrapper-text-color, var(--color), red);
