@@ -153,7 +153,7 @@ export default class Filter extends Shadow() {
     }
     :host [type='filter'] {
       font-size:unset;
-      padding:0 0.2rem 0.2rem 0;
+      padding:0 0.2rem 0 0;
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
