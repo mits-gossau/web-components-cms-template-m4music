@@ -122,7 +122,7 @@
   --event-item-detail-a-text-underline-offset:0.1rem; 
   --event-item-icon-transform-open: rotate(45deg);
   --event-item-icon-transition: transform 0.15s ease;
-  --event-item-name-font-size-mobile:1.55rem;
+  --event-item-name-font-size-mobile:25px;
   --event-item-name-font-size:1.25rem;
   --event-item-name-line-height:125%;
   --event-item-picture-width-mobile:4.5rem;
