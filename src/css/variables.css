@@ -124,7 +124,7 @@
   --event-item-icon-transition: transform 0.15s ease;
   --event-item-name-font-size-mobile:25px;
   --event-item-name-font-size:1.25rem;
-  --event-item-name-line-height:125%;
+  --event-item-name-line-height:100%;
   --event-item-picture-width-mobile:4.5rem;
   --event-item-speaker-picture-border-radius-mobile:50%;
   --event-item-speaker-picture-border-radius:50%;
