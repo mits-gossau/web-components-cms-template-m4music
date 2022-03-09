@@ -35,17 +35,17 @@ export default class Embed extends BaseBody {
         text-align: left !important;
         display: block
       }
-      :host(.embed-youtube), .embed-youtube {
-        width: 32vw;
-        height: 18vw;
-      }
+      :host(.embed-youtube) {
+        max-height: 900px;
+        height: 50vw;
+      }      
       :host(.embed-youtube) iframe, .embed-youtube iframe {
         width: 100%;
         height: 100%;
       }
       :host(.embed-polldaddy) .css-answer-group, 
       :host(.embed-polldaddy) .poll__answer-media-public {
-        width: 50%;
+        width: 34vw;
       }
       :host(.embed-polldaddy) .css-answer-group.pds-answer-group > div {
         width: 100%;
@@ -53,19 +53,25 @@ export default class Embed extends BaseBody {
       :host(.embed-polldaddy) .css-answer.pds-answer > span {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      :host(.embed-polldaddy) .embed-youtube {
+        width: 34vw;
+        height: 19vw;
       }
       :host(.white) iframe{
         width: 32vw;
         height: 18vw;
       }
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        :host(.embed-youtube), .embed-youtube {
+        :host(.embed-polldaddy) .embed-youtube {
           width: 80vw;
           height: 45vw;
         }
+        :host(.embed-polldaddy) .css-box,
         :host(.embed-polldaddy) .css-answer-group, 
         :host(.embed-polldaddy) .poll__answer-media-public {
-          width: 80vw;
+          width: 80vw !important;
         }
         :host(.embed-polldaddy) .css-answer.pds-answer > span {
           display: inline;
