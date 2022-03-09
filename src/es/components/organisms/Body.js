@@ -67,23 +67,7 @@ export default class Body extends BaseBody {
     :host ul > li > p {
       margin: var(--li-p-margin, 0);
     }
-    :host .embed-container .embed-youtube {
-      text-align: left !important;
-    }
-    :host .embed-container .embed-youtube iframe {
-      width: 32vw;
-      height: 18vw;
-    }
-    :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
-      width: 50%;
-    }
-    :host .embed-container .css-answer-group.pds-answer-group > div {
-      width: 100%;
-    }
-    :host .embed-container .css-answer.pds-answer > span {
-      display: flex;
-      flex-wrap: wrap;
-    }
+
     :host .custom-width {
       width:var(--content-custom-width, var(--content-width-not-web-component), 80%);
     }
@@ -99,11 +83,6 @@ export default class Body extends BaseBody {
     :host .event-detail-inner-container {
       padding: var(--detail-wrapper-padding-with-bg-color, 0 4rem);
     }
-    .white.embed-container {
-      padding: 1rem 0;
-      width: 100%;
-    }
-
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
@@ -125,16 +104,6 @@ export default class Body extends BaseBody {
       }
       :host ul {
         margin-top: 0;
-      }
-      :host .embed-container .embed-youtube iframe {
-        width: 80vw;
-        height: 45vw;
-      }
-      :host .embed-container .css-answer-group, :host .embed-container .poll__answer-media-public {
-        width: 80vw;
-      }
-      :host .embed-container .css-answer.pds-answer > span {
-        display: inline;
       }
       :host .custom-width {
         width:var(--content-custom-width-mobile, var(--content-width-not-web-component-mobile), 100%);
