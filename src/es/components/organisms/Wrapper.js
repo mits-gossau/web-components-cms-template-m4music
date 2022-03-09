@@ -187,7 +187,8 @@ export default class Wrapper extends BaseBody {
         flex-direction:${this.getType(this.getAttribute('type')).directionMobile};
         flex-wrap:${this.getType(this.getAttribute('type')).wrapMobile};
         margin-bottom:var(--wrapper-margin-bottom-mobile, 0);
-        padding: var(--wrapper-section-padding-mobile, 0 1rem);
+        padding: ${(this.getAttribute('background-color') === 'white') ? 'var(--wrapper-section-padding-mobile-with-bg-color, 0 1rem);' : 'var(--wrapper-section-padding-mobile, 0 1rem);'};
+        
       }
       :host > section * p {
         line-height:var(--p-line-height-mobile, normal);

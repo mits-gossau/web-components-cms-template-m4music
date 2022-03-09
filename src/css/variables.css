@@ -133,6 +133,7 @@
   --eventlist-title-h3-font-size-mobile:28px;
   --eventlist-title-padding-with-bg-color: 0 5%;
   --eventlist-title-wrapper-section-padding-mobile: 0;
+  --eventlist-title-wrapper-section-padding-mobile-with-bg-color: 0 5%;
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
