@@ -207,7 +207,7 @@
   --h1-text-transform:var(--h-title-text-transform);
   --h2-color:var(--color);
   --h2-font-family:var(--font-family);
-  --h2-font-size-mobile:min(1.6rem, 7vw);
+  --h2-font-size-mobile:28px;
   --h2-font-size:2rem;
   --h2-font-weight:var(--h-title-font-weight);
   --h2-line-height-mobile:100%;
