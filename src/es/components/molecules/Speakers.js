@@ -65,7 +65,7 @@ export default class Speakers extends Shadow() {
       }
       :host .name {
         font-size:var(--name-font-size-mobile, initial);
-        margin:0.9rem 0;
+        margin:0.25rem 0;
       }
       :host .function {
         font-size:var(--function-font-size-mobile, 20px);
