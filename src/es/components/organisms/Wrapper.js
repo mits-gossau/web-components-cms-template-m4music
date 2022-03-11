@@ -204,7 +204,7 @@ export default class Wrapper extends BaseBody {
         margin:var(--wrapper-last-margin-mobile, 0);
       }
       :host :is(h1, h2, h3, h4) {
-        margin:var(--h-title-margin-mobile, 0 0 0.5rem 0);
+        margin:var(--h-title-margin-mobile, var(--h-title-margin, 0));
       }
       :host :is(h5, h6) {
         margin: var(--h56-title-margin, 0);
