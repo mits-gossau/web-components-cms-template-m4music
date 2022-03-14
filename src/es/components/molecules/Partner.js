@@ -41,7 +41,7 @@ export default class Partner extends Shadow() {
       flex-direction:column;
       justify-content:flex-start;
       padding:0.5rem 0.5rem 1rem;
-      width:100%;
+      width:calc(100% - 1rem);
     }
     :host .partner {
       align-items: center;
