@@ -66,7 +66,7 @@ export default class Partner extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .logo-wrapper {
         justify-content: center;
-        gap:0.5rem;
+        gap:1rem;
         flex-direction: column;
         width:100%;
       }
