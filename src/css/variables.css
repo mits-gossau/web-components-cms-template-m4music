@@ -654,4 +654,5 @@
   --wrapper-margin-bottom-mobile:2rem;
   --wrapper-margin-bottom:3rem;
   --wrapper-section-padding-mobile:0;
+  --button-icon-justify-content:flex-start;
 }
