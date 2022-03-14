@@ -64,6 +64,9 @@ export default class Partner extends Shadow() {
       --padding:var(--a-link-content-spacing, 0);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+      :host .partner {
+        padding-bottom:2rem;
+      }
       :host .logo-wrapper {
         justify-content: center;
         gap:1rem;
