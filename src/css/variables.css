@@ -377,8 +377,8 @@
   --highlightbox-padding:6vw 5vw;
   --highlightbox-text-align:center;
   --html-background-color:var(--background-color);
-  --jury-wrapper-h56-title-margin-mobile:var(--p-margin-mobile);
-  --jury-wrapper-h56-title-margin:var(--p-margin);
+  --jury-wrapper-h56-title-margin-mobile:0;
+  --jury-wrapper-h56-title-margin:0;
   --jury-wrapper-p-margin-mobile: 0;
   --jury-wrapper-p-margin: 0;
   --jury-wrapper-wrapper-h3-text-color:var(--color-orange);
@@ -655,4 +655,10 @@
   --wrapper-margin-bottom:3rem;
   --wrapper-section-padding-mobile:0;
   --button-icon-justify-content:flex-start;
+  --jury-wrapper-h-title-margin:1rem 0 0 0;
+  --jury-wrapper-h-title-margin-mobile:0.5rem 0 0 0;
+  --jury-wrapper-photo-teaser-container-padding-bottom:1rem;
+  --jury-wrapper-photo-teaser-container-padding-bottom-mobile:0.9rem;
+
+  
 }

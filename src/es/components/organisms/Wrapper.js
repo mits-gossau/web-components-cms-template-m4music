@@ -108,6 +108,9 @@ export default class Wrapper extends BaseBody {
     :host > section > div:last-of-type {
       margin:var(--wrapper-last-margin, 0);
     }
+    :host > section > .photo-teaser-container {
+      padding-bottom:var(--photo-teaser-container-padding-bottom, 0);
+    }
     :host article {
       width: var(--article-width, 100%);
     }
@@ -124,6 +127,7 @@ export default class Wrapper extends BaseBody {
       color:var(--wrapper-text-color, var(--color), red);
       margin: var(--h56-title-margin, 0);
     }
+   
     :host .event-item {
       max-width: 25%;
       margin: 0;
@@ -202,6 +206,10 @@ export default class Wrapper extends BaseBody {
       }
       :host > section > div:last-of-type {
         margin:var(--wrapper-last-margin-mobile, 0);
+      }
+      :host > section > .photo-teaser-container {
+        padding-bottom:var(--photo-teaser-container-padding-bottom-mobile, 0);
+        margin:0 !important;
       }
       :host :is(h1, h2, h3, h4) {
         margin:var(--h-title-margin-mobile, var(--h-title-margin, 0));
