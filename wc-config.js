@@ -188,6 +188,10 @@
     {
       selector: 'm4music-o-',
       url: 'organisms/'
+    },
+    {
+      selector: 'xxx-a-',
+      url: 'web-components-toolbox/src/es/components/atoms/'
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑
