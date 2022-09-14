@@ -86,6 +86,16 @@ export default class Body extends BaseBody {
     :host .event-detail-inner-container {
       padding: var(--detail-wrapper-padding-with-bg-color, 0 4rem);
     }
+    :host .header-image {
+      background:yellow;
+      position:absolute;
+      top: 0;
+      left: 0;
+      right:0;
+      width: 100%;
+      height:500px;
+      margin:0;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);
