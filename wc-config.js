@@ -192,6 +192,10 @@
     {
       selector: 'xxx-a-',
       url: 'web-components-toolbox/src/es/components/atoms/'
+    },
+    {
+      selector: 'xxx-o-',
+      url: 'web-components-toolbox/src/es/components/organism/'
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑
