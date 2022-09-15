@@ -4,7 +4,20 @@
  * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
  * - if a component holds other components you should share the attribute namespace with its children
  */
- html {
+ :root {
+  --body-h1-font-size:3.13rem;
+  --body-h1-padding:0 0 3.75rem 0;
+  --body-h2-font-size: 1.89rem;
+  --button-primary-background-color-custom:white;
+  --button-primary-border-radius:var(--button-border-radius);
+  --button-primary-color-custom:var(--background-color);
+  --button-primary-font-size:0.95rem;
+  --button-primary-line-height:1.2rem;
+  --button-primary-padding:0.5rem 1rem;
+  --color-hover:var(--button-background-color-hover-primary);
+  --color-secondary: var(--button-background-color-primary);
+
+  /* */
   --a-text-decoration-color-ext:var(--link-underline-color);
   --a-text-decoration-color-hover-ext:var(--color-orange);
   --a-text-decoration-line-ext:underline;
@@ -38,7 +51,7 @@
   --button-background-color-primary:var(--color-orange);
   --button-background-color-secondary:var(--color);
   --button-border-pass-secondary:1px solid black;
-  --button-border-radius:4px;
+  --button-border-radius:0px;
   --button-color-arrowDown-mobile:var(--button-color-arrowDown);
   --button-color-arrowDown:var(--button-color-secondary);
   --button-color-hover-arrow:var(--button-color-hover-secondary);
@@ -88,8 +101,8 @@
   --color-orange:#FA4B46;
   --color:#FFFFFF;
   --content-max-width:1600px;
-  --content-spacing-mobile:var(--content-spacing);
-  --content-spacing:0;
+  /* --content-spacing-mobile:var(--content-spacing); */
+  /* --content-spacing:0; */
   --content-width-mobile:90%;
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:88%;
