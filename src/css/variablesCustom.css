@@ -7,7 +7,6 @@
  :root {
   --body-h1-font-size:3.13rem;
   --body-h1-padding:0 0 3.75rem 0;
-  --body-h2-font-size: 1.89rem;
   --button-primary-background-color-custom:white;
   --button-primary-border-radius:var(--button-border-radius);
   --button-primary-color-custom:var(--background-color);
@@ -16,7 +15,10 @@
   --button-primary-padding:0.5rem 1rem;
   --color-hover:var(--button-background-color-hover-primary);
   --color-secondary: var(--button-background-color-primary);
+  --figcaption-background-color:#FB5E3F;
+  --figcaption-color:#232323;
 
+  --button-secondary-background-color:yellow !important;
   /* */
   --a-text-decoration-color-ext:var(--link-underline-color);
   --a-text-decoration-color-hover-ext:var(--color-orange);
@@ -224,7 +226,7 @@
   --h2-color:var(--color);
   --h2-font-family:var(--font-family);
   --h2-font-size-mobile:28px;
-  --h2-font-size:2rem;
+  --h2-font-size:1.9rem;
   --h2-font-weight:var(--h-title-font-weight);
   --h2-line-height-mobile:100%;
   --h2-line-height:100%;
@@ -246,7 +248,7 @@
   --h4-color:var(--color);
   --h4-font-family:var(--font-family);
   --h4-font-size-mobile:min(1.25rem, 5vw);
-  --h4-font-size:1.25rem;
+  --h4-font-size:0.95rem;
   --h4-font-weight:var(--h-title-font-weight);
   --h4-line-height-mobile:125%;
   --h4-line-height:125%;

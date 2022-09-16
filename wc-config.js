@@ -218,6 +218,11 @@
       selector: 'xxx-o-',
       url: 'web-components-toolbox/src/es/components/organisms/',
       separateFolder: true
+    },
+    {
+      selector: 'xxx-m-',
+      url: 'web-components-toolbox/src/es/components/molecules/',
+      separateFolder: true
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑

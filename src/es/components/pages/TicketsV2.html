@@ -14,8 +14,8 @@
   <link href=../web-components-toolbox/src/css/variables.css rel=stylesheet type="text/css">
   <link href=../../../css/misc.css rel=stylesheet>
   <link href=../../../css/fonts.css rel=stylesheet>
-  <link href=../../../css/variablesCustom.css rel=stylesheet>
   <script src="../../../../wc-config.js" type="text/javascript"></script>
+  <link href=../../../css/variablesCustom.css rel=stylesheet>
   <!-- NOTE: Remove line Debugging.js below for none localhost -->
   <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
   <link href="../../../../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -112,23 +112,72 @@
       </m4music-o-header>
     </div>
     <m4music-o-body namespace="body-" namespace-fallback>
-      <div>
-        <xxx-o-wrapper>
-          <div>bla bla bla</div>
-          <div>
-            <h3><strong>Catering Services Migros</strong></h3>
-            <p>Unter dem Brand «Catering Services Migros» pflegen wir Event-Gastronomie auf höchstem Niveau. Wir bieten
-              kulinarische und kulturelle Erlebnisse in eigenen Eventhallen und überraschen Gäste mit unserem Catering
-              an
-              Grossanlässen. Unter anderem bewirten wir Gäste am Leichtathletik-Meeting «Weltklasse Zürich», am
-              Eidgenössischen
-              Schwing- und Älplerfest, am Gurtenfestival, in der Swissporarena in Luzern, beim VIP-Catering im Stadion
-              St.
-              Gallen und bei «Salto Natale».</p>
-            <p><a rel="noopener" href="https://www.migros.ch/de/gastronomie/catering-services.html" target="_blank"
-                title="Zu den Catering Services Migros">Zu den Catering Services Migros</a></p>
-          </div>
-        </xxx-o-wrapper>
+      <xxx-o-wrapper>
+        <xxx-m-teaser>
+          <figure>
+            <figcaption>
+              <style>
+                :host h4 {
+                  --h4-title-padding:0;
+                  --h4-margin:0;
+                  --h4-line-height:100%;
+                }
+                :host .title {
+                  padding-bottom:140px;
+                }
+                :host .row {
+                  display:flex;
+                  flex-direction:row;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom:0.5rem;
+                }
+              </style>
+              <div class="title">
+                <h2>FESTIVAL PÄSSE</h2>
+              </div>
+              <div class="row">
+                <h4>FREITAG: CHF 49</h4>
+                <xxx-a-button namespace="button-primary-">KAUFEN</xxx-a-button>
+              </div>
+              <div class="row">
+                <h4>SAMSTAG: CHF 55</h4>
+                <xxx-a-button namespace="button-primary-">KAUFEN</xxx-a-button>
+              </div>
+              <div class="row">
+                <h4>SAMSTAG + FREITAG: CHF 75</h4>
+                <xxx-a-button namespace="button-primary-">KAUFEN</xxx-a-button>
+              </div>
+            </figcaption>
+          </figure>
+        </xxx-m-teaser>
+
+        <div>
+
+          <xxx-m-teaser>
+            <figure>
+              <figcaption>
+                <style>
+                  :host {
+                    --figcaption-background-color: white;
+                  }
+                </style>
+                <div>
+                  <h2>PROFESSIONALS</h2>
+                  <div>
+                    <div>
+                      <h4>Festivalpass (1 oder 2 Tage)<br>Zugang zu Networking-Event und Apero<br>Zugang zu
+                        Netzwerkdatenbank aller akkreditierten
+                        Professionals</h4>
+                    </div>
+
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          </xxx-m-teaser>
+        </div>
+      </xxx-o-wrapper>
       </div>
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
