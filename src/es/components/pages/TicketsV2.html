@@ -117,20 +117,24 @@
           <figure>
             <figcaption>
               <style>
+                :host {
+                  
+                }
                 :host h4 {
-                  --h4-title-padding:0;
-                  --h4-margin:0;
-                  --h4-line-height:100%;
+                  --h4-title-padding: 0;
+                  --h4-margin: 0;
+                  --h4-line-height: 100%;
                 }
                 :host .title {
-                  padding-bottom:140px;
+                  padding-bottom: 140px;
                 }
+
                 :host .row {
-                  display:flex;
-                  flex-direction:row;
+                  display: flex;
+                  flex-direction: row;
                   justify-content: space-between;
                   align-items: center;
-                  margin-bottom:0.5rem;
+                  margin-bottom: 0.5rem;
                 }
               </style>
               <div class="title">
@@ -153,25 +157,33 @@
         </m4m-m-teaser>
 
         <div>
-
           <m4m-m-teaser>
             <figure>
               <figcaption>
                 <style>
                   :host {
                     --figcaption-background-color: white;
+                    --button-primary-background-color-custom:#232323;
+                    --button-primary-color-custom:white;
+                  }
+                  :host .professionals {
+                    display:flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: space-between;
                   }
                 </style>
-                <div>
+                <div class="professionals">
                   <h2>PROFESSIONALS</h2>
                   <div>
-                    <div>
-                      <h4>Festivalpass (1 oder 2 Tage)<br>Zugang zu Networking-Event und Apero<br>Zugang zu
-                        Netzwerkdatenbank aller akkreditierten
-                        Professionals</h4>
-                    </div>
-
+                    <h4>Festivalpass (1 oder 2 Tage)<br>Zugang zu Networking-Event und Apero<br>Zugang zu
+                      Netzwerkdatenbank aller akkreditierten
+                      Professionals</h4>
                   </div>
+                  <div>
+                    <m4m-a-button namespace="button-primary-">MEHR INFOS</m4m-a-button>
+                  </div>
+
                 </div>
               </figcaption>
             </figure>

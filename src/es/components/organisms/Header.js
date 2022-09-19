@@ -57,10 +57,14 @@ export default class Header extends BaseHeader {
       max-width:var(--content-max-width, 100vw);
     }
     :host > header > a-logo {
-      z-index:100;
+      z-index:103;
     }
     :host > header > m4music-m-navigation {
+      z-index:102;
       top:0;
+    }
+    :host > header > a-menu-icon {
+      z-index:103;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {}
   `

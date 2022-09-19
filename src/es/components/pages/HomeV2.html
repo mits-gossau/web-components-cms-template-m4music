@@ -118,28 +118,21 @@
     <m4music-o-body namespace="body-" namespace-fallback>
 
 
-      <div>
+      
         <m4m-a-emotion-pictures namespace="emotion-pictures-default-">
           <a-picture picture-load defaultSource="../../../img/dummy_header_new.jpg" alt="randomized image"></a-picture>
           <style>
             :host {
               --body-content-spacing: 0;
-              --body-content-max-width: 100vw;
-              --emotion-pictures-default-img-max-height: 556px;
+              --emotion-pictures-default-img-max-height: var(--header-height);
               --width: 100vw;
               position: absolute;
               top: 0;
               left: 0;
-            }
-
-            @media only screen and (max-width: 960px) {
-              :host {
-                --img-height: 156px;
-              }
-            }
+            }            
           </style>
         </m4m-a-emotion-pictures>
-      </div>
+      
       <div>
         <h1>SEE YOU NEXT YEAR!<br />M4MUSIC 2023 AM 24. & 25. MÄRZ <br />IN ZÜRICH</h1>
         <p class="lead">m4music verbindet und fördert: Hier kommt die Schweizer
