@@ -210,17 +210,17 @@
       url: 'organisms/'
     },
     {
-      selector: 'xxx-a-',
+      selector: 'm4m-a-',
       url: 'web-components-toolbox/src/es/components/atoms/',
       separateFolder: true
     },
     {
-      selector: 'xxx-o-',
+      selector: 'm4m-o-',
       url: 'web-components-toolbox/src/es/components/organisms/',
       separateFolder: true
     },
     {
-      selector: 'xxx-m-',
+      selector: 'm4m-m-',
       url: 'web-components-toolbox/src/es/components/molecules/',
       separateFolder: true
     }
