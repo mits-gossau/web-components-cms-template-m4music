@@ -309,9 +309,8 @@
   --header-detail-position:static;
   --header-flex-direction-mobile:row;
   --header-header-logo-margin:0 1rem 0 0;
-  --header-height-mobile:var(--header-height);
-  --header-height:min(30vw,30vh);
-  --header-align-items: start;
+  --header-height-mobile:min(6rem, 170px);
+  --header-height:176px;
   --header-lang-navigation-color-hover:var(--color);
   --header-lang-navigation-font-size:max(20px, 0.65rem);
   --header-lang-navigation-text-decoration:underline solid var(--color-black) 1px;
