@@ -114,7 +114,8 @@
         <div>
           <div class="headline">
             <div>
-              <a-picture picture-load defaultSource="../../../img/m4m_white.svg" alt="randomized image" namespace="head-logo-">
+              <a-picture picture-load defaultSource="../../../img/m4m_white.svg" alt="randomized image"
+                namespace="head-logo-">
               </a-picture>
               <h1>Festival</h1>
             </div>
@@ -127,24 +128,13 @@
 
         </div>
 
-
-        <!-- <div>
-          <h2 class="bg-color font-size-big font-family-secondary">
-            Logo Top
-          </h2>
-          <a-picture picture-load defaultSource="../../../img/header-test.jpg" alt="randomized image"></a-picture>
-            <div class="logo" logo-position="flex-start">
-            <a-logo href="/" namespace="header-logo-" namespace-fallback src="../../../img/m4m_white.svg"></a-logo>
-            </div>
-        </div> -->
-
         <style>
           :host {
             --body-content-max-width: 100%;
-            --body-content-spacing: 0;
+            /* --body-content-spacing: 0; */
             padding-bottom: var(--spacer-height);
-            --head-logo-img-margin:0;
-            --head-logo-margin:3vw 0 0 5px;
+            --head-logo-img-margin: 0;
+            --head-logo-margin: 3vw 0 0 5px;
           }
 
           :host .headline {
@@ -157,9 +147,22 @@
             align-items: flex-start;
             flex-direction: column;
             justify-content: space-between;
-            margin: 0 6%;
+            /* margin: 0 6%; */
+            margin: 0 auto;
             opacity: 1;
             padding: 2rem 0 0 0;
+            width: 88%;
+            max-width: var(--content-max-width);
+          }
+
+          :host .headline > div {
+            /* width: 25vw; */
+          }
+
+          @media only screen and (max-width: 960px) {
+            :host .headline > div {
+              width: 100%;
+            }
           }
         </style>
       </m4m-a-emotion-pictures>

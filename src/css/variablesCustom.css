@@ -5,7 +5,6 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
 :root {
-  --header-height: 80px;
   --body-h1-font-size: 3.13rem;
   --body-h1-padding: 0 0 3.75rem 0;
   --button-primary-background-color-custom: white;
@@ -14,19 +13,25 @@
   --button-primary-font-size: 0.95rem;
   --button-primary-line-height: 1.2rem;
   --button-primary-padding: 0.5rem 1rem;
+  --button-secondary-background-color: yellow !important;
   --color-hover: var(--button-background-color-hover-primary);
   --color-secondary: var(--button-background-color-primary);
-  --figcaption-background-color: #FB5E3F;
-  --header-background-color: #FA4B46;
-  --figcaption-color: #232323;
-  --button-secondary-background-color: yellow !important;
-  --header-content-spacing-mobile: 0 auto;
-  --header-a-menu-icon-height: 4px;
-  --emotion-pictures-with-logo-h2-font-size: 2.5rem;
   --emotion-pictures-with-logo-h1-color: var(--header-background-color);
+  --emotion-pictures-with-logo-h1-font-size-mobile:2.5rem;
+  --emotion-pictures-with-logo-h2-font-size: 2.5rem;
+  --emotion-pictures-with-logo-h2-margin-mobile: 0 0 1rem 0;
   --emotion-pictures-with-logo-h2-margin: 0 0 2rem 0;
-  --head-logo-width-mobile:200px;
-    --emotion-pictures-with-logo-h2-margin-mobile: 0 0 1rem 0;
+  --figcaption-background-color: #FB5E3F;
+  --figcaption-color: #232323;
+  /* --head-logo-img-width:25vw; */
+  /* --head-logo-width:5vw; */
+  --head-logo-width-mobile:227px;
+  --head-logo-img-width:400px;
+  --header-a-menu-icon-height: 4px;
+  --header-background-color: #FA4B46;
+  --header-content-spacing-mobile: 0 auto;
+  --header-height: 80px;
+  --emotion-pictures-with-logo-h1-font-size:3.2rem;
 
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
