@@ -5,34 +5,37 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
 :root {
-  --body-h1-font-size: 3.13rem;
-  --body-h1-padding: 0 0 3.75rem 0;
   --button-primary-background-color-custom: white;
+  --button-primary-background-color-hover-custom: var(--button-background-color-hover-secondary);
   --button-primary-border-radius: var(--button-border-radius);
   --button-primary-color-custom: var(--background-color);
   --button-primary-font-size: 0.95rem;
   --button-primary-line-height: 1.2rem;
   --button-primary-padding: 0.5rem 1rem;
+  --button-primary-text-transform: uppercase;
   --button-secondary-background-color: yellow !important;
   --color-hover: var(--button-background-color-hover-primary);
   --color-secondary: var(--button-background-color-primary);
-  --emotion-pictures-with-logo-h1-color: var(--header-background-color);
-  --emotion-pictures-with-logo-h1-font-size-mobile:2.5rem;
-  --emotion-pictures-with-logo-h2-font-size: 2.5rem;
+  --emotion-pictures-with-logo-h1-color: var(--color);
+  --emotion-pictures-with-logo-h1-margin-mobile: 0 0 20px 0;
+  --emotion-pictures-with-logo-h1-margin: 0 0 2rem 0;
   --emotion-pictures-with-logo-h2-margin-mobile: 0 0 1rem 0;
   --emotion-pictures-with-logo-h2-margin: 0 0 2rem 0;
   --figcaption-background-color: #FB5E3F;
   --figcaption-color: #232323;
-  /* --head-logo-img-width:25vw; */
-  /* --head-logo-width:5vw; */
-  --head-logo-width-mobile:227px;
-  --head-logo-img-width:400px;
+  --h1-font-size-mobile: min(7vw, 3.2rem);
+  --h1-font-size: min(7vw, 3.2rem);
+  --h2-font-size: min(5vw, 3.2rem);
+  --h2-font-size-mobile:min(10vw, 2.52rem);
+  --h2-font-weight: var(--h-title-font-weight);
+  --h3-font-size-mobile: min(1.7rem, 15vw);
+  --h3-font-size: min(5vw,1.9rem);
+  --head-logo-img-width: min(14rem, 500px);
+  --head-logo-width-mobile: 227px;
   --header-a-menu-icon-height: 4px;
   --header-background-color: #FA4B46;
   --header-content-spacing-mobile: 0 auto;
   --header-height: 80px;
-  --emotion-pictures-with-logo-h1-font-size:3.2rem;
-
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
   --a-text-decoration-color-hover-ext: var(--color-orange);
@@ -228,7 +231,7 @@
   --h-title-text-transform: uppercase;
   --h1-color: var(--color);
   --h1-font-family: var(--font-family);
-  --h1-font-size-mobile: 36px;
+  /* --h1-font-size-mobile: 36px;
   --h1-font-size: 3rem;
   --h1-font-weight: var(--h-title-font-weight);
   --h1-line-height-mobile: 100%;
@@ -236,10 +239,10 @@
   --h1-margin-mobile: var(--h-title-margin);
   --h1-margin: var(--h-title-margin);
   --h1-padding: var(--h-title-padding);
-  --h1-text-transform: var(--h-title-text-transform);
-  --h2-color: var(--color);
+  --h1-text-transform: var(--h-title-text-transform); */
+  /* --h2-color: var(--color) */;
   --h2-font-family: var(--font-family);
-  --h2-font-size-mobile: 28px;
+ /* --h2-font-size-mobile: 28px;
   --h2-font-size: 1.9rem;
   --h2-font-weight: var(--h-title-font-weight);
   --h2-line-height-mobile: 100%;
@@ -247,18 +250,17 @@
   --h2-margin-mobile: var(--h-title-margin);
   --h2-margin: var(--h-title-margin);
   --h2-padding: var(--h-title-padding);
-  --h2-text-transform: var(--h-title-text-transform);
-  --h3-color: var(--color);
+  --h2-text-transform: var(--h-title-text-transform); */
+  /* --h3-color: var(--color);*/
   --h3-font-family: var(--font-family);
-  --h3-font-size-mobile: min(1.35rem, 6vw);
-  --h3-font-size: 1.5rem;
+  /* --h3-font-size-mobile: min(1.7rem, 15vw);
+  --h3-font-size: 1.9rem;
   --h3-font-weight: var(--h-title-font-weight);
-  --h3-line-height-mobile: 100%;
+  --h3-line-height-mobile:1.8rem;
   --h3-line-height: 100%;
   --h3-margin-mobile: var(--h-title-margin);
   --h3-margin: var(--h-title-margin);
-  --h3-padding: var(--h-title-padding);
-  --h3-text-transform: var(--h-title-text-transform);
+  --h3-padding: var(--h-title-padding); */
   --h4-color: var(--color);
   --h4-font-family: var(--font-family);
   --h4-font-size-mobile: min(1.25rem, 5vw);
