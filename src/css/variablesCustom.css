@@ -30,6 +30,11 @@
   --h2-font-weight: var(--h-title-font-weight);
   --h3-font-size-mobile: min(1.7rem, 15vw);
   --h3-font-size: min(5vw,1.9rem);
+  --h4-font-size: min(5vw, 1.27rem);
+  --h4-font-size-mobile:min(5vw, 1.2rem);
+  --h5-font-size:min(5vw, 0.95rem);
+  --h5-font-size-mobile:min(5vw, 1.2rem);
+  --h5-text-transform:uppercase;
   --head-logo-img-width: min(14rem, 500px);
   --head-logo-width-mobile: 227px;
   --header-a-menu-icon-height: 4px;
@@ -261,9 +266,9 @@
   --h3-margin-mobile: var(--h-title-margin);
   --h3-margin: var(--h-title-margin);
   --h3-padding: var(--h-title-padding); */
-  --h4-color: var(--color);
+  /* --h4-color: var(--color); */
   --h4-font-family: var(--font-family);
-  --h4-font-size-mobile: min(1.25rem, 5vw);
+  /* --h4-font-size-mobile: min(1.25rem, 5vw);
   --h4-font-size: 0.95rem;
   --h4-font-weight: var(--h-title-font-weight);
   --h4-line-height-mobile: 125%;
@@ -271,10 +276,10 @@
   --h4-margin-mobile: var(--h-title-margin);
   --h4-margin: var(--h-title-margin);
   --h4-padding: var(--h-title-padding);
-  --h4-text-transform: var(--h-title-text-transform);
-  --h5-color: var(--color);
+  --h4-text-transform: var(--h-title-text-transform); */
+  /* --h5-color: var(--color); */
   --h5-font-family: var(--font-family);
-  --h5-font-size-mobile: min(1rem, 4vw);
+  /* --h5-font-size-mobile: min(1rem, 4vw);
   --h5-font-size: 1rem;
   --h5-font-weight: var(--h-title-font-weight);
   --h5-line-height-mobile: 125%;
@@ -282,7 +287,7 @@
   --h5-margin-mobile: var(--h-title-margin);
   --h5-margin: var(--h-title-margin);
   --h5-padding: var(--h-title-padding);
-  --h5-text-transform: var(--h-title-text-transform);
+  --h5-text-transform: var(--h-title-text-transform); */
   --h56-title-margin: var(--h-title-margin);
   --h6-color: var(--color);
   --h6-font-family: var(--font-family);
