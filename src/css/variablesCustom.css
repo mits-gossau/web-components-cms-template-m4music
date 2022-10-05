@@ -41,6 +41,8 @@
   --header-background-color: #FA4B46;
   --header-content-spacing-mobile: 0 auto;
   --header-height: 80px;
+  --newsletter-23-wrapper-margin-bottom:0;
+  --newsletter-23-main-spacing:200px;
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
   --a-text-decoration-color-hover-ext: var(--color-orange);
