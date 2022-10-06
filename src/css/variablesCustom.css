@@ -44,6 +44,12 @@
   --header-content-spacing-mobile: 0 auto;
   --header-height: 80px;
   --newsletter-23-wrapper-margin-bottom:0;
+  --home-teaser-big-img-height:min(70vw, 776px);
+  --home-teaser-big-img-object-fit:fill;
+  --home-teaser-big-img-width:100%;
+  --home-teaser-small-img-height:min(45vw, 465px);
+  --home-teaser-small-img-object-fit: fill;
+  --home-teaser-small-img-width: 100%;
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
   --a-text-decoration-color-hover-ext: var(--color-orange);
