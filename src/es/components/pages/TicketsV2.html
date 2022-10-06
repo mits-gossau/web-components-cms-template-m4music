@@ -114,17 +114,16 @@
         <style>
           :host {
             --body-content-max-width: 100%;
+            --content-spacing: var(--component-spacing);
           }
         </style>
         <div>
           <m4music-o-wrapper>
-
             <h2>GET YOUR TICKETS NOW</h2>
             <h3>5 Bühnen, rund 40 Acts, mehrere Talks und Workshops und eine Award Show: Wir setzen das erste
               Festival-Highlight des
               Jahres.</h3>
-
-            <m4music-m-tickets23 namespace="tickets-23-">
+            <m4music-m-tickets23 namespace="tickets-23-" namespace-fallback>
               <div>
                 <div class="item">
                   <h2>2-TAGES-PASS</h2>

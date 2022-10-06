@@ -24,7 +24,7 @@ export default class Tickets23 extends Shadow() {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -33,11 +33,11 @@ export default class Tickets23 extends Shadow() {
    *
    * @return {void}
    */
-  renderCSS() {
+  renderCSS () {
     this.css = /* css */ `
     :host {
       width:100%;
-      
+
     }
     :host > div  {
       width:100%;
@@ -48,6 +48,7 @@ export default class Tickets23 extends Shadow() {
     }
     :host .item {
       flex:1 0 0px;
+      margin:var(--h-title-margin, 0);
       min-width:min(40vw, 50%);
     }
     :host .item-center {
@@ -61,18 +62,23 @@ export default class Tickets23 extends Shadow() {
     :host h2 {
       font-size:var(--h2-font-size, min(5vw, 2.52rem));
       line-height:100%;
+      margin:0;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+    :host {
+      margin-top:var(--component-spacing-mobile);
+    }
     :host > div  {
       flex-direction: column;
+      margin:0 0 var(--component-spacing-mobile) 0;
+    }
+    :host .item {
+      margin:0 0 var(--component-spacing-mobile, 0) 0;
     }
     :host h2 {
       font-size:var(--h2-font-size-mobile, min(10vw, 2.45rem));
-      margin:0;
     }
-    :host .item-buy{
-      margin: 0 0 2rem 0;
-    }
+
   }`
   }
 }
