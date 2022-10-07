@@ -45,13 +45,18 @@ export default class Teaser extends Shadow() {
       height:100%;
       width:100%;
     }
-    :host .box h3 {
+    :host h3 {
+      font-size:var(--h3-font-size,1rem);
       margin:1rem;
+      line-height:var(--h3-line-height, 100%);
     }
     :host .box-title:hover {
       background:var(--color-orange, white);
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+     :host h3 {
+      font-size:var(--h3-font-size-mobile,1rem);
+    }
      :host .wrapper {
       flex-direction:column;
       gap:0;
