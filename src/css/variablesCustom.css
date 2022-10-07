@@ -5,6 +5,8 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
 :root {
+  --component-spacing:2rem;
+  --component-spacing-mobile: 1.5rem;
   --button-primary-background-color-custom: white;
   --button-primary-background-color-hover-custom: var(--button-background-color-hover-secondary);
   --button-primary-border-radius: var(--button-border-radius);
@@ -41,6 +43,13 @@
   --header-background-color: #FA4B46;
   --header-content-spacing-mobile: 0 auto;
   --header-height: 80px;
+  --newsletter-23-wrapper-margin-bottom:0;
+  --home-teaser-big-img-height:min(70vw, 776px);
+  --home-teaser-big-img-object-fit:fill;
+  --home-teaser-big-img-width:100%;
+  --home-teaser-small-img-height:min(45vw, 465px);
+  --home-teaser-small-img-object-fit: fill;
+  --home-teaser-small-img-width: 100%;
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
   --a-text-decoration-color-hover-ext: var(--color-orange);
@@ -229,7 +238,8 @@
   --footer-ul-margin: 0;
   --footer-ul-padding: 0;
   --h-title-font-weight: normal;
-  --h-title-margin: 0 0 0.5rem 0;
+  --h-title-margin: 0 0 2rem 0;
+  --h-title-margin-mobile: 0 0 1.5rem 0;
   --content-page-title-h-title-margin: 1rem 0 0.5rem 0;
   --content-page-title-h-title-margin-mobile: 1.35rem 0 0.5rem 0;
   --h-title-padding: 0;
@@ -687,8 +697,8 @@
   --wrapper-last-margin-mobile: var(--wrapper-div-margin-mobile);
   --wrapper-li-background-size: 1rem;
   --wrapper-li-padding: 0 0 0.5rem 2rem;
-  --wrapper-margin-bottom-mobile: 2rem;
-  --wrapper-margin-bottom: 3rem;
+  /* --wrapper-margin-bottom-mobile: 2rem;
+  --wrapper-margin-bottom: 3rem; */
   --wrapper-section-padding-mobile: 0;
   --button-icon-justify-content: flex-start;
   --jury-wrapper-h-title-margin: 1rem 0 0 0;
