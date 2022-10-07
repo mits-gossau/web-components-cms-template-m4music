@@ -501,6 +501,7 @@
   --newsletter-h3-text-transform: none;
   --newsletter-h3-word-break: normal;
   --newsletter-justify-content: center;
+  --newsletter-icon-path-fill: var(--color);
   --newsletter-m4music-m-form-display: flex;
   --newsletter-m4music-m-form-flex-direction: column;
   --newsletter-m4music-m-form-padding: 0;
