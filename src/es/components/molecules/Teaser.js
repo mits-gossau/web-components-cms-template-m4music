@@ -1,5 +1,6 @@
 // @ts-check
 import { Shadow } from '../web-components-cms-template/src/es/components/prototypes/Shadow.js'
+/* global self */
 
 export default class Teaser extends Shadow() {
   connectedCallback () {
@@ -24,7 +25,6 @@ export default class Teaser extends Shadow() {
     this.css = /* css */`
     :host {
       margin:var(--component-spacing) 0 0 0;
-      background-color:red;
       width:100%;
       height:100%;
     }
@@ -35,31 +35,27 @@ export default class Teaser extends Shadow() {
       justify-content: space-between;
       align-items: flex-start;
     }
-    
     :host .box {
       margin:0 0 1rem 0;
-      width:100%;
-      height:100%;
       position: relative;
     }
-
-   :host .box h3 {
+    :host .box-title {
       position: absolute;
-      top: 0;
-      left: 0;
-      background-color:yellow;
-      width:100%;
-      height:100%;
       z-index:3;
-      margin:0;
+      height:100%;
+      width:100%;
     }
-
-    :host .box h3:hover {
-      background:orange;
+    :host .box h3 {
+      margin:1rem;
     }
-    
-     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host { }
+    :host .box-title:hover {
+      background:var(--color-orange, white);
+    }
+    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+     :host .wrapper {
+      flex-direction:column;
+      gap:0;
+     }
     }
     `
   }
