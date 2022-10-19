@@ -89,7 +89,7 @@ export default class Body extends BaseBody {
     :host .lead {
       font-size:1.85rem;
       line-height:initial;
-      margin:0 0 1.75rem 0;
+      margin:0 0 3.75rem 0;
       font-family:inherit;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
