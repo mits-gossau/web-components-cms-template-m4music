@@ -5,52 +5,34 @@
  * - if a component holds other components you should share the attribute namespace with its children
  */
 :root {
-  --component-spacing:2rem;
-  --component-spacing-mobile: 1.5rem;
+  --body-h1-font-size: 3.13rem;
+  --body-h1-padding: 0 0 3.75rem 0;
   --button-primary-background-color-custom: white;
-  --button-primary-background-color-hover-custom: var(--button-background-color-hover-secondary);
   --button-primary-border-radius: var(--button-border-radius);
   --button-primary-color-custom: var(--background-color);
   --button-primary-font-size: 0.95rem;
   --button-primary-line-height: 1.2rem;
   --button-primary-padding: 0.5rem 1rem;
-  --button-primary-text-transform: uppercase;
   --button-secondary-background-color: yellow !important;
   --color-hover: var(--button-background-color-hover-primary);
   --color-secondary: var(--button-background-color-primary);
-  --emotion-pictures-with-logo-h1-color: var(--color);
-  --emotion-pictures-with-logo-h1-margin-mobile: 0 0 20px 0;
-  --emotion-pictures-with-logo-h1-margin: 0 0 2rem 0;
+  --emotion-pictures-with-logo-h1-color: var(--header-background-color);
+  --emotion-pictures-with-logo-h1-font-size-mobile:2.5rem;
+  --emotion-pictures-with-logo-h2-font-size: 2.5rem;
   --emotion-pictures-with-logo-h2-margin-mobile: 0 0 1rem 0;
   --emotion-pictures-with-logo-h2-margin: 0 0 2rem 0;
   --figcaption-background-color: #FB5E3F;
   --figcaption-color: #232323;
-  --h-title-line-height:100%;
-  --h1-font-size: min(100px, 7vw);
-  --h1-font-size-mobile: min(50px, 15vw);
-  --h2-font-size: min(80px, 5vw);
-  --h2-font-size-mobile:min(40px, 10vw);
-  --h3-font-size: min(60px, 5vw);
-  --h3-font-size-mobile: min(30px, 15vw);
-  --h3-line-height:var(--h-title-line-height);
-  --h4-font-size: min(40px, 5vw);
-  --h4-font-size-mobile:min(20px, 15vw);
-  --h5-font-size:min(30px, 5vw);
-  --h5-font-size-mobile:min(20px, 15vw);
-  --h5-text-transform:uppercase;
-  --head-logo-img-width: min(14rem, 500px);
-  --head-logo-width-mobile: 227px;
+  /* --head-logo-img-width:25vw; */
+  /* --head-logo-width:5vw; */
+  --head-logo-width-mobile:227px;
+  --head-logo-img-width:400px;
   --header-a-menu-icon-height: 4px;
   --header-background-color: #FA4B46;
   --header-content-spacing-mobile: 0 auto;
   --header-height: 80px;
-  --newsletter-23-wrapper-margin-bottom:0;
-  --home-teaser-big-img-height:min(70vw, 776px);
-  --home-teaser-big-img-object-fit:fill;
-  --home-teaser-big-img-width:100%;
-  --home-teaser-small-img-height:min(45vw, 465px);
-  --home-teaser-small-img-object-fit: fill;
-  --home-teaser-small-img-width: 100%;
+  --emotion-pictures-with-logo-h1-font-size:3.2rem;
+
   /* ========================================================================= */
   --a-text-decoration-color-ext: var(--link-underline-color);
   --a-text-decoration-color-hover-ext: var(--color-orange);
@@ -239,15 +221,14 @@
   --footer-ul-margin: 0;
   --footer-ul-padding: 0;
   --h-title-font-weight: normal;
-  --h-title-margin: 0 0 2rem 0;
-  --h-title-margin-mobile: 0 0 1.5rem 0;
+  --h-title-margin: 0 0 0.5rem 0;
   --content-page-title-h-title-margin: 1rem 0 0.5rem 0;
   --content-page-title-h-title-margin-mobile: 1.35rem 0 0.5rem 0;
   --h-title-padding: 0;
   --h-title-text-transform: uppercase;
   --h1-color: var(--color);
   --h1-font-family: var(--font-family);
-  /* --h1-font-size-mobile: 36px;
+  --h1-font-size-mobile: 36px;
   --h1-font-size: 3rem;
   --h1-font-weight: var(--h-title-font-weight);
   --h1-line-height-mobile: 100%;
@@ -255,10 +236,10 @@
   --h1-margin-mobile: var(--h-title-margin);
   --h1-margin: var(--h-title-margin);
   --h1-padding: var(--h-title-padding);
-  --h1-text-transform: var(--h-title-text-transform); */
-  /* --h2-color: var(--color) */;
+  --h1-text-transform: var(--h-title-text-transform);
+  --h2-color: var(--color);
   --h2-font-family: var(--font-family);
- /* --h2-font-size-mobile: 28px;
+  --h2-font-size-mobile: 28px;
   --h2-font-size: 1.9rem;
   --h2-font-weight: var(--h-title-font-weight);
   --h2-line-height-mobile: 100%;
@@ -266,20 +247,21 @@
   --h2-margin-mobile: var(--h-title-margin);
   --h2-margin: var(--h-title-margin);
   --h2-padding: var(--h-title-padding);
-  --h2-text-transform: var(--h-title-text-transform); */
-  /* --h3-color: var(--color);*/
+  --h2-text-transform: var(--h-title-text-transform);
+  --h3-color: var(--color);
   --h3-font-family: var(--font-family);
-  /* --h3-font-size-mobile: min(1.7rem, 15vw);
-  --h3-font-size: 1.9rem;
+  --h3-font-size-mobile: min(1.35rem, 6vw);
+  --h3-font-size: 1.5rem;
   --h3-font-weight: var(--h-title-font-weight);
-  --h3-line-height-mobile:1.8rem;
+  --h3-line-height-mobile: 100%;
   --h3-line-height: 100%;
   --h3-margin-mobile: var(--h-title-margin);
   --h3-margin: var(--h-title-margin);
-  --h3-padding: var(--h-title-padding); */
-  /* --h4-color: var(--color); */
+  --h3-padding: var(--h-title-padding);
+  --h3-text-transform: var(--h-title-text-transform);
+  --h4-color: var(--color);
   --h4-font-family: var(--font-family);
-  /* --h4-font-size-mobile: min(1.25rem, 5vw);
+  --h4-font-size-mobile: min(1.25rem, 5vw);
   --h4-font-size: 0.95rem;
   --h4-font-weight: var(--h-title-font-weight);
   --h4-line-height-mobile: 125%;
@@ -287,10 +269,10 @@
   --h4-margin-mobile: var(--h-title-margin);
   --h4-margin: var(--h-title-margin);
   --h4-padding: var(--h-title-padding);
-  --h4-text-transform: var(--h-title-text-transform); */
-  /* --h5-color: var(--color); */
+  --h4-text-transform: var(--h-title-text-transform);
+  --h5-color: var(--color);
   --h5-font-family: var(--font-family);
-  /* --h5-font-size-mobile: min(1rem, 4vw);
+  --h5-font-size-mobile: min(1rem, 4vw);
   --h5-font-size: 1rem;
   --h5-font-weight: var(--h-title-font-weight);
   --h5-line-height-mobile: 125%;
@@ -298,7 +280,7 @@
   --h5-margin-mobile: var(--h-title-margin);
   --h5-margin: var(--h-title-margin);
   --h5-padding: var(--h-title-padding);
-  --h5-text-transform: var(--h-title-text-transform); */
+  --h5-text-transform: var(--h-title-text-transform);
   --h56-title-margin: var(--h-title-margin);
   --h6-color: var(--color);
   --h6-font-family: var(--font-family);
@@ -512,7 +494,6 @@
   --newsletter-h3-text-transform: none;
   --newsletter-h3-word-break: normal;
   --newsletter-justify-content: center;
-  --newsletter-icon-path-fill: var(--color);
   --newsletter-m4music-m-form-display: flex;
   --newsletter-m4music-m-form-flex-direction: column;
   --newsletter-m4music-m-form-padding: 0;
@@ -698,8 +679,8 @@
   --wrapper-last-margin-mobile: var(--wrapper-div-margin-mobile);
   --wrapper-li-background-size: 1rem;
   --wrapper-li-padding: 0 0 0.5rem 2rem;
-  /* --wrapper-margin-bottom-mobile: 2rem;
-  --wrapper-margin-bottom: 3rem; */
+  --wrapper-margin-bottom-mobile: 2rem;
+  --wrapper-margin-bottom: 3rem;
   --wrapper-section-padding-mobile: 0;
   --button-icon-justify-content: flex-start;
   --jury-wrapper-h-title-margin: 1rem 0 0 0;

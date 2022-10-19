@@ -107,6 +107,9 @@
     </m4music-o-header>
 
     <m4music-o-body namespace="body-" namespace-fallback>
+
+
+
       <m4m-a-emotion-pictures namespace="emotion-pictures-with-logo-">
         <div>
           <div class="headline">
@@ -114,10 +117,11 @@
               <a-picture picture-load defaultSource="../../../img/m4m_white.svg" alt="randomized image"
                 namespace="head-logo-">
               </a-picture>
+              <h1>Festival</h1>
             </div>
-            <h1>
+            <h2>
               SEE YOU NEXT YEAR!<br />M4MUSIC 2023 AM 24. & 25. MÄRZ <br />IN ZÜRICH
-            </h1>
+            </h2>
           </div>
 
           <a-picture picture-load defaultSource="../../../img/test-header-2.jpg" alt="randomized image"></a-picture>
@@ -127,29 +131,36 @@
         <style>
           :host {
             --body-content-max-width: 100%;
+            /* --body-content-spacing: 0; */
+            padding-bottom: var(--spacer-height);
             --head-logo-img-margin: 0;
             --head-logo-margin: 3vw 0 0 5px;
-            padding-bottom: var(--spacer-height);
           }
 
           :host .headline {
-            align-items: flex-start;
+            position: absolute;
             bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
+            align-items: flex-start;
             flex-direction: column;
             justify-content: space-between;
-            left: 0;
+            /* margin: 0 6%; */
             margin: 0 auto;
-            max-width: var(--content-max-width);
             opacity: 1;
             padding: 2rem 0 0 0;
-            position: absolute;
-            right: 0;
-            top: 0;
             width: 88%;
+            max-width: var(--content-max-width);
           }
+
+          :host .headline > div {
+            /* width: 25vw; */
+          }
+
           @media only screen and (max-width: 960px) {
-            :host .headline>div {
+            :host .headline > div {
               width: 100%;
             }
           }
@@ -157,13 +168,10 @@
       </m4m-a-emotion-pictures>
 
       <div>
-     <div>
-      <h3>m4music verbindet und fördert: Hier kommt die Schweizer
-        Musikszene zusammen, tauscht sich aus und feiert die
-        Artists von
-        morgen. Celebrating future pop music!</h3>
-     </div> 
-        <div class="spacer"></div>
+        <p class="lead">m4music verbindet und fördert: Hier kommt die Schweizer
+          Musikszene zusammen, tauscht sich aus und feiert die
+          Artists von
+          morgen. Celebrating future pop music!</p>
         <m4m-a-button namespace="button-primary-">JETZT EINREICHEN: BEST SWISS VIDEO CLIP</m4m-a-button>
         <div class="spacer"></div>
         <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">RECORDINGS CONFERENCES 2022
@@ -171,6 +179,7 @@
         <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">PHOTOS</m4music-a-button>
         <div class="spacer"></div>
       </div>
+
     </m4music-o-body>
 
     <m4music-o-footer namespace="footer-" namespace-fallback>
