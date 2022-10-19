@@ -99,6 +99,7 @@ export default class Footer extends BaseFooter {
         display:flex;
         flex-direction:row;
         justify-content:space-between;
+        align-items: center;
       }
       :host .footer__meta {
         font-size:var(--meta-font-size, 1em);
@@ -151,6 +152,16 @@ export default class Footer extends BaseFooter {
       :host .hide-desktop{
         display:none;
       }
+      :host .metalinks >  ul{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+      :host .languages{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }  
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
         :host > * {
           margin:var(--content-spacing-mobile, 0) auto; 

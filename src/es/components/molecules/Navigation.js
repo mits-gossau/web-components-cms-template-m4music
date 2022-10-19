@@ -50,6 +50,7 @@ export default class Navigation extends BaseNavigation {
         justify-content:space-evenly;
         align-items:center;
       }
+     
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
         :host .icons {
           gap:0;

@@ -15,7 +15,7 @@ import BaseHeader from '../web-components-cms-template/src/es/components/organis
  * @attribute {}
  */
 export default class Header extends BaseHeader {
-  constructor (...args) {
+  constructor(...args) {
     super(...args)
     this.keyListener = event => {
       if (event.key === 'Escape' && this.header.classList.contains('open')) {
@@ -26,13 +26,13 @@ export default class Header extends BaseHeader {
     }
   }
 
-  connectedCallback () {
+  connectedCallback() {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     super.connectedCallback()
     self.addEventListener('keydown', this.keyListener)
   }
 
-  disconnectedCallback () {
+  disconnectedCallback() {
     this.removeEventListener('keydown', this.keyListener)
   }
 
@@ -41,7 +41,7 @@ export default class Header extends BaseHeader {
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS () {
+  shouldComponentRenderCSS() {
     return !this.root.querySelector(`:host > style[_css], ${this.tagName} > style[_css]`)
   }
 
@@ -50,17 +50,24 @@ export default class Header extends BaseHeader {
    *
    * @return {void}
    */
-  renderCSS () {
+  renderCSS() {
     super.renderCSS()
     this.css = /* css */ `
+    :host {
+       height:var(--height, auto);
+    }
     :host > header {
       max-width:var(--content-max-width, 100vw);
     }
     :host > header > a-logo {
-      z-index:100;
+      z-index:103;
     }
     :host > header > m4music-m-navigation {
+      z-index:102;
       top:0;
+    }
+    :host > header > a-menu-icon {
+      z-index:103;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {}
   `

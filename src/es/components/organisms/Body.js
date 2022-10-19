@@ -86,6 +86,12 @@ export default class Body extends BaseBody {
     :host .event-detail-inner-container {
       padding: var(--detail-wrapper-padding-with-bg-color, 0 4rem);
     }
+    :host .lead {
+      font-size:1.85rem;
+      line-height:initial;
+      margin:0 0 1.75rem 0;
+      font-family:inherit;
+    }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         background-color:var(--background-color-mobile, inherit);

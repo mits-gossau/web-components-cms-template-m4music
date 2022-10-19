@@ -60,6 +60,9 @@ export default class Embed extends BaseBody {
         width: 34vw;
         height: 19vw;
       }
+      :host(.embed-spotify) {
+        padding-bottom: 1.5rem;
+      }
       :host(.white) iframe{
         width: 32vw;
         height: 18vw;
