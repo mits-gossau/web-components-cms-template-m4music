@@ -125,6 +125,8 @@
   --event-detail-button-width-mobile:auto;
   --event-detail-button-width:auto;
   --event-detail-picture-background-color: white;
+  --event-detail-h1-color: white;
+  --event-detail-date-color: white;
   --event-detail-picture-img-filter: grayscale(1);
   --event-detail-picture-opacity: 0.5;
   --event-item-animation-duration: 500;
