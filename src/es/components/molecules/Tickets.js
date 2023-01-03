@@ -106,6 +106,20 @@ export default class Tickets extends Shadow() {
     :host .soldout {
       filter: opacity(0.3);
     }
+    :host a {
+      color: var(--a-color, var(--color-secondary, var(--color, pink)));
+      font-weight: var(--a-font-weight, var(--font-weight, normal));
+      text-align: var(--a-text-align, unset);
+      text-decoration: var(--a-text-decoration, var(--text-decoration, none));
+      text-underline-offset: var(--a-text-underline-offset, unset);
+      display: var(--a-display, inline);
+      margin: var(--a-margin, var(--content-spacing, unset)) auto;
+      text-decoration-color: var(--a-text-decoration-color-ext, red);
+    }
+    :host a:hover, :host a:active, :host a:focus {
+      color: var(--a-color-hover, var(--color-hover-secondary, var(--color-hover, var(--color, green))));
+      text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
+    } 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host  {
         flex-direction: column;
