@@ -128,6 +128,7 @@
   --event-detail-h1-color: white;
   --event-detail-date-color: white;
   --event-detail-picture-img-filter: grayscale(1);
+  --event-detail-picture-img-max-height: 100%;
   --event-detail-picture-opacity: 0.5;
   --event-item-animation-duration: 500;
   --event-item-animation-easing: ease-out;
@@ -678,5 +679,4 @@
   --jury-wrapper-photo-teaser-container-padding-bottom:1rem;
   --jury-wrapper-photo-teaser-container-padding-bottom-mobile:0.9rem;
 
-  
 }
