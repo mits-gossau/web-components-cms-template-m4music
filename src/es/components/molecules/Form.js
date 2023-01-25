@@ -203,6 +203,9 @@ export default class Form extends BaseForm {
         height: var(--checkbox-height, 20px);
         margin-top: var(--checkbox-margin-top, 30px);
       }
+      :host input[type=file] {
+        font-size:20px;
+      }
       :host input[type=submit], :host input[type=button] {
         -webkit-appearance: none;
       }

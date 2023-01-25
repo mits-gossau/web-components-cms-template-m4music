@@ -70,6 +70,7 @@ export default class EventDetail extends Shadow() {
       height:100%;
       position:absolute;
       width:100%;
+      z-index: 2;
     }
     :host .eventdetail-subtitle {
       margin: var(--event-detail-h1-subtitle-margin, -1rem 1rem 1rem 0)
