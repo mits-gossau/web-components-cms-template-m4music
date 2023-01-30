@@ -223,6 +223,11 @@
       selector: 'm4m-m-',
       url: 'web-components-toolbox/src/es/components/molecules/',
       separateFolder: true
+    },
+    {
+      selector: 'm4m-c-',
+      url: 'web-components-toolbox/src/es/components/controllers/',
+      separateFolder: true
     }
   ] // directories
   // ↑↑↑ adjustable ↑↑↑
