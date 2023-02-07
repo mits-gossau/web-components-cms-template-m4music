@@ -156,7 +156,7 @@
   --font-family:"GillSansMTBook", sans-serif;
   --font-size-label-small:min(0.5rem, 5vw);
   --font-size-mobile:min(18px, 5vw);
-  --font-size:32px;
+  --font-size:40px;
   --footer-a-font-size-mobile:min(18px, 5vw);
   --footer-a-font-size:0.65rem;
   --footer-a-text-underline-offset:0.2rem;
@@ -211,7 +211,7 @@
   --footer-ul-margin:0;
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
-  --h-title-margin:0 0 0.5rem 0;
+  --h-title-margin:0 0 1em 0;
   --content-page-title-h-title-margin:1rem 0 0.5rem 0;
   --content-page-title-h-title-margin-mobile:1.35rem 0 0.5rem 0;
   --h-title-padding:0;
@@ -219,7 +219,7 @@
   --h1-color:var(--color);
   --h1-font-family:var(--font-family);
   --h1-font-size-mobile:36px;
-  --h1-font-size:3rem;
+  --h1-font-size:2rem;
   --h1-font-weight:var(--h-title-font-weight);
   --h1-line-height-mobile:100%;
   --h1-line-height:100%;
