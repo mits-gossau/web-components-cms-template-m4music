@@ -24,8 +24,8 @@
 
 <body>
   <p-general>
-    <m4music-o-body namespace="body-" namespace-fallback>
-      <m4m-o-wrapper namespace="news-">
+    <m4music-o-body>
+      <m4m-o-wrapper>
         <style>
           :host {
             --gap-custom: 0;
@@ -43,25 +43,33 @@
           }
 
           :host .o-wrapper__info + .o-wrapper__heading {
-            margin-top: 2rem;
+            --h1-margin: 2rem 0 0 0;
           }
 
           :host .o-wrapper__date {
             font-size: 0.75rem;
           }
 
-          :host .o-wrapper__heading {
-            --h1-margin: 0;
-          }
-
           :host .o-wrapper__heading + .o-wrapper__text {
-            margin-top: 2rem;
-            font-size: 1rem;
+            --p-margin: 2rem 0 0 0;
+            --p-font-size: 1rem;
           }
 
           @media only screen and (max-width: 960px) {
             :host .o-wrapper__content {
               --margin-first-child-mobile: 0;
+            }
+
+            :host .o-wrapper__info + .o-wrapper__heading {
+              --h1-margin-mobile: 1rem 0 0 0;
+            }
+
+            :host .o-wrapper__heading + .o-wrapper__text {
+            --p-margin-mobile: 1rem 0 0 0;
+          }
+
+            :host .o-wrapper__content + .o-wrapper__picture {
+              --margin-last-child-mobile: 1rem 0 0 0;
             }
           }
         </style>
@@ -77,8 +85,7 @@
           <h1 class="o-wrapper__heading">LOREM IPSUM DOLOR SIT AMET.</h1>
           <p class="o-wrapper__text">Benannt hat sich die Band Annie Taylor nach einer mutigen Frau: 1901 stürzte sich die New Yorker Stuntfrau im Alter von 63 Jahren in einem Fass die Niagarafälle hinunter – und überlebte.</p>
         </div>
-
-        <div>
+        <div class="o-wrapper__picture">
           <m4m-a-picture namespace="news-post-picture-" namespace-fallback defaultsource="../../../img/Testbild.jpg"
             alt="02 DTC Isa">
           </m4m-a-picture>
