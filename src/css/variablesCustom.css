@@ -408,6 +408,8 @@
   --macro-carousel-pagination-border-selected:var(--color-orange);
   --macro-carousel-pagination-color-selected:var(--color-orange);
   --navigation-icon-path-fill:var(--color-black);
+  --news-post-picture-img-height: 100%;
+  --news-post-picture-img-object-fit: cover;
   --newsletter-align-items:center;
   --newsletter-background-color:#E63C1A;
   --newsletter-background:var(--wrapper-background-secondary-color);
