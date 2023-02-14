@@ -25,54 +25,7 @@
 <body>
   <p-general>
     <m4music-o-body>
-      <m4m-o-wrapper>
-        <style>
-          :host {
-            --gap-custom: 0;
-            --gap-mobile-custom: var(--content-spacing-mobile);
-          }
-
-          :host .o-wrapper__content {
-            --margin-first-child: 0 100px 0 0;
-          }
-
-          :host .o-wrapper__info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-
-          :host .o-wrapper__info + .o-wrapper__heading {
-            --h1-margin: 2rem 0 0 0;
-          }
-
-          :host .o-wrapper__date {
-            font-size: 0.75rem;
-          }
-
-          :host .o-wrapper__heading + .o-wrapper__text {
-            --p-margin: 2rem 0 0 0;
-            --p-font-size: 1rem;
-          }
-          /* @media only screen and (max-width: _max-width_) { */
-          @media only screen and (max-width: 960px) {
-            :host .o-wrapper__content {
-              --margin-first-child-mobile: 0;
-            }
-
-            :host .o-wrapper__info + .o-wrapper__heading {
-              --h1-margin-mobile: 1rem 0 0 0;
-            }
-
-            :host .o-wrapper__heading + .o-wrapper__text {
-              --p-margin-mobile: 1rem 0 0 0;
-            }
-
-            :host .o-wrapper__content + .o-wrapper__picture {
-              --margin-last-child-mobile: 1rem 0 0 0;
-            }
-          }
-        </style>
+      <m4m-o-wrapper namespace="news-post-">
         <div class="o-wrapper__content">
           <div class="o-wrapper__info">
             <span class="o-wrapper__date">POSTED 6.9.2022</span>
