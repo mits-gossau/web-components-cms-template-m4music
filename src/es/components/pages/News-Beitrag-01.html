@@ -25,71 +25,29 @@
 <body>
   <p-general>
     <m4music-o-body>
-      <m4m-o-wrapper namespace="wrapper-news-post-">
-        <!-- <style>
-          :host {
-            --gap-custom: 0;
-            --gap-mobile-custom: var(--content-spacing-mobile);
-          }
-
-          :host .o-wrapper__content {
-            --margin-first-child: 0 100px 0 0;
-          }
-
-          :host .o-wrapper__info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-
-          :host .o-wrapper__info + .o-wrapper__heading {
-            --h1-margin: 2rem 0 0 0;
-          }
-
-          :host .o-wrapper__date {
-            font-size: 0.75rem;
-          }
-
-          :host .o-wrapper__heading + .o-wrapper__text {
-            --p-margin: 2rem 0 0 0;
-            --p-font-size: 1rem;
-          }
-          /* @media only screen and (max-width: _max-width_) { */
-          @media only screen and (max-width: 960px) {
-            :host .o-wrapper__content {
-              --margin-first-child-mobile: 0;
-            }
-
-            :host .o-wrapper__info + .o-wrapper__heading {
-              --h1-margin-mobile: 1rem 0 0 0;
-            }
-
-            :host .o-wrapper__heading + .o-wrapper__text {
-              --p-margin-mobile: 1rem 0 0 0;
-            }
-
-            :host .o-wrapper__content + .o-wrapper__picture {
-              --margin-last-child-mobile: 1rem 0 0 0;
-            }
-          }
-        </style> -->
-        <div class="o-wrapper__content">
-          <div class="o-wrapper__info">
-            <span class="o-wrapper__date">Posted 6.9.2022</span>
-            <m4music-a-icon link="https://www.facebook.com/m4music" target="blank" title="Facebook">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 0.039978C4.5 0.039978 0 4.52998 0 10.06C0 15.06 3.66 19.21 8.44 19.96V12.96H5.9V10.06H8.44V7.84998C8.44 5.33998 9.93 3.95998 12.22 3.95998C13.31 3.95998 14.45 4.14998 14.45 4.14998V6.61998H13.19C11.95 6.61998 11.56 7.38998 11.56 8.17998V10.06H14.34L13.89 12.96H11.56V19.96C13.9164 19.5878 16.0622 18.3855 17.6099 16.57C19.1576 14.7546 20.0054 12.4456 20 10.06C20 4.52998 15.5 0.039978 10 0.039978Z" fill="#FA4B46"/>
-                </svg>
-            </m4music-a-icon>
+      <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+          <div class="o-wrapper__content">
+            <div class="o-wrapper__info">
+              <span class="o-wrapper__text-small">Posted 6.9.2022</span>
+              <m4music-a-icon link="https://www.instagram.com/m4musicfestival/" target="blank" title="Instagram" namespace="navigation-">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z" fill="#FA4B46"/>
+                  </svg>
+              </m4music-a-icon>
+            </div>
+            <h1 class="o-wrapper__heading">My Ugly Clementine (AUT)</h1>
+            <p class="o-wrapper__text">Benannt hat sich die Band Annie Taylor nach einer mutigen Frau: 1901 stürzte sich die New Yorker Stuntfrau im Alter von 63 Jahren in einem Fass die Niagarafälle hinunter – und überlebte.</p>
           </div>
-          <h1 class="o-wrapper__heading">My Ugly Clementine (AUT)</h1>
-          <p class="o-wrapper__text">Mit unwiderstehlichen Pop-Hooks, einer Prise 60er-Jahre-Soul und Mitsing-Refrains mischen My Ugly Clementine die Post-Punk-Szene auf: Ihre Musik steht für Spass, ihre Texte sind Statements für Empowerment, Gleichberechtigung, Selbstliebe und Feminismus. 2020 erhielt die Band den Amadeus Austrian Music Award, 2021 wurde ihr Debütalbum «Vitamin C» mit dem European Independent Album Of The Year ausgezeichnet. Hinter der Supergroup aus Wien stehen drei szenebekannte Frauen: Sophie Lindinger (Leyya), Mira Lu Kovacs (5K HD und Schmieds Puls) und Nastasja Ronck (Lucid Kid). Bis Sommer 2022 war zudem Kem Kolleritsch aka Kerosin 95 mit von der Partie.</p>
-        </div>
-        <div class="o-wrapper__picture">
-          <!-- srdan todo -->
-          <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="../../../../assets/img/dummy-image-news-post.png" alt="02 DTC Isa"></m4m-a-picture>
-        </div>
-      </m4m-o-wrapper>
+          <div class="o-wrapper__picture">
+            <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000" alt="02 DTC Isa"></m4m-a-picture>
+          </div>
+        </m4m-o-wrapper>
+        <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+          <div>
+            <p class="o-wrapper__text">Benannt hat sich die Band Annie Taylor nach einer mutigen Frau: 1901 stürzte sich die New Yorker Stuntfrau im Alter von 63 Jahren in einem Fass die Niagarafälle hinunter – und überlebte. Das Zürcher Quartett trumpft vor allem bei Live-Shows mit ihrem eingängigen Gitarrensound und der eindringlichen Stimme von Gitarristin Gini Jungi auf. «Grunge-Psychedelic-Rock» bezeichnet die Band ihren Mix aus Rock’n’Roll, Grunge, Psych-Rock und Dreampop. Mit ihrem 2020 veröffentlichten Debütalbum «Sweet Mortality» bewiesen Annie Taylor zudem, dass sie ein Händchen für scharfsinniges Songwriting haben. 2021 war die Band als «SRF 3 Best Talent» für den Swiss Music Award nominiert. Aktuell arbeiten sie an neuen Songs.</p>
+            <span class="o-wrapper__text-small">AUTORIN</span>
+          </div>
+        </m4m-o-wrapper>
       </div>
     </m4music-o-body>
   </p-general>
