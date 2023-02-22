@@ -28,7 +28,7 @@
   --a-text-decoration-style-ext:solid;
   --a-text-decoration-style-hover-ext:solid;
   --a-text-underline-offset:0.3rem; 
-  --background-color:#232323;
+  --background-color:white;
   --balloon-font-size:var(--h6-font-size);
   --body-content-custom-width-mobile-white:100%;
   --body-content-custom-width-mobile:var(--content-width-not-web-component-mobile);
@@ -102,7 +102,7 @@
   --color-grey:#555555;
   --color-light-grey:#686868;
   --color-orange:#FA4B46;
-  --color:#FFFFFF;
+  --color:#232323;
   --content-max-width:1600px;
   /* --content-spacing-mobile:var(--content-spacing); */
   /* --content-spacing:0; */
@@ -680,5 +680,4 @@
   --jury-wrapper-h-title-margin-mobile:0.5rem 0 0 0;
   --jury-wrapper-photo-teaser-container-padding-bottom:1rem;
   --jury-wrapper-photo-teaser-container-padding-bottom-mobile:0.9rem;
-
 }
