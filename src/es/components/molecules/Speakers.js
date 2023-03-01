@@ -36,61 +36,46 @@ export default class Speakers extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
-      background-color: ${this.hasAttribute('background-color') ? this.getAttribute('background-color') : 'transparent'};
-      align-items: center;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-start;
-      padding:var(--padding, 0);
-      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 9.2rem;
+      margin-right: 0.5rem;
     }
-    :host .name {
-      color:var(--name-color, black);
-      font-size:var(--name-font-size, initial);
-      line-height:100%;
-      margin:0.5rem 0 0 0;
-      text-transform:uppercase;
-      word-wrap:anywhere;
-      text-align: center;
+    :host .m-speakers__name {
+      margin: 1rem 0 1rem;
+      font-size: 1rem;
     }
-    :host .function {
-      font-size:0.75rem;
-      text-align:center;
-      margin:0;
+    
+    :host .m-speakers__function,
+    :host .m-speakers__text {
+      font-size: 0.6rem;
     }
-    @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host{
-        align-items:${this.getAlignment(this.getAttribute('align'))};
+    @media only screen and (max-width: 960px) {
+      :host {
         width: 100%;
+        max-width: 100%;
       }
-      :host .name {
-        font-size:var(--name-font-size-mobile, initial);
-        margin:0.5rem 0 0.25rem 0;
+    
+      :host .o-wrapper__teasers {
+        flex-direction: column;
       }
-      :host .function {
-        font-size:var(--function-font-size-mobile, 20px);
-        text-align:${this.getAttribute('align') === 'left' ? 'left' : 'right'}
+    
+      :host .m-speakers__name {
+        margin: 1rem 0 1rem;
+        font-size: 1.5rem;
       }
-      :host .name.right {
-        text-align:right;
+    
+      :host .m-speakers__function,
+      :host .m-speakers__text {
+        font-size: 1rem;
       }
-      :host .name.left {
-        text-align:left;
+    
+      :host .m-speakers__text {
+        margin: 0 0 1rem 0;
       }
     }
   `
-  }
-
-  /**
-   *
-   * @param {*} alignDirection
-   * @returns
-   */
-  getAlignment (alignDirection) {
-    const alignment = {
-      right: 'flex-end',
-      left: 'flex-start'
-    }
-    return (alignDirection in alignment) ? alignment[alignDirection] : alignment.left
   }
 }
