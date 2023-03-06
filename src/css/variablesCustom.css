@@ -28,8 +28,9 @@
   --a-text-decoration-style-ext:solid;
   --a-text-decoration-style-hover-ext:solid;
   --a-text-underline-offset:0.3rem; 
-  --background-color:white;
+  --background-color:#232323;
   --balloon-font-size:var(--h6-font-size);
+  --body-light-background-color: #ffffff;
   --body-content-custom-width-mobile-white:100%;
   --body-content-custom-width-mobile:var(--content-width-not-web-component-mobile);
   --body-content-custom-width:var(--content-width-not-web-component);
@@ -102,7 +103,7 @@
   --color-grey:#555555;
   --color-light-grey:#686868;
   --color-orange:#FA4B46;
-  --color:#232323;
+  --color:#FFFFFF;
   --content-max-width:1600px;
   /* --content-spacing-mobile:var(--content-spacing); */
   /* --content-spacing:0; */
