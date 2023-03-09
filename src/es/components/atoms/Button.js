@@ -379,7 +379,7 @@ export default class Button extends Shadow() {
     const iconSize = breakpoint === 'desktop' ? '12px' : '8px'
     return /* css */ `
     :host > button {
-      border-radius:4px;
+      border-radius:0px;
       background-color:var(--background-color, white);
       color:var(--color, black);
       font-size:var(${fontSize}, inherit);

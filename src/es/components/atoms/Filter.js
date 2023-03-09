@@ -145,6 +145,9 @@ export default class Filter extends Shadow() {
     }
     :host h5 {
       margin: 10px 0;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      color: #232323;
     }
     :host .filterButtonContainer {
       display: flex;

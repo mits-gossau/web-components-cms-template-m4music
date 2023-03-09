@@ -306,6 +306,8 @@ export default class Wrapper extends BaseBody {
       case "type":
         return 4;      
       case "genre":
+        return 5;
+      case "entry":
         return 5; 
       default:
         return 0

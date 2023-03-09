@@ -107,7 +107,7 @@ export default class EventItem extends Shadow() {
     }
     :host .date{
       color:var(--date-font-color, #616161);
-      font-size:var(--date-font-size, 0.65rem);
+      font-size:var(--date-font-size, 0.6rem);
       line-height:var(--date-line-height, 125%);   
     }
     :host .date > span {
@@ -115,15 +115,15 @@ export default class EventItem extends Shadow() {
     }
     :host .name{
       color:var(--name-font-color, #000000); 
-      font-size:var(--name-font-size, 0.9rem);
+      font-size: 1rem;
       line-height:var(--name-line-height, 100%);
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
       width:95%;
     }
-    :host .description{
-      color:var(--description-font-color, #000000); 
-      font-size:var(--description-font-size, 0.65rem);
-      line-height:var(--description-line-height, 125%);
+    :host .entry{
+      color:#000000; 
+      font-size: 0.6rem;
+      line-height:125%;
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
       max-width: 95%;
       word-break: break-word;
@@ -157,7 +157,7 @@ export default class EventItem extends Shadow() {
         line-height:var(--name-line-height-mobile, 100%);
         text-align:left;
       }
-      :host .description{
+      :host .entry{
         font-size:var(--description-font-size-mobile, 1rem);
         text-align:left;
       }
