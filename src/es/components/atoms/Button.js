@@ -387,7 +387,7 @@ export default class Button extends Shadow() {
       height:auto;
       padding:var(${padding}, 0);
     }
-    :host(:not([data-filter-value='show_all'])) > button::after {
+    /*:host(:not([data-filter-value='show_all'])) > button::after {
       content: url('/assets/img/filter.svg');
       padding-left: 0.2rem;
       display:inline-block;
@@ -410,7 +410,7 @@ export default class Button extends Shadow() {
       display:inline-block;
       height:${iconSize};
       width:${iconSize};
-    }
+    }*/
     :host > button:hover,
     :host > button:active,
     :host(.active) > button {
