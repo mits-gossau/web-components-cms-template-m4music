@@ -53,8 +53,12 @@ export default class Header extends BaseHeader {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */ `
+    :host {
+      height: 2rem;
+    }
     :host > header {
       max-width:var(--content-max-width, 100vw);
+      margin: 0 2rem;
     }
     :host > header > a-logo {
       z-index:103;
