@@ -19,7 +19,7 @@
   <!-- NOTE: Remove line Debugging.js below for none localhost -->
   <script rel=preload type=module>import('../../../es/helpers/Debugging.js')</script>
   <link href="../../../../assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <title>News-Beitrag-01</title>
+  <title>Show-Single</title>
 </head>
 
 <body class="theme-light">
@@ -30,24 +30,52 @@
       <m4music-a-button namespace="header-detail-button-" type="arrowLeft" namespace-fallback>zurück</m4music-a-button>
     </m4music-o-header>
     <m4music-o-body>
-      <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
-          <div class="o-wrapper__content">
+      <m4m-o-wrapper namespace="wrapper-text-picture-cover-" class="theme-light">
+        <div class="o-wrapper__content">
+          <div class="o-wrapper__info-wrap">
             <div class="o-wrapper__info">
-              <span class="o-wrapper__uppercase o-wrapper__text-small">Posted 6.9.2022</span>
+              <span class="o-wrapper__uppercase o-wrapper__date">Sa 26.03.2022 – 21:30 – Box</span>
             </div>
-            <h1 class="o-wrapper__heading">My Ugly Clementine (AUT)</h1>
-            <p class="o-wrapper__text">Benannt hat sich die Band Annie Taylor nach einer mutigen Frau: 1901 stürzte sich die New Yorker Stuntfrau im Alter von 63 Jahren in einem Fass die Niagarafälle hinunter – und überlebte.</p>
+            <h1 class="o-wrapper__heading">Priy Ragu (CH)</h1>
+            <p class="o-wrapper__text-small o-wrapper__uppercase">Genre</p>
           </div>
-          <div class="o-wrapper__picture">
-            <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000" alt="02 DTC Isa"></m4m-a-picture>
-          </div>
-        </m4m-o-wrapper>
-        <div>
-          <div>
-            <p>Benannt hat sich die Band Annie Taylor nach einer mutigen Frau: 1901 stürzte sich die New Yorker Stuntfrau im Alter von 63 Jahren in einem Fass die Niagarafälle hinunter – und überlebte. Das Zürcher Quartett trumpft vor allem bei Live-Shows mit ihrem eingängigen Gitarrensound und der eindringlichen Stimme von Gitarristin Gini Jungi auf. «Grunge-Psychedelic-Rock» bezeichnet die Band ihren Mix aus Rock’n’Roll, Grunge, Psych-Rock und Dreampop. Mit ihrem 2020 veröffentlichten Debütalbum «Sweet Mortality» bewiesen Annie Taylor zudem, dass sie ein Händchen für scharfsinniges Songwriting haben. 2021 war die Band als «SRF 3 Best Talent» für den Swiss Music Award nominiert. Aktuell arbeiten sie an neuen Songs.</p>
-            <p>Autorin</p>
-          </div>
+          <m4m-a-button namespace="button-square-">Tickets</m4m-a-button>
         </div>
+        <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000"
+          alt="02 DTC Isa">
+        </m4m-a-picture> 
+      </m4m-o-wrapper>
+      <div>
+        <p>Priya Ragu gilt aktuell als eine der vielversprechendsten R&B-Künstler:innen: Sie wurde kürzlich in der Longlist der «BBC Sound of 2022» gelistet und von Amazon Music zur «Breakthrough Artists for 2022» und «Artist to Watch for 2022» gekürt. Die in St. Gallen aufgewachsene Musikerin interpretiert auf ihrem Debüt-Mixtape «damnshestamil» R&B, Soul und Elektropop neu und kombiniert ihren «Ragu-Wave-Sound» mit Klangelementen aus London, Sri Lanka und Süd Indien: Zu hören sind darauf zum Beispiel Kollywood-Samples, die aus Ramil Nadu in Südindien stammen, Krishna-Mantras oder traditionelle Tabla. Das Album «damnshestamil», das im September 2021 veröffentlicht wurde, ist das Ergebnis der Zusammenarbeit mit ihrem Bruder und Produzenten Roshaan Ragu alias Japhna Gold.</p>
+      </div>
+      <div>
+        <m4m-a-iframe>
+          <template>
+            <iframe src="https://open.spotify.com/embed/playlist/61ffvDggrS3nIAq6C6Z52w?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </template>
+        </m4m-a-iframe>
+      </div>
+      <div>
+        <m4m-m-list namespace="list-vertical-">
+          <h2 class="m-list__heading">Event Partner</h2>
+          <ul class="m-list__list">
+            <li class="m-list__list-item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </li>
+            <li class="m-list__ist-item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </li>
+            <li class="m-list__list-item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </li>
+            <li class="m-list__list-item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </li>
+            <li class="m-list__list-item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </li>
+          </ul>          
+        </m4m-m-list>
       </div>
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
@@ -170,13 +198,15 @@
       </div>
     </m4music-o-footer>
   </p-general>
-
-  <script rel="preload" type="module">
+  <m4m-c-fb-pixel id="XXXXXXXXXXXXXXX" wc-config-load>
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=889748457863737&ev=PageView&noscript=1" /></noscript>
+  </m4m-c-fb-pixel>
+  <script rel=preload type=module>
     self.Environment = {
-      mobileBreakpoint: '960px'
+        mobileBreakpoint: '960px'
     }
   </script>
-
 </body>
 
 </html>
+

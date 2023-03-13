@@ -319,6 +319,7 @@ export default class Button extends Shadow() {
     return /* css */ `
     :host button{
       ${this.getAttribute('background-color') === 'white' ? 'color: var(--color-black);' : ''}
+      text-transform: uppercase;
     }
     :host button:hover{
       ${this.getAttribute('background-color') === 'white' ? 'color: var(--color-black);' : ''}
@@ -332,6 +333,9 @@ export default class Button extends Shadow() {
       animation-name: arrowleft;
       animation-duration: 0.5s;
       animation-fill-mode: both;
+    }
+    :host > button .arrow path {
+      fill: white;
     }
     @keyframes arrowright {
       0%{
