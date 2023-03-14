@@ -10,9 +10,10 @@
   --button-primary-background-color-custom:white;
   --button-primary-border-radius:var(--button-border-radius);
   --button-primary-color-custom:var(--background-color);
-  --button-primary-font-size:0.95rem;
+  --button-primary-font-size:0.75rem;
   --button-primary-line-height:1.2rem;
-  --button-primary-padding:0.5rem 1rem;
+  --button-primary-padding: 0.4rem 0.875rem;
+  --button-text-transform: uppercase;
   --color-hover:var(--button-background-color-hover-primary);
   --color-secondary: var(--button-background-color-primary);
   --figcaption-background-color:#FB5E3F;
@@ -683,6 +684,7 @@
   --jury-wrapper-photo-teaser-container-padding-bottom:1rem;
   --jury-wrapper-photo-teaser-container-padding-bottom-mobile:0.9rem;
   --header-detail-content-spacing-mobile: 1rem;
+  --header-logo-big-img-margin: 0 0 2rem;
 }
 
 .theme-light {
