@@ -289,7 +289,7 @@
   --header-a-menu-icon-height-open-mobile:5px;
   --header-a-menu-icon-margin-open-mobile:0 0.4rem 0 0;
   --header-background-color-open:var(--color-orange);
-  --header-background-color:var(--background-color);
+  --header-background-color: #FA4B46;
   --header-box-sizing-open-mobile:border-box;
   --header-content-spacing:var(--content-spacing);
   --header-content-width-mobile:var(--content-width);
@@ -685,10 +685,14 @@
   --jury-wrapper-photo-teaser-container-padding-bottom-mobile:0.9rem;
   --header-detail-content-spacing-mobile: 1rem;
   --header-logo-big-img-margin: 0 0 2rem;
+  --header-logo-big-justify-content: flex-start;
 }
 
 .theme-light {
   --background-color: white;
   --color: #232323;
   --h1-color: var(--color);
+  --background-color-mobile: white;
+  --color-mobile: #232323;
+  --h1-color-mobile: var(--color);
 }

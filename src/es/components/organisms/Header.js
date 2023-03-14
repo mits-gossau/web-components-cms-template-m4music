@@ -58,7 +58,7 @@ export default class Header extends BaseHeader {
     }
     :host > header {
       max-width:var(--content-max-width, 100vw);
-      margin: 0 2rem;
+      margin-top: 0;
     }
     :host > header > a-logo {
       z-index:103;
