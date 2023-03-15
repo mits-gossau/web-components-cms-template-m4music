@@ -127,6 +127,36 @@
           color: #232323;
           margin-bottom: 1rem;
         }
+
+        :host .highlights-wrapper {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: 2rem;
+        }
+
+        :host .highlight-link {
+          width: 30%;
+          text-decoration: none;
+          margin: 0 1rem 2.5rem 0;
+        }
+
+        :host .highlight-link h2 {
+          font-size: 1.5rem;
+          margin-top: 0.7rem;
+        }
+
+        @media only screen and (max-width: 960px) {
+          :host .highlights-wrapper {
+            flex-direction: column;
+            margin-top: 3rem;
+          }
+
+          :host .highlight-link {
+            width: 100%;
+            margin: 0 0 2rem 0;
+          }
+        }
       </style>
       <div>
           <a-logo namespace="header-logo-big-" src="../../../img/logo-weiss-2x.png" arial-label="M4Music Logo" href="/"></a-logo>
@@ -136,6 +166,35 @@
           <div class="link">
             <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">RECORDINGS CONFERENCES 2022</m4music-a-button>
           </div>
+      </div>
+      <div>
+        <h2>HIGHLIGHTS</h2>
+        <div class="highlights-wrapper">
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>ANNIE TAYLOR</h2>
+          </a>
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>MAKALA</h2>
+          </a>
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>BATBAIT</h2>
+          </a>
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>HAIYTI</h2>
+          </a>
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>PRIYA RAGU</h2>
+          </a>
+          <a class="highlight-link" href="#">
+            <a-picture defaultsource="http://via.placeholder.com/504x504" alt="02 DTC Isa"></a-picture>
+            <h2>MOLCHAT DOMA</h2>
+          </a>
+        </div>
       </div>
       <div class="theme-light">
         <h2 class="heading">ALLE SHOWS</h2>
