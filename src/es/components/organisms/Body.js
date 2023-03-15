@@ -34,7 +34,7 @@ export default class Body extends BaseBody {
       background-color:var(--main-background-color, inherit);
     }
     :host > main > * {
-      margin:var(--content-spacing, 0) auto;
+      margin: var(--content-spacing, 0) auto;
       width:var(--content-width, 80%);
       max-width:var(--content-max-width, 100vw);
     }

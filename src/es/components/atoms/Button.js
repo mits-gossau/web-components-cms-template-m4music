@@ -383,7 +383,7 @@ export default class Button extends Shadow() {
     const iconSize = breakpoint === 'desktop' ? '12px' : '8px'
     return /* css */ `
     :host > button {
-      border-radius:4px;
+      border-radius:0px;
       background-color:var(--background-color, white);
       color:var(--color, black);
       font-size:var(${fontSize}, inherit);
@@ -391,7 +391,7 @@ export default class Button extends Shadow() {
       height:auto;
       padding:var(${padding}, 0);
     }
-    :host(:not([data-filter-value='show_all'])) > button::after {
+    /*:host(:not([data-filter-value='show_all'])) > button::after {
       content: url('/assets/img/filter.svg');
       padding-left: 0.2rem;
       display:inline-block;
@@ -414,7 +414,7 @@ export default class Button extends Shadow() {
       display:inline-block;
       height:${iconSize};
       width:${iconSize};
-    }
+    }*/
     :host > button:hover,
     :host > button:active,
     :host(.active) > button {
