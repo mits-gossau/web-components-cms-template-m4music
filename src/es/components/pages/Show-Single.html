@@ -78,45 +78,55 @@
         </m4m-a-iframe>
       </div>
       <div>
-        <div class="m-logos">
+        <div class="display">
           <style>
-            :host .m-logos__heading {
+            :host .display__heading {
               font-size: 0.75rem;
               margin-bottom: 2.5rem;
             }
             
-            :host .m-logos__logo-wrap {
+            :host .display__items {
               display: flex;
               flex-direction: row;
               justify-content: space-between;
             }
             @media only screen and (max-width: 960px) {
-              :host .m-logos__heading {
+              :host .display__heading {
                 font-size: 1.1rem;
                 margin-bottom: 2.5rem;
               }
 
-              :host .m-logos__logo-wrap {
+              :host .display__items {
                 flex-direction: column;
                 align-items: flex-start;
               }
 
-              :host m4m-a-logo {
+              :host .display__item {
                 margin-bottom: 1.6rem;
               }
 
-              :host m4m-a-logo:last-child {
+              :host .display__item:last-child {
                 margin-bottom: 0;
               }
             }
           </style>
-          <h2 class="m-logos__heading">Event Partner</h2>
-          <div class="m-logos__logo-wrap">
-            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+          <h2 class="display__heading">Event Partner</h2>
+          <div class="display__items">
+            <div class="display__item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </div>
+            <div class="display__item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </div>
+            <div class="display__item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </div>
+            <div class="display__item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </div>
+            <div class="display__item">
+              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            </div>
           </div>          
         </div>
       </div>
