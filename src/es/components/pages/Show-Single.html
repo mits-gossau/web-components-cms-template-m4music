@@ -31,6 +31,28 @@
     </m4music-o-header>
     <m4music-o-body>
       <m4m-o-wrapper namespace="wrapper-text-picture-cover-" class="theme-light">
+        <style>
+          :host .o-wrapper__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          :host .o-wrapper__date,
+          :host .o-wrapper__text-small {
+            font-size: 0.75rem;
+          }
+
+          @media only screen and (max-width: 960px) {
+            :host .o-wrapper__info-wrap {
+              margin-bottom: 2.5rem;
+            }
+
+            :host .o-wrapper__info {
+              margin-top: 2.2rem;
+            }
+          }
+        </style>
         <div class="o-wrapper__content">
           <div class="o-wrapper__info-wrap">
             <div class="o-wrapper__info">
@@ -39,7 +61,7 @@
             <h1 class="o-wrapper__heading">Priy Ragu (CH)</h1>
             <p class="o-wrapper__text-small o-wrapper__uppercase">Genre</p>
           </div>
-          <m4m-a-button namespace="button-square-">Tickets</m4m-a-button>
+          <m4music-a-button namespace="button-dark-">Tickets</m4music-a-button>
         </div>
         <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000"
           alt="02 DTC Isa">
@@ -56,26 +78,47 @@
         </m4m-a-iframe>
       </div>
       <div>
-        <m4m-m-list namespace="list-vertical-">
-          <h2 class="m-list__heading">Event Partner</h2>
-          <ul class="m-list__list">
-            <li class="m-list__list-item">
-              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            </li>
-            <li class="m-list__ist-item">
-              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            </li>
-            <li class="m-list__list-item">
-              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            </li>
-            <li class="m-list__list-item">
-              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            </li>
-            <li class="m-list__list-item">
-              <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
-            </li>
-          </ul>          
-        </m4m-m-list>
+        <div class="m-logos">
+          <style>
+            :host .m-logos__heading {
+              font-size: 0.75rem;
+              margin-bottom: 2.5rem;
+            }
+            
+            :host .m-logos__logo-wrap {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            @media only screen and (max-width: 960px) {
+              :host .m-logos__heading {
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
+              }
+
+              :host .m-logos__logo-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              :host m4m-a-logo {
+                margin-bottom: 1.6rem;
+              }
+
+              :host m4m-a-logo:last-child {
+                margin-bottom: 0;
+              }
+            }
+          </style>
+          <h2 class="m-logos__heading">Event Partner</h2>
+          <div class="m-logos__logo-wrap">
+            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+            <m4m-a-logo src="http://via.placeholder.com/200x100" namespace="logo-partner-" href="http://via.placeholder.com/200x100"></m4m-a-logo>
+          </div>          
+        </div>
       </div>
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>

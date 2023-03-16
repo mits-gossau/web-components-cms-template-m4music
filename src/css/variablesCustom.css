@@ -686,13 +686,31 @@
   --header-detail-content-spacing-mobile: 1rem;
   --header-logo-big-img-margin: 0 0 2rem;
   --header-logo-big-justify-content: flex-start;
+  --button-dark-background-color-primary: #232323;
+  --button-dark-width: auto;
+  --button-dark-width-mobile: 100%;
+  --button-dark-padding: 0.4rem 0.875rem;
+  --button-dark-padding-mobile: 1rem 0.5rem;
+  --button-dark-font-size: 0.75rem;
+  --button-dark-font-size-mobile: 1rem;
+  --button-dark-margin: 0;
+  --button-dark-margin-mobile: 0;
+  --wrapper-text-picture-cover-align-items: stretch;
+  --wrapper-text-picture-cover-flex-direction-mobile: column-reverse;
+  --wrapper-text-picture-cover-h1-margin: 1rem 0 1rem;
+  --wrapper-text-picture-cover-h1-margin-mobile: 1rem 0 1rem;
 }
 
 .theme-light {
   --background-color: white;
   --color: #232323;
   --h1-color: var(--color);
+  --h2-color: var(--color);
+  --h3-color: var(--color);
   --background-color-mobile: white;
   --color-mobile: #232323;
   --h1-color-mobile: var(--color);
+  --h2-color-mobile: var(--color);
+  --h3-color-mobile: var(--color);
+  --footer-color-mobile: white;
 }
