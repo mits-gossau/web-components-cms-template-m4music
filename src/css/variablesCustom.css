@@ -365,7 +365,6 @@
   --header-navigation-margin-bottom-mobile:1.75rem;
   --header-navigation-margin-bottom:1rem;
   --header-navigation-min-width:auto;
-  --header-navigation-padding-no-scroll:min(50px, 15vw) 0 0 0;
   --header-navigation-padding-top:0;
   --header-navigation-padding:0;
   --header-navigation-text-align:center;
@@ -702,6 +701,12 @@
   --button-dark-color-hover-primary: white;
   --button-dark-background-color-hover-primary: #FA4B46;
   --figcaption-background-color: #FA4B46;
+  --header-navigation-a-link-color-no-scroll: white;
+  --header-navigation-color-mobile: white;
+  --navigation-icon-path-fill: white;
+  --header-navigation-align-items: flex-end;
+  --header-lang-navigation-color-active: white;
+  --header-lang-navigation-text-decoration: none;
 }
 
 .theme-light {
