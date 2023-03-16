@@ -717,4 +717,6 @@
   --footer-color-mobile: white;
   --button-color-arrowRight: #232323;
   --button-color-arrowRight-mobile: #232323;
+  --speaker-image-img-margin: 0;
+  --speaker-image-img-margin-mobile: 0;
 }
