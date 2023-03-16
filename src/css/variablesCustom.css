@@ -699,6 +699,8 @@
   --wrapper-text-picture-cover-flex-direction-mobile: column-reverse;
   --wrapper-text-picture-cover-h1-margin: 1rem 0 1rem;
   --wrapper-text-picture-cover-h1-margin-mobile: 1rem 0 1rem;
+  --button-dark-color-hover-primary: white;
+  --button-dark-background-color-hover-primary: #FA4B46;
 }
 
 .theme-light {
