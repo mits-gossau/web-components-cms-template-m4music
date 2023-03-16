@@ -31,6 +31,33 @@
     </m4music-o-header>
     <m4music-o-body>
       <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+        <style>
+          :host .o-wrapper__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          :host .o-wrapper__date,
+          :host .o-wrapper__text-small {
+            font-size: 0.75rem;
+          }
+
+          @media only screen and (max-width: 960px) {
+            :host .o-wrapper__info-wrap {
+              margin-bottom: 2.5rem;
+            }
+
+            :host .o-wrapper__date,
+            :host .o-wrapper__text-small {
+              font-size: 1.1rem;
+            }
+
+            :host .o-wrapper__info {
+              margin-top: 2.2rem;
+            }
+          }
+        </style>
         <div class="o-wrapper__content">
           <div class="o-wrapper__info-wrap">
             <div class="o-wrapper__info">
@@ -39,7 +66,7 @@
             <h1 class="o-wrapper__heading">Kulturelle Aneignung und Musik antirassistisch im Musikbusiness</h1>
             <p class="o-wrapper__text-small o-wrapper__uppercase">Genre</p>
           </div>
-          <m4m-a-button namespace="button-square-">Anmelden</m4m-a-button>
+          <m4music-a-button namespace="button-dark-">Anmelden</m4music-a-button>
         </div>
         <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000"
           alt="02 DTC Isa">S
@@ -49,10 +76,41 @@
         <p>Was hat Musik mit kultureller Aneignung zu tun? Was habe ich als Musikschaffende:r damit zu tun? Dieser Workshop wirft Fragen auf – und möchte im gemeinsamen Austausch aufzeigen, wie Musikschaffende ihre Arbeit aktiv antirassistisch gestalten und so für eine inklusivere Gesellschaft einstehen können. Nebst einem Überblick über antirassistisches Vokabular liefert der Workshop geschichtlichen Input zur Thematik. Die Sozialarbeiterinnen und Referentinnen Charlotte Acakpo und Melanie Zwahlen beleuchten aber auch reale Beispiele aus dem Musikgeschäft, sensibilisieren so die Wahrnehmung der Teilnehmenden und schaffen Raum für Fragen, Erfahrungsaustausch und Reflexion. Der Workshop ist kein Safe-Space für betroffene Personen. In Zusammenarbeit mit Verein Diversum Verbindliche Anmeldung bis 21. März 2022: Anmeldung Diese Conference findet auf Deutsch statt.</p>
       </div>
       <div>
-        <m4m-m-list namespace="list-vertical-">
-          <h2 class="m-list__heading">Speaker</h2>
-          <ul class="m-list__list">
-            <li class="m-list___list-item">
+        <div class="display">
+          <style>
+            :host .display__heading {
+              font-size: 0.75rem;
+              margin-bottom: 2.5rem;
+            }
+            
+            :host .display__items {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            @media only screen and (max-width: 960px) {
+              :host .display__heading {
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
+              }
+
+              :host .display__items {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              :host .display__item {
+                margin-bottom: 1.6rem;
+              }
+
+              :host .display__item:last-child {
+                margin-bottom: 0;
+              }
+            }
+          </style>
+          <h2 class="display__heading">Speaker</h2>
+          <div class="display__items">
+            <div class="display__item">
               <m4music-m-speakers>
                 <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
                   alt="02 DTC Isa">
@@ -61,8 +119,8 @@
                 <p class="m-speakers__function">Sozialarbeiterin, Workshopleiterin Verein Diversum - Zürich</p>
                 <p class="m-speakers__text">Charlotte Acakpo ist ausgebildete Sozialarbeiterin und arbeitet mit geflüchteten Menschen im Bereich der Sozialberatung und Asylbetreuung. Nebenbei ist sie aktives Mitglied des rassismuskritischen Vereins Diversum und gibt Antirassistische Workshops mit verschiedenen Schwerpunkten.</p>
               </m4music-m-speakers>
-            </li>
-            <li class="m-list__list-item">
+            </div>
+            <div class="display__item">
               <m4music-m-speakers>
                 <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
                   alt="02 DTC Isa">
@@ -71,8 +129,8 @@
                 <p class="m-speakers__function">Sozialarbeiterin in Ausbildung, Workshopleiterin Verein Diversum - Zürich</p>
                 <p class="m-speakers__text">Melanie Zwahlen studiert Soziale Arbeit, arbeitet in einem Jugendheim und gibt nebenbei mit dem Verein Diversum Antirassismus-Workshops. Ihre grosse Leidenschaft ist die Musik: Sie durfte mit ihrer Band «ALL XS» auch schon am m4music spielen.</p>
               </m4music-m-speakers>
-            </li>
-            <li class="m-list__list-item">
+            </div>
+            <div class="display__item">
               <m4music-m-speakers>
                 <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
                   alt="02 DTC Isa">
@@ -81,8 +139,8 @@
                 <p class="m-speakers__function">Sozialarbeiterin, Workshopleiterin Verein Diversum - Zürich</p>
                 <p class="m-speakers__text">Charlotte Acakpo ist ausgebildete Sozialarbeiterin und arbeitet mit geflüchteten Menschen im Bereich der Sozialberatung und Asylbetreuung. Nebenbei ist sie aktives Mitglied des rassismuskritischen Vereins Diversum und gibt Antirassistische Workshops mit verschiedenen Schwerpunkten.</p>
               </m4music-m-speakers>
-            </li>
-            <li class="m-list__list-item">
+            </div>
+            <div class="display__item">
               <m4music-m-speakers>
                 <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
                   alt="02 DTC Isa">
@@ -91,9 +149,9 @@
                 <p class="m-speakers__function">Sozialarbeiterin in Ausbildung, Workshopleiterin Verein Diversum - Zürich</p>
                 <p class="m-speakers__text">Melanie Zwahlen studiert Soziale Arbeit, arbeitet in einem Jugendheim und gibt nebenbei mit dem Verein Diversum Antirassismus-Workshops. Ihre grosse Leidenschaft ist die Musik: Sie durfte mit ihrer Band «ALL XS» auch schon am m4music spielen.</p>
               </m4music-m-speakers>
-            </li>
-          </ul>
-        </m4m-list>
+            </div>
+          </div>
+        </div>
       </div>
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>

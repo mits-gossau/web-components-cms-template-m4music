@@ -310,7 +310,7 @@
   --header-detail-logo-height-mobile:var(--header-logo-height-mobile);
   --header-detail-logo-height:var(--header-logo-height);
   --header-detail-logo-justify-content:var(--header-logo-justify-content);
-  --header-detail-logo-margin-mobile:0 0 0 2rem;
+  --header-detail-logo-margin-mobile:0;
   --header-detail-logo-margin:var(--header-logo-margin);
   --header-detail-logo-width:var(--header-logo-width);
   --header-detail-position:static;
@@ -686,13 +686,33 @@
   --header-detail-content-spacing-mobile: 1rem;
   --header-logo-big-img-margin: 0 0 2rem;
   --header-logo-big-justify-content: flex-start;
+  --button-dark-background-color-primary: #232323;
+  --button-dark-width: auto;
+  --button-dark-width-mobile: 100%;
+  --button-dark-padding: 0.4rem 0.875rem;
+  --button-dark-padding-mobile: 1rem 0.5rem;
+  --button-dark-font-size: 0.75rem;
+  --button-dark-font-size-mobile: 1rem;
+  --button-dark-margin: 0;
+  --button-dark-margin-mobile: 0;
+  --wrapper-text-picture-cover-align-items: stretch;
+  --wrapper-text-picture-cover-flex-direction-mobile: column-reverse;
+  --wrapper-text-picture-cover-h1-margin: 1rem 0 1rem;
+  --wrapper-text-picture-cover-h1-margin-mobile: 1rem 0 1rem;
+  --button-dark-color-hover-primary: white;
+  --button-dark-background-color-hover-primary: #FA4B46;
 }
 
 .theme-light {
   --background-color: white;
   --color: #232323;
   --h1-color: var(--color);
+  --h2-color: var(--color);
+  --h3-color: var(--color);
   --background-color-mobile: white;
   --color-mobile: #232323;
   --h1-color-mobile: var(--color);
+  --h2-color-mobile: var(--color);
+  --h3-color-mobile: var(--color);
+  --footer-color-mobile: white;
 }
