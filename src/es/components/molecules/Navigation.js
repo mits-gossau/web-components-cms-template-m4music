@@ -22,8 +22,6 @@ export default class Navigation extends BaseNavigation {
       }
       :host .icons {
         align-items:center;
-        border-bottom:1px solid black;
-        border-top:1px solid black;
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
@@ -31,15 +29,25 @@ export default class Navigation extends BaseNavigation {
         justify-content:space-between;
         padding:0.5rem 0 0.5rem 0;
       }
+      :host .icons m4music-a-icon:last-child {
+        padding-right: 0;
+      }
       :host .meta {
         padding:0.5rem 0 0 0;
-        border-top:1px solid black;
+      }
+      :host .meta ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
       }
       :host .icons > a-logo {
         margin:0.25rem 1rem 0.25rem 0;
       }
       :host .icons > a-logo:last-of-type {
         margin:0;
+      }
+      :host(.no-scroll) > nav > ul {
+        --header-navigation-padding-no-scroll:min(50px, 15vw) var(--content-spacing) 0 0;
       }
       :host(.no-scroll) > nav > ul li.meta ul a-link {
         --header-navigation-font-size:min(24px, max(16px, 0.8rem));
@@ -50,10 +58,26 @@ export default class Navigation extends BaseNavigation {
         justify-content:space-evenly;
         align-items:center;
       }
+
+      :host .lang {
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-end;
+      }
+
+      :host .lang a-link + a-link {
+        margin-left: 1rem;
+      }
      
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
         :host .icons {
           gap:0;
+        }
+      }
+
+      @media only screen and (max-width: 960px) {
+        :host(.no-scroll) > nav > ul {
+          --header-navigation-padding-no-scroll:min(50px, 15vw) 1.77rem 0 0;
         }
       }
     `
