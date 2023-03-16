@@ -310,7 +310,7 @@
   --header-detail-logo-height-mobile:var(--header-logo-height-mobile);
   --header-detail-logo-height:var(--header-logo-height);
   --header-detail-logo-justify-content:var(--header-logo-justify-content);
-  --header-detail-logo-margin-mobile:0 0 0 2rem;
+  --header-detail-logo-margin-mobile:0;
   --header-detail-logo-margin:var(--header-logo-margin);
   --header-detail-logo-width:var(--header-logo-width);
   --header-detail-position:static;
