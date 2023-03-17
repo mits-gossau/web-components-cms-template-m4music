@@ -710,6 +710,8 @@
   --button-primary-font-size-mobile: 1.1rem;
   --button-primary-padding: 0.6rem 1.1rem;
   --button-font-size-mobile: 1.1rem;
+  --image-no-margin-img-margin: 0;
+  --button-primary-color-hover: white;
 }
 
 .theme-light {
@@ -731,13 +733,13 @@
 }
 
 .theme-red {
-  --background-color: #FA4B46;;
+  --background-color: #FA4B46;
   --color: white;
   --h1-color: white;
   --h2-color: white;
   --h3-color: white;
   --h4-color: white;
-  --background-color-mobile:  #FA4B46;;
+  --background-color-mobile: #FA4B46;
   --color-mobile: white;
   --h1-color-mobile: white;
   --h2-color-mobile: white;

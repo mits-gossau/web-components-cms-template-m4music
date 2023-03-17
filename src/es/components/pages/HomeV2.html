@@ -183,6 +183,74 @@
           <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">PHOTOS</m4music-a-button>
         </div>
       </div>
+      <m4m-o-wrapper>
+        <style>
+          :host > section {
+            --gap: 1rem;
+          }
+
+          :host .teaser {
+            position: relative;
+          }
+
+          :host .teaser:hover .teaser__info {
+            background-color: #FA4B46;
+          }
+
+          :host .teaser + .teaser {
+            margin-top: 1rem;
+          }
+
+          :host .teaser__info {
+            position: absolute;
+            z-index: 1;
+            top: 0rem;
+            left: 0rem;
+            padding: 0.6rem 2.5rem 0 0.65rem;
+            width: 100%;
+            height: 100%;
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          :host .teaser h2 {
+            --h2-font-size: 1.5rem;
+            --h2-margin: 0 0 0.325rem 0;
+          }
+        </style>
+        <div>
+          <div class="teaser">
+            <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/776x776" alt="02 DTC Isa"></m4m-a-picture>
+            <div class="teaser__info">
+              <h2>LOREM IPSUM DOLOR SIT AMET.</h2>
+              <p>Dolore magna aliquyam erat, sed diam voluptua. At vero eos et.</p>
+            </div>
+          </div>
+          <div class="teaser">
+            <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/773x465" alt="02 DTC Isa"></m4m-a-picture>
+            <div class="teaser__info">
+              <h2>ALIQUYAM ERAT, SED EIRMOD TEMPO</h2>
+              <p>Stet clita kasd gubergren, no sea takimata</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="teaser">
+            <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/773x465" alt="02 DTC Isa"></m4m-a-picture>
+            <div class="teaser__info">
+              <h2>AT VERO EOS ET ACCUSAM ET JUSTO</h2>
+            </div>
+          </div>
+          <div class="teaser">
+            <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/776x776" alt="02 DTC Isa"></m4m-a-picture>
+            <div class="teaser__info">
+              <h2>ED DIAM NONUMY</h2>
+            </div>
+          </div>
+        </div>
+      </m4m-o-wrapper>
+      <div>
+        <m4m-a-button namespace="button-primary-">MEHR NEWS</m4m-a-button>
+      </div>
     </m4music-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
