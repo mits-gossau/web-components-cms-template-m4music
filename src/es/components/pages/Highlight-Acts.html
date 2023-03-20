@@ -109,8 +109,12 @@
         </ul>
       </m4music-m-navigation>
     </m4music-o-header>
-    <m4music-o-body namespace="body-" namespace-fallback>
+    <m4m-o-body>
       <style>
+        :host a-logo {
+          margin-top: 2rem;
+        }
+
         :host .text {
           margin: 2rem 0;
         }
@@ -144,6 +148,7 @@
         :host .highlight-link h2 {
           font-size: 1.5rem;
           margin-top: 0.7rem;
+          color: white;
         }
 
         @media only screen and (max-width: 960px) {
@@ -158,13 +163,20 @@
           }
         }
       </style>
-      <div>
+      <div class="stage">
           <a-logo namespace="header-logo-big-" src="../../../img/logo-weiss-2x.png" arial-label="M4Music Logo" href="/"></a-logo>
           <h2>SHOWS AM M4MUSIC FESTIVAL 2022 25. & 26. MÄRZ IN ZÜRICH</h2>
           <p class="text">Entdecke die aktuellsten upcoming Artists auf 5 Festivalbühnen im EXIL, Moods & Schiffbau (Halle, Box, Open Air).</p>
           <m4m-a-button namespace="button-primary-">Tickets</m4m-a-button>
           <div class="link">
-            <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">RECORDINGS CONFERENCES 2022</m4music-a-button>
+            <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">
+              <style>
+                :host button svg path {
+                  fill: white;
+                }
+              </style>
+              RECORDINGS CONFERENCES 2022
+            </m4music-a-button>
           </div>
       </div>
       <div>
@@ -196,167 +208,170 @@
           </a>
         </div>
       </div>
-      <div class="theme-light">
-        <h2 class="heading">ALLE SHOWS</h2>
-        <m4music-o-list namespace="list-" background-color="white">
-          <m4music-a-filter background-color="white">
-            <div class="filter">
-              <h5>Filter</h5>
-              <m4music-a-button namespace="button-filter-" class="active" data-filter-value="show_all"
-                data-showall-translation="Alle Events" data-reset-translation="Filter zurücksetzen" namespace-fallback
-                type="filter"> Alle Events </m4music-a-button>
-            </div>
-            <div class="weekdays">
-              <h5>Tag</h5>
-              <div class="filterButtonContainer">
-                <m4music-a-button namespace="button-filter-" data-filter-value="Freitag" data-filter-group="day" namespace-fallback
-                  type="filter"> Freitag </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Samstag" data-filter-group="day" namespace-fallback
-                  type="filter"> Samstag </m4music-a-button>
+      <m4m-o-body-style background-color-var="var(--background-color-theme-light)" color-var="var(--color-theme-light)" h2-color-var="var(--color-theme-light)">
+        <div>
+          <h2 class="heading">ALLE SHOWS</h2>
+          <m4music-o-list namespace="list-" background-color="white">
+            <m4music-a-filter background-color="white">
+              <div class="filter">
+                <h5>Filter</h5>
+                <m4music-a-button namespace="button-filter-" class="active" data-filter-value="show_all"
+                  data-showall-translation="Alle Events" data-reset-translation="Filter zurücksetzen" namespace-fallback
+                  type="filter"> Alle Events </m4music-a-button>
               </div>
-            </div>
-            <div class="locations">
-              <h5>Location</h5>
-              <div class="filterButtonContainer">
-                <m4music-a-button namespace="button-filter-" data-filter-value="Box_Zürich" data-filter-group="location" namespace-fallback
-                  type="filter"> Box </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Matchbox_Zürich" data-filter-group="location" namespace-fallback
-                  type="filter"> Matchbox </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Moods_Zürich" data-filter-group="location" namespace-fallback
-                  type="filter"> Moods </m4music-a-button>
+              <div class="weekdays">
+                <h5>Tag</h5>
+                <div class="filterButtonContainer">
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Freitag" data-filter-group="day" namespace-fallback
+                    type="filter"> Freitag </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Samstag" data-filter-group="day" namespace-fallback
+                    type="filter"> Samstag </m4music-a-button>
+                </div>
               </div>
-            </div>
-            <div class="languages">
-              <h5>Sprache</h5>
-              <div class="filterButtonContainer">
-                <m4music-a-button namespace="button-filter-" data-filter-value="DE" data-filter-group="language" namespace-fallback type="filter">
-                  Deutsch </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="EN" data-filter-group="language" namespace-fallback type="filter">
-                  Englisch </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="FR" data-filter-group="language" namespace-fallback type="filter">
-                  Französisch </m4music-a-button>
+              <div class="locations">
+                <h5>Location</h5>
+                <div class="filterButtonContainer">
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Box_Zürich" data-filter-group="location" namespace-fallback
+                    type="filter"> Box </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Matchbox_Zürich" data-filter-group="location" namespace-fallback
+                    type="filter"> Matchbox </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Moods_Zürich" data-filter-group="location" namespace-fallback
+                    type="filter"> Moods </m4music-a-button>
+                </div>
               </div>
-            </div>
-            <div class="genres">
-              <h5>Genre</h5>
-              <div class="filterButtonContainer">
-                <m4music-a-button namespace="button-filter-" data-filter-value="Workshop" data-filter-group="genre" namespace-fallback
-                  type="filter"> Workshop </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Panel" data-filter-group="genre" namespace-fallback type="filter">
-                  Panel </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Unterhaltung" data-filter-group="genre" namespace-fallback
-                  type="filter"> Unterhaltung </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Lesung_Gespräch" data-filter-group="genre" namespace-fallback
-                  type="filter"> Lesung & Gespräch </m4music-a-button>
+              <div class="languages">
+                <h5>Sprache</h5>
+                <div class="filterButtonContainer">
+                  <m4music-a-button namespace="button-filter-" data-filter-value="DE" data-filter-group="language" namespace-fallback type="filter">
+                    Deutsch </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="EN" data-filter-group="language" namespace-fallback type="filter">
+                    Englisch </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="FR" data-filter-group="language" namespace-fallback type="filter">
+                    Französisch </m4music-a-button>
+                </div>
               </div>
-            </div>
-            <div class="entry">
-              <h5>Veranstaltungstyp</h5>
-              <div class="filterButtonContainer">
-                <m4music-a-button namespace="button-filter-" data-filter-value="Free" data-filter-group="entry" namespace-fallback type="filter">
-                  Eintritt frei </m4music-a-button>
-                <m4music-a-button namespace="button-filter-" data-filter-value="Ticket" data-filter-group="entry" namespace-fallback type="filter">
-                  mit Ticket </m4music-a-button>
+              <div class="genres">
+                <h5>Genre</h5>
+                <div class="filterButtonContainer">
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Workshop" data-filter-group="genre" namespace-fallback
+                    type="filter"> Workshop </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Panel" data-filter-group="genre" namespace-fallback type="filter">
+                    Panel </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Unterhaltung" data-filter-group="genre" namespace-fallback
+                    type="filter"> Unterhaltung </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Lesung_Gespräch" data-filter-group="genre" namespace-fallback
+                    type="filter"> Lesung & Gespräch </m4music-a-button>
+                </div>
               </div>
-            </div>
-          </m4music-a-filter>
-          <m4music-o-wrapper type="event-wrapper" namespace="list-wrapper-" namespace-fallback no-space>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item namespace="event-item-" namespace-fallback
-                data-tags="conference DE Workshop Free Freitag Box_Zürich" type="event">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
+              <div class="entry">
+                <h5>Veranstaltungstyp</h5>
+                <div class="filterButtonContainer">
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Free" data-filter-group="entry" namespace-fallback type="filter">
+                    Eintritt frei </m4music-a-button>
+                  <m4music-a-button namespace="button-filter-" data-filter-value="Ticket" data-filter-group="entry" namespace-fallback type="filter">
+                    mit Ticket </m4music-a-button>
                 </div>
-                <div class="content-wrapper">
-                  <p class="date">25.03.2022 – 09:30 – Box</p>
-                  <p class="entry">Eintritt frei</p>
-                  <p class="name">Kulturelle Aneignung und Musik:</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item namespace="event-item-" namespace-fallback data-tags="Keynote Ticket" type="event">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Ticket</p>
-                  <p class="name">DE Kostenlos Neque pellentsures fusce</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item type="event" namespace="event-item-" data-tags="English Free">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Eintritt frei</p>
-                  <p class="name">EN Kostenlos Pharetra et ut</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item type="event" namespace="event-item-" data-tags="Français Panel Ticket">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Ticket</p>
-                  <p class="name">FR Panel At vestibulum enim</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item type="event" namespace="event-item-" data-tags="Deutsch Ticket">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Ticket</p>
-                  <p class="name">DE Kostenlos Neque pellentsures fusce</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item type="event" namespace="event-item-" data-tags="English Free">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Eintritt frei</p>
-                  <p class="name">EN Kostenlos Pharetra et ut</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-            <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
-              <m4music-m-event-item type="event" namespace="event-item-" data-tags="Français Panel Ticket">
-                <div class="image-wrapper">
-                  <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
-                    alt="02 DTC Isa"> </a-picture>
-                </div>
-                <div class="content-wrapper">
-                  <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
-                  <p class="entry">Ticket</p>
-                  <p class="name">FR Panel At vestibulum enim</p>
-                </div>
-              </m4music-m-event-item>
-            </a>
-          </m4music-o-wrapper>
-        </m4music-o-list>
-      </div>
-    </m4music-o-body>
+              </div>
+            </m4music-a-filter>
+            <m4music-o-wrapper type="event-wrapper" namespace="list-wrapper-" namespace-fallback no-space>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item namespace="event-item-" namespace-fallback
+                  data-tags="conference DE Workshop Free Freitag Box_Zürich" type="event">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">25.03.2022 – 09:30 – Box</p>
+                    <p class="entry">Eintritt frei</p>
+                    <p class="name">Kulturelle Aneignung und Musik:</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item namespace="event-item-" namespace-fallback data-tags="Keynote Ticket" type="event">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Ticket</p>
+                    <p class="name">DE Kostenlos Neque pellentsures fusce</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item type="event" namespace="event-item-" data-tags="English Free">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Eintritt frei</p>
+                    <p class="name">EN Kostenlos Pharetra et ut</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item type="event" namespace="event-item-" data-tags="Français Panel Ticket">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Ticket</p>
+                    <p class="name">FR Panel At vestibulum enim</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item type="event" namespace="event-item-" data-tags="Deutsch Ticket">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Ticket</p>
+                    <p class="name">DE Kostenlos Neque pellentsures fusce</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item type="event" namespace="event-item-" data-tags="English Free">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Eintritt frei</p>
+                    <p class="name">EN Kostenlos Pharetra et ut</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+              <a href="/events/de/2022/m4music-festival/conference/kulturelle-aneignung-und-musik-antirassistisch-im-musikbusiness/#eventList" class="event-item">
+                <m4music-m-event-item type="event" namespace="event-item-" data-tags="Français Panel Ticket">
+                  <div class="image-wrapper">
+                    <a-picture namespace="event-item-picture-" namespace-fallback defaultsource="http://via.placeholder.com/368x368"
+                      alt="02 DTC Isa"> </a-picture>
+                  </div>
+                  <div class="content-wrapper">
+                    <p class="date">20.12.2022 - 18:30 - <span>Exil</span></p>
+                    <p class="entry">Ticket</p>
+                    <p class="name">FR Panel At vestibulum enim</p>
+                  </div>
+                </m4music-m-event-item>
+              </a>
+            </m4music-o-wrapper>
+          </m4music-o-list>
+        </div>
+      </m4m-o-body-style>
+
+    </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
         <div class="footer__engagement hide-mobile">
