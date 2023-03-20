@@ -205,6 +205,8 @@
 
           :host .teaser {
             position: relative;
+            display: inline-block;
+            margin-bottom: 0;
           }
 
           :host .teaser:hover .teaser__info {
@@ -229,37 +231,47 @@
           :host .teaser h2 {
             --h2-font-size: 1.5rem;
             --h2-margin: 0 0 0.325rem 0;
+            color: white;
+          }
+
+          :host .teaser:hover h2 {
+            color: white;
+            text-decoration: none;
+          }
+
+          :host .teaser p {
+            color: white;
           }
         </style>
         <div>
-          <div class="teaser">
+          <a class="teaser" #href="#">
             <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/776x776" alt="02 DTC Isa"></m4m-a-picture>
             <div class="teaser__info">
               <h2>LOREM IPSUM DOLOR SIT AMET.</h2>
               <p>Dolore magna aliquyam erat, sed diam voluptua. At vero eos et.</p>
             </div>
-          </div>
-          <div class="teaser">
+          </a>
+          <a class="teaser" #href="#">
             <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/773x465" alt="02 DTC Isa"></m4m-a-picture>
             <div class="teaser__info">
               <h2>ALIQUYAM ERAT, SED EIRMOD TEMPO</h2>
               <p>Stet clita kasd gubergren, no sea takimata</p>
             </div>
-          </div>
+          </a>
         </div>
         <div>
-          <div class="teaser">
+          <a class="teaser" #href="#">
             <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/773x465" alt="02 DTC Isa"></m4m-a-picture>
             <div class="teaser__info">
               <h2>AT VERO EOS ET ACCUSAM ET JUSTO</h2>
             </div>
-          </div>
-          <div class="teaser">
+          </a>
+          <a class="teaser" #href="#">
             <m4m-a-picture namespace="image-no-margin-" defaultsource="http://via.placeholder.com/776x776" alt="02 DTC Isa"></m4m-a-picture>
             <div class="teaser__info">
               <h2>ED DIAM NONUMY</h2>
             </div>
-          </div>
+          </a>
         </div>
       </m4m-o-wrapper>
       <div>
