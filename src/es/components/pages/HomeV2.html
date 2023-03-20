@@ -271,13 +271,14 @@
             :host .m-newsletter__wrap {
               display: flex;
               flex-direction: row;
+              justify-content: space-between;
               background-color: #FA4B46;
-              padding: 4.5rem 0;
+              padding: 4.5rem 0.65rem;
             }
 
             :host .m-newsletter__container {
               width: 33.33%;
-              margin-right: 1.75rem;
+              /* margin-right: 1.75rem; */
             }
 
             :host .m-newsletter__container:last-child {
@@ -309,6 +310,7 @@
             :host .m-newsletter__form {
               display: flex;
               flex-direction: row;
+              flex-wrap: wrap;
             }
 
             :host .m-newsletter__form input[type="email"] {
@@ -318,7 +320,7 @@
               border: none;
               color: #999999;
               font-size: 0.5rem;
-              width: 275px;
+              width: 250px;
             }
 
             :host .m-newsletter__submit {
@@ -345,7 +347,7 @@
 
               :host .m-newsletter__wrap {
                 flex-direction: column;
-                padding: 2rem 0;
+                padding: 2rem 0.65rem;
               }
 
               :host .m-newsletter__wrap h3 {

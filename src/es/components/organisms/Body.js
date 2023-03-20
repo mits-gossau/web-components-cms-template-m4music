@@ -34,7 +34,7 @@ export default class Body extends BaseBody {
       background-color:var(--main-background-color, inherit);
     }
     :host > main > * {
-      margin: var(--content-spacing, 0) auto;
+      margin: 2rem auto var(--content-spacing, 0);
       width:var(--content-width, 80%);
       max-width:var(--content-max-width, 100vw);
     }
@@ -126,8 +126,12 @@ export default class Body extends BaseBody {
       }
       :host .event-detail-inner-container {
         padding: 0;
+      }     
+    }
+    @media only screen and (max-width: 960px) {
+      :host > main > * {
+        margin: 1rem auto var(--content-spacing, 0);
       }
-      
     }
     `
   }
