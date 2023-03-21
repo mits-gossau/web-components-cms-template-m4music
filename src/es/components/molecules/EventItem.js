@@ -126,6 +126,11 @@ export default class EventItem extends Shadow() {
       line-height:125%;
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
       max-width: 95%;
+    }
+    :host .description{
+      color:#000000; 
+      font-size: 0.6rem;
+      line-height:125%;
       word-break: break-word;
     }
     :host(.hidden) {
@@ -159,6 +164,10 @@ export default class EventItem extends Shadow() {
         text-align:left;
       }
       :host .entry{
+        font-size:var(--description-font-size-mobile, 1rem);
+        text-align:left;
+      }
+      :host .description{
         font-size:var(--description-font-size-mobile, 1rem);
         text-align:left;
       }
