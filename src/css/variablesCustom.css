@@ -715,9 +715,17 @@
   --button-primary-padding-mobile: 1rem 0.5rem;
   --button-primary-font-size: 0.75rem;
   --button-primary-font-size-mobile: 1rem;
+  --button-primary-inverted-font-size-mobile: 1.1rem;
+  --button-primary-inverted-padding: 0.4rem 0.875rem;
+  --button-primary-inverted-padding-mobile: 1rem 0.5rem;
+  --button-primary-inverted-font-size: 0.75rem;
+  --button-primary-inverted-font-size-mobile: 1rem;
+  --button-primary-inverted-border-radius: 0;
   --button-font-size-mobile: 1.1rem;
   --image-no-margin-img-margin: 0;
   --button-primary-color-hover: white;
+  --button-primary-inverted-background-color: white;
+  --button-primary-inverted-background-color-hover: #232323;
   --spacer-margin: 1.5rem 0 0;
   --any-margin-top-first-child: 1.5rem;
   --any-margin-top-first-child-mobile: 1.5rem;
