@@ -107,11 +107,8 @@
   --color-orange:#FA4B46;
   --color:#FFFFFF;
   --color-theme-light:#232323;
-  --content-max-width:1600px;
-  /* --content-spacing-mobile:var(--content-spacing); */
-  /* --content-spacing:0; */
   --content-spacing: 4rem;
-  --content-width-mobile:90%;
+  --content-width-mobile:88%;
   --content-width-not-web-component-mobile:90%;
   --content-width-not-web-component:88%;
   --content-width:88%;
@@ -163,7 +160,7 @@
   --font-size-mobile:min(18px, 5vw);
   --font-size:40px;
   --footer-a-font-size-mobile:min(18px, 5vw);
-  --footer-a-font-size:0.65rem;
+  --footer-a-font-size:0.55rem;
   --footer-a-text-underline-offset:0.2rem;
   --footer-background-color:var(--background-color);
   --footer-border-top:1px solid var(--border-color);
@@ -710,7 +707,10 @@
   --header-lang-navigation-color-active: white;
   --header-lang-navigation-text-decoration: none;
   --button-primary-font-size-mobile: 1.1rem;
-  --button-primary-padding: 0.6rem 1.1rem;
+  --button-primary-padding: 0.4rem 0.875rem;
+  --button-primary-padding-mobile: 1rem 0.5rem;
+  --button-primary-font-size: 0.75rem;
+  --button-primary-font-size-mobile: 1rem;
   --button-font-size-mobile: 1.1rem;
   --image-no-margin-img-margin: 0;
   --button-primary-color-hover: white;
@@ -719,6 +719,20 @@
   --any-margin-top-first-child-mobile: 1.5rem;
   --header-logo-big-width: 100%;
   --header-logo-big-width-mobile: 100%;
+  --newsletter-field-input-border-radius: 0;
+  --newsletter-field-input-height: auto;
+  --newsletter-button-font-size: 0.5rem;
+  --newsletter-button-height: auto;
+  --newsletter-button-padding: 0.35rem 0.4rem;
+  --newsletter-button-margin-mobile: 0;
+  --image-no-margin-img-width: 100%;
+  --image-no-margin-img-object-fit: cover;
+  --newsletter-button-background-color-hover-primary: black;
+  --newsletter-button-color-hover-primary: white;
+  --newsletter-button-background-color-hover-primary-mobile: black;
+  --newsletter-button-color-hover-primary-mobile: white;
+  --newsletter-button-padding-mobile: 0.4rem 0.875rem;
+  --newsletter-button-margin: 0;
 }
 
 .theme-light {
@@ -737,6 +751,8 @@
   --button-color-arrowRight-mobile: #232323;
   --speaker-image-img-margin: 0;
   --speaker-image-img-margin-mobile: 0;
+  --any-content-spacing: 4rem;
+  --any-content-spacing-mobile: 4rem;
 }
 
 .theme-red {
