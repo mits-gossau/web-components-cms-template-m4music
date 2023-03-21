@@ -40,6 +40,9 @@ export default class Navigation extends BaseNavigation {
         flex-direction: column;
         align-items: flex-end;
       }
+      :host > nav > ul .meta ul {
+        padding-top: 1rem;
+      }
       :host .icons > a-logo {
         margin:0.25rem 1rem 0.25rem 0;
       }
