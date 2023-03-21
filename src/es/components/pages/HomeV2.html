@@ -132,17 +132,19 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
           }
 
           :host .stage__info a-logo {
             height: 200px;
             width: 500px;
+            margin-top: 1rem;
           }
 
           :host .stage__heading {
             --body-h1-padding: 0;
             font-size: 2.5rem;
+            --h1-margin: 0  0 1.5rem;
           }
 
           :host .stage__links {
@@ -213,6 +215,7 @@
             position: relative;
             display: inline-block;
             margin-bottom: 0;
+            width: 100%;
           }
 
           :host .teaser:hover .teaser__info {
@@ -294,11 +297,6 @@
               padding: 4.5rem 0.65rem;
             }
 
-            :host .m-newsletter__container {
-              width: 33.33%;
-              /* margin-right: 1.75rem; */
-            }
-
             :host .m-newsletter__container:last-child {
               margin-right: 0;
             }
@@ -331,14 +329,18 @@
               flex-wrap: wrap;
             }
 
-            :host .m-newsletter__form input[type="email"] {
+            :host .m-newsletter__form a-input input[type="email"] {
               background-color: white;
               margin-right: 0.75rem;
               padding: 0.35rem 0.4rem;
               border: none;
               color: #999999;
               font-size: 0.5rem;
-              width: 250px;
+              border-radius: 0;
+            }
+
+            :host .m-newsletter__form input[type="email"]::placeholder {
+              color: #999999;
             }
 
             :host .m-newsletter__submit {
@@ -457,7 +459,7 @@
                   :host .m-newsletter__form {
                       display: flex;
                       flex-direction: row;
-                      flex-wrap: wrap;
+                      /* flex-wrap: wrap; */
                   }
                   :host .m-newsletter__form a-input input[type="email"] {
                       background-color: white;
@@ -481,6 +483,11 @@
                       color: white;
                       cursor: pointer;
                   }
+
+                  :host .m-newsletter__form m4music-a-button {
+                    display: flex;
+                  }
+
                   @media only screen and (max-width: 960px) {
                       :host .m-newsletter__form {
                           flex-direction: column;
@@ -489,7 +496,6 @@
                           margin-right: 0;
                           padding: 0.5rem 0.6rem;
                           font-size: 1rem;
-                          width: 75%;
                           margin-bottom: 1rem;
                       }
                       :host .m-newsletter__submit {
