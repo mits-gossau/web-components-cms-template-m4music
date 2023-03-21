@@ -537,6 +537,7 @@
   --register-field-error-image-padding:0 0.2rem 0 0;
   --register-field-error-line-height:150%;
   --register-field-height-mobile:auto;
+  --list-color-black: black;
   --register-field-height:auto;
   --register-field-input-align-self:flex-start;
   --register-field-input-background:var(--background-color);

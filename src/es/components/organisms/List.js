@@ -146,7 +146,7 @@ export default class Wrapper extends BaseBody {
     :host .hidden {
       display: none;
     }
-    :host h4.noResultsFound {
+    :host .noResultsFound {
       text-transform: none;
       margin: 50px 0;
       color: ${this.hasAttribute('background-color') ? 'var(--color-black)' : 'var(--color)'};
