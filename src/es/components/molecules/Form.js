@@ -276,7 +276,9 @@ export default class Form extends BaseForm {
         display: none;
       }
       :host #afterSubmit p {
-        font-size: 27px;
+        font-size: 24px;
+        width: 500px;
+        margin-top: 0;
       }
       :host .hidden {
         display: none;
@@ -344,6 +346,7 @@ export default class Form extends BaseForm {
         }
         :host #afterSubmit p {
           font-size: var(--font-size-mobile, 10px);
+          width: 100%;
         }
         :host .longanswer * label {
           font-size:var(--field-label-font-size-mobile,10rem);
