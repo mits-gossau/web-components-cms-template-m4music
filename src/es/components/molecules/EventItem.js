@@ -80,6 +80,7 @@ export default class EventItem extends Shadow() {
       justify-content:flex-start;
       align-content:flex-start;
       margin-bottom:var(--margin-bottom, 0.9rem);
+      margin-right: var(--margin-right, 0);
       background-color:transparent;
       ${this.hasAttribute('href') ? 'cursor: pointer;' : ''}
       flex-wrap:wrap;
@@ -92,8 +93,7 @@ export default class EventItem extends Shadow() {
       margin:0 0 0.25rem 0;
     }
     :host .image-wrapper{
-      margin-right:0.45rem;
-      width:90%;
+      width:100%;
     }
     :host .content-wrapper{
       display:flex;
@@ -143,10 +143,11 @@ export default class EventItem extends Shadow() {
       }
       :host .content-wrapper{
         padding-top:0;
+        margin-left:0.6rem;
         align-items:flex-start;
       }
       :host .image-wrapper{
-       width:auto;
+       width:110px;
       }
       :host .date{
         font-size:var(--date-font-size-mobile, 1rem);

@@ -139,7 +139,7 @@ export default class Wrapper extends BaseBody {
         --filter-background-color: ${this.getAttribute('background-color')};
         --event-item-name-font-color: var(--color-black);
         --event-item-description-font-color: var(--color-black);  
-        width: 90%;   
+        width: 100%;   
       }`
         : ''
       }

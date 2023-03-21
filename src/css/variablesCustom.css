@@ -134,7 +134,9 @@
   --event-detail-picture-opacity: 0.5;
   --event-item-animation-duration: 500;
   --event-item-animation-easing: ease-out;
-  --event-item-date-font-size-mobile:1rem;
+  --event-item-date-font-size-mobile:0.889rem;
+  --event-item-description-font-size-mobile:0.889rem;
+  --event-item-name-font-size-mobile:1.66rem;
   --event-item-detail-a-text-color:inherit;
   --event-item-detail-a-text-decoration-color-hover:var(--color-orange);
   --event-item-detail-a-text-decoration-color:var(--color-black);
@@ -143,13 +145,14 @@
   --event-item-detail-a-text-underline-offset:0.1rem; 
   --event-item-icon-transform-open: rotate(45deg);
   --event-item-icon-transition: transform 0.15s ease;
+  --event-item-margin-right: 0.45rem;
   --event-item-name-font-size-mobile:25px;
   --event-item-name-font-size:1.25rem;
   --event-item-name-line-height:100%;
-  --event-item-picture-width-mobile:4.5rem;
+  --event-item-picture-width-mobile:110px;
   --event-item-speaker-picture-border-radius-mobile:50%;
   --event-item-speaker-picture-border-radius:50%;
-  --event-item-speaker-picture-width-mobile:4.5rem;
+  --event-item-speaker-picture-width-mobile:110px;
   --eventlist-title-h-title-margin:0.5rem 0;
   --eventlist-title-h3-font-size-mobile:28px;
   --eventlist-title-padding-with-bg-color: 0 5%;
@@ -728,6 +731,7 @@
   --newsletter-button-margin-mobile: 0;
   --image-no-margin-img-width: 100%;
   --image-no-margin-img-object-fit: cover;
+  --img-margin: 0;
   --newsletter-button-background-color-hover-primary: black;
   --newsletter-button-color-hover-primary: white;
   --newsletter-button-background-color-hover-primary-mobile: black;
