@@ -80,6 +80,19 @@ export default class Navigation extends BaseNavigation {
           --header-navigation-padding-no-scroll:min(50px, 15vw) 1.77rem 0 0;
         }
       }
+
+      @media only screen and (max-width: 1899px) {
+        :host(.no-scroll) > nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        :host(.no-scroll) > nav > ul {
+          width: 88%;
+          padding-right: 0;
+        }
+      }
     `
   }
 }
