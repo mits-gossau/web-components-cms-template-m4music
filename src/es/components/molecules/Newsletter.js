@@ -5,6 +5,10 @@ import BaseBody from '../organisms/Body.js'
 export default class Newsletter extends BaseBody {
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
+
+    document.addEventListener('newsletter-form-submit', () => {
+      this.newsletterInfo.style.display = 'none'
+    })
   }
 
   /**
@@ -99,5 +103,9 @@ export default class Newsletter extends BaseBody {
         
       }
     `
+  }
+
+  get newsletterInfo () {
+    return this.root.querySelector('#newsletterInfo')
   }
 }

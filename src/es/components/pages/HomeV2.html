@@ -305,6 +305,13 @@
               font-size: 0.75rem;
             }
 
+            :host .m-newsletter__wrap h4 {
+                font-size: 0.6rem;
+                width: 480px;
+                font-weight: normal;
+                margin-bottom: 0.35rem;
+            }
+
             :host .m-newsletter__wrap p {
               font-size: 1rem;
               width: 340px;
@@ -369,6 +376,11 @@
               :host .m-newsletter__wrap h3 {
                 font-size: 1.5rem;
               }
+
+              :host .m-newsletter__wrap h4 {
+                    font-size: 1rem;
+                    width: auto;
+                }
 
               :host .m-newsletter__wrap p {
                 font-size: 1.5rem;
@@ -450,12 +462,12 @@
             </div>
             <div class="m-newsletter__container m-newsletter__policy">
               <h3>VERPASSE NICHTS</h3>
+              <h4 id="newsletterInfo">NewsletterInfo text wlöasdklöksadölkaefwjlökaefwjölaiwej</h4>
               <m4music-m-form type="newsletter" namespace="newsletter-" namespace-children="newsletter-field-" namespace-button="newsletter-button-" redirect="false" site-key="@(System.Configuration.ConfigurationManager.AppSettings["RecaptchaV3SiteKey"])" namespace-fallback use-url-params>
                 <style>
                   :host .m-newsletter__form {
                       display: flex;
                       flex-direction: row;
-                      /* flex-wrap: wrap; */
                   }
                   :host .m-newsletter__form a-input input[type="email"] {
                       background-color: white;
@@ -464,7 +476,7 @@
                       border: none;
                       color: #999999;
                       font-size: 0.5rem;
-                      width: 250px;
+                      width: 390px;
                   }
                   :host .m-newsletter__form a-input input[type="email"]::placeholder {
                     color: #999999;

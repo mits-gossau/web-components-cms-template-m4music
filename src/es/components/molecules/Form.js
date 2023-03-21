@@ -37,6 +37,12 @@ export default class Form extends BaseForm {
 
                     this.form.style.display = 'none'
                     this.afterSubmit.style.display = 'block'
+                    
+                    this.dispatchEvent(new CustomEvent('newsletter-form-submit', {
+                      bubbles: true,
+                      cancelable: true,
+                      composed: true
+                    }))
                   } else console.error('Failed captcha')
                 })
                 .catch(error => console.error('Something went wrong while verifying captcha: ', error))

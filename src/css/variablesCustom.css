@@ -472,7 +472,7 @@
   --newsletter-form-flex-direction:row;
   --newsletter-form-justify-content: space-between;
   --newsletter-form-margin:0;
-  --newsletter-form-padding:1rem 0 0 0;
+  --newsletter-form-padding:0;
   --newsletter-form-steps-counter-color:var(--color-orange);
   --newsletter-form-steps-counter-padding:0 0.4rem 0 0;
   --newsletter-form-steps-title-margin:0 0 0 1rem;
