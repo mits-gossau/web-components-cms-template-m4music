@@ -68,6 +68,17 @@ export default class Navigation extends BaseNavigation {
       :host .lang a-link + a-link {
         margin-left: 1rem;
       }
+
+      :host(.no-scroll) > nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      :host(.no-scroll) > nav > ul {
+        width: 88%;
+        padding-right: 0;
+      }
      
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {  
         :host .icons {
@@ -78,19 +89,6 @@ export default class Navigation extends BaseNavigation {
       @media only screen and (max-width: 960px) {
         :host(.no-scroll) > nav > ul {
           --header-navigation-padding-no-scroll:min(50px, 15vw) 1.77rem 0 0;
-        }
-      }
-
-      @media only screen and (max-width: 1899px) {
-        :host(.no-scroll) > nav {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-
-        :host(.no-scroll) > nav > ul {
-          width: 88%;
-          padding-right: 0;
         }
       }
     `
