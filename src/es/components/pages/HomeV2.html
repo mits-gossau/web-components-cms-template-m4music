@@ -286,6 +286,7 @@
       <div>
         <m4m-a-button namespace="button-primary-">MEHR NEWS</m4m-a-button>
       </div>
+      <m4m-o-body-style background-color-var="var(--figcaption-background-color)" color-var="var(--color-theme-light)" h2-color-var="var(--color-theme-light)">
       <div>
         <m4music-m-newsletter>
           <style>
@@ -320,6 +321,10 @@
             :host .m-newsletter__container.m-newsletter__policy p {
               font-size: 0.35rem;
               width: 300px;
+            }
+
+            :host .m-newsletter__container.m-newsletter__policy p a {
+              color: white;
             }
 
             :host .m-newsletter__icons m4music-a-icon {
@@ -544,6 +549,7 @@
           </div>
         </m4music-m-newsletter>
       </div>
+      </m4m-o-body-style>
     </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
