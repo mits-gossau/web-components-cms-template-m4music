@@ -137,8 +137,8 @@
 
           :host .stage__info a-logo {
             height: 200px;
-            width: 500px;
-            margin-top: 1rem;
+            width: auto;
+            margin-top: 1.5rem;
           }
 
           :host .stage__heading {
@@ -164,7 +164,8 @@
 
             :host .stage__info a-logo {
               height: 90px;
-              width: 230px;
+              width: auto;
+              margin-top: 2rem;
             }
           }
         </style>
@@ -179,7 +180,7 @@
           </style>
         </m4m-a-picture>
         <div class="stage__info">
-          <a-logo namespace="header-logo-big-" src="../../../img/logo-weiss-2x.png" arial-label="M4Music Logo" href="/"></a-logo>
+          <a-logo namespace="header-logo-big-" src="../../../img/m4m_logo_conference.png" arial-label="M4Music Logo" href="/"></a-logo>
           <h1 class="stage__heading">SEE YOU NEXT YEAR!<br />M4MUSIC 2023 AM 24. & 25. MÄRZ <br />IN ZÜRICH</h1>
         </div>
       </div>
@@ -327,7 +328,7 @@
             }
 
             :host .m-newsletter__icons m4music-a-icon {
-              margin-right: 0.625rem;
+              margin-right: 0.3rem;
             }
 
             :host .m-newsletter__icons m4music-a-icon:last-child {
@@ -412,6 +413,10 @@
                 padding: 0.5rem 0.6rem;
                 font-size: 1rem;
                 width: auto;
+              }
+
+              :host .m-newsletter__icons m4music-a-icon {
+                margin-right: 0;
               }
             }
           </style>
@@ -549,6 +554,11 @@
         </m4music-m-newsletter>
       </div>
       </m4m-o-body-style>
+      <div>
+        <m4music-a-video namespace="video-" namespace-fallback>
+          <iframe src="https://mx3.ch/p/12034z/embed/standard" width="100%" height="360" scrolling="no" frameborder="no" allowfullscreen></iframe>
+        </m4music-a-video>
+      </div>
     </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
