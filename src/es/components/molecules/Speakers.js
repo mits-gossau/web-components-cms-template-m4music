@@ -41,17 +41,19 @@ export default class Speakers extends Shadow() {
       justify-content: space-between;
       align-items: flex-start;
       max-width: 9.2rem;
-      margin-right: 0.5rem;
+      margin-right: 1rem;
     }
     :host .m-speakers__name {
-      margin: 1rem 0 1rem;
+      margin: 0.375rem 0 0;
       font-size: 1rem;
     }
     
     :host .m-speakers__function,
     :host .m-speakers__text {
       font-size: 0.6rem;
+      margin: 0.5rem 0 0;
     }
+
     @media only screen and (max-width: 960px) {
       :host {
         width: 100%;

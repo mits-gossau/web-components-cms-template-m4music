@@ -58,8 +58,9 @@
             :host .display__items {
               display: flex;
               flex-direction: row;
-              justify-content: space-between;
+              justify-content: flex-start;
             }
+
             @media only screen and (max-width: 960px) {
               :host .display__heading {
                 font-size: 1.1rem;
@@ -81,83 +82,6 @@
             }
           </style>
           <h2 class="display__heading">Speaker</h2>
-          <div class="display__items">
-            <div class="display__item">
-              <m4music-m-speakers>
-                <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
-                  alt="02 DTC Isa">
-                </m4m-a-picture>
-                <p class="m-speakers__name">Charlotte Acakpo</p>
-                <p class="m-speakers__function">Sozialarbeiterin, Workshopleiterin Verein Diversum - Zürich</p>
-                <p class="m-speakers__text">Charlotte Acakpo ist ausgebildete Sozialarbeiterin und arbeitet mit geflüchteten Menschen im Bereich der Sozialberatung und Asylbetreuung. Nebenbei ist sie aktives Mitglied des rassismuskritischen Vereins Diversum und gibt Antirassistische Workshops mit verschiedenen Schwerpunkten.</p>
-              </m4music-m-speakers>
-            </div>
-            <div class="display__item">
-              <m4music-m-speakers>
-                <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
-                  alt="02 DTC Isa">
-                </m4m-a-picture>
-                <p class="m-speakers__name">Melanie Zwahlen</p>
-                <p class="m-speakers__function">Sozialarbeiterin in Ausbildung, Workshopleiterin Verein Diversum - Zürich</p>
-                <p class="m-speakers__text">Melanie Zwahlen studiert Soziale Arbeit, arbeitet in einem Jugendheim und gibt nebenbei mit dem Verein Diversum Antirassismus-Workshops. Ihre grosse Leidenschaft ist die Musik: Sie durfte mit ihrer Band «ALL XS» auch schon am m4music spielen.</p>
-              </m4music-m-speakers>
-            </div>
-            <div class="display__item">
-              <m4music-m-speakers>
-                <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
-                  alt="02 DTC Isa">
-                </m4m-a-picture>
-                <p class="m-speakers__name">Charlotte Acakpo</p>
-                <p class="m-speakers__function">Sozialarbeiterin, Workshopleiterin Verein Diversum - Zürich</p>
-                <p class="m-speakers__text">Charlotte Acakpo ist ausgebildete Sozialarbeiterin und arbeitet mit geflüchteten Menschen im Bereich der Sozialberatung und Asylbetreuung. Nebenbei ist sie aktives Mitglied des rassismuskritischen Vereins Diversum und gibt Antirassistische Workshops mit verschiedenen Schwerpunkten.</p>
-              </m4music-m-speakers>
-            </div>
-            <div class="display__item">
-              <m4music-m-speakers>
-                <m4m-a-picture defaultsource="http://via.placeholder.com/368x368"
-                  alt="02 DTC Isa">
-                </m4m-a-picture>
-                <p class="m-speakers__name">Melanie Zwahlen</p>
-                <p class="m-speakers__function">Sozialarbeiterin in Ausbildung, Workshopleiterin Verein Diversum - Zürich</p>
-                <p class="m-speakers__text">Melanie Zwahlen studiert Soziale Arbeit, arbeitet in einem Jugendheim und gibt nebenbei mit dem Verein Diversum Antirassismus-Workshops. Ihre grosse Leidenschaft ist die Musik: Sie durfte mit ihrer Band «ALL XS» auch schon am m4music spielen.</p>
-              </m4music-m-speakers>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="display">
-          <style>
-            :host .display__heading {
-              font-size: 1.5rem;
-            }
-            
-            :host .display__items {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-            }
-            @media only screen and (max-width: 960px) {
-              :host .display__heading {
-                font-size: 1.1rem;
-                margin-bottom: 2.5rem;
-              }
-
-              :host .display__items {
-                flex-direction: column;
-                align-items: flex-start;
-              }
-
-              :host .display__item {
-                margin-bottom: 1.6rem;
-              }
-
-              :host .display__item:last-child {
-                margin-bottom: 0;
-              }
-            }
-          </style>
-          <h2 class="display__heading">Moderators</h2>
           <div class="display__items">
             <div class="display__item">
               <m4music-m-speakers>
