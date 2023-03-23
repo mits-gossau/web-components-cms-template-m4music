@@ -750,6 +750,8 @@
   --newsletter-button-margin: 0;
   --header-logo-big-height: 100%;
   --header-logo-big-height-mobile: 100%;
+  --logo-partner-width: 100%;
+  --logo-partner-height: 100%;
 }
 
 .theme-light {
@@ -789,4 +791,8 @@
   --button-color-arrowRight-mobile: white;
   --speaker-image-img-margin: 0;
   --speaker-image-img-margin-mobile: 0;
+}
+
+.h-title-no-margin {
+  margin: 0 auto;
 }
