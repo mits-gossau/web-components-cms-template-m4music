@@ -138,6 +138,8 @@
             :host .buy {
               display: flex;
               align-items: center;
+              justify-content: space-between;
+              width: 700px;
             }
 
             :host h4 {
@@ -167,6 +169,7 @@
               :host .buy {
                 flex-direction: column;
                 align-items: flex-start;
+                width: auto;
               }
 
               :host h4 {
@@ -212,7 +215,7 @@
           <h4>PROFESSIONALS</h4>
           <div class="buy">
             <span>AB CHF 49</span>
-            <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+            <m4m-a-button namespace="button-primary-inverted-" disabled>SOLD OUT</m4m-a-button>
           </div>
         </div>
       </div>
