@@ -750,6 +750,8 @@
   --newsletter-button-margin: 0;
   --header-logo-big-height: 100%;
   --header-logo-big-height-mobile: 100%;
+  --header-detail-button-color-hover-arrowLeft: white;
+  --button-primary-inverted-color-disabled: #CCCCCC;
 }
 
 .theme-light {
@@ -794,3 +796,5 @@
 .h-title-no-margin {
   margin: 0 auto;
 }
+
+

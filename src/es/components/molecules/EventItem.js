@@ -77,10 +77,10 @@ export default class EventItem extends Shadow() {
       display:flex;
       flex-direction:column;
       align-items:flex-start;
-      justify-content:flex-start;
+      justify-content:space-between;
       align-content:flex-start;
-      margin-bottom:var(--margin-bottom, 0.9rem);
-      margin-right: var(--margin-right, 0);
+      margin-bottom: 4rem;
+      margin-right: 1rem;
       background-color:transparent;
       ${this.hasAttribute('href') ? 'cursor: pointer;' : ''}
       flex-wrap:wrap;
@@ -118,7 +118,7 @@ export default class EventItem extends Shadow() {
       font-size: 1rem;
       line-height:var(--name-line-height, 100%);
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
-      width:95%;
+      max-width: 240px;
     }
     :host .entry{
       color:#000000; 
@@ -162,6 +162,7 @@ export default class EventItem extends Shadow() {
         font-size:var(--name-font-size-mobile, 1.5rem);
         line-height:var(--name-line-height-mobile, 100%);
         text-align:left;
+        width: auto;
       }
       :host .entry{
         font-size:var(--description-font-size-mobile, 1rem);
