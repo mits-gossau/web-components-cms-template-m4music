@@ -71,6 +71,7 @@ export default class Header extends BaseHeader {
     }
     :host > header > a-menu-icon {
       z-index:103;
+      --header-a-menu-icon-background-color: white;
     }
 
     @media only screen and (max-width: 960px) {
