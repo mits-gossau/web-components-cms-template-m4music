@@ -66,8 +66,12 @@
             :host .display__items {
               display: flex;
               flex-direction: row;
-
             }
+
+            :host .display__item {
+              margin: 0 0.5rem 0.5rem 0;
+            }
+
             @media only screen and (max-width: 960px) {
               :host .display__heading {
                 font-size: 1.1rem;
@@ -77,10 +81,6 @@
               :host .display__items {
                 flex-direction: column;
                 align-items: flex-start;
-              }
-
-              :host .display__items + :host .display__items {
-                margin-left: 0.5rem;
               }
 
               :host .display__item {
