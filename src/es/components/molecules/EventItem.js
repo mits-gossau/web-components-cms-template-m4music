@@ -79,7 +79,7 @@ export default class EventItem extends Shadow() {
       align-items:flex-start;
       justify-content:space-between;
       align-content:flex-start;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
       margin-right: 1rem;
       background-color:transparent;
       ${this.hasAttribute('href') ? 'cursor: pointer;' : ''}
