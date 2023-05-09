@@ -4,17 +4,16 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 /* global self */
 
 /**
- * Wrapper for a stage element
- * Example at: /src/es/components/pages/HomeV2.html
+ * Wrapper for a stage-small element
+ * Example at: /src/es/components/pages/Show.html
  *
  * @export
- * @class Stage
+ * @class StageSmall
  * @type {CustomElementConstructor}
  * @attribute {}
  * @css {}
  */
-export default class Stage extends Shadow() {
-
+export default class StageSmall extends Shadow() {
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
   }
@@ -40,8 +39,8 @@ export default class Stage extends Shadow() {
       width: 100%;
       position: relative;
       max-width: 100vw;
+      height: 460px;
       overflow: hidden;
-      height: 1000px;
       --any-content-spacing: 0;
       --any-content-spacing--mobile: 0;
       --any-margin-top-first-child: 0;
@@ -49,28 +48,28 @@ export default class Stage extends Shadow() {
       --any-content-width: 100%;
       --any-content-width-mobile: 100%;
     }
+
+    :host .stage + div {
+      margin-top: 2rem;
+    }
+
     :host .stage__info {
       position: absolute;
       z-index: 1;
       left: 50%;
       transform: translateX(-50%);
       width: 88%;
-      bottom: 0;
+      top: 2rem;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
+
     :host .stage__info a-logo {
       height: 200px;
       width: auto;
-      margin-top: 1.5rem;
     }
-    :host .stage__heading {
-      --body-h1-padding: 0;
-      font-size: 2.5rem;
-      --h1-margin: 0  0 1.5rem;
-    }
+
     :host .stage__links {
       margin-top: 2rem;
       display: flex;
@@ -78,7 +77,7 @@ export default class Stage extends Shadow() {
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
-        height: 840px;
+        height: 420px;
       }
 
       :host .stage__links {
