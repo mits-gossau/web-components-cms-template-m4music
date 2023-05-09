@@ -108,116 +108,42 @@
     </m4music-o-header>
     <m4m-o-body>
       <div>
-        <div class="ticket">
-          <style>
-            :host .ticket {
-              background-color: #FA4B46;
-            }
-
-            :host .title {
-              margin-bottom: 1rem;
-            }
-  
-            :host h2 {
-              font-size: 2rem;
-              color: white;
-            }
-
-            :host .text {
-              margin-bottom: 2.75rem;
-            }
-
-            :host .row {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-              margin-bottom: 1.6rem;
-            }
-
-            :host .buy {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              width: 700px;
-            }
-
-            :host h4 {
-              --h4-font-size: 1.3rem;
-              --h4-margin: 0;
-            }
-
-            :host .row span {
-              font-size: 1.3rem;
-              margin-right: 2.625rem;
-            }
-
-            @media only screen and (max-width: 960px) {
-              :host .text {
-                margin-bottom: 3rem;
-              }
-
-              :host .row {
-                flex-direction: column;
-                align-items: flex-start;
-              }
-
-              :host .row + .row {
-                margin-top: 3.5rem;
-              }
-
-              :host .buy {
-                flex-direction: column;
-                align-items: flex-start;
-                width: auto;
-              }
-
-              :host h4 {
-                --h4-font-size-mobile: 2rem;
-              }
-
-              :host .row span {
-                font-size: 2rem;
-                margin-right: 0;
-                margin-bottom: 0.85rem;
-              }
-            }
-          </style>
-        </div>
-        <div class="title">
-          <h2>GET YOUR TICKETS NOW</h2>
-        </div>
-        <div class="text">
-          <p>5 Bühnen, rund 40 Acts, mehrere Talks und Workshops und eine Award Show: Wir setzen das erste Festival-Highlight des Jahres.</p>
-        </div>
-        <div class="row">
-          <h4>2-TAGES-PASS</h4>
-          <div class="buy">
-            <span>CHF 75</span>
-            <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+        <m4music-m-tickets>
+          <div class="title">
+            <h2>GET YOUR TICKETS NOW</h2>
           </div>
-        </div>
-        <div class="row">
-          <h4>FREITAG</h4>
-          <div class="buy">
-            <span>CHF 49</span>
-            <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+          <div class="text">
+            <p>5 Bühnen, rund 40 Acts, mehrere Talks und Workshops und eine Award Show: Wir setzen das erste Festival-Highlight des Jahres.</p>
           </div>
-        </div>
-        <div class="row">
-          <h4>SAMSTAG</h4>
-          <div class="buy">
-            <span>CHF 55</span>
-            <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+          <div class="row">
+            <h4>2-TAGES-PASS</h4>
+            <div class="buy">
+              <span>CHF 75</span>
+              <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <h4>PROFESSIONALS</h4>
-          <div class="buy">
-            <span>AB CHF 49</span>
-            <m4m-a-button namespace="button-primary-inverted-" disabled>SOLD OUT</m4m-a-button>
+          <div class="row">
+            <h4>FREITAG</h4>
+            <div class="buy">
+              <span>CHF 49</span>
+              <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+            </div>
           </div>
-        </div>
+          <div class="row">
+            <h4>SAMSTAG</h4>
+            <div class="buy">
+              <span>CHF 55</span>
+              <m4m-a-button namespace="button-primary-inverted-">KAUFEN</m4m-a-button>
+            </div>
+          </div>
+          <div class="row">
+            <h4>PROFESSIONALS</h4>
+            <div class="buy">
+              <span>AB CHF 49</span>
+              <m4m-a-button namespace="button-primary-inverted-" disabled>SOLD OUT</m4m-a-button>
+            </div>
+          </div>
+        </m4music-m-tickets>
       </div>
     </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>

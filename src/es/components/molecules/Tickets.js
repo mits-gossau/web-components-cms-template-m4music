@@ -35,100 +35,77 @@ export default class Tickets extends Shadow() {
    */
   renderCSS () {
     this.css = /* css */ `
-    :host  {
-      display:flex;
+    :host {
+      background-color: #FA4B46;
+    }
+
+    :host .title {
+      margin-bottom: 1rem;
+    }
+
+    :host h2 {
+      font-size: 2rem;
+      color: white;
+      font-weight: normal;
+    }
+
+    :host .text {
+      margin-bottom: 2.75rem;
+    }
+
+    :host .row {
+      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: space-between;
-      padding-bottom:1rem;
-      color:var(--color-black);
+      align-items: center;
+      margin-bottom: 1.6rem;
     }
-    :host > div {
-      max-width: calc(50% - 1rem);
-      min-width: min(500px, 50% - 1rem);
-      word-break: break-word;
-      box-sizing: border-box;
-      background-color: white;
-      display:flex;
-      flex-direction: column;
-      flex: 1;
+
+    :host .buy {
+      display: flex;
+      align-items: center;
       justify-content: space-between;
-      padding:0.5rem;
+      width: 700px;
     }
-    :host .content-wrapper {
-      align-items: flex-start;
-      display:flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+
+    :host h4 {
+      --h4-font-size: 1.3rem;
+      --h4-margin: 0;
+      font-weight: 400;
     }
-    :host .type{
-      color:var(--color-black);
-      font-size:2rem;
-      line-height:100%;
-      margin:0;
-      padding:1rem 1rem  0.5rem 0.5rem;
-      text-transform: uppercase;
+
+    :host .row span {
+      font-size: 1.3rem;
+      margin-right: 2.625rem;
     }
-    :host .price {
-      color:var(--color-orange);
-      font-size:2rem;
-      line-height:100%;
-      margin:0;
-      padding:0 0 1rem 0.5rem;
-    }
-    :host ul {
-      list-style-type: none;
-      margin:0;
-      padding:0 0 1rem 0.5rem;
-    }
-    :host ul > li {
-      background-size:1rem;
-      background: url('/assets/img/check.svg') no-repeat 0 0.3rem transparent; 
-      color:var(--color-black);
-      font-size:1rem;
-      line-height:125%;
-      list-style-type: none;
-      padding:0 0 0.25rem 1.5rem;
-      vertical-align: middle;
-    }
-    :host .btn-wrapper {
-      display:flex;
-      flex-direction: row;
-      gap: 0.5rem;
-      padding:0;
-    }
-    :host .btn-wrapper > m4music-a-button {
-      flex-grow:1;
-      margin:0;
-    }
-    :host .soldout {
-      filter: opacity(0.3);
-    }
-    :host a {
-      color: var(--a-color, var(--color-secondary, var(--color, pink)));
-      font-weight: var(--a-font-weight, var(--font-weight, normal));
-      text-align: var(--a-text-align, unset);
-      text-decoration: var(--a-text-decoration, var(--text-decoration, none));
-      text-underline-offset: var(--a-text-underline-offset, unset);
-      display: var(--a-display, inline);
-      margin: var(--a-margin, var(--content-spacing, unset)) auto;
-      text-decoration-color: var(--a-text-decoration-color-ext, red);
-    }
-    :host a:hover, :host a:active, :host a:focus {
-      color: var(--a-color-hover, var(--color-hover-secondary, var(--color-hover, var(--color, green))));
-      text-decoration: var(--a-text-decoration-hover, var(--text-decoration-hover, var(--a-text-decoration, var(--text-decoration, none))));
-    } 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-      :host  {
+      :host .text {
+        margin-bottom: 3rem;
+      }
+
+      :host .row {
         flex-direction: column;
+        align-items: flex-start;
       }
-      :host > div {
-        max-width: 100%;
+
+      :host .row + .row {
+        margin-top: 3.5rem;
       }
-      :host ul > li {
-        background-size:1rem;
+
+      :host .buy {
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+      }
+
+      :host h4 {
+        --h4-font-size-mobile: 2rem;
+      }
+
+      :host .row span {
+        font-size: 2rem;
+        margin-right: 0;
+        margin-bottom: 0.85rem;
       }
     }
   `
