@@ -149,6 +149,9 @@ export default class Button extends Shadow() {
     :host > .icon > svg {
       width:var(--icon-width, 100%);
     }
+    :host button svg path {
+      fill: #FFFFFF;
+    }
     :host button:disabled:hover {
       background-color: var(--background-color-${this.type}, transparent);
       cursor: default;

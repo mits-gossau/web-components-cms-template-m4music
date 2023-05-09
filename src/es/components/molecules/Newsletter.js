@@ -28,79 +28,133 @@ export default class Newsletter extends BaseBody {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
-      :host {
-        background: var(--background);
-        padding: var(--padding);
-        display: var(--display);
-        flex-direction: var(--flex-direction);
-        justify-content: var(--justify-content);
-        margin-bottom: var(--margin-botton);
-      }
-      :host > h3 {
-        color: var(--h3-color);
-        font-size: var(--h3-font-size);
-        font-family: var(--h3-font-family);
-        font-weight: var(--h3-font-weight);
-        line-height: var(--h3-line-height);
-        word-break: var(--h3-word-break);
-        text-transform: var(--h3-text-transform);
-        margin: var(--h3-margin) auto;
-        padding: var(--h3-padding);
-      }
-      :host > * {
-        text-align: var(--text-align);
-      }
-      :host > * a {
-        text-decoration-line: var(--a-text-decoration-line-ext, none);
-        text-decoration-style: var(--a-text-decoration-style-ext, solid);
-        text-decoration-color: var(--a-text-decoration-color-ext, red);
-        text-decoration-thickness:var(--a-text-decoration-thickness-ext, 1px);    
-        color: var(--color);
-      }
-      :host > * a:hover {
-        text-decoration-line: var(--a-text-decoration-line-hover-ext, none);
-        text-decoration-style: var(--a-text-decoration-style-hover-ext, solid);
-        text-decoration-color: var(--a-text-decoration-color-hover-ext, red);
-        text-decoration-thickness:var(--a-text-decoration-thickness-hover-ext, 1px);    
-      }
-      :host > p {
-        margin: var(--p-margin);
-        margin-bottom: 0;
-      }
-      :host .container {
-        margin: 0 auto;
-        width: 450px;
-      }
-      :host .policy{
-        margin: var(--policy-margin);
-        font-size: var(--policy-font-size);
-        text-align: var(--policy-text-align, start);
+      :host .m-newsletter__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FA4B46;
       }
 
-      :host .policy p {
-        margin: var(--policy-p-margin, 0);
+      :host .m-newsletter__container:last-child {
+        margin-right: 0;
       }
-      :host > m4music-m-form {
-        padding: var(--newsletter-m4music-m-form-padding);
-        display: var(--newsletter-m4music-m-form-display);
-        flex-direction: var(--newsletter-m4music-m-form-flex-direction);
+
+      :host .m-newsletter__wrap h3 {
+        font-size: 0.75rem;
+      }
+
+      :host .m-newsletter__wrap h4 {
+          font-size: 0.6rem;
+          width: 480px;
+          font-weight: normal;
+          margin-bottom: 0.35rem;
+      }
+
+      :host .m-newsletter__wrap p {
+        font-size: 1rem;
+        width: 340px;
+      }
+
+      :host .m-newsletter__container.m-newsletter__policy p {
+        font-size: 0.35rem;
+        width: 300px;
+      }
+
+      :host .m-newsletter__container.m-newsletter__policy p a {
+        color: white;
+      }
+
+      :host .m-newsletter__icons m4music-a-icon {
+        margin-right: 0.3rem;
+      }
+
+      :host .m-newsletter__icons m4music-a-icon:last-child {
+        margin-right: 0;
+      }
+
+      :host .m-newsletter__form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      :host .m-newsletter__form a-input input[type="email"] {
+        background-color: white;
+        margin-right: 0.75rem;
+        padding: 0.35rem 0.4rem;
+        border: none;
+        color: #999999;
+        font-size: 0.5rem;
+        border-radius: 0;
+      }
+
+      :host .m-newsletter__submit {
+        border: none;
+        background-color: white;
+        padding: 0.35rem 0.6rem;
+        font-size: 0.5rem;
+        color: #232323;
+        transition: all 0.3s ease-in-out;
+      }
+
+      :host .m-newsletter__submit:hover {
+        background-color: #232323;
+        color: white;
+        cursor: pointer;
       }
 
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
-        :host .container {
-          width: 294px;
+        :host .m-newsletter__container {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 2rem;
         }
-      }
-      
-      @media only screen and (max-width: 800px) {
-        :host {
-          padding: var(--mobile-padding);
+
+        :host .m-newsletter__wrap {
+          flex-direction: column;
+          padding: 2rem 0.65rem;
         }
-        :host > h3 {
-          margin-top: var(--mobile-padding);
+
+        :host .m-newsletter__wrap h3 {
+          font-size: 1.5rem;
         }
-        
-        
+
+        :host .m-newsletter__wrap h4 {
+              font-size: 1rem;
+              width: auto;
+          }
+
+        :host .m-newsletter__wrap p {
+          font-size: 1.5rem;
+          width: auto;
+        }
+
+        :host .m-newsletter__container.m-newsletter__policy p {
+          font-size: 0.8rem;
+          width: auto;
+        }
+
+        :host .m-newsletter__form {
+          flex-direction: column;
+        }
+
+        :host .m-newsletter__form input[type="email"] {
+          margin-right: 0;
+          padding: 0.5rem 0.6rem;
+          font-size: 1rem;
+          width: 75%;
+          margin-bottom: 1rem;
+        }
+
+        :host .m-newsletter__submit {
+          padding: 0.5rem 0.6rem;
+          font-size: 1rem;
+          width: auto;
+        }
+
+        :host .m-newsletter__icons m4music-a-icon {
+          margin-right: 0;
+        }
       }
     `
   }
