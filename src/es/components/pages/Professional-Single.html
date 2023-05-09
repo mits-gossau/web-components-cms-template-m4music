@@ -45,51 +45,7 @@
           </div>
         </div>
         <div>
-          <div class="contact">
-            <style>
-              :host .contact {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-              }
-
-              :host .contact__wrap {
-                display: flex;
-                flex-direction: column;
-              }
-
-              :host .contact__heading {
-                font-size: 1rem;
-                margin-bottom: 1rem;
-              }
-
-              :host .contact__top-text {
-                font-size: 0.6rem;
-                margin-bottom: 0.175rem;
-              }
-
-              :host .contact__bottom-text {
-                margin-bottom: 1.625rem;
-              }
-
-              :host .contact__wrap .contact__wrap:last-child .contact__bottom-text {
-                margin-bottom: 0;
-              }
-
-              @media only screen and (max-width: 960px) {
-                :host .contact {
-                  flex-direction: column;
-                }
-
-                :host .contact__wrap--main + .contact__wrap--main {
-                  margin-top: 3rem;
-                }
-
-                :host .contact__top-text {
-                  font-size: 0.75rem;
-                }
-              }
-            </style>
+          <m4music-m-contact>
             <div class="contact__wrap contact__wrap--main">
               <h2 class="contact__heading">KONTAKT</h2>
               <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">MAIL</m4music-a-button>
@@ -111,7 +67,7 @@
                 <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
               </div>
             </div>
-          </div>
+          </m4music-m-contact>
         </div>
       </div>
     </m4m-o-body>

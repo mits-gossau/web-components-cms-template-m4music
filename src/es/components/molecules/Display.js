@@ -5,7 +5,7 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 
 /**
  * Wrapper for a display element
- * Example at: /src/es/components/pages/Show-Signle.html
+ * Example at: /src/es/components/pages/Show-Single.html
  *
  * @export
  * @class Display
