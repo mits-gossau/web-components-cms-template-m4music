@@ -58,6 +58,13 @@ export default class HighlightActs extends Shadow() {
       color: white;
       text-decoration: none;
     }
+
+    :host .highlight-link p {
+      font-size: 0.6rem;
+      margin: 0.65rem 0 0.2rem;
+      color: white;
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host .highlights-wrapper {
         flex-direction: column;
@@ -67,6 +74,11 @@ export default class HighlightActs extends Shadow() {
       :host .highlight-link {
         width: 100%;
         margin: 0 0 2rem 0;
+      }
+
+      :host .highlight-link p {
+        font-size: 1rem;
+        margin: 0.65rem 0 0.2rem;
       }
     }
   `
