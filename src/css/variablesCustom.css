@@ -752,6 +752,12 @@
   --header-logo-big-height-mobile: 100%;
   --header-detail-button-color-hover-arrowLeft: white;
   --button-primary-inverted-color-disabled: #CCCCCC;
+  --header-logo-stage-text-height: 200px;
+  --header-logo-stage-text-width: 500px;
+  --header-logo-stage-text-height-mobile: 90px;
+  --header-logo-stage-text-width-mobile: 230px;
+  --header-logo-stage-text-justify-content: flex-start;
+  --header-logo-stage-text-justify-content-mobile: flex-start;
 }
 
 .theme-light {
