@@ -4,16 +4,16 @@ import { Shadow } from '../web-components-cms-template/src/es/components/prototy
 /* global self */
 
 /**
- * Wrapper for a event-partner element
+ * Wrapper for a display element
  * Example at: /src/es/components/pages/Show-Signle.html
  *
  * @export
- * @class EventPartner
+ * @class Display
  * @type {CustomElementConstructor}
  * @attribute {}
  * @css {}
  */
-export default class EventPartner extends Shadow() {
+export default class Display extends Shadow() {
   connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
   }
