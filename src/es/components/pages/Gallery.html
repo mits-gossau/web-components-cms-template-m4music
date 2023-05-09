@@ -30,45 +30,7 @@
       <m4music-a-button namespace="header-detail-button-" type="arrowLeft" namespace-fallback>zurück</m4music-a-button>
     </m4music-o-header>
     <m4m-o-body>
-      <div class="gallery">
-        <style>
-          :host .gallery {
-            display: flex;
-            flex-direction: column;
-          }
-
-          :host .gallery__wrap {
-            display: flex;
-            flex-direction: row;
-          }
-
-          :host .gallery__column {
-            display: flex;
-            flex-direction: column;
-            margin-right: 1rem;
-          }
-
-          :host .gallery__column m4music-a-picture {
-            margin-bottom: 1rem;
-            overflow: hidden;
-          }
-
-          :host .gallery__column m4music-a-picture:last-child {
-            margin-bottom: 0;
-          }
-
-          @media only screen and (max-width: 960px) {
-            :host .gallery__wrap {
-              flex-direction: column;
-              margin-right: 0;
-            }
-
-            :host .gallery__column m4music-a-picture,
-            :host .gallery__column m4music-a-picture:last-child {
-              margin-bottom: 0.5rem;
-            }
-          }
-        </style>
+      <m4music-m-gallery>
         <h1>FOTOGALERIE</h1>
         <div class="gallery__wrap">
           <div class="gallery__column">
@@ -105,7 +67,7 @@
             </m4music-a-picture>
           </div>
         </div>
-      </div>
+      </m4music-m-gallery>
     </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
