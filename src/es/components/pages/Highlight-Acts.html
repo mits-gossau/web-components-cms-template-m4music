@@ -123,50 +123,9 @@
           margin-top: 1rem;
         }
 
-        :host .theme-light {
-          background-color: white;
-        }
-
         :host .heading {
           color: #232323;
           margin-bottom: 1rem;
-        }
-
-        :host .highlights-wrapper {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-top: 2rem;
-        }
-
-        :host .highlight-link {
-          width: 30%;
-          text-decoration: none;
-          margin: 0 1rem 2.5rem 0;
-        }
-
-        :host .highlight-link:hover,
-        :host .highlight-link:hover h2 {
-          text-decoration: none;
-        }
-
-        :host .highlight-link h2 {
-          font-size: 1.5rem;
-          margin-top: 0.7rem;
-          color: white;
-          text-decoration: none;
-        }
-
-        @media only screen and (max-width: 960px) {
-          :host .highlights-wrapper {
-            flex-direction: column;
-            margin-top: 3rem;
-          }
-
-          :host .highlight-link {
-            width: 100%;
-            margin: 0 0 2rem 0;
-          }
         }
       </style>
       <div class="stage">
@@ -176,16 +135,11 @@
           <m4m-a-button namespace="button-primary-">Tickets</m4m-a-button>
           <div class="link">
             <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">
-              <style>
-                :host button svg path {
-                  fill: white;
-                }
-              </style>
               RECORDINGS CONFERENCES 2022
             </m4music-a-button>
           </div>
       </div>
-      <div>
+      <m4music-m-highlight-acts>
         <h2>HIGHLIGHTS</h2>
         <div class="highlights-wrapper">
           <a class="highlight-link" href="#">
@@ -213,7 +167,7 @@
             <h2>MOLCHAT DOMA</h2>
           </a>
         </div>
-      </div>
+      </m4music-m-highlight-acts>
       <m4m-o-body-style background-color-var="var(--background-color-theme-light)" color-var="var(--color-theme-light)" h2-color-var="var(--color-theme-light)">
         <div>
           <h2 class="heading">ALLE SHOWS</h2>
@@ -377,7 +331,6 @@
           </m4music-o-list>
         </div>
       </m4m-o-body-style>
-
     </m4m-o-body>
     <m4music-o-footer namespace="footer-" namespace-fallback>
       <div class="footer__main">
