@@ -311,6 +311,40 @@ export default class Form extends BaseForm {
         display:block;
         font-size:var(--field-label-font-size,10rem);
       }
+      /** NEWSLETTER */
+      :host .m-newsletter__form {
+        display: flex;
+        flex-direction: row;
+      }
+      :host .m-newsletter__form a-input input[type="email"] {
+          background-color: white;
+          margin-right: 0.75rem;
+          padding: 0.35rem 0.4rem;
+          border: none;
+          color: #999999;
+          font-size: 0.5rem;
+          width: 390px;
+      }
+      :host .m-newsletter__form a-input input[type="email"]::placeholder {
+        color: #999999;
+      }
+      :host .m-newsletter__submit {
+          border: none;
+          background-color: white;
+          padding: 0.35rem 0.6rem;
+          font-size: 0.5rem;
+          color: #232323;
+          transition: all 0.3s ease-in-out;
+      }
+      :host .m-newsletter__submit:hover {
+          background-color: #232323;
+          color: white;
+          cursor: pointer;
+      }
+
+      :host .m-newsletter__form m4music-a-button {
+        display: flex;
+      }      
       @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
         :host h4.form-caption {
           font-size:var(--h4-font-size-mobile, min(1.25rem, 5vw)) !important;
@@ -359,6 +393,22 @@ export default class Form extends BaseForm {
         }
         :host textarea {
           width:var(--register-field-input-width-mobile,100%);
+        }
+        /** NEWSLETTER MOBILE */
+        :host .m-newsletter__form {
+          flex-direction: column;
+        }
+        :host .m-newsletter__form a-input input[type="email"] {
+            margin-right: 0;
+            padding: 0.5rem 0.6rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            width: auto;
+        }
+        :host .m-newsletter__submit {
+            padding: 0.5rem 0.6rem;
+            font-size: 1rem;
+            width: auto;
         }
       }
     `

@@ -110,99 +110,18 @@
       </m4music-m-navigation>
     </m4music-o-header>
     <m4m-o-body>
-      <style>
-        :host a-logo {
-          height: 200px;
-          width: 500px;
-          margin-top: 2rem;
-        }
-
-        :host .text {
-          margin: 2rem 0;
-        }
-
-        :host .link {
-          margin-top: 1rem;
-        }
-
-        :host .heading {
-          color: #232323;
-          margin-bottom: 1rem;
-        }
-
-        :host .highlights-wrapper {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-top: 2rem;
-        }
-
-        :host .highlight-link {
-          width: 30%;
-          text-decoration: none;
-          margin: 0 1rem 2.5rem 0;
-        }
-
-        :host .highlight-link h2 {
-          font-size: 1.5rem;
-          color: white;
-          text-decoration: none;
-        }
-
-        :host .highlight-link p {
-          font-size: 0.6rem;
-          margin: 0.65rem 0 0.2rem;
-          color: white;
-        }
-
-
-        :host .highlight-link:hover {
-          text-decoration: none;
-        }
-
-        :host .highlight-link:hover h2 {
-          text-decoration: none;
-        }
-
-        @media only screen and (max-width: 960px) {
-          :host .highlights-wrapper {
-            flex-direction: column;
-            margin-top: 3rem;
-          }
-
-          :host .highlight-link {
-            width: 100%;
-            margin: 0 0 2rem 0;
-          }
-
-          :host .highlight-link p {
-            font-size: 1rem;
-            margin: 0.65rem 0 0.2rem;
-          }
-
-          :host a-logo {
-            height: 90px;
-            width: 230px;
-          }
-        }
-      </style>
-      <div>
-          <a-logo namespace="header-logo-big-" src="../../../img/logo-weiss-2x.png" arial-label="M4Music Logo" href="/"></a-logo>
+      <m4music-m-stage-text>
+          <a-logo namespace="header-logo-stage-text-" src="../../../img/logo-weiss-2x.png" arial-label="M4Music Logo" href="/"></a-logo>
           <h2>SHOWS AM M4MUSIC FESTIVAL 2022 25. & 26. MÄRZ IN ZÜRICH</h2>
           <p class="text">Entdecke die aktuellsten upcoming Artists auf 5 Festivalbühnen im EXIL, Moods & Schiffbau (Halle, Box, Open Air).</p>
           <m4m-a-button namespace="button-primary-">Tickets</m4m-a-button>
           <div class="link">
             <m4music-a-button namespace="button-" namespace-fallback type="arrowRight">
-              <style>
-                :host button svg path {
-                  fill: white;
-                }
-              </style>
               RECORDINGS CONFERENCES 2022
             </m4music-a-button>
           </div>
-      </div>
-      <div>
+      </m4music-m-stage-text>
+      <m4music-m-highlight-acts>
         <h2>KEYSPEAKER 2022</h2>
         <div class="highlights-wrapper">
           <a class="highlight-link" href="#">
@@ -236,7 +155,7 @@
             <h2>MOLCHAT DOMA</h2>
           </a>
         </div>
-      </div>
+      </m4music-m-highlight-acts>
       <m4m-o-body-style background-color-var="var(--background-color-theme-light)" color-var="var(--color-theme-light)" h2-color-var="var(--color-theme-light)">
         <div>
           <h2 class="heading">ALLE SHOWS</h2>

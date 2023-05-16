@@ -11,13 +11,11 @@ export default class Picture extends BasePicture {
       :host(.hover) picture img {
         opacity: 0;
       }
-      :host picture:hover img {
-        transform: scale(1.3);
-        transform-origin: 50% 50%;
-      }
+
       :host(.hover) picture {
         background-color: var(--color-orange, #FA4B46);
       }
+      
       ${this.getAttribute('namespace') === 'event-detail-picture-'
       ? `:host {
           background-color: var(--background-color, none);
