@@ -77,6 +77,14 @@
   --button-filter-font-size:0.5rem;
   --button-filter-padding-mobile:0.45rem;
   --button-filter-padding:0.25rem;
+  --button-filter-overview-background-color-hover:#FA4B46;
+  --button-filter-overview-background-color:#232323;
+  --button-filter-overview-color-hover:#FFFFFF;
+  --button-filter-overview-color:#FFFFFF;;
+  --button-filter-overview-font-size-mobile:0.8rem;
+  --button-filter-overview-font-size:0.5rem;
+  --button-filter-overview-padding-mobile:0.45rem;
+  --button-filter-overview-padding:0.25rem;
   --button-font-family:var(--font-family, var(--font-family-bold));
   --button-font-size-mobile:min(16px, 5vw);
   --button-font-size:0.75rem;

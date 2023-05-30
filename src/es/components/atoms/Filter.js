@@ -122,9 +122,6 @@ export default class Filter extends Shadow() {
     :host > div {
       align-self: flex-start;
     }
-    :host .filter {
-      width: 130px;
-    }
     :host .filter > *:not(h5) {
       display: inline-block;
     }
