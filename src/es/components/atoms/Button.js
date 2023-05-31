@@ -150,7 +150,7 @@ export default class Button extends Shadow() {
       width:var(--icon-width, 100%);
     }
     :host button svg path {
-      fill: #FFFFFF;
+      ${this.getAttribute('background-color') === 'white' ? 'fill: var(--color);' : 'fill: #FFF;'}
     }
     :host button:disabled:hover {
       background-color: var(--background-color-${this.type}, transparent);

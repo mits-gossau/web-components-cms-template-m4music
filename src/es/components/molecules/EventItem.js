@@ -118,7 +118,6 @@ export default class EventItem extends Shadow() {
       font-size: 1rem;
       line-height:var(--name-line-height, 100%);
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
-      max-width: 240px;
     }
     :host .entry{
       color:#000000; 
