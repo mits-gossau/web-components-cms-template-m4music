@@ -49,6 +49,12 @@ export default class Stage extends Shadow() {
       --any-content-width: 100%;
       --any-content-width-mobile: 100%;
     }
+
+    :host .stage {
+      margin: 0;
+      width: 100%;      
+    }
+
     :host .stage__info {
       position: absolute;
       z-index: 1;
@@ -79,6 +85,11 @@ export default class Stage extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         height: 840px;
+      }
+
+      :host .stage {
+        height: 75vh;
+        --img-height: 75vh;
       }
 
       :host .stage__links {
