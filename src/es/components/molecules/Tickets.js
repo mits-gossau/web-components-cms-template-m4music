@@ -65,17 +65,19 @@ export default class Tickets extends Shadow() {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 700px;
+      width: 40%;
     }
 
     :host h4 {
-      --h4-font-size: 1.3rem;
-      --h4-margin: 0;
-      font-weight: 400;
+      font-size: 1rem;
+      margin: 0;
+      font-weight: normal;
+      width: 60%;
+      margin-right: 1rem;
     }
 
     :host .row span {
-      font-size: 1.3rem;
+      font-size: 1rem;
       margin-right: 2.625rem;
     }
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -99,7 +101,8 @@ export default class Tickets extends Shadow() {
       }
 
       :host h4 {
-        --h4-font-size-mobile: 2rem;
+        font-size: 2rem;
+        width: 100%;
       }
 
       :host .row span {
