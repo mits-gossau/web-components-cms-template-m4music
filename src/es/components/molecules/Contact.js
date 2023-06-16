@@ -43,6 +43,7 @@ export default class Contact extends Shadow() {
     :host .contact__wrap {
       display: flex;
       flex-direction: column;
+      width: 50%;
     }
 
     :host .contact__heading {
@@ -66,6 +67,10 @@ export default class Contact extends Shadow() {
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         flex-direction: column;
+      }
+
+      :host .contact__wrap {
+        width: 100%;
       }
 
       :host .contact__wrap--main + .contact__wrap--main {
