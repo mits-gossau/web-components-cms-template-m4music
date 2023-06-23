@@ -46,6 +46,10 @@ export default class Contact extends Shadow() {
       width: 50%;
     }
 
+    :host .contact__wrap + .contact__wrap {
+      margin-top: 1.625rem;
+    }
+
     :host .contact__heading {
       font-size: 1rem;
       margin-bottom: 1rem;
@@ -64,6 +68,22 @@ export default class Contact extends Shadow() {
     :host .contact__wrap .contact__wrap:last-child .contact__bottom-text {
       margin-bottom: 0;
     }
+
+    .contact__link {
+      text-decoration: none;
+      color: #232323;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .contact__link:active,
+    .contact__link:visited {
+      color: #232323;
+    }
+
+    .contact__link:hover {
+      color: #FB5E3F;
+    }
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host {
         flex-direction: column;

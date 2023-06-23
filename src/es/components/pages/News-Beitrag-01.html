@@ -31,6 +31,21 @@
     </m4music-o-header>
     <m4m-o-body>
       <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+          <style>
+            @media only screen and (max-width: 960px){
+              .o-wrapper__content {
+                --wrapper-text-picture-cover-margin-first-child-mobile: 400px 0 0 0 !important;
+              }
+
+              .o-wrapper__picture {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 72px;
+                height: 400px;
+              }
+            }
+          </style>
           <div class="o-wrapper__content">
             <div class="o-wrapper__info">
               <span class="o-wrapper__uppercase o-wrapper__text-small">Posted 6.9.2022</span>
