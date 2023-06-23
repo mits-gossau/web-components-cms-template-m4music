@@ -31,6 +31,21 @@
     </m4music-o-header>
     <m4m-o-body>
       <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+        <style>
+          @media only screen and (max-width: 960px){
+            .o-wrapper__content {
+              --wrapper-text-picture-cover-margin-first-child-mobile: 400px 0 0 0 !important;
+            }
+
+            .o-wrapper__picture {
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 72px;
+              height: 400px;
+            }
+          }
+        </style>
         <div class="o-wrapper__content">
           <div class="o-wrapper__info-wrap">
             <div class="o-wrapper__info">
@@ -41,9 +56,11 @@
           </div>
           <m4music-a-button namespace="button-dark-">Tickets</m4music-a-button>
         </div>
-        <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000"
+        <div class="o-wrapper__picture">
+          <m4m-a-picture namespace="picture-cover-" namespace-fallback defaultsource="http://via.placeholder.com/960x1000"
           alt="02 DTC Isa">
-        </m4m-a-picture> 
+          </m4m-a-picture> 
+        </div>
       </m4m-o-wrapper>
       <div>
         <p>Priya Ragu gilt aktuell als eine der vielversprechendsten R&B-Künstler:innen: Sie wurde kürzlich in der Longlist der «BBC Sound of 2022» gelistet und von Amazon Music zur «Breakthrough Artists for 2022» und «Artist to Watch for 2022» gekürt. Die in St. Gallen aufgewachsene Musikerin interpretiert auf ihrem Debüt-Mixtape «damnshestamil» R&B, Soul und Elektropop neu und kombiniert ihren «Ragu-Wave-Sound» mit Klangelementen aus London, Sri Lanka und Süd Indien: Zu hören sind darauf zum Beispiel Kollywood-Samples, die aus Ramil Nadu in Südindien stammen, Krishna-Mantras oder traditionelle Tabla. Das Album «damnshestamil», das im September 2021 veröffentlicht wurde, ist das Ergebnis der Zusammenarbeit mit ihrem Bruder und Produzenten Roshaan Ragu alias Japhna Gold.</p>

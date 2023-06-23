@@ -31,6 +31,21 @@
     </m4music-o-header>
     <m4m-o-body>
       <m4m-o-wrapper namespace="wrapper-text-picture-cover-">
+          <style>
+            @media only screen and (max-width: 960px){
+              .o-wrapper__content {
+                --wrapper-text-picture-cover-margin-first-child-mobile: 400px 0 0 0 !important;
+              }
+
+              .o-wrapper__picture {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 72px;
+                height: 400px;
+              }
+            }
+          </style>
           <div class="o-wrapper__content o-wrapper__content--start">
             <span class="o-wrapper__uppercase o-wrapper__text-small">Musikerin, London</span>
             <h1 class="o-wrapper__heading">PRIYA RAGU</h1>
@@ -56,15 +71,21 @@
               <h2 class="contact__heading">CONFERENCES</h2>
               <div class="contact__wrap">
                 <span class="contact__top-text">26.03.2022 – 13:00 – Moods</span>
-                <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                <a class="contact__link" href="#">
+                  <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                </a>
               </div>
               <div class="contact__wrap">
                 <span class="contact__top-text">26.03.2022 – 13:00 – Moods</span>
-                <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                <a class="contact__link" href="#">
+                  <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                </a>
               </div>
               <div class="contact__wrap">
                 <span class="contact__top-text">26.03.2022 – 13:00 – Moods</span>
-                <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                <a class="contact__link" href="#">
+                  <span class="contact__bottom-text">SWISS SUCCESS STORY: PRIYA RAGU</span>
+                </a>
               </div>
             </div>
           </m4music-m-contact>
