@@ -4,6 +4,26 @@
  * - if a component holds other components or nodes you can declare or remap classes eg. :host > h1 {--color: var(--h1-color, white);}
  * - if a component holds other components you should share the attribute namespace with its children
  */
+
+  @import url("https://cdn.fonts.net/t/1.css?apiType=css&projectid=cccd2390-2102-11ec-bcae-02a6d29600a2");
+
+  @font-face {
+    font-family: "GillSansMTBook";
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    src: url('../fonts/GillSansMTBook/normal_normal_400.woff') format('woff'), url('../fonts/GillSansMTBook/normal_normal_400.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: "GillSansMTBold";
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+    src: url('../fonts/GillSansMTBold/normal_normal.woff') format('woff'), url('../fonts/GillSansMTBold/normal_normal_400.woff2') format('woff2');
+  }
+
+
  :root {
   --body-h1-font-size:3.13rem;
   --body-h1-padding:0 0 3.75rem 0;
