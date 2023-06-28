@@ -50,6 +50,10 @@ export default class Contact extends Shadow() {
       margin-top: 1.625rem;
     }
 
+    :host .contact__wrap.contact__wrap--main {
+      margin-top: 0;
+    }
+
     :host .contact__heading {
       font-size: 1rem;
       margin-bottom: 1rem;
