@@ -101,7 +101,7 @@ export default class EventItem extends Shadow() {
       align-content:flex-start;
       justify-content:flex-start;
       align-items:${this.getAttribute('type') === 'speaker' ? 'center' : 'flex-start'};
-      width:95%;
+      width:100%;
       padding-top:16px;
       word-break:break-word;
     }

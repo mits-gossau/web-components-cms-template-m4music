@@ -129,7 +129,7 @@ export default class Wrapper extends BaseBody {
     }
    
     :host .event-item {
-      max-width: 25%;
+      max-width: 18%;
       margin: 0;
       text-decoration: none;
     }
