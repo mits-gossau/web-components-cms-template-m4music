@@ -129,7 +129,7 @@ export default class Wrapper extends BaseBody {
     }
    
     :host .event-item {
-      max-width: 18%;
+      max-width: 10.2rem;
       margin: 0;
       text-decoration: none;
     }
@@ -182,6 +182,36 @@ export default class Wrapper extends BaseBody {
     :host(.rich-text-wrapper) section a {
       line-height: var(--rich-text-a-line-height, 125%);
     }
+    /*
+    @media only screen and (min-width: 2560px){
+      :host .event-item {
+        max-width: 20%;
+      }
+    }
+
+   
+
+    @media only screen and (min-width: 3050px){
+      :host .event-item {
+        max-width: 18%;
+      }
+    }
+
+
+    @media only screen and (min-width: 3440px){
+      :host .event-item {
+        max-width: 16%;
+      }
+    }
+
+    @media only screen and (min-width: 3880px){
+      :host .event-item {
+        max-width: 14%;
+      }
+    }
+*/
+
+
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
       :host > section {
         ${this.hasAttribute('no-space') ? '--wrapper-margin-bottom-mobile: 0' : ''};
