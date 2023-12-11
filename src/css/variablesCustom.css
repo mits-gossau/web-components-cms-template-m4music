@@ -44,13 +44,13 @@
   /* ========================================================================= */
   --a-text-decoration-color-ext:var(--link-underline-color);
   --a-text-decoration-color-hover-ext:var(--color-orange);
-  --a-text-decoration-line-ext:underline;
-  --a-text-decoration-line-hover-ext:underline;
+  /* --a-text-decoration-line-ext:underline; */
+  /* --a-text-decoration-line-hover-ext:underline; */
   --a-text-decoration-style-ext:solid;
   --a-text-decoration-style-hover-ext:solid;
   --a-text-underline-offset:0.3rem; 
   --background-color:#232323;
-  --background-color-theme-light: #ffffff;
+  --background-color-theme-light: #0c0404;
   --balloon-font-size:var(--h6-font-size);
   --body-light-background-color: #ffffff;
   --body-content-custom-width-mobile-white:100%;
