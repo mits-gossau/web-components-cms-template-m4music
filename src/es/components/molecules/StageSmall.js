@@ -59,10 +59,11 @@ export default class StageSmall extends Shadow() {
       left: 50%;
       transform: translateX(-50%);
       width: 88%;
-      top: 2rem;
-      height: 100%;
+      top: 0;
+      height: 93%;      
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
     }
 
     :host .stage__info a-logo {
