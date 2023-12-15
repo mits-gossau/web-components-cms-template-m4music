@@ -65,7 +65,7 @@ export default class Stage extends Shadow() {
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     :host .stage__info a-logo {
       height: 200px;
