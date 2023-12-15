@@ -62,7 +62,7 @@ export default class Stage extends Shadow() {
       transform: translateX(-50%);
       width: 88%;
       bottom: 0;
-      height: 100%;
+      height: 107%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
