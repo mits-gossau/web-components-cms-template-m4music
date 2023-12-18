@@ -36,6 +36,7 @@ export default class Speakers extends Shadow() {
   renderCSS () {
     this.css = /* css */ `
     :host  {
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -48,10 +49,13 @@ export default class Speakers extends Shadow() {
       font-size: 1rem;
     }
     
-    :host .m-speakers__function,
-    :host .m-speakers__text {
+    :host .m-speakers__function {
       font-size: 0.6rem;
       margin: 0.5rem 0 0;
+    }
+
+    :host .m-speakers__text{
+      display: none;
     }
 
     @media only screen and (max-width: 960px) {
