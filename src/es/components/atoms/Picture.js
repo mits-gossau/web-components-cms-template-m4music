@@ -5,6 +5,9 @@ export default class Picture extends BasePicture {
   renderCSS () {
     super.renderCSS()
     this.css = /* css */`
+    :host([loaded]) picture img {
+      width: 100%;
+    }
 
       :host picture, :host picture img {
         transition: var(--transition, 0.15s ease-in-out all);
