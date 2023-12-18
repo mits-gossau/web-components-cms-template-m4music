@@ -43,6 +43,7 @@ export default class Display extends Shadow() {
     :host .display__items {
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
     }
 
     :host .display__item {
