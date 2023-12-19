@@ -54,7 +54,6 @@ export default class Stage extends Shadow() {
       margin: 0;
       width: 100%;      
     }
-
     :host .stage__info {
       position: absolute;
       z-index: 1;
