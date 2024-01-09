@@ -126,19 +126,19 @@ export default class Filter extends Shadow() {
       display: inline-block;
     }
     :host .weekdays {
-      width: 210px;
+      width: 175px;
     }
     :host .locations {
-      width: 300px;
+      width: 252px;
     }
     :host .eventType {
-      width: 270px;
+      width: 297px;
     }
     :host .languages {
-      width: 320px;
+      width: 305px;
     }
     :host .genres {
-      width: 380px;
+      width: 416px;
     }
     :host h5 {
       margin: 10px 0;
@@ -153,6 +153,17 @@ export default class Filter extends Shadow() {
     :host [type='filter'] {
       font-size:unset;
       padding:0 0.2rem 0 0;
+    }
+
+    :host .filter, 
+    :host .weekdays,
+    :host .locations,
+    :host .eventType,
+    :host .languages,
+    :host .genres {
+        /*width: calc((100% - 1rem) / 3) !important; Adjust the width calculation based on your preference */
+        margin-right: 1rem; /* Adjust the margin based on your preference */
+        margin-bottom: 1rem; /* Adjust the margin based on your preference */
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
@@ -172,6 +183,15 @@ export default class Filter extends Shadow() {
       }
       :host [type='filter'] {
         padding:0 0.2rem 0.2rem 0;
+      }
+      :host .weekdays,
+      :host .locations,
+      :host .eventType,
+      :host .languages,
+      :host .genres {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 0.5rem;
       }
     }
   `
