@@ -125,21 +125,6 @@ export default class Filter extends Shadow() {
     :host .filter > *:not(h5) {
       display: inline-block;
     }
-    :host .weekdays {
-      width: 175px;
-    }
-    :host .locations {
-      width: 252px;
-    }
-    :host .eventType {
-      width: 297px;
-    }
-    :host .languages {
-      width: 305px;
-    }
-    :host .genres {
-      width: 416px;
-    }
     :host h5 {
       margin: 10px 0;
       text-transform: uppercase;
@@ -149,6 +134,12 @@ export default class Filter extends Shadow() {
     :host .filterButtonContainer {
       display: flex;
       flex-wrap: wrap;
+      max-width: var(--filter-button-container-max-width-tablet, 9em);
+    }
+    @media only screen and (min-width: 1200px) {
+      :host .filterButtonContainer {
+        max-width: var(--filter-button-container-max-width-desktop, 13em);
+      }
     }
     :host [type='filter'] {
       font-size:unset;
