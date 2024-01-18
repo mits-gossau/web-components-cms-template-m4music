@@ -134,11 +134,11 @@ export default class Filter extends Shadow() {
     :host .filterButtonContainer {
       display: flex;
       flex-wrap: wrap;
-      max-width: var(--filter-button-container-max-width-tablet, 9em);
+      max-width: var(--filter-button-container-max-width-mobile, unset);
     }
     @media only screen and (min-width: 1200px) {
       :host .filterButtonContainer {
-        max-width: var(--filter-button-container-max-width-desktop, 13em);
+        max-width: var(--filter-button-container-max-width-desktop, 12em);
       }
     }
     :host [type='filter'] {
