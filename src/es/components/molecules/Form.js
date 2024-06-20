@@ -15,40 +15,14 @@ export default class Form extends BaseForm {
       event.preventDefault()
 
       if (this.getAttribute('type') === 'newsletter') {
-        this.loadDependency().then(grecaptcha => {
-          // @ts-ignore
-          grecaptcha.ready(() => {
-            // @ts-ignore
-            grecaptcha.execute(this.getAttribute('site-key'), { action: 'newsletter' }).then(token => {
-              fetch('/umbraco/api/M4MusicNewsletterApi/VerifyRecaptcha', {
-                method: 'post',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ recaptchaToken: token })
-              })
-                .then(response => {
-                  if (response.ok) return response.json()
-                })
-                .then(response => {
-                  if (response) { // passed captcha
-                    if (!this.submitEventListener(event)) {
-                      // TODO if wanted include validation here
-                      return
-                    }
-
-                    this.form.style.display = 'none'
-                    this.afterSubmit.style.display = 'block'
-                    
-                    this.dispatchEvent(new CustomEvent('newsletter-form-submit', {
-                      bubbles: true,
-                      cancelable: true,
-                      composed: true
-                    }))
-                  } else console.error('Failed captcha')
-                })
-                .catch(error => console.error('Something went wrong while verifying captcha: ', error))
-            })
-          })
-        })
+        this.form.style.display = 'none'
+        this.afterSubmit.style.display = 'block'
+        
+        this.dispatchEvent(new CustomEvent('newsletter-form-submit', {
+          bubbles: true,
+          cancelable: true,
+          composed: true
+        }))
       }
     }
 
@@ -61,14 +35,14 @@ export default class Form extends BaseForm {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     this.loadDependency()
-    this.addEventListener('form-submit', this.submitM4MusicEventListener)
+     this.addEventListener('form-submit', this.submitM4MusicEventListener)
     if (this.previousButton) {
       this.previousButton.addEventListener('click', this.previousButtonClickedEventListener)
     }
   }
 
   disconnectedCallback () {
-    this.removeEventListener('form-submit', this.submitM4MusicEventListener)
+     this.removeEventListener('form-submit', this.submitM4MusicEventListener)
     if (this.previousButton) {
       this.previousButton.removeEventListener('click', this.previousButtonClickedEventListener)
     }
