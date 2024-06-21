@@ -12,12 +12,12 @@ export default class Form extends BaseForm {
     super(...args)
 
     this.submitM4MusicEventListener = event => {
-      event.preventDefault()
+        //event.preventDefault()
 
       if (this.getAttribute('type') === 'newsletter') {
         this.form.style.display = 'none'
         this.afterSubmit.style.display = 'block'
-        
+        this.submitEventListener(event) // normal form submit
         this.dispatchEvent(new CustomEvent('newsletter-form-submit', {
           bubbles: true,
           cancelable: true,
