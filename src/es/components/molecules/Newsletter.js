@@ -117,20 +117,24 @@ export default class Newsletter extends BaseBody {
 
         :host .m-newsletter__wrap h3 {
           font-size: 1.5rem;
+          margin: var(--newsletter-h3-margin-custom, 0); /* FE Review Change 2024 */
         }
 
         :host .m-newsletter__wrap h4 {
-              font-size: 1rem;
-              width: auto;
+            font-size: 1rem;
+            margin: var(--newsletter-h4-margin-custom, 0); /* FE Review Change 2024 */
+            width: auto;
           }
 
         :host .m-newsletter__wrap p {
           font-size: 1.5rem;
+          margin: var(--newsletter-p-margin-custom, 0);
           width: auto;
         }
 
         :host .m-newsletter__container.m-newsletter__policy p {
           font-size: 0.8rem;
+          margin: 1em 0; /* FE Review Change 2024 */
           width: auto;
         }
 

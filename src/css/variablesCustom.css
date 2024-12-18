@@ -515,6 +515,8 @@
   --newsletter-h3-font-size:var(--h3-font-size);
   --newsletter-h3-font-weight:var(--h3-font-weight);
   --newsletter-h3-line-height:var(--h3-line-height);
+  --newsletter-h3-margin-custom: 1em 0 20px 0; /* FE Review Change 2024 */
+  --newsletter-h4-margin-custom: 0 0 0.35rem 0; /* FE Review Change 2024 */
   --newsletter-h3-margin:var(--h3-margin);
   --newsletter-h3-padding:var(--h3-padding);
   --newsletter-h3-text-transform:none;
@@ -526,6 +528,7 @@
   --newsletter-margin-botton:3rem;
   --newsletter-mobile-padding:0.9rem;
   --newsletter-p-margin:0.5rem 0;
+  --newsletter-p-margin-custom: 0 0 20px 0; /* FE Review Change 2024 */
   --newsletter-padding:6vw 5vw;
   --newsletter-policy-font-size:0.5rem;
   --newsletter-policy-margin:0.25rem 0;
