@@ -121,7 +121,7 @@ export default class EventItem extends Shadow() {
     }
     :host .entry{
       color:#000000; 
-      font-size: 0.6rem;
+      font-size:var(--entry-font-size, 0.6rem); /* FE Review Change 2024 */
       line-height:125%;
       text-align:${this.getAttribute('type') === 'speaker' ? 'center' : 'left'};
       max-width: 95%;
@@ -164,7 +164,7 @@ export default class EventItem extends Shadow() {
         width: auto;
       }
       :host .entry{
-        font-size:var(--description-font-size-mobile, 1rem);
+        font-size:var(--entry-font-size-mobile, 1rem); /* FE Review Change 2024 */
         text-align:left;
       }
       :host .description{

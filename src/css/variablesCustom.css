@@ -165,6 +165,8 @@
   --event-item-date-font-size: 0.5rem;
   --event-item-date-font-color: #232323;
   --event-item-date-font-size-mobile:0.889rem;
+  --event-item-entry-font-size: 0.5rem; /* FE Review Change 2024 */
+  --event-item-entry-font-size-mobile: 0.889rem; /* FE Review Change 2024 */
   --event-item-description-font-size-mobile:0.889rem;
   --event-item-name-font-size-mobile:1.66rem;
   --event-item-detail-a-text-color:inherit;
