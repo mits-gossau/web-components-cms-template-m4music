@@ -104,6 +104,10 @@ export default class Contact extends Shadow() {
       :host .contact__top-text {
         font-size: 0.75rem;
       }
+
+      :host .contact__heading {
+        margin-bottom: 5px; /* FE Review Change 2024 */
+    }
     }
   `
   }
