@@ -75,7 +75,7 @@ export default class Navigation extends BaseNavigation {
       :host(.no-scroll) > nav {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* FE Review Change 2024 */
         justify-content: center;
       }
 
