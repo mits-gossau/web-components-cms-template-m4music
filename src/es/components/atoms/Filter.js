@@ -154,7 +154,7 @@ export default class Filter extends Shadow() {
     :host .genres {
         /*width: calc((100% - 1rem) / 3) !important; Adjust the width calculation based on your preference */
         margin-right: 1rem; /* Adjust the margin based on your preference */
-        margin-bottom: 1rem; /* Adjust the margin based on your preference */
+        margin-bottom: 60px; /* Adjust the margin based on your preference */
     }
 
     @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
