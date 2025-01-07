@@ -107,9 +107,9 @@ export default class Filter extends Shadow() {
         --filter-background-color: ${this.getAttribute('background-color')};
         color: var(--color-black);
         width: calc(100% - 2rem) !important;
-        padding: 0 0 1rem 0;`
+        padding: 0;`
       : `
-        padding:0.9rem 0;
+        padding:0;
         width: 100% !important;
         `}
       align-content:center;
