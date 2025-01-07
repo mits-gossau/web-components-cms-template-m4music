@@ -67,7 +67,6 @@ export default class StageSmall extends Shadow() {
     }
 
     :host .stage__info a-logo {
-      margin-top: 2rem;
       height: auto;
       width: auto;
     }
