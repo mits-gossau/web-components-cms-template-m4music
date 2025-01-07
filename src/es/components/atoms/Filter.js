@@ -126,7 +126,7 @@ export default class Filter extends Shadow() {
       display: inline-block;
     }
     :host h5 {
-      margin: 10px 0;
+      margin: 0;
       text-transform: uppercase;
       font-size: 0.6rem;
       color: #232323;
