@@ -53,8 +53,8 @@ export default class HighlightActs extends Shadow() {
     }
 
     /* FE Review Change 2024 */
-    :host .highlight-link h2, h3 {
-      font-size: 1.5rem;
+    :host .highlight-link h2{
+      font-size: 1.25rem;
       margin-top: 0.7rem;
       color: white;
       text-decoration: none;
