@@ -128,7 +128,7 @@ export default class EventItem extends Shadow() {
     }
     :host .description{
       color:#000000; 
-      font-size: 0.6rem;
+      font-size: var(--description-font-size, 0.6rem); /* FE Review Change 2024 */
       line-height:125%;
       word-break: break-word;
     }

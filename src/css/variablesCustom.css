@@ -167,6 +167,7 @@
   --event-item-date-font-size-mobile:0.889rem;
   --event-item-entry-font-size: 0.5rem; /* FE Review Change 2024 */
   --event-item-entry-font-size-mobile: 0.889rem; /* FE Review Change 2024 */
+  --event-item-description-font-size: 0.5rem; /* FE Review Change 2024 */
   --event-item-description-font-size-mobile:0.889rem;
   --event-item-name-font-size-mobile:1.66rem;
   --event-item-detail-a-text-color:inherit;
@@ -248,7 +249,7 @@
   --footer-ul-margin:0;
   --footer-ul-padding:0;
   --h-title-font-weight:normal;
-  --h-title-margin:0 0 1em 0;
+  --h-title-margin:0 0 min(1em, 60px) 0;
   --content-page-title-h-title-margin:1rem 0 0.5rem 0;
   --content-page-title-h-title-margin-mobile:1.35rem 0 0.5rem 0;
   --h-title-padding:0;
