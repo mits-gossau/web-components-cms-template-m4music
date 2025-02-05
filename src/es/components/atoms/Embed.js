@@ -37,8 +37,8 @@ export default class Embed extends BaseBody {
         display: block
       }
       :host(.embed-youtube) {
-        max-height: 900px;
         height: 50vw;
+        width: calc(16/9 * 50vw);
       }      
       :host(.embed-youtube) iframe, .embed-youtube iframe {
         width: 100%;
