@@ -34,6 +34,10 @@ export default class HighlightActs extends Shadow() {
    */
   renderCSS () {
     this.css = /* css */ `
+    :host h2 {
+      font-weight: 400;
+    }
+
     :host .highlights-wrapper {
       display: flex;
       flex-direction: row;
@@ -55,6 +59,7 @@ export default class HighlightActs extends Shadow() {
     /* FE Review Change 2024 */
     :host .highlight-link h2{
       font-size: 1.25rem;
+      font-weight: 400;
       margin-top: 0.7rem;
       color: white;
       text-decoration: none;

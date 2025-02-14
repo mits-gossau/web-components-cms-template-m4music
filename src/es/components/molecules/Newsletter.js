@@ -41,6 +41,7 @@ export default class Newsletter extends BaseBody {
 
       :host .m-newsletter__wrap h3 {
         font-size: 0.75rem;
+        font-weight: 400;
       }
 
       :host .m-newsletter__wrap h4 {
