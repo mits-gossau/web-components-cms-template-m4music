@@ -724,6 +724,7 @@
   --header-detail-content-spacing-mobile: 1rem;
   --header-logo-big-img-margin: 0;
   --header-logo-big-justify-content: flex-start;
+  --header-logo-big-max-width: none;
   --button-dark-background-color-primary: #232323;
   --button-dark-width: auto;
   --button-dark-width-mobile: 100%;
@@ -781,12 +782,10 @@
   --newsletter-button-color-hover-primary-mobile: white;
   --newsletter-button-padding-mobile: 0.4rem 0.875rem;
   --newsletter-button-margin: 0;
-  /* --header-logo-big-width: 50vw; */
-  /* --header-logo-big-width-mobile: 100%; */
-  --header-logo-big-max-width:50vw;
   --header-logo-big-height: 100%;
   --header-logo-big-max-height:50vw;
   --header-logo-big-height-mobile: 100%;
+  --header-logo-big-width-mobile: 70vw;
   --header-detail-button-color-hover-arrowLeft: white;
   --button-primary-inverted-color-disabled: #CCCCCC;
   --header-logo-stage-text-height: 200px;
@@ -795,6 +794,7 @@
   --header-logo-stage-text-width-mobile: 230px;
   --header-logo-stage-text-justify-content: flex-start;
   --header-logo-stage-text-justify-content-mobile: flex-start;
+  --header-logo-small-justify-content: flex-start;
 }
 
 .theme-light {
