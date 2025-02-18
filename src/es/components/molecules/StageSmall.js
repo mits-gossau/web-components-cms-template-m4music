@@ -39,7 +39,6 @@ export default class StageSmall extends Shadow() {
       width: 100%;
       position: relative;
       max-width: 100vw;
-      height: 460px;
       overflow: hidden;
       --any-content-spacing: 0;
       --any-content-spacing--mobile: 0;
@@ -47,6 +46,12 @@ export default class StageSmall extends Shadow() {
       --any-margin-top-first-child-mobile: 0;
       --any-content-width: 100%;
       --any-content-width-mobile: 100%;
+    }
+
+    :host, :host a-picture {
+      height: 460px;
+      --height: 460px;
+      --img-height: 460px;
     }
 
     :host .stage + div {
