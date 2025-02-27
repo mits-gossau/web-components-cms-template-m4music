@@ -795,13 +795,15 @@
   --header-logo-stage-text-justify-content: flex-start;
   --header-logo-stage-text-justify-content-mobile: flex-start;
   --header-logo-small-justify-content: flex-start;
-  --header-logo-small-width: 100%;
+  --header-logo-small-align-items: flex-start;
+  --header-logo-small-width: 60%;
   --header-logo-small-height: 100%;
-  --header-logo-small-height: 100%;
+  --header-logo-small-margin: 0.6rem 0 0 0;
+  --header-logo-small-margin: 1.2rem 0 0 0;
   --header-logo-small-max-height:50vw;
   --header-logo-small-max-width: none;
   --header-logo-small-height-mobile: 100%;
-  --header-logo-small-width-mobile: 100%;
+  --header-logo-small-width-mobile: 50%;
 }
 
 .theme-light {
